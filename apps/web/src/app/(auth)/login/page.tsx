@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { Eye, EyeOff } from 'lucide-react';
 
 import { apiClient } from '@/lib/api-client';
 import { useAuthStore } from '@/stores/auth.store';
@@ -12,6 +13,7 @@ export default function LoginPage() {
   const setAuth = useAuthStore((s) => s.setAuth);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -49,20 +51,29 @@ export default function LoginPage() {
         />
       </div>
 
-      <div className="space-y-1.5">
+      <div className="space-y-1.5 relative">
         <label htmlFor="login-password" className="block text-sm font-medium text-brand-100">
           Password
         </label>
-        <input
-          id="login-password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          minLength={8}
-          className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-brand-300/50 outline-none ring-brand-400 focus:border-brand-400 focus:ring-1"
-          placeholder="••••••••"
-        />
+        <div className="relative">
+          <input
+            id="login-password"
+            type={showPassword ? 'text' : 'password'}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            minLength={8}
+            className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 pr-10 text-white placeholder-brand-300/50 outline-none ring-brand-400 focus:border-brand-400 focus:ring-1"
+            placeholder="••••••••"
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-brand-300 hover:text-white transition-colors"
+          >
+            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+          </button>
+        </div>
       </div>
 
       {error && (

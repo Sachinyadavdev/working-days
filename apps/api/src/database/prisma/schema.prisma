@@ -22,10 +22,11 @@ model User {
   createdAt     DateTime  @default(now()) @map("created_at")
   updatedAt     DateTime  @updatedAt @map("updated_at")
 
-  roles          UserRole[]
-  employee       Employee?
-  refreshTokens  RefreshToken[]
-  notifications  Notification[]
+  roles               UserRole[]
+  employee            Employee?
+  refreshTokens       RefreshToken[]
+  passwordResetTokens PasswordResetToken[]
+  notifications       Notification[]
   activityLogs   ActivityLog[]
   assignedTasks  Task[]         @relation("TaskAssignee")
   reportedTasks  Task[]         @relation("TaskReporter")
@@ -37,12 +38,16 @@ model User {
 }
 
 model Role {
-  id          String   @id @default(uuid())
-  name        String   @unique
+  id          String     @id @default(uuid())
+  name        String     @unique
+  slug        String     @unique @default(dbgenerated("gen_random_uuid()"))
   description String?
-  isSystem    Boolean  @default(false) @map("is_system")
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
+  isSystem    Boolean    @default(false) @map("is_system")
+  priority    Int        @default(0)
+  status      RoleStatus @default(ACTIVE)
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+  deletedAt   DateTime?  @map("deleted_at")
 
   users       UserRole[]
   permissions RolePermission[]
@@ -53,6 +58,7 @@ model Role {
 model Permission {
   id          String   @id @default(uuid())
   name        String   @unique
+  slug        String   @unique @default(dbgenerated("gen_random_uuid()"))
   description String?
   module      String
   action      String
@@ -62,6 +68,11 @@ model Permission {
 
   @@unique([module, action])
   @@map("permissions")
+}
+
+enum RoleStatus {
+  ACTIVE
+  INACTIVE
 }
 
 model UserRole {
@@ -97,6 +108,21 @@ model RefreshToken {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("refresh_tokens")
+  @@index([token])
+  @@index([userId])
+}
+
+model PasswordResetToken {
+  id        String    @id @default(uuid())
+  token     String    @unique
+  userId    String    @map("user_id")
+  expiresAt DateTime  @map("expires_at")
+  usedAt    DateTime? @map("used_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("password_reset_tokens")
   @@index([token])
   @@index([userId])
 }

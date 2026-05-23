@@ -1,16 +1,16 @@
-# Graph Report - working-days  (2026-05-22)
+# Graph Report - working-days  (2026-05-23)
 
 ## Corpus Check
-- 132 files · ~15,194 words
+- 136 files · ~16,825 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 742 nodes · 994 edges · 46 communities (39 shown, 7 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.8)
+- 756 nodes · 1008 edges · 48 communities (39 shown, 9 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e17cfa08`
+- Built from commit: `e5a8283c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -53,6 +53,8 @@
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 36|Community 36]]
 - [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 46|Community 46]]
+- [[_COMMUNITY_Community 47|Community 47]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 22 edges
@@ -78,30 +80,30 @@
 - `RegisterPage()` --calls--> `useAuthStore`  [EXTRACTED]
   apps/web/src/app/(auth)/register/page.tsx → apps/web/src/stores/auth.store.ts
 
-## Communities (46 total, 7 thin omitted)
+## Communities (48 total, 9 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.07
-Nodes (14): AttendanceController, AttendanceModule, AttendanceService, PrismaService, CurrentUser, Roles(), CheckInDto, CreateLeaveRequestDto (+6 more)
+Cohesion: 0.06
+Nodes (17): AttendanceController, AttendanceModule, AttendanceService, PrismaService, CurrentUser, Roles(), CheckInDto, CreateEmployeeDto (+9 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.06
+Cohesion: 0.05
 Nodes (11): AuthController, AuthService, APP_CONSTANTS, Public(), LoginDto, RegisterDto, PermissionsGuard, HealthController (+3 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.06
-Nodes (11): GlobalExceptionFilter, LoggingInterceptor, TransformedResponse, TransformInterceptor, LoggerModule, LoggerService, NotificationsController, NotificationsGateway (+3 more)
+Cohesion: 0.12
+Nodes (7): GlobalExceptionFilter, LoggingInterceptor, TransformedResponse, TransformInterceptor, LoggerModule, LoggerService, AppModule
 
 ### Community 3 - "Community 3"
-Cohesion: 0.05
-Nodes (36): devDependencies, @ems/eslint-config, jest, @nestjs/cli, @nestjs/schematics, @nestjs/testing, prisma, rimraf (+28 more)
+Cohesion: 0.09
+Nodes (22): devDependencies, @ems/eslint-config, jest, @nestjs/cli, @nestjs/schematics, @nestjs/testing, prisma, rimraf (+14 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.07
-Nodes (11): ActivityLogsController, ActivityLogsModule, AuthModule, DatabaseModule, JwtAuthGuard, RolesGuard, JwtRefreshStrategy, JwtStrategy (+3 more)
+Cohesion: 0.06
+Nodes (12): ActivityLogsController, ActivityLogsModule, AuthModule, DatabaseModule, JwtAuthGuard, RolesGuard, LeaveController, LeaveModule (+4 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.13
+Cohesion: 0.11
 Nodes (20): DashboardLayout(), AppSidebar(), navigation, Header(), apiClient, authStore, cn(), LoginPage() (+12 more)
 
 ### Community 6 - "Community 6"
@@ -129,32 +131,32 @@ Cohesion: 0.09
 Nodes (22): devDependencies, @ems/eslint-config, eslint, eslint-config-next, postcss, rimraf, tailwindcss, @tailwindcss/postcss (+14 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.15
-Nodes (5): CreateProjectDto, UpdateProjectDto, ProjectsController, ProjectsModule, ProjectsService
+Cohesion: 0.11
+Nodes (4): NotificationsController, NotificationsGateway, NotificationsModule, NotificationsService
 
 ### Community 13 - "Community 13"
 Cohesion: 0.09
 Nodes (21): dependsOn, outputs, cache, cache, persistent, globalDependencies, dependsOn, cache (+13 more)
 
 ### Community 14 - "Community 14"
-Cohesion: 0.16
-Nodes (4): CreateTaskDto, UpdateTaskDto, TasksController, TasksService
+Cohesion: 0.15
+Nodes (5): CreateTaskDto, UpdateTaskDto, TasksController, TasksModule, TasksService
 
 ### Community 15 - "Community 15"
 Cohesion: 0.10
 Nodes (20): compilerOptions, allowJs, baseUrl, esModuleInterop, incremental, isolatedModules, jsx, lib (+12 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.16
-Nodes (5): CreateEmployeeDto, UpdateEmployeeDto, EmployeesController, EmployeesModule, EmployeesService
+Cohesion: 0.15
+Nodes (5): CreateProjectDto, UpdateProjectDto, ProjectsController, ProjectsModule, ProjectsService
 
 ### Community 17 - "Community 17"
 Cohesion: 0.16
 Nodes (5): CreateTeamDto, UpdateTeamDto, TeamsController, TeamsModule, TeamsService
 
 ### Community 18 - "Community 18"
-Cohesion: 0.11
-Nodes (19): scripts, build, clean, db:generate, db:migrate, db:migrate:deploy, db:push, db:seed (+11 more)
+Cohesion: 0.06
+Nodes (33): jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, moduleNameMapper, rootDir, testEnvironment, testRegex (+25 more)
 
 ### Community 19 - "Community 19"
 Cohesion: 0.12
@@ -181,8 +183,8 @@ Cohesion: 0.18
 Nodes (10): dependencies, eslint, eslint-config-prettier, eslint-plugin-import, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, main, name (+2 more)
 
 ### Community 26 - "Community 26"
-Cohesion: 0.22
-Nodes (8): collection, compilerOptions, assets, deleteOutDir, plugins, watchAssets, $schema, sourceRoot
+Cohesion: 0.20
+Nodes (9): collection, compilerOptions, assets, builder, deleteOutDir, plugins, watchAssets, $schema (+1 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.25
@@ -205,24 +207,24 @@ Cohesion: 0.40
 Nodes (3): containerVariants, itemVariants, stats
 
 ## Knowledge Gaps
-- **323 isolated node(s):** `name`, `version`, `private`, `description`, `dev` (+318 more)
+- **326 isolated node(s):** `name`, `version`, `private`, `description`, `dev` (+321 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `dependencies` connect `Community 7` to `Community 3`?**
-  _High betweenness centrality (0.093) - this node is a cross-community bridge._
-- **Why does `LoggerService` connect `Community 2` to `Community 0`, `Community 1`, `Community 7`?**
-  _High betweenness centrality (0.050) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `Community 7` to `Community 18`?**
+  _High betweenness centrality (0.091) - this node is a cross-community bridge._
+- **Why does `LoggerService` connect `Community 2` to `Community 0`, `Community 1`, `Community 12`, `Community 7`?**
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
 - **Why does `bootstrap()` connect `Community 7` to `Community 2`?**
-  _High betweenness centrality (0.048) - this node is a cross-community bridge._
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _323 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _326 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.057971014492753624 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.05959183673469388 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05380852550663871 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.058693244739756366 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1225296442687747 - nodes in this community are weakly interconnected._

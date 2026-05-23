@@ -51,4 +51,13 @@ This mode builds the production-ready optimized Docker images for the frontend a
 - WebSockets: `ws://localhost/socket.io/`
 
 
-You can log in to the frontend using the seeded admin credentials: Email: admin@ems.com Password: Admin@123
+You can log in to the frontend using the seeded admin credentials: Email: admin@ems.com Password: Admin@123  
+
+**Graphify - Commands **
+- **Build Docker Image:docker build -t graphify .**
+"First run graphify query" before I blindly start searching through your files for architecture or codebase questions.
+"Run graphify update ." after I modify code files in our session so that the graph stays perfectly synchronized with our changes.
+
+NOTE
+
+Since we added new tables and columns, you should run pnpm prisma db push --accept-data-loss (or a migrate dev command) if you deploy this to other environments to synchronize their databases.

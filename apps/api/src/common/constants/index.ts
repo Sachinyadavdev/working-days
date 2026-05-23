@@ -9,4 +9,5 @@ export const APP_CONSTANTS = {
   },
   TASK_KEY_PREFIX: 'task:',
   USER_PERMISSIONS_KEY: 'user:permissions:',
+  PASSWORD_RESET_TOKEN_EXPIRY: 3600000, // 1 hour in milliseconds
 } as const;

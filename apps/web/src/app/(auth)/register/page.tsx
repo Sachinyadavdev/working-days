@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { Eye, EyeOff } from 'lucide-react';
 
 import { apiClient } from '@/lib/api-client';
 import { useAuthStore } from '@/stores/auth.store';
@@ -10,7 +11,16 @@ import { useAuthStore } from '@/stores/auth.store';
 export default function RegisterPage() {
   const router = useRouter();
   const setAuth = useAuthStore((s) => s.setAuth);
-  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', password: '' });
+  const [form, setForm] = useState({ 
+    firstName: '', 
+    lastName: '', 
+    email: '', 
+    password: '',
+    department: '',
+    designation: '',
+    phone: ''
+  });
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -53,9 +63,34 @@ export default function RegisterPage() {
         <input id="register-email" name="email" type="email" value={form.email} onChange={handleChange} required className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-brand-300/50 outline-none ring-brand-400 focus:border-brand-400 focus:ring-1" placeholder="john@company.com" />
       </div>
 
+      <div className="grid grid-cols-2 gap-3">
+        <div className="space-y-1.5">
+          <label htmlFor="register-department" className="block text-sm font-medium text-brand-100">Department <span className="text-brand-300/50">(Optional)</span></label>
+          <input id="register-department" name="department" value={form.department} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-brand-300/50 outline-none ring-brand-400 focus:border-brand-400 focus:ring-1" placeholder="Engineering" />
+        </div>
+        <div className="space-y-1.5">
+          <label htmlFor="register-designation" className="block text-sm font-medium text-brand-100">Designation <span className="text-brand-300/50">(Optional)</span></label>
+          <input id="register-designation" name="designation" value={form.designation} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-brand-300/50 outline-none ring-brand-400 focus:border-brand-400 focus:ring-1" placeholder="Software Engineer" />
+        </div>
+      </div>
+
       <div className="space-y-1.5">
+        <label htmlFor="register-phone" className="block text-sm font-medium text-brand-100">Phone <span className="text-brand-300/50">(Optional)</span></label>
+        <input id="register-phone" name="phone" type="tel" value={form.phone} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-brand-300/50 outline-none ring-brand-400 focus:border-brand-400 focus:ring-1" placeholder="+1 (555) 000-0000" />
+      </div>
+
+      <div className="space-y-1.5 relative">
         <label htmlFor="register-password" className="block text-sm font-medium text-brand-100">Password</label>
-        <input id="register-password" name="password" type="password" value={form.password} onChange={handleChange} required minLength={8} className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-brand-300/50 outline-none ring-brand-400 focus:border-brand-400 focus:ring-1" placeholder="Minimum 8 characters" />
+        <div className="relative">
+          <input id="register-password" name="password" type={showPassword ? 'text' : 'password'} value={form.password} onChange={handleChange} required minLength={8} className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 pr-10 text-white placeholder-brand-300/50 outline-none ring-brand-400 focus:border-brand-400 focus:ring-1" placeholder="Minimum 8 characters" />
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-brand-300 hover:text-white transition-colors"
+          >
+            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+          </button>
+        </div>
       </div>
 
       {error && <div className="rounded-lg bg-error/10 px-4 py-2.5 text-sm text-red-300">{error}</div>}

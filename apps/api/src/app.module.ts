@@ -18,6 +18,9 @@ import { LeaveModule } from './modules/leave/leave.module';
 import { NotificationsModule } from './modules/notifications/notifications.module';
 import { ActivityLogsModule } from './modules/activity-logs/activity-logs.module';
 import { HealthModule } from './health/health.module';
+import { RolesModule } from './modules/roles/roles.module';
+import { PermissionsModule } from './modules/permissions/permissions.module';
+import { AuthorizationModule } from './modules/authorization/authorization.module';
 
 @Module({
   imports: [
@@ -74,6 +77,12 @@ import { HealthModule } from './health/health.module';
 
     // Health check
     HealthModule,
+
+    RolesModule,
+
+    PermissionsModule,
+
+    AuthorizationModule,
   ],
   providers: [
     // Apply throttle guard globally
