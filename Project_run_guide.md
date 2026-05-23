@@ -61,3 +61,5 @@ You can log in to the frontend using the seeded admin credentials: Email: admin@
 NOTE
 
 Since we added new tables and columns, you should run pnpm prisma db push --accept-data-loss (or a migrate dev command) if you deploy this to other environments to synchronize their databases.
+
+pnpm --filter @ems/api run db:seed

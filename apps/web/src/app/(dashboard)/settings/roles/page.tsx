@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Plus } from 'lucide-react';
 import { RequirePermission } from '@/components/auth/require-permission';
-import { api } from '@/lib/api-client';
+import { apiClient as api } from '@/lib/api-client';
 import { RoleDialog } from './components/role-dialog';
 import { PermissionMatrix } from './components/permission-matrix';
 

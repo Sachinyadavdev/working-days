@@ -21,6 +21,15 @@ import { HealthModule } from './health/health.module';
 import { RolesModule } from './modules/roles/roles.module';
 import { PermissionsModule } from './modules/permissions/permissions.module';
 import { AuthorizationModule } from './modules/authorization/authorization.module';
+import { SuperAdminModule } from './modules/super-admin/super-admin.module';
+import { SettingsModule } from './modules/settings/settings.module';
+import { SecurityModule } from './modules/security/security.module';
+import { DepartmentModule } from './modules/department/department.module';
+import { DesignationModule } from './modules/designation/designation.module';
+import { EmployeeProfileModule } from './modules/employee-profile/employee-profile.module';
+import { SalaryModule } from './modules/salary/salary.module';
+import { WorkspaceModule } from './modules/workspace/workspace.module';
+import { DocumentsModule } from './modules/documents/documents.module';
 
 @Module({
   imports: [
@@ -83,6 +92,24 @@ import { AuthorizationModule } from './modules/authorization/authorization.modul
     PermissionsModule,
 
     AuthorizationModule,
+
+    SuperAdminModule,
+
+    SettingsModule,
+
+    SecurityModule,
+
+    DepartmentModule,
+
+    DesignationModule,
+
+    EmployeeProfileModule,
+
+    SalaryModule,
+
+    WorkspaceModule,
+
+    DocumentsModule,
   ],
   providers: [
     // Apply throttle guard globally

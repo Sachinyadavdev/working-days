@@ -11,6 +11,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { PrismaService } from '../../database/prisma.service';
 import { RedisService } from '../../redis/redis.service';
 import { LoggerService } from '../../logger/logger.service';
+import { SecurityService } from '../security/security.service';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
@@ -25,6 +26,7 @@ export class AuthService {
     private readonly configService: ConfigService,
     private readonly redisService: RedisService,
     private readonly logger: LoggerService,
+    private readonly securityService: SecurityService,
   ) {}
 
   async register(registerDto: RegisterDto) {
@@ -55,8 +57,8 @@ export class AuthService {
         employee: {
           create: {
             employeeCode,
-            department: department || null,
-            designation: designation || null,
+            departmentId: department || null,
+            designationId: designation || null,
             phone: phone || null,
             dateOfJoining: new Date(),
           },
@@ -97,8 +99,14 @@ export class AuthService {
     };
   }
 
-  async login(loginDto: LoginDto) {
+  async login(loginDto: LoginDto, ipAddress: string, userAgent: string) {
     const { email, password } = loginDto;
+
+    // Brute force check
+    const failedAttempts = await this.securityService.getRecentFailedAttempts(email, 15);
+    if (failedAttempts >= 5) {
+      throw new UnauthorizedException('Too many failed login attempts. Please try again later.');
+    }
 
     // Find user with roles
     const user = await this.prisma.user.findUnique({
@@ -121,14 +129,24 @@ export class AuthService {
     });
 
     if (!user || !user.isActive) {
+      await this.securityService.logLoginAttempt(email, ipAddress, userAgent, false);
       throw new UnauthorizedException('Invalid credentials');
     }
 
     // Verify password
     const isPasswordValid = await bcrypt.compare(password, user.passwordHash);
     if (!isPasswordValid) {
+      await this.securityService.logLoginAttempt(email, ipAddress, userAgent, false);
       throw new UnauthorizedException('Invalid credentials');
     }
+
+    await this.securityService.logLoginAttempt(email, ipAddress, userAgent, true);
+    
+    // Create/Update Device History
+    // We can use a device ID from request headers or default to UserAgent + IP hash for simplicity
+    const deviceId = bcrypt.hashSync(userAgent + ipAddress, 2).substring(0, 16);
+    await this.securityService.recordDevice(user.id, deviceId, ipAddress, userAgent);
+
 
     // Extract role names
     const roleNames = user.roles.map((ur) => ur.role.name);

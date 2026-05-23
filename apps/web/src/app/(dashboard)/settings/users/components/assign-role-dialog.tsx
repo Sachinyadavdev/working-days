@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
-import { api } from '@/lib/api-client';
+import { apiClient as api } from '@/lib/api-client';
 
 interface AssignRoleDialogProps {
   isOpen: boolean;

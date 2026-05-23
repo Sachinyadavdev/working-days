@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { RequirePermission } from '@/components/auth/require-permission';
-import { api } from '@/lib/api-client';
+import { apiClient as api } from '@/lib/api-client';
 import { AssignRoleDialog } from './components/assign-role-dialog';
 
 interface User {

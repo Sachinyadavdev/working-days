@@ -8,7 +8,7 @@ import { Label } from '@/components/ui/label';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { api } from '@/lib/api-client';
+import { apiClient as api } from '@/lib/api-client';
 
 const roleSchema = z.object({
   name: z.string().min(2, 'Name is required'),
