@@ -142,6 +142,21 @@ export class AuthService {
 
     await this.securityService.logLoginAttempt(email, ipAddress, userAgent, true);
     
+    if (user.forcePasswordReset) {
+      // Generate a temporary token specifically for resetting the password
+      const tempToken = await this.jwtService.signAsync(
+        { sub: user.id, email: user.email, isResetToken: true },
+        { expiresIn: '15m' }
+      );
+      return {
+        requiresPasswordReset: true,
+        tempToken,
+        user: {
+          email: user.email,
+        }
+      };
+    }
+
     // Create/Update Device History
     // We can use a device ID from request headers or default to UserAgent + IP hash for simplicity
     const deviceId = bcrypt.hashSync(userAgent + ipAddress, 2).substring(0, 16);
@@ -264,6 +279,39 @@ export class AuthService {
 
     // Always return a success message (prevents email enumeration)
     return { message: 'If that email address is in our database, we will send you an email to reset your password.' };
+  }
+
+  async firstLoginReset(dto: ResetPasswordDto): Promise<{ message: string }> {
+    let payload;
+    try {
+      payload = await this.jwtService.verifyAsync(dto.token);
+    } catch (e) {
+      throw new UnauthorizedException('Invalid or expired temporary token');
+    }
+
+    if (!payload.isResetToken) {
+      throw new UnauthorizedException('Invalid token type');
+    }
+
+    const userId = payload.sub;
+    const passwordHash = await bcrypt.hash(dto.newPassword, APP_CONSTANTS.BCRYPT_SALT_ROUNDS);
+
+    await this.prisma.$transaction([
+      this.prisma.user.update({
+        where: { id: userId },
+        data: { 
+          passwordHash,
+          forcePasswordReset: false 
+        },
+      }),
+      this.prisma.refreshToken.deleteMany({
+        where: { userId },
+      }),
+    ]);
+
+    this.logger.log(`First login password reset completed for user: ${userId}`);
+
+    return { message: 'Password has been successfully updated. Please login with your new password.' };
   }
 
   async resetPassword(dto: ResetPasswordDto): Promise<{ message: string }> {

@@ -4,6 +4,7 @@ import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 import { EmployeesService } from './employees.service';
 import { CreateEmployeeDto } from './dto/create-employee.dto';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
+import { AdminCreateEmployeeDto, ChangeRoleDto, ResetPasswordDto, ChangeStatusDto } from './dto/admin-employee.dto';
 import { PaginationDto } from '../../common/dto/pagination.dto';
 import { Roles } from '../../common/decorators/roles.decorator';
 
@@ -37,5 +38,33 @@ export class EmployeesController {
   @ApiOperation({ summary: 'Update employee' })
   async update(@Param('id') id: string, @Body() updateEmployeeDto: UpdateEmployeeDto) {
     return this.employeesService.update(id, updateEmployeeDto);
+  }
+
+  @Post('admin-create')
+  @Roles('SUPER_ADMIN', 'ADMIN')
+  @ApiOperation({ summary: 'Create a full employee profile with User and Role' })
+  async createEmployeeAsAdmin(@Body() adminCreateEmployeeDto: AdminCreateEmployeeDto) {
+    return this.employeesService.createEmployeeAsAdmin(adminCreateEmployeeDto);
+  }
+
+  @Patch(':id/status')
+  @Roles('SUPER_ADMIN', 'ADMIN')
+  @ApiOperation({ summary: 'Change employee status' })
+  async changeStatus(@Param('id') id: string, @Body() changeStatusDto: ChangeStatusDto) {
+    return this.employeesService.changeStatus(id, changeStatusDto);
+  }
+
+  @Post(':id/reset-password')
+  @Roles('SUPER_ADMIN', 'ADMIN')
+  @ApiOperation({ summary: 'Reset employee password' })
+  async resetPasswordAsAdmin(@Param('id') id: string, @Body() resetPasswordDto: ResetPasswordDto) {
+    return this.employeesService.resetPasswordAsAdmin(id, resetPasswordDto);
+  }
+
+  @Patch(':id/role')
+  @Roles('SUPER_ADMIN', 'ADMIN')
+  @ApiOperation({ summary: 'Change employee roles' })
+  async changeRole(@Param('id') id: string, @Body() changeRoleDto: ChangeRoleDto) {
+    return this.employeesService.changeRole(id, changeRoleDto);
   }
 }

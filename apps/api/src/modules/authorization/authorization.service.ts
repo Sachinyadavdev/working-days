@@ -82,7 +82,7 @@ export class AuthorizationService {
     const permissionSet = new Set<string>();
     
     // Determine if super admin
-    const isSuperAdmin = userRoles.some(ur => ur.role.slug === 'super-admin');
+    const isSuperAdmin = userRoles.some(ur => ur.role.name === 'SUPER_ADMIN');
 
     if (isSuperAdmin) {
       const allPerms = await prisma.permission.findMany();

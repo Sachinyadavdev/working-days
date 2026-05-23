@@ -86,4 +86,13 @@ export class AuthController {
   async resetPassword(@Body() resetPasswordDto: ResetPasswordDto) {
     return this.authService.resetPassword(resetPasswordDto);
   }
+
+  @Public()
+  @Post('first-login-reset')
+  @HttpCode(HttpStatus.OK)
+  @ApiOperation({ summary: 'Reset password on first login' })
+  @ApiResponse({ status: 200, description: 'Password reset successful' })
+  async firstLoginReset(@Body() resetPasswordDto: ResetPasswordDto) {
+    return this.authService.firstLoginReset(resetPasswordDto);
+  }
 }

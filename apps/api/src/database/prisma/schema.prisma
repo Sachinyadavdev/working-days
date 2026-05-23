@@ -10,17 +10,18 @@ datasource db {
 // ============== USERS & AUTH ==============
 
 model User {
-  id            String    @id @default(uuid())
-  email         String    @unique
-  passwordHash  String    @map("password_hash")
-  firstName     String    @map("first_name")
-  lastName      String    @map("last_name")
-  avatar        String?
-  isActive      Boolean   @default(true) @map("is_active")
-  emailVerified Boolean   @default(false) @map("email_verified")
-  lastLoginAt   DateTime? @map("last_login_at")
-  createdAt     DateTime  @default(now()) @map("created_at")
-  updatedAt     DateTime  @updatedAt @map("updated_at")
+  id                 String    @id @default(uuid())
+  email              String    @unique
+  passwordHash       String    @map("password_hash")
+  firstName          String    @map("first_name")
+  lastName           String    @map("last_name")
+  avatar             String?
+  isActive           Boolean   @default(true) @map("is_active")
+  emailVerified      Boolean   @default(false) @map("email_verified")
+  forcePasswordReset Boolean   @default(false) @map("force_password_reset")
+  lastLoginAt        DateTime? @map("last_login_at")
+  createdAt          DateTime  @default(now()) @map("created_at")
+  updatedAt          DateTime  @updatedAt @map("updated_at")
 
   roles               UserRole[]
   employee            Employee?

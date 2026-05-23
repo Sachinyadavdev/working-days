@@ -41,7 +41,7 @@ export class RolesGuard implements CanActivate {
           where: { userId: user.sub },
           include: { role: true },
         });
-        userRolesList = userRoles.map((ur) => ur.role.slug);
+        userRolesList = userRoles.map((ur) => ur.role.name);
         await this.redisService.setJson(cacheKey, userRolesList, 3600);
       }
     }
@@ -54,7 +54,7 @@ export class RolesGuard implements CanActivate {
       return false;
     }
 
-    if (userRolesList.includes('super-admin')) {
+    if (userRolesList.includes('SUPER_ADMIN')) {
       return true;
     }
 

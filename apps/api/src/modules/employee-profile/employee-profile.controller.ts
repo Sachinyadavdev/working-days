@@ -1,7 +1,7 @@
 import { Controller, Get, Put, Body, UseGuards, Post } from '@nestjs/common';
 import { EmployeeProfileService } from './employee-profile.service';
-import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import { CurrentUser } from '../auth/decorators/current-user.decorator';
+import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
+import { CurrentUser } from '../../common/decorators/current-user.decorator';
 
 @UseGuards(JwtAuthGuard)
 @Controller('employee-profile')

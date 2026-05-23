@@ -50,7 +50,7 @@ export function AssignRoleDialog({ isOpen, onClose, user, onSuccess }: AssignRol
     try {
       setIsLoading(true);
       // Determine what to add and what to remove
-      const initialRoles = new Set(user.roles?.map((r: any) => r.id) || []);
+      const initialRoles = new Set<string>(user.roles?.map((r: any) => r.id) || []);
       
       const rolesToAdd = Array.from(selectedRoles).filter(id => !initialRoles.has(id));
       const rolesToRemove = Array.from(initialRoles).filter(id => !selectedRoles.has(id));

@@ -47,7 +47,7 @@ export class PermissionsGuard implements CanActivate {
       });
       
       const permissionSet = new Set<string>();
-      const isSuperAdmin = userRoles.some(ur => ur.role.slug === 'super-admin');
+      const isSuperAdmin = userRoles.some(ur => ur.role.name === 'SUPER_ADMIN');
 
       if (isSuperAdmin) {
         const allPerms = await prisma.permission.findMany();
