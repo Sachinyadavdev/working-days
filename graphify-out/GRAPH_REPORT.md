@@ -1,16 +1,16 @@
 # Graph Report - working-days  (2026-05-24)
 
 ## Corpus Check
-- 217 files · ~31,444 words
+- 219 files · ~34,139 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1073 nodes · 1716 edges · 80 communities (62 shown, 18 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.8)
+- 1084 nodes · 1747 edges · 81 communities (65 shown, 16 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bcec1325`
+- Built from commit: `3f9776a2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -87,15 +87,16 @@
 - [[_COMMUNITY_Community 77|Community 77]]
 - [[_COMMUNITY_Community 78|Community 78]]
 - [[_COMMUNITY_Community 79|Community 79]]
+- [[_COMMUNITY_Community 80|Community 80]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `PrismaService` - 24 edges
 2. `compilerOptions` - 22 edges
 3. `cn()` - 21 edges
 4. `PaginationDto` - 20 edges
-5. `scripts` - 19 edges
-6. `RedisService` - 18 edges
-7. `apiClient` - 18 edges
+5. `apiClient` - 20 edges
+6. `scripts` - 19 edges
+7. `RedisService` - 18 edges
 8. `compilerOptions` - 17 edges
 9. `useAuthStore` - 16 edges
 10. `LoggerService` - 15 edges
@@ -103,28 +104,28 @@
 ## Surprising Connections (you probably didn't know these)
 - `cn()` --calls--> `clsx`  [INFERRED]
   apps/web/src/lib/utils.ts → apps/web/package.json
+- `ViewEmployeeModal()` --calls--> `formatDate()`  [INFERRED]
+  apps/web/src/components/employees/view-employee-modal.tsx → packages/shared-utils/src/index.ts
 - `bootstrap()` --calls--> `compression`  [INFERRED]
   apps/api/src/main.ts → apps/api/package.json
 - `bootstrap()` --calls--> `helmet`  [INFERRED]
   apps/api/src/main.ts → apps/api/package.json
 - `LoginPage()` --calls--> `useAuthStore`  [EXTRACTED]
   apps/web/src/app/(auth)/login/page.tsx → apps/web/src/stores/auth.store.ts
-- `RegisterPage()` --calls--> `useAuthStore`  [EXTRACTED]
-  apps/web/src/app/(auth)/register/page.tsx → apps/web/src/stores/auth.store.ts
 
-## Communities (80 total, 18 thin omitted)
+## Communities (81 total, 16 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.11
-Nodes (9): AdminCreateEmployeeDto, ChangeRoleDto, ChangeStatusDto, ResetPasswordDto, CreateEmployeeDto, UpdateEmployeeDto, EmployeesController, EmployeesModule (+1 more)
+Nodes (10): AdminCreateEmployeeDto, AdminUpdateEmployeeDto, ChangeRoleDto, ChangeStatusDto, ResetPasswordDto, CreateEmployeeDto, UpdateEmployeeDto, EmployeesController (+2 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.06
-Nodes (12): AuthController, AuthModule, AuthService, APP_CONSTANTS, LoginDto, RegisterDto, SecurityController, SecurityModule (+4 more)
+Nodes (11): AuthController, AuthService, APP_CONSTANTS, Public(), LoginDto, RegisterDto, HealthController, HealthModule (+3 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.17
-Nodes (4): GlobalExceptionFilter, LoggingInterceptor, LoggerService, AppModule
+Cohesion: 0.13
+Nodes (6): GlobalExceptionFilter, LoggingInterceptor, TransformedResponse, TransformInterceptor, LoggerService, AppModule
 
 ### Community 3 - "Community 3"
 Cohesion: 0.09
@@ -163,8 +164,8 @@ Cohesion: 0.17
 Nodes (12): devDependencies, @ems/eslint-config, eslint, eslint-config-next, postcss, rimraf, tailwindcss, @tailwindcss/postcss (+4 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.15
-Nodes (12): RequirePermission(), RequirePermissionProps, AssignRoleDialog(), AssignRoleDialogProps, DepartmentModal(), DesignationModal(), Department, Designation (+4 more)
+Cohesion: 0.31
+Nodes (6): AssignRoleDialog(), AssignRoleDialogProps, PermissionGroup, PermissionMatrixProps, Checkbox, DialogFooter()
 
 ### Community 13 - "Community 13"
 Cohesion: 0.09
@@ -183,8 +184,8 @@ Cohesion: 0.15
 Nodes (5): CreateProjectDto, UpdateProjectDto, ProjectsController, ProjectsModule, ProjectsService
 
 ### Community 17 - "Community 17"
-Cohesion: 0.16
-Nodes (5): CreateTeamDto, UpdateTeamDto, TeamsController, TeamsModule, TeamsService
+Cohesion: 0.30
+Nodes (3): CreateTeamDto, UpdateTeamDto, TeamsService
 
 ### Community 18 - "Community 18"
 Cohesion: 0.11
@@ -210,6 +211,10 @@ Nodes (14): devDependencies, @ems/eslint-config, rimraf, typescript, main, name,
 Cohesion: 0.20
 Nodes (7): inter, metadata, Providers(), Theme, ThemeContext, ThemeContextType, ThemeProvider()
 
+### Community 24 - "Community 24"
+Cohesion: 0.17
+Nodes (3): ViewEmployeeModal(), formatDate(), formatRelativeTime()
+
 ### Community 25 - "Community 25"
 Cohesion: 0.18
 Nodes (10): dependencies, eslint, eslint-config-prettier, eslint-plugin-import, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, main, name (+2 more)
@@ -223,7 +228,7 @@ Cohesion: 0.25
 Nodes (7): code:bash (docker-compose up -d db redis), code:bash (pnpm --filter=@ems/api run db:push), code:bash (pnpm run dev), code:bash (docker-compose up -d --build), Employee Management System - Run Guide, Option 1: Development Mode (Recommended for Coding), Option 2: Production Simulation (Full Docker)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.21
+Cohesion: 0.22
 Nodes (3): ActivityLogsController, ActivityLogsModule, ActivityLogsService
 
 ### Community 30 - "Community 30"
@@ -247,28 +252,28 @@ Cohesion: 0.15
 Nodes (3): UpdateUserDto, UsersController, UsersService
 
 ### Community 48 - "Community 48"
-Cohesion: 0.10
-Nodes (27): DepartmentFormValues, DepartmentModalProps, departmentSchema, DesignationFormValues, DesignationModalProps, designationSchema, PermissionGroup, PermissionMatrixProps (+19 more)
+Cohesion: 0.11
+Nodes (20): DepartmentFormValues, DepartmentModal(), DepartmentModalProps, departmentSchema, DesignationFormValues, DesignationModal(), DesignationModalProps, designationSchema (+12 more)
 
 ### Community 49 - "Community 49"
-Cohesion: 0.17
-Nodes (9): PermissionMatrix(), RoleDialog(), Role, Card, CardContent, CardDescription, CardFooter, CardHeader (+1 more)
+Cohesion: 0.14
+Nodes (11): RequirePermission(), RequirePermissionProps, PermissionMatrix(), Role, Card, CardContent, CardDescription, CardFooter (+3 more)
 
 ### Community 50 - "Community 50"
-Cohesion: 0.11
-Nodes (7): Public(), UpdateSettingDto, HealthController, HealthModule, SettingsController, SettingsModule, SettingsService
+Cohesion: 0.16
+Nodes (4): UpdateSettingDto, SettingsController, SettingsModule, SettingsService
 
 ### Community 51 - "Community 51"
-Cohesion: 0.12
-Nodes (17): RequireRole(), RequireRoleProps, ChangeRoleModal(), ChangeRoleModalProps, ChangeStatusModal(), ChangeStatusModalProps, ResetPasswordModal(), ResetPasswordModalProps (+9 more)
+Cohesion: 0.17
+Nodes (10): RequireRole(), RequireRoleProps, EmployeeDirectoryPage(), apiClient, authStore, LoginPage(), RegisterPage(), AuthState (+2 more)
 
 ### Community 52 - "Community 52"
 Cohesion: 0.16
 Nodes (5): AssignRoleDto, AuthorizationController, RequirePermissions(), PermissionsGuard, prisma
 
 ### Community 53 - "Community 53"
-Cohesion: 0.16
-Nodes (5): AttendanceController, AttendanceModule, AttendanceService, CurrentUser, CheckInDto
+Cohesion: 0.21
+Nodes (5): AttendanceModule, AttendanceService, CurrentUser, CheckInDto, PaginationDto
 
 ### Community 54 - "Community 54"
 Cohesion: 0.16
@@ -282,29 +287,37 @@ Nodes (3): WorkspaceController, WorkspaceModule, WorkspaceService
 Cohesion: 0.16
 Nodes (5): JwtAuthGuard, PermissionsController, PermissionsModule, PermissionsService, prisma
 
+### Community 57 - "Community 57"
+Cohesion: 0.15
+Nodes (3): NotificationsController, NotificationsGateway, NotificationsModule
+
 ### Community 58 - "Community 58"
-Cohesion: 0.20
-Nodes (4): Roles(), SuperAdminController, SuperAdminModule, SuperAdminService
+Cohesion: 0.13
+Nodes (5): PrismaService, Roles(), SuperAdminController, SuperAdminModule, SuperAdminService
 
 ### Community 59 - "Community 59"
 Cohesion: 0.18
 Nodes (11): jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, moduleNameMapper, rootDir, testEnvironment, testRegex (+3 more)
 
 ### Community 65 - "Community 65"
-Cohesion: 0.44
-Nodes (4): AuthorizationModule, LoggerModule, RedisModule, RolesModule
+Cohesion: 0.28
+Nodes (6): AuthorizationModule, DatabaseModule, LoggerModule, RedisModule, RolesModule, TeamsModule
 
 ### Community 66 - "Community 66"
 Cohesion: 0.47
 Nodes (4): AssignPermissionsDto, CreateRoleDto, UpdateRoleDto, prisma
+
+### Community 68 - "Community 68"
+Cohesion: 0.11
+Nodes (23): ChangeRoleModal(), ChangeRoleModalProps, ChangeStatusModal(), ChangeStatusModalProps, ResetPasswordModal(), ResetPasswordModalProps, roleSchema, AddEmployeeModal() (+15 more)
 
 ### Community 69 - "Community 69"
 Cohesion: 0.29
 Nodes (7): scripts, build, clean, dev, lint, start, type-check
 
 ### Community 70 - "Community 70"
-Cohesion: 0.23
-Nodes (3): DatabaseModule, PrismaService, PaginationDto
+Cohesion: 0.22
+Nodes (4): AuthModule, JwtRefreshStrategy, JwtStrategy, UsersModule
 
 ### Community 71 - "Community 71"
 Cohesion: 0.15
@@ -331,9 +344,9 @@ Cohesion: 0.50
 Nodes (3): name, private, version
 
 ## Knowledge Gaps
-- **367 isolated node(s):** `name`, `version`, `private`, `description`, `dev` (+362 more)
+- **371 isolated node(s):** `name`, `version`, `private`, `description`, `dev` (+366 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -341,14 +354,14 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `dependencies` connect `Community 7` to `Community 75`?**
   _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **Why does `bootstrap()` connect `Community 7` to `Community 2`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **Why does `LoggerService` connect `Community 2` to `Community 65`, `Community 1`, `Community 70`, `Community 7`, `Community 50`, `Community 57`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+- **Why does `LoggerService` connect `Community 2` to `Community 65`, `Community 1`, `Community 7`, `Community 50`, `Community 57`, `Community 58`?**
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _367 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _371 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.11363636363636363 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10793650793650794 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.05505279034690799 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05782312925170068 - nodes in this community are weakly interconnected._
+- **Should `Community 2` be split into smaller, more focused modules?**
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._

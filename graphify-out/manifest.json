@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\employees.controller.ts": {
-    "mtime": 1779541135.5606632,
-    "ast_hash": "effdc03d3282233e61d77dd545f240a0",
+    "mtime": 1779607608.7722178,
+    "ast_hash": "86cba76ab7aac1fe531b917ef59dce75",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\employees.module.ts": {
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\employees.service.ts": {
-    "mtime": 1779539807.2807484,
-    "ast_hash": "6e906867e7a85349ddc84d1e44fc4727",
+    "mtime": 1779613650.649064,
+    "ast_hash": "e2b0327601b4b872d123063bd60b9990",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\dto\\create-employee.dto.ts": {
@@ -785,8 +785,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\dto\\admin-employee.dto.ts": {
-    "mtime": 1779539479.2042353,
-    "ast_hash": "98aaf417b6d9925615036ae784e1172f",
+    "mtime": 1779613639.7148833,
+    "ast_hash": "6a58cb27004360afc2e1ba52d6edaf6e",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\permissions\\permissions.controller.spec.ts": {
@@ -980,8 +980,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\employees\\page.tsx": {
-    "mtime": 1779540774.3659997,
-    "ast_hash": "3a3820289d168c29628e8147c1be40b4",
+    "mtime": 1779608722.0409281,
+    "ast_hash": "0fa4cc3fb8b383756ced16173a562b97",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\settings\\roles\\page.tsx": {
@@ -1025,8 +1025,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\employees\\add-employee-modal.tsx": {
-    "mtime": 1779561916.4507835,
-    "ast_hash": "eba3ba41b4e3f35cfdde655c5652ec25",
+    "mtime": 1779613842.4865808,
+    "ast_hash": "86eb0b4bea50859e887fc1f94f55f1ab",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\ui\\button.tsx": {
@@ -1097,6 +1097,16 @@
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\designations\\components\\designation-modal.tsx": {
     "mtime": 1779562059.6797235,
     "ast_hash": "d181a4158cacbce86c1f52d2351fc4ed",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\employees\\edit-employee-modal.tsx": {
+    "mtime": 1779613868.897255,
+    "ast_hash": "4bee6ae24670685c337bfac73bc13095",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\employees\\view-employee-modal.tsx": {
+    "mtime": 1779608701.153643,
+    "ast_hash": "249e9940fecbdcb8e7b2135f7ce077fe",
     "semantic_hash": ""
   }
 }

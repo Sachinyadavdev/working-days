@@ -23,6 +23,11 @@ const employeeSchema = z.object({
   gender: z.string().optional(),
   dateOfBirth: z.string().optional(),
   address: z.string().optional(),
+  emergencyContact: z.string().optional(),
+  
+  employeeCode: z.string().optional(),
+  workLocation: z.string().optional(),
+  bloodGroup: z.string().optional(),
   
   departmentId: z.string().optional(),
   designationId: z.string().optional(),
@@ -98,8 +103,8 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
 
   const nextStep = async () => {
     const fieldsToValidate = 
-      step === 1 ? ['firstName', 'lastName', 'email', 'phone', 'gender', 'dateOfBirth', 'address'] 
-      : step === 2 ? ['departmentId', 'designationId', 'employeeType', 'dateOfJoining']
+      step === 1 ? ['firstName', 'lastName', 'email', 'phone', 'gender', 'dateOfBirth', 'address', 'emergencyContact'] 
+      : step === 2 ? ['employeeCode', 'departmentId', 'designationId', 'employeeType', 'dateOfJoining', 'workLocation', 'bloodGroup']
       : [];
       
     const isStepValid = await trigger(fieldsToValidate as any);
@@ -241,11 +246,35 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
                   />
                 </div>
                 <div className="space-y-1.5">
+                  <label className="text-sm font-medium text-brand-200">Gender</label>
+                  <select
+                    {...register('gender')}
+                    className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400 text-white [&>option]:bg-brand-900"
+                  >
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-1.5">
                   <label className="text-sm font-medium text-brand-200">Date of Birth</label>
                   <input
                     {...register('dateOfBirth')}
                     type="date"
                     className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label className="text-sm font-medium text-brand-200">Emergency Contact</label>
+                  <input
+                    {...register('emergencyContact')}
+                    className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400"
+                    placeholder="Name, Relation, Phone..."
                   />
                 </div>
               </div>
@@ -264,6 +293,15 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
 
           {step === 2 && (
             <div className="space-y-4 animate-in fade-in slide-in-from-right-4">
+              <div className="space-y-1.5">
+                <label className="text-sm font-medium text-brand-200">Employee Code</label>
+                <input
+                  {...register('employeeCode')}
+                  className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400"
+                  placeholder="Leave empty to auto-generate"
+                />
+              </div>
+
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <label className="text-sm font-medium text-brand-200">Department</label>
@@ -318,6 +356,25 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
                     className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400"
                   />
                   {errors.dateOfJoining && <span className="text-xs text-red-400">{errors.dateOfJoining.message}</span>}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="text-sm font-medium text-brand-200">Work Location</label>
+                  <input
+                    {...register('workLocation')}
+                    className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400"
+                    placeholder="e.g. New York Office"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label className="text-sm font-medium text-brand-200">Blood Group</label>
+                  <input
+                    {...register('bloodGroup')}
+                    className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400"
+                    placeholder="e.g. O+"
+                  />
                 </div>
               </div>
             </div>

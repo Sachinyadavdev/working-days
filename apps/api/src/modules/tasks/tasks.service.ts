@@ -32,7 +32,7 @@ export class TasksService {
         orderBy: { [sortBy || 'createdAt']: sortOrder },
         include: {
           project: { select: { id: true, name: true, key: true } },
-          assignee: { select: { id: true, firstName: true, lastName: true, avatar: true } },
+          assignee: { select: { id: true, user: { select: { id: true, firstName: true, lastName: true, avatar: true } } } },
           reporter: { select: { id: true, firstName: true, lastName: true } },
           _count: { select: { subtasks: true, comments: true } },
         },
@@ -58,7 +58,7 @@ export class TasksService {
       where: { id },
       include: {
         project: { select: { id: true, name: true, key: true } },
-        assignee: { select: { id: true, firstName: true, lastName: true, avatar: true, email: true } },
+        assignee: { select: { id: true, user: { select: { id: true, firstName: true, lastName: true, avatar: true, email: true } } } },
         reporter: { select: { id: true, firstName: true, lastName: true, email: true } },
         subtasks: true,
         comments: {
@@ -78,7 +78,7 @@ export class TasksService {
   async create(dto: CreateTaskDto, reporterId: string) {
     // Auto-increment task number within the project
     const lastTask = await this.prisma.task.findFirst({
-      where: { projectId: dto.projectId },
+      where: { projectId: dto.projectId || null },
       orderBy: { taskNumber: 'desc' },
       select: { taskNumber: true },
     });
@@ -90,23 +90,25 @@ export class TasksService {
         taskNumber,
         title: dto.title,
         description: dto.description,
+        status: dto.status as any,
         priority: dto.priority as any,
-        type: dto.type as any,
-        storyPoints: dto.storyPoints,
-        dueDate: dto.dueDate ? new Date(dto.dueDate) : undefined,
+        estimatedHours: dto.estimatedHours,
+        deadline: dto.deadline ? new Date(dto.deadline) : undefined,
         projectId: dto.projectId,
-        assigneeId: dto.assigneeId,
+        assignedTo: dto.assignedTo,
+        tags: dto.tags || [],
+        attachments: dto.attachments || [],
         reporterId,
         parentId: dto.parentId,
       },
       include: {
         project: { select: { id: true, name: true, key: true } },
-        assignee: { select: { id: true, firstName: true, lastName: true } },
+        assignee: { select: { id: true, user: { select: { firstName: true, lastName: true } } } },
       },
     });
 
     // Emit event for notifications
-    if (task.assigneeId) {
+    if (task.assignedTo) {
       this.eventEmitter.emit('task.assigned', task);
     }
 
@@ -123,8 +125,12 @@ export class TasksService {
     if (dto.status === 'IN_PROGRESS' && !existing.startedAt) {
       updateData.startedAt = new Date();
     }
-    if (dto.status === 'DONE' && !existing.completedAt) {
+    if (dto.status === 'COMPLETED' && !existing.completedAt) {
       updateData.completedAt = new Date();
+    }
+
+    if (dto.deadline) {
+      updateData.deadline = new Date(dto.deadline);
     }
 
     const task = await this.prisma.task.update({

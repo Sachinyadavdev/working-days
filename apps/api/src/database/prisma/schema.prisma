@@ -31,7 +31,6 @@ model User {
   activityLogs   ActivityLog[]
   deviceHistory  DeviceHistory[]
   ownedWorkspaces Workspace[]
-  assignedTasks  Task[]         @relation("TaskAssignee")
   reportedTasks  Task[]         @relation("TaskReporter")
   comments       Comment[]
 
@@ -171,6 +170,7 @@ model Employee {
   leaveRequests    LeaveRequest[]
   workspaceMembers WorkspaceMember[]
   managedDepartments Department[]     @relation("DepartmentManager")
+  assignedTasks      Task[]           @relation("TaskAssignee")
 
   @@map("employees")
   @@index([employeeCode])
@@ -322,32 +322,34 @@ enum Priority {
   LOW
   MEDIUM
   HIGH
-  URGENT
+  CRITICAL
 }
 
 // ============== TASKS ==============
 
 model Task {
-  id          String     @id @default(uuid())
-  taskNumber  Int        @map("task_number")
-  title       String
-  description String?
-  status      TaskStatus @default(BACKLOG)
-  priority    Priority   @default(MEDIUM)
-  type        TaskType   @default(TASK)
-  storyPoints Int?       @map("story_points")
-  dueDate     DateTime?  @map("due_date")
-  startedAt   DateTime?  @map("started_at")
-  completedAt DateTime?  @map("completed_at")
-  projectId   String     @map("project_id")
-  assigneeId  String?    @map("assignee_id")
-  reporterId  String     @map("reporter_id")
-  parentId    String?    @map("parent_id")
-  createdAt   DateTime   @default(now()) @map("created_at")
-  updatedAt   DateTime   @updatedAt @map("updated_at")
+  id             String     @id @default(uuid())
+  taskNumber     Int        @map("task_number")
+  title          String
+  description    String?
+  status         TaskStatus @default(PENDING)
+  priority       Priority   @default(MEDIUM)
+  type           TaskType   @default(TASK)
+  estimatedHours Float?     @map("estimated_hours")
+  deadline       DateTime?
+  tags           String[]   @default([])
+  attachments    String[]   @default([])
+  startedAt      DateTime?  @map("started_at")
+  completedAt    DateTime?  @map("completed_at")
+  projectId      String?    @map("project_id")
+  assignedTo     String?    @map("assigned_to")
+  reporterId     String     @map("reporter_id")
+  parentId       String?    @map("parent_id")
+  createdAt      DateTime   @default(now()) @map("created_at")
+  updatedAt      DateTime   @updatedAt @map("updated_at")
 
-  project  Project   @relation(fields: [projectId], references: [id], onDelete: Cascade)
-  assignee User?     @relation("TaskAssignee", fields: [assigneeId], references: [id])
+  project  Project?  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  assignee Employee? @relation("TaskAssignee", fields: [assignedTo], references: [id])
   reporter User      @relation("TaskReporter", fields: [reporterId], references: [id])
   parent   Task?     @relation("TaskSubtasks", fields: [parentId], references: [id])
   subtasks Task[]    @relation("TaskSubtasks")
@@ -356,17 +358,18 @@ model Task {
   @@unique([projectId, taskNumber])
   @@map("tasks")
   @@index([projectId])
-  @@index([assigneeId])
+  @@index([assignedTo])
   @@index([status])
   @@index([priority])
 }
 
 enum TaskStatus {
-  BACKLOG
-  TODO
+  PENDING
   IN_PROGRESS
   IN_REVIEW
-  DONE
+  TESTING
+  COMPLETED
+  BLOCKED
   CANCELLED
 }
 

@@ -1782,7 +1782,7 @@
       "source_file": "apps/api/src/common/decorators/public.decorator.ts",
       "source_location": "L1",
       "id": "apps_api_src_common_decorators_public_decorator_ts",
-      "community": 50,
+      "community": 1,
       "norm_label": "public.decorator.ts"
     },
     {
@@ -1791,7 +1791,7 @@
       "source_file": "apps/api/src/common/decorators/public.decorator.ts",
       "source_location": "L9",
       "id": "decorators_public_decorator_public",
-      "community": 50,
+      "community": 1,
       "norm_label": "public()"
     },
     {
@@ -1818,7 +1818,7 @@
       "source_file": "apps/api/src/common/dto/pagination.dto.ts",
       "source_location": "L1",
       "id": "apps_api_src_common_dto_pagination_dto_ts",
-      "community": 70,
+      "community": 53,
       "norm_label": "pagination.dto.ts"
     },
     {
@@ -1827,7 +1827,7 @@
       "source_file": "apps/api/src/common/dto/pagination.dto.ts",
       "source_location": "L5",
       "id": "dto_pagination_dto_paginationdto",
-      "community": 70,
+      "community": 53,
       "norm_label": "paginationdto"
     },
     {
@@ -1836,7 +1836,7 @@
       "source_file": "apps/api/src/common/dto/pagination.dto.ts",
       "source_location": "L36",
       "id": "dto_pagination_dto_paginationdto_skip",
-      "community": 70,
+      "community": 53,
       "norm_label": ".skip()"
     },
     {
@@ -2070,7 +2070,7 @@
       "source_file": "apps/api/src/common/interceptors/transform.interceptor.ts",
       "source_location": "L1",
       "id": "apps_api_src_common_interceptors_transform_interceptor_ts",
-      "community": 79,
+      "community": 2,
       "norm_label": "transform.interceptor.ts"
     },
     {
@@ -2079,7 +2079,7 @@
       "source_file": "apps/api/src/common/interceptors/transform.interceptor.ts",
       "source_location": "L10",
       "id": "interceptors_transform_interceptor_transformedresponse",
-      "community": 79,
+      "community": 2,
       "norm_label": "transformedresponse"
     },
     {
@@ -2088,7 +2088,7 @@
       "source_file": "apps/api/src/common/interceptors/transform.interceptor.ts",
       "source_location": "L17",
       "id": "interceptors_transform_interceptor_transforminterceptor",
-      "community": 79,
+      "community": 2,
       "norm_label": "transforminterceptor"
     },
     {
@@ -2097,7 +2097,7 @@
       "source_file": "apps/api/src/common/interceptors/transform.interceptor.ts",
       "source_location": "L20",
       "id": "interceptors_transform_interceptor_transforminterceptor_intercept",
-      "community": 79,
+      "community": 2,
       "norm_label": ".intercept()"
     },
     {
@@ -2133,7 +2133,7 @@
       "source_file": "apps/api/src/database/database.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_database_database_module_ts",
-      "community": 70,
+      "community": 65,
       "norm_label": "database.module.ts"
     },
     {
@@ -2142,7 +2142,7 @@
       "source_file": "apps/api/src/database/database.module.ts",
       "source_location": "L10",
       "id": "database_database_module_databasemodule",
-      "community": 70,
+      "community": 65,
       "norm_label": "databasemodule"
     },
     {
@@ -2151,7 +2151,7 @@
       "source_file": "apps/api/src/database/prisma.service.ts",
       "source_location": "L1",
       "id": "apps_api_src_database_prisma_service_ts",
-      "community": 70,
+      "community": 58,
       "norm_label": "prisma.service.ts"
     },
     {
@@ -2160,7 +2160,7 @@
       "source_file": "apps/api/src/database/prisma.service.ts",
       "source_location": "L7",
       "id": "database_prisma_service_prismaservice",
-      "community": 70,
+      "community": 58,
       "norm_label": "prismaservice"
     },
     {
@@ -2169,7 +2169,7 @@
       "source_file": "apps/api/src/database/prisma.service.ts",
       "source_location": "L8",
       "id": "database_prisma_service_prismaservice_constructor",
-      "community": 70,
+      "community": 58,
       "norm_label": ".constructor()"
     },
     {
@@ -2178,7 +2178,7 @@
       "source_file": "apps/api/src/database/prisma.service.ts",
       "source_location": "L18",
       "id": "database_prisma_service_prismaservice_onmoduleinit",
-      "community": 70,
+      "community": 58,
       "norm_label": ".onmoduleinit()"
     },
     {
@@ -2187,7 +2187,7 @@
       "source_file": "apps/api/src/database/prisma.service.ts",
       "source_location": "L36",
       "id": "database_prisma_service_prismaservice_onmoduledestroy",
-      "community": 70,
+      "community": 58,
       "norm_label": ".onmoduledestroy()"
     },
     {
@@ -2196,7 +2196,7 @@
       "source_file": "apps/api/src/database/prisma.service.ts",
       "source_location": "L44",
       "id": "database_prisma_service_prismaservice_ishealthy",
-      "community": 70,
+      "community": 58,
       "norm_label": ".ishealthy()"
     },
     {
@@ -2232,7 +2232,7 @@
       "source_file": "apps/api/src/health/health.controller.ts",
       "source_location": "L1",
       "id": "apps_api_src_health_health_controller_ts",
-      "community": 50,
+      "community": 1,
       "norm_label": "health.controller.ts"
     },
     {
@@ -2241,7 +2241,7 @@
       "source_file": "apps/api/src/health/health.controller.ts",
       "source_location": "L10",
       "id": "health_health_controller_healthcontroller",
-      "community": 50,
+      "community": 1,
       "norm_label": "healthcontroller"
     },
     {
@@ -2250,7 +2250,7 @@
       "source_file": "apps/api/src/health/health.controller.ts",
       "source_location": "L11",
       "id": "health_health_controller_healthcontroller_constructor",
-      "community": 50,
+      "community": 1,
       "norm_label": ".constructor()"
     },
     {
@@ -2259,7 +2259,7 @@
       "source_file": "apps/api/src/health/health.controller.ts",
       "source_location": "L19",
       "id": "health_health_controller_healthcontroller_check",
-      "community": 50,
+      "community": 1,
       "norm_label": ".check()"
     },
     {
@@ -2268,7 +2268,7 @@
       "source_file": "apps/api/src/health/health.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_health_health_module_ts",
-      "community": 50,
+      "community": 1,
       "norm_label": "health.module.ts"
     },
     {
@@ -2277,7 +2277,7 @@
       "source_file": "apps/api/src/health/health.module.ts",
       "source_location": "L5",
       "id": "health_health_module_healthmodule",
-      "community": 50,
+      "community": 1,
       "norm_label": "healthmodule"
     },
     {
@@ -2376,7 +2376,7 @@
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.controller.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_activity_logs_activity_logs_controller_ts",
-      "community": 70,
+      "community": 28,
       "norm_label": "activity-logs.controller.ts"
     },
     {
@@ -2430,7 +2430,7 @@
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_activity_logs_activity_logs_service_ts",
-      "community": 70,
+      "community": 28,
       "norm_label": "activity-logs.service.ts"
     },
     {
@@ -2511,7 +2511,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L12",
       "id": "attendance_attendance_controller_attendancecontroller",
-      "community": 53,
+      "community": 80,
       "norm_label": "attendancecontroller"
     },
     {
@@ -2520,7 +2520,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L13",
       "id": "attendance_attendance_controller_attendancecontroller_constructor",
-      "community": 53,
+      "community": 80,
       "norm_label": ".constructor()"
     },
     {
@@ -2529,7 +2529,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L17",
       "id": "attendance_attendance_controller_attendancecontroller_checkin",
-      "community": 53,
+      "community": 80,
       "norm_label": ".checkin()"
     },
     {
@@ -2538,7 +2538,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L23",
       "id": "attendance_attendance_controller_attendancecontroller_checkout",
-      "community": 53,
+      "community": 80,
       "norm_label": ".checkout()"
     },
     {
@@ -2547,7 +2547,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L29",
       "id": "attendance_attendance_controller_attendancecontroller_findall",
-      "community": 53,
+      "community": 80,
       "norm_label": ".findall()"
     },
     {
@@ -2736,7 +2736,7 @@
       "source_file": "apps/api/src/modules/auth/auth.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_auth_auth_module_ts",
-      "community": 1,
+      "community": 70,
       "norm_label": "auth.module.ts"
     },
     {
@@ -2745,7 +2745,7 @@
       "source_file": "apps/api/src/modules/auth/auth.module.ts",
       "source_location": "L47",
       "id": "auth_auth_module_authmodule",
-      "community": 1,
+      "community": 70,
       "norm_label": "authmodule"
     },
     {
@@ -2898,7 +2898,7 @@
       "source_file": "apps/api/src/modules/auth/strategies/jwt-refresh.strategy.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_auth_strategies_jwt_refresh_strategy_ts",
-      "community": 1,
+      "community": 70,
       "norm_label": "jwt-refresh.strategy.ts"
     },
     {
@@ -2907,7 +2907,7 @@
       "source_file": "apps/api/src/modules/auth/strategies/jwt-refresh.strategy.ts",
       "source_location": "L8",
       "id": "strategies_jwt_refresh_strategy_jwtrefreshstrategy",
-      "community": 1,
+      "community": 70,
       "norm_label": "jwtrefreshstrategy"
     },
     {
@@ -2916,7 +2916,7 @@
       "source_file": "apps/api/src/modules/auth/strategies/jwt-refresh.strategy.ts",
       "source_location": "L9",
       "id": "strategies_jwt_refresh_strategy_jwtrefreshstrategy_constructor",
-      "community": 1,
+      "community": 70,
       "norm_label": ".constructor()"
     },
     {
@@ -2925,7 +2925,7 @@
       "source_file": "apps/api/src/modules/auth/strategies/jwt-refresh.strategy.ts",
       "source_location": "L18",
       "id": "strategies_jwt_refresh_strategy_jwtrefreshstrategy_validate",
-      "community": 1,
+      "community": 70,
       "norm_label": ".validate()"
     },
     {
@@ -2934,7 +2934,7 @@
       "source_file": "apps/api/src/modules/auth/strategies/jwt.strategy.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_auth_strategies_jwt_strategy_ts",
-      "community": 1,
+      "community": 70,
       "norm_label": "jwt.strategy.ts"
     },
     {
@@ -2943,7 +2943,7 @@
       "source_file": "apps/api/src/modules/auth/strategies/jwt.strategy.ts",
       "source_location": "L9",
       "id": "strategies_jwt_strategy_jwtstrategy",
-      "community": 1,
+      "community": 70,
       "norm_label": "jwtstrategy"
     },
     {
@@ -2952,7 +2952,7 @@
       "source_file": "apps/api/src/modules/auth/strategies/jwt.strategy.ts",
       "source_location": "L10",
       "id": "strategies_jwt_strategy_jwtstrategy_constructor",
-      "community": 1,
+      "community": 70,
       "norm_label": ".constructor()"
     },
     {
@@ -2961,7 +2961,7 @@
       "source_file": "apps/api/src/modules/auth/strategies/jwt.strategy.ts",
       "source_location": "L18",
       "id": "strategies_jwt_strategy_jwtstrategy_validate",
-      "community": 1,
+      "community": 70,
       "norm_label": ".validate()"
     },
     {
@@ -3820,10 +3820,19 @@
       "norm_label": ".createemployeeasadmin()"
     },
     {
-      "label": ".changeStatus()",
+      "label": ".updateEmployeeAsAdmin()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.controller.ts",
       "source_location": "L53",
+      "id": "employees_employees_controller_employeescontroller_updateemployeeasadmin",
+      "community": 0,
+      "norm_label": ".updateemployeeasadmin()"
+    },
+    {
+      "label": ".changeStatus()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/employees/employees.controller.ts",
+      "source_location": "L60",
       "id": "employees_employees_controller_employeescontroller_changestatus",
       "community": 0,
       "norm_label": ".changestatus()"
@@ -3832,7 +3841,7 @@
       "label": ".resetPasswordAsAdmin()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.controller.ts",
-      "source_location": "L60",
+      "source_location": "L67",
       "id": "employees_employees_controller_employeescontroller_resetpasswordasadmin",
       "community": 0,
       "norm_label": ".resetpasswordasadmin()"
@@ -3841,7 +3850,7 @@
       "label": ".changeRole()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.controller.ts",
-      "source_location": "L67",
+      "source_location": "L74",
       "id": "employees_employees_controller_employeescontroller_changerole",
       "community": 0,
       "norm_label": ".changerole()"
@@ -3904,7 +3913,7 @@
       "label": ".findById()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
-      "source_location": "L69",
+      "source_location": "L78",
       "id": "employees_employees_service_employeesservice_findbyid",
       "community": 0,
       "norm_label": ".findbyid()"
@@ -3913,7 +3922,7 @@
       "label": ".create()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
-      "source_location": "L95",
+      "source_location": "L113",
       "id": "employees_employees_service_employeesservice_create",
       "community": 0,
       "norm_label": ".create()"
@@ -3922,7 +3931,7 @@
       "label": ".update()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
-      "source_location": "L119",
+      "source_location": "L137",
       "id": "employees_employees_service_employeesservice_update",
       "community": 0,
       "norm_label": ".update()"
@@ -3931,16 +3940,25 @@
       "label": ".createEmployeeAsAdmin()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
-      "source_location": "L143",
+      "source_location": "L161",
       "id": "employees_employees_service_employeesservice_createemployeeasadmin",
       "community": 0,
       "norm_label": ".createemployeeasadmin()"
     },
     {
+      "label": ".updateEmployeeAsAdmin()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/employees/employees.service.ts",
+      "source_location": "L229",
+      "id": "employees_employees_service_employeesservice_updateemployeeasadmin",
+      "community": 0,
+      "norm_label": ".updateemployeeasadmin()"
+    },
+    {
       "label": ".changeStatus()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
-      "source_location": "L208",
+      "source_location": "L288",
       "id": "employees_employees_service_employeesservice_changestatus",
       "community": 0,
       "norm_label": ".changestatus()"
@@ -3949,7 +3967,7 @@
       "label": ".resetPasswordAsAdmin()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
-      "source_location": "L225",
+      "source_location": "L305",
       "id": "employees_employees_service_employeesservice_resetpasswordasadmin",
       "community": 0,
       "norm_label": ".resetpasswordasadmin()"
@@ -3958,7 +3976,7 @@
       "label": ".changeRole()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
-      "source_location": "L248",
+      "source_location": "L328",
       "id": "employees_employees_service_employeesservice_changerole",
       "community": 0,
       "norm_label": ".changerole()"
@@ -3976,16 +3994,25 @@
       "label": "AdminCreateEmployeeDto",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/dto/admin-employee.dto.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "id": "dto_admin_employee_dto_admincreateemployeedto",
       "community": 0,
       "norm_label": "admincreateemployeedto"
     },
     {
+      "label": "AdminUpdateEmployeeDto",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/employees/dto/admin-employee.dto.ts",
+      "source_location": "L28",
+      "id": "dto_admin_employee_dto_adminupdateemployeedto",
+      "community": 0,
+      "norm_label": "adminupdateemployeedto"
+    },
+    {
       "label": "ChangeRoleDto",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/dto/admin-employee.dto.ts",
-      "source_location": "L23",
+      "source_location": "L30",
       "id": "dto_admin_employee_dto_changeroledto",
       "community": 0,
       "norm_label": "changeroledto"
@@ -3994,7 +4021,7 @@
       "label": "ResetPasswordDto",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/dto/admin-employee.dto.ts",
-      "source_location": "L27",
+      "source_location": "L34",
       "id": "dto_admin_employee_dto_resetpassworddto",
       "community": 0,
       "norm_label": "resetpassworddto"
@@ -4003,7 +4030,7 @@
       "label": "ChangeStatusDto",
       "file_type": "code",
       "source_file": "apps/api/src/modules/employees/dto/admin-employee.dto.ts",
-      "source_location": "L31",
+      "source_location": "L38",
       "id": "dto_admin_employee_dto_changestatusdto",
       "community": 0,
       "norm_label": "changestatusdto"
@@ -4212,7 +4239,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_notifications_notifications_controller_ts",
-      "community": 70,
+      "community": 53,
       "norm_label": "notifications.controller.ts"
     },
     {
@@ -4221,7 +4248,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L10",
       "id": "notifications_notifications_controller_notificationscontroller",
-      "community": 68,
+      "community": 57,
       "norm_label": "notificationscontroller"
     },
     {
@@ -4230,7 +4257,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L11",
       "id": "notifications_notifications_controller_notificationscontroller_constructor",
-      "community": 68,
+      "community": 57,
       "norm_label": ".constructor()"
     },
     {
@@ -4239,7 +4266,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L15",
       "id": "notifications_notifications_controller_notificationscontroller_findall",
-      "community": 68,
+      "community": 57,
       "norm_label": ".findall()"
     },
     {
@@ -4248,7 +4275,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L21",
       "id": "notifications_notifications_controller_notificationscontroller_markasread",
-      "community": 68,
+      "community": 57,
       "norm_label": ".markasread()"
     },
     {
@@ -4257,7 +4284,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L25",
       "id": "notifications_notifications_controller_notificationscontroller_markallasread",
-      "community": 68,
+      "community": 57,
       "norm_label": ".markallasread()"
     },
     {
@@ -4347,7 +4374,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.service.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_notifications_notifications_service_ts",
-      "community": 70,
+      "community": 53,
       "norm_label": "notifications.service.ts"
     },
     {
@@ -5670,7 +5697,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L12",
       "id": "teams_teams_controller_teamscontroller",
-      "community": 17,
+      "community": 79,
       "norm_label": "teamscontroller"
     },
     {
@@ -5679,7 +5706,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L13",
       "id": "teams_teams_controller_teamscontroller_constructor",
-      "community": 17,
+      "community": 79,
       "norm_label": ".constructor()"
     },
     {
@@ -5688,7 +5715,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L17",
       "id": "teams_teams_controller_teamscontroller_findall",
-      "community": 17,
+      "community": 79,
       "norm_label": ".findall()"
     },
     {
@@ -5697,7 +5724,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L21",
       "id": "teams_teams_controller_teamscontroller_create",
-      "community": 17,
+      "community": 79,
       "norm_label": ".create()"
     },
     {
@@ -5706,7 +5733,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L25",
       "id": "teams_teams_controller_teamscontroller_findone",
-      "community": 17,
+      "community": 79,
       "norm_label": ".findone()"
     },
     {
@@ -5715,7 +5742,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L29",
       "id": "teams_teams_controller_teamscontroller_update",
-      "community": 17,
+      "community": 79,
       "norm_label": ".update()"
     },
     {
@@ -5724,7 +5751,7 @@
       "source_file": "apps/api/src/modules/teams/teams.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_teams_teams_module_ts",
-      "community": 17,
+      "community": 65,
       "norm_label": "teams.module.ts"
     },
     {
@@ -5733,7 +5760,7 @@
       "source_file": "apps/api/src/modules/teams/teams.module.ts",
       "source_location": "L10",
       "id": "teams_teams_module_teamsmodule",
-      "community": 17,
+      "community": 65,
       "norm_label": "teamsmodule"
     },
     {
@@ -5922,7 +5949,7 @@
       "source_file": "apps/api/src/modules/users/users.module.ts",
       "source_location": "L11",
       "id": "users_users_module_usersmodule",
-      "community": 1,
+      "community": 70,
       "norm_label": "usersmodule"
     },
     {
@@ -7245,7 +7272,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "community": 12,
+      "community": 48,
       "norm_label": "page.tsx"
     },
     {
@@ -7254,7 +7281,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L13",
       "id": "departments_page_department",
-      "community": 12,
+      "community": 48,
       "norm_label": "department"
     },
     {
@@ -7263,7 +7290,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L29",
       "id": "departments_page_departmentspage",
-      "community": 12,
+      "community": 48,
       "norm_label": "departmentspage()"
     },
     {
@@ -7308,7 +7335,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L37",
       "id": "components_department_modal_departmentmodal",
-      "community": 12,
+      "community": 48,
       "norm_label": "departmentmodal()"
     },
     {
@@ -7317,7 +7344,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "community": 12,
+      "community": 48,
       "norm_label": "page.tsx"
     },
     {
@@ -7326,7 +7353,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L13",
       "id": "designations_page_designation",
-      "community": 12,
+      "community": 48,
       "norm_label": "designation"
     },
     {
@@ -7335,7 +7362,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L25",
       "id": "designations_page_designationspage",
-      "community": 12,
+      "community": 48,
       "norm_label": "designationspage()"
     },
     {
@@ -7380,7 +7407,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L35",
       "id": "components_designation_modal_designationmodal",
-      "community": 12,
+      "community": 48,
       "norm_label": "designationmodal()"
     },
     {
@@ -7425,7 +7452,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/users/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_admin_users_page_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "page.tsx"
     },
     {
@@ -7434,7 +7461,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/users/page.tsx",
       "source_location": "L21",
       "id": "users_page_adminuserspage",
-      "community": 48,
+      "community": 68,
       "norm_label": "adminuserspage()"
     },
     {
@@ -7560,14 +7587,14 @@
       "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_employees_page_tsx",
-      "community": 51,
+      "community": 68,
       "norm_label": "page.tsx"
     },
     {
       "label": "EmployeeDirectoryPage()",
       "file_type": "code",
       "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
-      "source_location": "L16",
+      "source_location": "L18",
       "id": "employees_page_employeedirectorypage",
       "community": 51,
       "norm_label": "employeedirectorypage()"
@@ -7605,7 +7632,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/permission-matrix.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_settings_roles_components_permission_matrix_tsx",
-      "community": 48,
+      "community": 12,
       "norm_label": "permission-matrix.tsx"
     },
     {
@@ -7614,7 +7641,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/permission-matrix.tsx",
       "source_location": "L9",
       "id": "components_permission_matrix_permissionmatrixprops",
-      "community": 48,
+      "community": 12,
       "norm_label": "permissionmatrixprops"
     },
     {
@@ -7623,7 +7650,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/permission-matrix.tsx",
       "source_location": "L16",
       "id": "components_permission_matrix_permissiongroup",
-      "community": 48,
+      "community": 12,
       "norm_label": "permissiongroup"
     },
     {
@@ -7677,7 +7704,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/role-dialog.tsx",
       "source_location": "L29",
       "id": "components_role_dialog_roledialog",
-      "community": 49,
+      "community": 48,
       "norm_label": "roledialog()"
     },
     {
@@ -7686,7 +7713,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/users/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_settings_users_page_tsx",
-      "community": 12,
+      "community": 49,
       "norm_label": "page.tsx"
     },
     {
@@ -7695,7 +7722,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/users/page.tsx",
       "source_location": "L10",
       "id": "users_page_user",
-      "community": 12,
+      "community": 49,
       "norm_label": "user"
     },
     {
@@ -7704,7 +7731,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/users/page.tsx",
       "source_location": "L18",
       "id": "users_page_userspage",
-      "community": 12,
+      "community": 49,
       "norm_label": "userspage()"
     },
     {
@@ -7740,7 +7767,7 @@
       "source_file": "apps/web/src/components/auth/require-permission.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_auth_require_permission_tsx",
-      "community": 12,
+      "community": 49,
       "norm_label": "require-permission.tsx"
     },
     {
@@ -7749,7 +7776,7 @@
       "source_file": "apps/web/src/components/auth/require-permission.tsx",
       "source_location": "L6",
       "id": "auth_require_permission_requirepermissionprops",
-      "community": 12,
+      "community": 49,
       "norm_label": "requirepermissionprops"
     },
     {
@@ -7758,7 +7785,7 @@
       "source_file": "apps/web/src/components/auth/require-permission.tsx",
       "source_location": "L13",
       "id": "auth_require_permission_requirepermission",
-      "community": 12,
+      "community": 49,
       "norm_label": "requirepermission()"
     },
     {
@@ -7794,7 +7821,7 @@
       "source_file": "apps/web/src/components/employees/access-management-modals.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_employees_access_management_modals_tsx",
-      "community": 51,
+      "community": 68,
       "norm_label": "access-management-modals.tsx"
     },
     {
@@ -7803,7 +7830,7 @@
       "source_file": "apps/web/src/components/employees/access-management-modals.tsx",
       "source_location": "L20",
       "id": "employees_access_management_modals_resetpasswordmodalprops",
-      "community": 51,
+      "community": 68,
       "norm_label": "resetpasswordmodalprops"
     },
     {
@@ -7812,7 +7839,7 @@
       "source_file": "apps/web/src/components/employees/access-management-modals.tsx",
       "source_location": "L27",
       "id": "employees_access_management_modals_resetpasswordmodal",
-      "community": 51,
+      "community": 68,
       "norm_label": "resetpasswordmodal()"
     },
     {
@@ -7821,7 +7848,7 @@
       "source_file": "apps/web/src/components/employees/access-management-modals.tsx",
       "source_location": "L105",
       "id": "employees_access_management_modals_roleschema",
-      "community": 51,
+      "community": 68,
       "norm_label": "roleschema"
     },
     {
@@ -7830,7 +7857,7 @@
       "source_file": "apps/web/src/components/employees/access-management-modals.tsx",
       "source_location": "L109",
       "id": "employees_access_management_modals_changerolemodalprops",
-      "community": 51,
+      "community": 68,
       "norm_label": "changerolemodalprops"
     },
     {
@@ -7839,7 +7866,7 @@
       "source_file": "apps/web/src/components/employees/access-management-modals.tsx",
       "source_location": "L116",
       "id": "employees_access_management_modals_changerolemodal",
-      "community": 51,
+      "community": 68,
       "norm_label": "changerolemodal()"
     },
     {
@@ -7848,7 +7875,7 @@
       "source_file": "apps/web/src/components/employees/access-management-modals.tsx",
       "source_location": "L185",
       "id": "employees_access_management_modals_changestatusmodalprops",
-      "community": 51,
+      "community": 68,
       "norm_label": "changestatusmodalprops"
     },
     {
@@ -7857,7 +7884,7 @@
       "source_file": "apps/web/src/components/employees/access-management-modals.tsx",
       "source_location": "L192",
       "id": "employees_access_management_modals_changestatusmodal",
-      "community": 51,
+      "community": 68,
       "norm_label": "changestatusmodal()"
     },
     {
@@ -7866,7 +7893,7 @@
       "source_file": "apps/web/src/components/employees/add-employee-modal.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_employees_add_employee_modal_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "add-employee-modal.tsx"
     },
     {
@@ -7875,35 +7902,107 @@
       "source_file": "apps/web/src/components/employees/add-employee-modal.tsx",
       "source_location": "L18",
       "id": "employees_add_employee_modal_employeeschema",
-      "community": 48,
+      "community": 68,
       "norm_label": "employeeschema"
     },
     {
       "label": "EmployeeFormValues",
       "file_type": "code",
       "source_file": "apps/web/src/components/employees/add-employee-modal.tsx",
-      "source_location": "L35",
+      "source_location": "L40",
       "id": "employees_add_employee_modal_employeeformvalues",
-      "community": 48,
+      "community": 68,
       "norm_label": "employeeformvalues"
     },
     {
       "label": "AddEmployeeModalProps",
       "file_type": "code",
       "source_file": "apps/web/src/components/employees/add-employee-modal.tsx",
-      "source_location": "L37",
+      "source_location": "L42",
       "id": "employees_add_employee_modal_addemployeemodalprops",
-      "community": 48,
+      "community": 68,
       "norm_label": "addemployeemodalprops"
     },
     {
       "label": "AddEmployeeModal()",
       "file_type": "code",
       "source_file": "apps/web/src/components/employees/add-employee-modal.tsx",
-      "source_location": "L42",
+      "source_location": "L47",
       "id": "employees_add_employee_modal_addemployeemodal",
-      "community": 48,
+      "community": 68,
       "norm_label": "addemployeemodal()"
+    },
+    {
+      "label": "edit-employee-modal.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "community": 68,
+      "norm_label": "edit-employee-modal.tsx"
+    },
+    {
+      "label": "employeeSchema",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L18",
+      "id": "employees_edit_employee_modal_employeeschema",
+      "community": 68,
+      "norm_label": "employeeschema"
+    },
+    {
+      "label": "EmployeeFormValues",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L40",
+      "id": "employees_edit_employee_modal_employeeformvalues",
+      "community": 68,
+      "norm_label": "employeeformvalues"
+    },
+    {
+      "label": "EditEmployeeModalProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L42",
+      "id": "employees_edit_employee_modal_editemployeemodalprops",
+      "community": 68,
+      "norm_label": "editemployeemodalprops"
+    },
+    {
+      "label": "EditEmployeeModal()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L48",
+      "id": "employees_edit_employee_modal_editemployeemodal",
+      "community": 68,
+      "norm_label": "editemployeemodal()"
+    },
+    {
+      "label": "view-employee-modal.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "community": 68,
+      "norm_label": "view-employee-modal.tsx"
+    },
+    {
+      "label": "ViewEmployeeModalProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L15",
+      "id": "employees_view_employee_modal_viewemployeemodalprops",
+      "community": 68,
+      "norm_label": "viewemployeemodalprops"
+    },
+    {
+      "label": "ViewEmployeeModal()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L21",
+      "id": "employees_view_employee_modal_viewemployeemodal",
+      "community": 24,
+      "norm_label": "viewemployeemodal()"
     },
     {
       "label": "app-sidebar.tsx",
@@ -7974,7 +8073,7 @@
       "source_file": "apps/web/src/components/ui/button.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_button_tsx",
-      "community": 12,
+      "community": 48,
       "norm_label": "button.tsx"
     },
     {
@@ -7983,7 +8082,7 @@
       "source_file": "apps/web/src/components/ui/button.tsx",
       "source_location": "L7",
       "id": "ui_button_buttonvariants",
-      "community": 12,
+      "community": 48,
       "norm_label": "buttonvariants"
     },
     {
@@ -7992,7 +8091,7 @@
       "source_file": "apps/web/src/components/ui/button.tsx",
       "source_location": "L36",
       "id": "ui_button_buttonprops",
-      "community": 12,
+      "community": 48,
       "norm_label": "buttonprops"
     },
     {
@@ -8001,7 +8100,7 @@
       "source_file": "apps/web/src/components/ui/button.tsx",
       "source_location": "L42",
       "id": "ui_button_button",
-      "community": 12,
+      "community": 48,
       "norm_label": "button"
     },
     {
@@ -8073,7 +8172,7 @@
       "source_file": "apps/web/src/components/ui/checkbox.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_checkbox_tsx",
-      "community": 48,
+      "community": 12,
       "norm_label": "checkbox.tsx"
     },
     {
@@ -8082,7 +8181,7 @@
       "source_file": "apps/web/src/components/ui/checkbox.tsx",
       "source_location": "L7",
       "id": "ui_checkbox_checkbox",
-      "community": 48,
+      "community": 12,
       "norm_label": "checkbox"
     },
     {
@@ -8091,7 +8190,7 @@
       "source_file": "apps/web/src/components/ui/data-table.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_data_table_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "data-table.tsx"
     },
     {
@@ -8100,7 +8199,7 @@
       "source_file": "apps/web/src/components/ui/data-table.tsx",
       "source_location": "L5",
       "id": "ui_data_table_datatableprops",
-      "community": 48,
+      "community": 68,
       "norm_label": "datatableprops"
     },
     {
@@ -8109,7 +8208,7 @@
       "source_file": "apps/web/src/components/ui/data-table.tsx",
       "source_location": "L26",
       "id": "ui_data_table_datatable",
-      "community": 48,
+      "community": 68,
       "norm_label": "datatable()"
     },
     {
@@ -8118,7 +8217,7 @@
       "source_file": "apps/web/src/components/ui/dialog.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_dialog_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "dialog.tsx"
     },
     {
@@ -8127,7 +8226,7 @@
       "source_file": "apps/web/src/components/ui/dialog.tsx",
       "source_location": "L11",
       "id": "ui_dialog_dialogoverlay",
-      "community": 48,
+      "community": 68,
       "norm_label": "dialogoverlay"
     },
     {
@@ -8136,7 +8235,7 @@
       "source_file": "apps/web/src/components/ui/dialog.tsx",
       "source_location": "L26",
       "id": "ui_dialog_dialogcontent",
-      "community": 48,
+      "community": 68,
       "norm_label": "dialogcontent"
     },
     {
@@ -8145,7 +8244,7 @@
       "source_file": "apps/web/src/components/ui/dialog.tsx",
       "source_location": "L46",
       "id": "ui_dialog_dialogheader",
-      "community": 48,
+      "community": 68,
       "norm_label": "dialogheader()"
     },
     {
@@ -8154,7 +8253,7 @@
       "source_file": "apps/web/src/components/ui/dialog.tsx",
       "source_location": "L60",
       "id": "ui_dialog_dialogfooter",
-      "community": 48,
+      "community": 12,
       "norm_label": "dialogfooter()"
     },
     {
@@ -8163,7 +8262,7 @@
       "source_file": "apps/web/src/components/ui/dialog.tsx",
       "source_location": "L74",
       "id": "ui_dialog_dialogtitle",
-      "community": 48,
+      "community": 68,
       "norm_label": "dialogtitle"
     },
     {
@@ -8172,7 +8271,7 @@
       "source_file": "apps/web/src/components/ui/dialog.tsx",
       "source_location": "L89",
       "id": "ui_dialog_dialogdescription",
-      "community": 48,
+      "community": 68,
       "norm_label": "dialogdescription"
     },
     {
@@ -12684,9 +12783,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "apps_api_src_common_decorators_roles_decorator_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_common_decorators_roles_decorator_ts"
     },
     {
       "relation": "imports_from",
@@ -12695,9 +12794,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "apps_api_src_common_decorators_roles_decorator_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_common_decorators_roles_decorator_ts"
     },
     {
       "relation": "imports_from",
@@ -12794,9 +12893,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "decorators_roles_decorator_roles",
-      "confidence_score": 1.0
+      "target": "decorators_roles_decorator_roles"
     },
     {
       "relation": "imports",
@@ -12805,9 +12904,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "decorators_roles_decorator_roles",
-      "confidence_score": 1.0
+      "target": "decorators_roles_decorator_roles"
     },
     {
       "relation": "imports",
@@ -13413,9 +13512,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "apps_api_src_common_guards_jwt_auth_guard_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_common_guards_jwt_auth_guard_ts"
     },
     {
       "relation": "imports_from",
@@ -13424,9 +13523,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "apps_api_src_common_guards_jwt_auth_guard_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_common_guards_jwt_auth_guard_ts"
     },
     {
       "relation": "imports_from",
@@ -13521,9 +13620,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "guards_jwt_auth_guard_jwtauthguard",
-      "confidence_score": 1.0
+      "target": "guards_jwt_auth_guard_jwtauthguard"
     },
     {
       "relation": "imports",
@@ -13532,9 +13631,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "guards_jwt_auth_guard_jwtauthguard",
-      "confidence_score": 1.0
+      "target": "guards_jwt_auth_guard_jwtauthguard"
     },
     {
       "relation": "imports",
@@ -13779,9 +13878,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "apps_api_src_common_guards_roles_guard_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_common_guards_roles_guard_ts"
     },
     {
       "relation": "imports_from",
@@ -13790,9 +13889,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "apps_api_src_common_guards_roles_guard_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_common_guards_roles_guard_ts"
     },
     {
       "relation": "imports_from",
@@ -13865,9 +13964,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "guards_roles_guard_rolesguard",
-      "confidence_score": 1.0
+      "target": "guards_roles_guard_rolesguard"
     },
     {
       "relation": "imports",
@@ -13876,9 +13975,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "guards_roles_guard_rolesguard",
-      "confidence_score": 1.0
+      "target": "guards_roles_guard_rolesguard"
     },
     {
       "relation": "imports",
@@ -14130,9 +14229,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_service_ts",
-      "target": "apps_api_src_database_prisma_service_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_database_prisma_service_ts"
     },
     {
       "relation": "imports_from",
@@ -14141,9 +14240,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_service_ts",
-      "target": "apps_api_src_database_prisma_service_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_database_prisma_service_ts"
     },
     {
       "relation": "imports_from",
@@ -14368,9 +14467,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_service_ts",
-      "target": "database_prisma_service_prismaservice",
-      "confidence_score": 1.0
+      "target": "database_prisma_service_prismaservice"
     },
     {
       "relation": "imports",
@@ -14379,9 +14478,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_service_ts",
-      "target": "database_prisma_service_prismaservice",
-      "confidence_score": 1.0
+      "target": "database_prisma_service_prismaservice"
     },
     {
       "relation": "imports",
@@ -16167,9 +16266,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "apps_api_src_modules_department_department_service_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_department_department_service_ts"
     },
     {
       "relation": "imports",
@@ -16178,9 +16277,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "department_department_service_departmentservice",
-      "confidence_score": 1.0
+      "target": "department_department_service_departmentservice"
     },
     {
       "relation": "imports_from",
@@ -16189,9 +16288,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "apps_api_src_modules_department_dto_create_department_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_department_dto_create_department_dto_ts"
     },
     {
       "relation": "imports",
@@ -16200,9 +16299,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "dto_create_department_dto_createdepartmentdto",
-      "confidence_score": 1.0
+      "target": "dto_create_department_dto_createdepartmentdto"
     },
     {
       "relation": "imports_from",
@@ -16211,9 +16310,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "apps_api_src_modules_department_dto_update_department_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_department_dto_update_department_dto_ts"
     },
     {
       "relation": "imports",
@@ -16222,9 +16321,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_controller_ts",
-      "target": "dto_update_department_dto_updatedepartmentdto",
-      "confidence_score": 1.0
+      "target": "dto_update_department_dto_updatedepartmentdto"
     },
     {
       "relation": "contains",
@@ -16253,9 +16352,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_controller_departmentcontroller",
-      "target": "department_department_controller_departmentcontroller_constructor",
-      "confidence_score": 1.0
+      "target": "department_department_controller_departmentcontroller_constructor"
     },
     {
       "relation": "method",
@@ -16263,9 +16362,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_controller_departmentcontroller",
-      "target": "department_department_controller_departmentcontroller_create",
-      "confidence_score": 1.0
+      "target": "department_department_controller_departmentcontroller_create"
     },
     {
       "relation": "method",
@@ -16273,9 +16372,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_controller_departmentcontroller",
-      "target": "department_department_controller_departmentcontroller_findall",
-      "confidence_score": 1.0
+      "target": "department_department_controller_departmentcontroller_findall"
     },
     {
       "relation": "method",
@@ -16283,9 +16382,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_controller_departmentcontroller",
-      "target": "department_department_controller_departmentcontroller_findone",
-      "confidence_score": 1.0
+      "target": "department_department_controller_departmentcontroller_findone"
     },
     {
       "relation": "method",
@@ -16293,9 +16392,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_controller_departmentcontroller",
-      "target": "department_department_controller_departmentcontroller_update",
-      "confidence_score": 1.0
+      "target": "department_department_controller_departmentcontroller_update"
     },
     {
       "relation": "method",
@@ -16303,9 +16402,9 @@
       "source_file": "apps/api/src/modules/department/department.controller.ts",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_controller_departmentcontroller",
-      "target": "department_department_controller_departmentcontroller_remove",
-      "confidence_score": 1.0
+      "target": "department_department_controller_departmentcontroller_remove"
     },
     {
       "relation": "imports",
@@ -16357,9 +16456,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_service_ts",
-      "target": "apps_api_src_modules_department_dto_create_department_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_department_dto_create_department_dto_ts"
     },
     {
       "relation": "imports",
@@ -16368,9 +16467,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_service_ts",
-      "target": "dto_create_department_dto_createdepartmentdto",
-      "confidence_score": 1.0
+      "target": "dto_create_department_dto_createdepartmentdto"
     },
     {
       "relation": "imports_from",
@@ -16379,9 +16478,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_service_ts",
-      "target": "apps_api_src_modules_department_dto_update_department_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_department_dto_update_department_dto_ts"
     },
     {
       "relation": "imports",
@@ -16390,9 +16489,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_department_service_ts",
-      "target": "dto_update_department_dto_updatedepartmentdto",
-      "confidence_score": 1.0
+      "target": "dto_update_department_dto_updatedepartmentdto"
     },
     {
       "relation": "contains",
@@ -16410,9 +16509,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_service_departmentservice",
-      "target": "department_department_service_departmentservice_constructor",
-      "confidence_score": 1.0
+      "target": "department_department_service_departmentservice_constructor"
     },
     {
       "relation": "method",
@@ -16420,9 +16519,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_service_departmentservice",
-      "target": "department_department_service_departmentservice_create",
-      "confidence_score": 1.0
+      "target": "department_department_service_departmentservice_create"
     },
     {
       "relation": "method",
@@ -16430,9 +16529,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_service_departmentservice",
-      "target": "department_department_service_departmentservice_findall",
-      "confidence_score": 1.0
+      "target": "department_department_service_departmentservice_findall"
     },
     {
       "relation": "method",
@@ -16440,9 +16539,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_service_departmentservice",
-      "target": "department_department_service_departmentservice_findone",
-      "confidence_score": 1.0
+      "target": "department_department_service_departmentservice_findone"
     },
     {
       "relation": "method",
@@ -16450,9 +16549,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_service_departmentservice",
-      "target": "department_department_service_departmentservice_update",
-      "confidence_score": 1.0
+      "target": "department_department_service_departmentservice_update"
     },
     {
       "relation": "method",
@@ -16460,9 +16559,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_service_departmentservice",
-      "target": "department_department_service_departmentservice_remove",
-      "confidence_score": 1.0
+      "target": "department_department_service_departmentservice_remove"
     },
     {
       "relation": "calls",
@@ -16471,9 +16570,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_service_departmentservice_update",
-      "target": "department_department_service_departmentservice_findone",
-      "confidence_score": 1.0
+      "target": "department_department_service_departmentservice_findone"
     },
     {
       "relation": "calls",
@@ -16482,9 +16581,9 @@
       "source_file": "apps/api/src/modules/department/department.service.ts",
       "source_location": "L112",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "department_department_service_departmentservice_remove",
-      "target": "department_department_service_departmentservice_findone",
-      "confidence_score": 1.0
+      "target": "department_department_service_departmentservice_findone"
     },
     {
       "relation": "contains",
@@ -16492,9 +16591,9 @@
       "source_file": "apps/api/src/modules/department/dto/create-department.dto.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_dto_create_department_dto_ts",
-      "target": "dto_create_department_dto_createdepartmentdto",
-      "confidence_score": 1.0
+      "target": "dto_create_department_dto_createdepartmentdto"
     },
     {
       "relation": "imports_from",
@@ -16503,9 +16602,9 @@
       "source_file": "apps/api/src/modules/department/dto/update-department.dto.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_dto_update_department_dto_ts",
-      "target": "apps_api_src_modules_department_dto_create_department_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_department_dto_create_department_dto_ts"
     },
     {
       "relation": "imports",
@@ -16514,9 +16613,9 @@
       "source_file": "apps/api/src/modules/department/dto/update-department.dto.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_dto_update_department_dto_ts",
-      "target": "dto_create_department_dto_createdepartmentdto",
-      "confidence_score": 1.0
+      "target": "dto_create_department_dto_createdepartmentdto"
     },
     {
       "relation": "contains",
@@ -16524,9 +16623,9 @@
       "source_file": "apps/api/src/modules/department/dto/update-department.dto.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_department_dto_update_department_dto_ts",
-      "target": "dto_update_department_dto_updatedepartmentdto",
-      "confidence_score": 1.0
+      "target": "dto_update_department_dto_updatedepartmentdto"
     },
     {
       "relation": "imports_from",
@@ -16535,9 +16634,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "apps_api_src_modules_designation_designation_service_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_designation_designation_service_ts"
     },
     {
       "relation": "imports",
@@ -16546,9 +16645,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "designation_designation_service_designationservice",
-      "confidence_score": 1.0
+      "target": "designation_designation_service_designationservice"
     },
     {
       "relation": "imports_from",
@@ -16557,9 +16656,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "apps_api_src_modules_designation_dto_create_designation_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_designation_dto_create_designation_dto_ts"
     },
     {
       "relation": "imports",
@@ -16568,9 +16667,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "dto_create_designation_dto_createdesignationdto",
-      "confidence_score": 1.0
+      "target": "dto_create_designation_dto_createdesignationdto"
     },
     {
       "relation": "imports_from",
@@ -16579,9 +16678,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "apps_api_src_modules_designation_dto_update_designation_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_designation_dto_update_designation_dto_ts"
     },
     {
       "relation": "imports",
@@ -16590,9 +16689,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_controller_ts",
-      "target": "dto_update_designation_dto_updatedesignationdto",
-      "confidence_score": 1.0
+      "target": "dto_update_designation_dto_updatedesignationdto"
     },
     {
       "relation": "contains",
@@ -16621,9 +16720,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_controller_designationcontroller",
-      "target": "designation_designation_controller_designationcontroller_constructor",
-      "confidence_score": 1.0
+      "target": "designation_designation_controller_designationcontroller_constructor"
     },
     {
       "relation": "method",
@@ -16631,9 +16730,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_controller_designationcontroller",
-      "target": "designation_designation_controller_designationcontroller_create",
-      "confidence_score": 1.0
+      "target": "designation_designation_controller_designationcontroller_create"
     },
     {
       "relation": "method",
@@ -16641,9 +16740,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_controller_designationcontroller",
-      "target": "designation_designation_controller_designationcontroller_findall",
-      "confidence_score": 1.0
+      "target": "designation_designation_controller_designationcontroller_findall"
     },
     {
       "relation": "method",
@@ -16651,9 +16750,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_controller_designationcontroller",
-      "target": "designation_designation_controller_designationcontroller_findone",
-      "confidence_score": 1.0
+      "target": "designation_designation_controller_designationcontroller_findone"
     },
     {
       "relation": "method",
@@ -16661,9 +16760,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_controller_designationcontroller",
-      "target": "designation_designation_controller_designationcontroller_update",
-      "confidence_score": 1.0
+      "target": "designation_designation_controller_designationcontroller_update"
     },
     {
       "relation": "method",
@@ -16671,9 +16770,9 @@
       "source_file": "apps/api/src/modules/designation/designation.controller.ts",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_controller_designationcontroller",
-      "target": "designation_designation_controller_designationcontroller_remove",
-      "confidence_score": 1.0
+      "target": "designation_designation_controller_designationcontroller_remove"
     },
     {
       "relation": "imports",
@@ -16725,9 +16824,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_service_ts",
-      "target": "apps_api_src_modules_designation_dto_create_designation_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_designation_dto_create_designation_dto_ts"
     },
     {
       "relation": "imports",
@@ -16736,9 +16835,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_service_ts",
-      "target": "dto_create_designation_dto_createdesignationdto",
-      "confidence_score": 1.0
+      "target": "dto_create_designation_dto_createdesignationdto"
     },
     {
       "relation": "imports_from",
@@ -16747,9 +16846,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_service_ts",
-      "target": "apps_api_src_modules_designation_dto_update_designation_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_designation_dto_update_designation_dto_ts"
     },
     {
       "relation": "imports",
@@ -16758,9 +16857,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_designation_service_ts",
-      "target": "dto_update_designation_dto_updatedesignationdto",
-      "confidence_score": 1.0
+      "target": "dto_update_designation_dto_updatedesignationdto"
     },
     {
       "relation": "contains",
@@ -16778,9 +16877,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_service_designationservice",
-      "target": "designation_designation_service_designationservice_constructor",
-      "confidence_score": 1.0
+      "target": "designation_designation_service_designationservice_constructor"
     },
     {
       "relation": "method",
@@ -16788,9 +16887,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_service_designationservice",
-      "target": "designation_designation_service_designationservice_create",
-      "confidence_score": 1.0
+      "target": "designation_designation_service_designationservice_create"
     },
     {
       "relation": "method",
@@ -16798,9 +16897,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_service_designationservice",
-      "target": "designation_designation_service_designationservice_findall",
-      "confidence_score": 1.0
+      "target": "designation_designation_service_designationservice_findall"
     },
     {
       "relation": "method",
@@ -16808,9 +16907,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_service_designationservice",
-      "target": "designation_designation_service_designationservice_findone",
-      "confidence_score": 1.0
+      "target": "designation_designation_service_designationservice_findone"
     },
     {
       "relation": "method",
@@ -16818,9 +16917,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_service_designationservice",
-      "target": "designation_designation_service_designationservice_update",
-      "confidence_score": 1.0
+      "target": "designation_designation_service_designationservice_update"
     },
     {
       "relation": "method",
@@ -16828,9 +16927,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_service_designationservice",
-      "target": "designation_designation_service_designationservice_remove",
-      "confidence_score": 1.0
+      "target": "designation_designation_service_designationservice_remove"
     },
     {
       "relation": "calls",
@@ -16839,9 +16938,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_service_designationservice_update",
-      "target": "designation_designation_service_designationservice_findone",
-      "confidence_score": 1.0
+      "target": "designation_designation_service_designationservice_findone"
     },
     {
       "relation": "calls",
@@ -16850,9 +16949,9 @@
       "source_file": "apps/api/src/modules/designation/designation.service.ts",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "designation_designation_service_designationservice_remove",
-      "target": "designation_designation_service_designationservice_findone",
-      "confidence_score": 1.0
+      "target": "designation_designation_service_designationservice_findone"
     },
     {
       "relation": "contains",
@@ -16860,9 +16959,9 @@
       "source_file": "apps/api/src/modules/designation/dto/create-designation.dto.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_dto_create_designation_dto_ts",
-      "target": "dto_create_designation_dto_createdesignationdto",
-      "confidence_score": 1.0
+      "target": "dto_create_designation_dto_createdesignationdto"
     },
     {
       "relation": "imports_from",
@@ -16871,9 +16970,9 @@
       "source_file": "apps/api/src/modules/designation/dto/update-designation.dto.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_dto_update_designation_dto_ts",
-      "target": "apps_api_src_modules_designation_dto_create_designation_dto_ts",
-      "confidence_score": 1.0
+      "target": "apps_api_src_modules_designation_dto_create_designation_dto_ts"
     },
     {
       "relation": "imports",
@@ -16882,9 +16981,9 @@
       "source_file": "apps/api/src/modules/designation/dto/update-designation.dto.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_dto_update_designation_dto_ts",
-      "target": "dto_create_designation_dto_createdesignationdto",
-      "confidence_score": 1.0
+      "target": "dto_create_designation_dto_createdesignationdto"
     },
     {
       "relation": "contains",
@@ -16892,9 +16991,9 @@
       "source_file": "apps/api/src/modules/designation/dto/update-designation.dto.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_designation_dto_update_designation_dto_ts",
-      "target": "dto_update_designation_dto_updatedesignationdto",
-      "confidence_score": 1.0
+      "target": "dto_update_designation_dto_updatedesignationdto"
     },
     {
       "relation": "contains",
@@ -17261,6 +17360,17 @@
       "source_file": "apps/api/src/modules/employees/employees.controller.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "source": "apps_api_src_modules_employees_employees_controller_ts",
+      "target": "dto_admin_employee_dto_adminupdateemployeedto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/employees/employees.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "apps_api_src_modules_employees_employees_controller_ts",
       "target": "dto_admin_employee_dto_changeroledto"
@@ -17367,6 +17477,16 @@
       "confidence_score": 1.0,
       "source": "employees_employees_controller_employeescontroller",
       "target": "employees_employees_controller_employeescontroller_createemployeeasadmin"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/employees/employees.controller.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "employees_employees_controller_employeescontroller",
+      "target": "employees_employees_controller_employeescontroller_updateemployeeasadmin",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -17514,6 +17634,17 @@
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "source": "apps_api_src_modules_employees_employees_service_ts",
+      "target": "dto_admin_employee_dto_adminupdateemployeedto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/employees/employees.service.ts",
+      "source_location": "L9",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "apps_api_src_modules_employees_employees_service_ts",
       "target": "dto_admin_employee_dto_changeroledto"
@@ -17614,6 +17745,16 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
+      "source_location": "L229",
+      "weight": 1.0,
+      "source": "employees_employees_service_employeesservice",
+      "target": "employees_employees_service_employeesservice_updateemployeeasadmin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/employees/employees.service.ts",
       "source_location": "L208",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -17639,6 +17780,17 @@
       "confidence_score": 1.0,
       "source": "employees_employees_service_employeesservice",
       "target": "employees_employees_service_employeesservice_changerole"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/employees/employees.service.ts",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "employees_employees_service_employeesservice_updateemployeeasadmin",
+      "target": "employees_employees_service_employeesservice_findbyid",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17689,6 +17841,17 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "employees_employees_service_employeesservice_updateemployeeasadmin",
+      "target": "employees_employees_service_employeesservice_update",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/employees/employees.service.ts",
       "source_location": "L210",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -17718,6 +17881,17 @@
       "target": "employees_employees_service_employeesservice_update"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/employees/employees.service.ts",
+      "source_location": "L280",
+      "weight": 1.0,
+      "source": "employees_employees_service_employeesservice_updateemployeeasadmin",
+      "target": "employees_employees_service_employeesservice_changerole",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/employees/dto/admin-employee.dto.ts",
@@ -17726,6 +17900,16 @@
       "confidence_score": 1.0,
       "source": "apps_api_src_modules_employees_dto_admin_employee_dto_ts",
       "target": "dto_admin_employee_dto_admincreateemployeedto"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/employees/dto/admin-employee.dto.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_employees_dto_admin_employee_dto_ts",
+      "target": "dto_admin_employee_dto_adminupdateemployeedto",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -22807,9 +22991,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "apps_web_src_lib_api_client_ts",
-      "confidence_score": 1.0
+      "target": "apps_web_src_lib_api_client_ts"
     },
     {
       "relation": "imports",
@@ -22818,9 +23002,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "lib_api_client_apiclient",
-      "confidence_score": 1.0
+      "target": "lib_api_client_apiclient"
     },
     {
       "relation": "imports_from",
@@ -22829,9 +23013,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "apps_web_src_components_ui_button_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_button_tsx"
     },
     {
       "relation": "imports",
@@ -22840,9 +23024,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "ui_button_button",
-      "confidence_score": 1.0
+      "target": "ui_button_button"
     },
     {
       "relation": "imports_from",
@@ -22851,9 +23035,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "apps_web_src_components_auth_require_permission_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_auth_require_permission_tsx"
     },
     {
       "relation": "imports",
@@ -22862,9 +23046,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "auth_require_permission_requirepermission",
-      "confidence_score": 1.0
+      "target": "auth_require_permission_requirepermission"
     },
     {
       "relation": "imports_from",
@@ -22873,9 +23057,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx"
     },
     {
       "relation": "imports",
@@ -22884,9 +23068,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "components_department_modal_departmentmodal",
-      "confidence_score": 1.0
+      "target": "components_department_modal_departmentmodal"
     },
     {
       "relation": "contains",
@@ -22894,9 +23078,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "departments_page_department",
-      "confidence_score": 1.0
+      "target": "departments_page_department"
     },
     {
       "relation": "contains",
@@ -22904,9 +23088,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "target": "departments_page_departmentspage",
-      "confidence_score": 1.0
+      "target": "departments_page_departmentspage"
     },
     {
       "relation": "imports_from",
@@ -22915,9 +23099,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "apps_web_src_components_ui_dialog_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_dialog_tsx"
     },
     {
       "relation": "imports",
@@ -22926,9 +23110,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "ui_dialog_dialogcontent",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogcontent"
     },
     {
       "relation": "imports",
@@ -22937,9 +23121,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "ui_dialog_dialogheader",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogheader"
     },
     {
       "relation": "imports",
@@ -22948,9 +23132,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "ui_dialog_dialogtitle",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogtitle"
     },
     {
       "relation": "imports",
@@ -22959,9 +23143,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "ui_dialog_dialogfooter",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogfooter"
     },
     {
       "relation": "imports_from",
@@ -22970,9 +23154,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "apps_web_src_components_ui_button_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_button_tsx"
     },
     {
       "relation": "imports",
@@ -22981,9 +23165,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "ui_button_button",
-      "confidence_score": 1.0
+      "target": "ui_button_button"
     },
     {
       "relation": "imports_from",
@@ -22992,9 +23176,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "apps_web_src_components_ui_input_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_input_tsx"
     },
     {
       "relation": "imports",
@@ -23003,9 +23187,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "ui_input_input",
-      "confidence_score": 1.0
+      "target": "ui_input_input"
     },
     {
       "relation": "imports_from",
@@ -23014,9 +23198,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "apps_web_src_components_ui_label_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_label_tsx"
     },
     {
       "relation": "imports",
@@ -23025,9 +23209,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "ui_label_label",
-      "confidence_score": 1.0
+      "target": "ui_label_label"
     },
     {
       "relation": "imports_from",
@@ -23036,9 +23220,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "apps_web_src_lib_api_client_ts",
-      "confidence_score": 1.0
+      "target": "apps_web_src_lib_api_client_ts"
     },
     {
       "relation": "imports",
@@ -23047,9 +23231,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "lib_api_client_apiclient",
-      "confidence_score": 1.0
+      "target": "lib_api_client_apiclient"
     },
     {
       "relation": "contains",
@@ -23057,9 +23241,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "components_department_modal_departmentschema",
-      "confidence_score": 1.0
+      "target": "components_department_modal_departmentschema"
     },
     {
       "relation": "contains",
@@ -23067,9 +23251,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "components_department_modal_departmentformvalues",
-      "confidence_score": 1.0
+      "target": "components_department_modal_departmentformvalues"
     },
     {
       "relation": "contains",
@@ -23077,9 +23261,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "components_department_modal_departmentmodalprops",
-      "confidence_score": 1.0
+      "target": "components_department_modal_departmentmodalprops"
     },
     {
       "relation": "contains",
@@ -23087,9 +23271,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "target": "components_department_modal_departmentmodal",
-      "confidence_score": 1.0
+      "target": "components_department_modal_departmentmodal"
     },
     {
       "relation": "imports_from",
@@ -23098,9 +23282,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "apps_web_src_lib_api_client_ts",
-      "confidence_score": 1.0
+      "target": "apps_web_src_lib_api_client_ts"
     },
     {
       "relation": "imports",
@@ -23109,9 +23293,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "lib_api_client_apiclient",
-      "confidence_score": 1.0
+      "target": "lib_api_client_apiclient"
     },
     {
       "relation": "imports_from",
@@ -23120,9 +23304,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "apps_web_src_components_ui_button_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_button_tsx"
     },
     {
       "relation": "imports",
@@ -23131,9 +23315,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "ui_button_button",
-      "confidence_score": 1.0
+      "target": "ui_button_button"
     },
     {
       "relation": "imports_from",
@@ -23142,9 +23326,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "apps_web_src_components_auth_require_permission_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_auth_require_permission_tsx"
     },
     {
       "relation": "imports",
@@ -23153,9 +23337,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "auth_require_permission_requirepermission",
-      "confidence_score": 1.0
+      "target": "auth_require_permission_requirepermission"
     },
     {
       "relation": "imports_from",
@@ -23164,9 +23348,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx"
     },
     {
       "relation": "imports",
@@ -23175,9 +23359,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "components_designation_modal_designationmodal",
-      "confidence_score": 1.0
+      "target": "components_designation_modal_designationmodal"
     },
     {
       "relation": "contains",
@@ -23185,9 +23369,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "designations_page_designation",
-      "confidence_score": 1.0
+      "target": "designations_page_designation"
     },
     {
       "relation": "contains",
@@ -23195,9 +23379,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "target": "designations_page_designationspage",
-      "confidence_score": 1.0
+      "target": "designations_page_designationspage"
     },
     {
       "relation": "imports_from",
@@ -23206,9 +23390,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "apps_web_src_components_ui_dialog_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_dialog_tsx"
     },
     {
       "relation": "imports",
@@ -23217,9 +23401,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "ui_dialog_dialogcontent",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogcontent"
     },
     {
       "relation": "imports",
@@ -23228,9 +23412,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "ui_dialog_dialogheader",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogheader"
     },
     {
       "relation": "imports",
@@ -23239,9 +23423,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "ui_dialog_dialogtitle",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogtitle"
     },
     {
       "relation": "imports",
@@ -23250,9 +23434,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "ui_dialog_dialogfooter",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogfooter"
     },
     {
       "relation": "imports_from",
@@ -23261,9 +23445,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "apps_web_src_components_ui_button_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_button_tsx"
     },
     {
       "relation": "imports",
@@ -23272,9 +23456,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "ui_button_button",
-      "confidence_score": 1.0
+      "target": "ui_button_button"
     },
     {
       "relation": "imports_from",
@@ -23283,9 +23467,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "apps_web_src_components_ui_input_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_input_tsx"
     },
     {
       "relation": "imports",
@@ -23294,9 +23478,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "ui_input_input",
-      "confidence_score": 1.0
+      "target": "ui_input_input"
     },
     {
       "relation": "imports_from",
@@ -23305,9 +23489,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "apps_web_src_components_ui_label_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_label_tsx"
     },
     {
       "relation": "imports",
@@ -23316,9 +23500,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "ui_label_label",
-      "confidence_score": 1.0
+      "target": "ui_label_label"
     },
     {
       "relation": "imports_from",
@@ -23327,9 +23511,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "apps_web_src_lib_api_client_ts",
-      "confidence_score": 1.0
+      "target": "apps_web_src_lib_api_client_ts"
     },
     {
       "relation": "imports",
@@ -23338,9 +23522,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "lib_api_client_apiclient",
-      "confidence_score": 1.0
+      "target": "lib_api_client_apiclient"
     },
     {
       "relation": "contains",
@@ -23348,9 +23532,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "components_designation_modal_designationschema",
-      "confidence_score": 1.0
+      "target": "components_designation_modal_designationschema"
     },
     {
       "relation": "contains",
@@ -23358,9 +23542,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "components_designation_modal_designationformvalues",
-      "confidence_score": 1.0
+      "target": "components_designation_modal_designationformvalues"
     },
     {
       "relation": "contains",
@@ -23368,9 +23552,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "components_designation_modal_designationmodalprops",
-      "confidence_score": 1.0
+      "target": "components_designation_modal_designationmodalprops"
     },
     {
       "relation": "contains",
@@ -23378,9 +23562,9 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "target": "components_designation_modal_designationmodal",
-      "confidence_score": 1.0
+      "target": "components_designation_modal_designationmodal"
     },
     {
       "relation": "imports_from",
@@ -24184,6 +24368,50 @@
       "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_employees_page_tsx",
       "target": "employees_add_employee_modal_addemployeemodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_employees_page_tsx",
+      "target": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_employees_page_tsx",
+      "target": "employees_edit_employee_modal_editemployeemodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_employees_page_tsx",
+      "target": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_employees_page_tsx",
+      "target": "employees_view_employee_modal_viewemployeemodal",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -25431,6 +25659,209 @@
       "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_add_employee_modal_tsx",
       "target": "employees_add_employee_modal_addemployeemodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "apps_web_src_components_ui_dialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "ui_dialog_dialogcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "ui_dialog_dialogheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "ui_dialog_dialogtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "employees_edit_employee_modal_employeeschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "employees_edit_employee_modal_employeeformvalues",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "employees_edit_employee_modal_editemployeemodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
+      "target": "employees_edit_employee_modal_editemployeemodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "target": "apps_web_src_components_ui_dialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "target": "ui_dialog_dialogcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "target": "ui_dialog_dialogheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "target": "ui_dialog_dialogtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "target": "employees_view_employee_modal_viewemployeemodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "apps_web_src_components_employees_view_employee_modal_tsx",
+      "target": "employees_view_employee_modal_viewemployeemodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "employees_view_employee_modal_viewemployeemodal",
+      "target": "src_index_formatdate"
     },
     {
       "relation": "imports_from",
@@ -27669,5 +28100,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bcec1325567a473796712c72961385159475085e"
+  "built_at_commit": "3f9776a26350a7afe25ffceb3b1c6a4c4f2519c1"
 }

@@ -6,7 +6,7 @@ import { PrismaService } from '../../database/prisma.service';
 import { PaginationDto } from '../../common/dto/pagination.dto';
 import { CreateEmployeeDto } from './dto/create-employee.dto';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
-import { AdminCreateEmployeeDto, ChangeRoleDto, ResetPasswordDto, ChangeStatusDto } from './dto/admin-employee.dto';
+import { AdminCreateEmployeeDto, AdminUpdateEmployeeDto, ChangeRoleDto, ResetPasswordDto, ChangeStatusDto } from './dto/admin-employee.dto';
 import { APP_CONSTANTS } from '../../common/constants';
 
 @Injectable()
@@ -39,6 +39,12 @@ export class EmployeesService {
         take: limit,
         orderBy: { [sortBy || 'createdAt']: sortOrder },
         include: {
+          department: {
+            select: { id: true, name: true },
+          },
+          designation: {
+            select: { id: true, name: true },
+          },
           user: {
             select: {
               id: true,
@@ -46,6 +52,9 @@ export class EmployeesService {
               firstName: true,
               lastName: true,
               avatar: true,
+              roles: {
+                include: { role: true },
+              },
             },
           },
         },
@@ -70,6 +79,12 @@ export class EmployeesService {
     const employee = await this.prisma.employee.findUnique({
       where: { id },
       include: {
+        department: {
+          select: { id: true, name: true },
+        },
+        designation: {
+          select: { id: true, name: true },
+        },
         user: {
           select: {
             id: true,
@@ -77,6 +92,9 @@ export class EmployeesService {
             firstName: true,
             lastName: true,
             avatar: true,
+            roles: {
+              include: { role: true },
+            },
           },
         },
         teamMembers: {
@@ -153,8 +171,8 @@ export class EmployeesService {
     const temporaryPassword = Math.random().toString(36).slice(-8);
     const passwordHash = await bcrypt.hash(temporaryPassword, APP_CONSTANTS.BCRYPT_SALT_ROUNDS);
     
-    // Generate Employee Code
-    const employeeCode = `EMP-${Date.now().toString().slice(-6)}`;
+    // Generate Employee Code if not provided
+    const employeeCode = dto.employeeCode || `EMP-${Date.now().toString().slice(-6)}`;
 
     const user = await this.prisma.user.create({
       data: {
@@ -172,6 +190,9 @@ export class EmployeesService {
             gender: dto.gender || null,
             address: dto.address || null,
             employeeType: dto.employeeType || 'FULL_TIME',
+            workLocation: dto.workLocation || null,
+            bloodGroup: dto.bloodGroup || null,
+            emergencyContact: dto.emergencyContact || null,
             dateOfJoining: new Date(dto.dateOfJoining),
             dateOfBirth: dto.dateOfBirth ? new Date(dto.dateOfBirth) : undefined,
           },
@@ -203,6 +224,65 @@ export class EmployeesService {
       roles: user.roles.map(r => r.role.name),
       temporaryPassword, // Ideally, don't return this, send via email. Returned here for demonstration.
     };
+  }
+
+  async updateEmployeeAsAdmin(id: string, dto: AdminUpdateEmployeeDto) {
+    const employee = await this.findById(id);
+
+    // Update User
+    if (dto.firstName || dto.lastName || dto.email) {
+      if (dto.email && dto.email !== employee.user.email) {
+        const existingUser = await this.prisma.user.findUnique({
+          where: { email: dto.email },
+        });
+        if (existingUser) {
+          throw new ConflictException('A user with this email already exists');
+        }
+      }
+      
+      await this.prisma.user.update({
+        where: { id: employee.userId },
+        data: {
+          firstName: dto.firstName,
+          lastName: dto.lastName,
+          email: dto.email,
+        },
+      });
+    }
+
+    // Update Employee
+    const updatedEmployee = await this.prisma.employee.update({
+      where: { id },
+      data: {
+        departmentId: dto.departmentId !== undefined ? dto.departmentId : undefined,
+        designationId: dto.designationId !== undefined ? dto.designationId : undefined,
+        phone: dto.phone !== undefined ? dto.phone : undefined,
+        gender: dto.gender !== undefined ? dto.gender : undefined,
+        address: dto.address !== undefined ? dto.address : undefined,
+        employeeType: dto.employeeType !== undefined ? dto.employeeType : undefined,
+        employeeCode: dto.employeeCode !== undefined ? dto.employeeCode : undefined,
+        workLocation: dto.workLocation !== undefined ? dto.workLocation : undefined,
+        bloodGroup: dto.bloodGroup !== undefined ? dto.bloodGroup : undefined,
+        emergencyContact: dto.emergencyContact !== undefined ? dto.emergencyContact : undefined,
+        dateOfJoining: dto.dateOfJoining ? new Date(dto.dateOfJoining) : undefined,
+        dateOfBirth: dto.dateOfBirth ? new Date(dto.dateOfBirth) : undefined,
+      },
+      include: {
+        user: {
+          select: { id: true, email: true, firstName: true, lastName: true },
+        },
+        department: true,
+      },
+    });
+
+    // Update Roles if provided
+    if (dto.roles) {
+      await this.changeRole(id, { roles: dto.roles });
+    }
+
+    this.logger.log(`Updated employee via Admin. Employee ID: ${id}`);
+    
+    return updatedEmployee;
   }
 
   async changeStatus(id: string, dto: ChangeStatusDto) {

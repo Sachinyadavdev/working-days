@@ -4,7 +4,7 @@ import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 import { EmployeesService } from './employees.service';
 import { CreateEmployeeDto } from './dto/create-employee.dto';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
-import { AdminCreateEmployeeDto, ChangeRoleDto, ResetPasswordDto, ChangeStatusDto } from './dto/admin-employee.dto';
+import { AdminCreateEmployeeDto, AdminUpdateEmployeeDto, ChangeRoleDto, ResetPasswordDto, ChangeStatusDto } from './dto/admin-employee.dto';
 import { PaginationDto } from '../../common/dto/pagination.dto';
 import { Roles } from '../../common/decorators/roles.decorator';
 
@@ -45,6 +45,13 @@ export class EmployeesController {
   @ApiOperation({ summary: 'Create a full employee profile with User and Role' })
   async createEmployeeAsAdmin(@Body() adminCreateEmployeeDto: AdminCreateEmployeeDto) {
     return this.employeesService.createEmployeeAsAdmin(adminCreateEmployeeDto);
+  }
+
+  @Patch(':id/admin-update')
+  @Roles('SUPER_ADMIN', 'ADMIN')
+  @ApiOperation({ summary: 'Update employee profile as admin' })
+  async updateEmployeeAsAdmin(@Param('id') id: string, @Body() adminUpdateEmployeeDto: AdminUpdateEmployeeDto) {
+    return this.employeesService.updateEmployeeAsAdmin(id, adminUpdateEmployeeDto);
   }
 
   @Patch(':id/status')

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Plus, MoreVertical, Key, Shield, UserX, UserCheck } from 'lucide-react';
+import { Plus, MoreVertical, Key, Shield, UserX, UserCheck, Edit, Eye } from 'lucide-react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,6 +11,8 @@ import { apiClient } from '@/lib/api-client';
 import { useAuthStore } from '@/stores/auth.store';
 
 import { AddEmployeeModal } from '@/components/employees/add-employee-modal';
+import { EditEmployeeModal } from '@/components/employees/edit-employee-modal';
+import { ViewEmployeeModal } from '@/components/employees/view-employee-modal';
 import { ResetPasswordModal, ChangeRoleModal, ChangeStatusModal } from '@/components/employees/access-management-modals';
 
 export default function EmployeeDirectoryPage() {
@@ -18,6 +20,8 @@ export default function EmployeeDirectoryPage() {
   const isAdmin = user?.roles?.includes('SUPER_ADMIN') || user?.roles?.includes('ADMIN');
 
   const [isAddOpen, setIsAddOpen] = useState(false);
+  const [viewModal, setViewModal] = useState<{ isOpen: boolean; employeeId: string | null }>({ isOpen: false, employeeId: null });
+  const [editModal, setEditModal] = useState<{ isOpen: boolean; employeeId: string | null }>({ isOpen: false, employeeId: null });
   const [resetModal, setResetModal] = useState<{ isOpen: boolean; employeeId: string; email: string }>({ isOpen: false, employeeId: '', email: '' });
   const [roleModal, setRoleModal] = useState<{ isOpen: boolean; employeeId: string; roles: string[] }>({ isOpen: false, employeeId: '', roles: [] });
   const [statusModal, setStatusModal] = useState<{ isOpen: boolean; employeeId: string; status: string }>({ isOpen: false, employeeId: '', status: '' });
@@ -53,13 +57,16 @@ export default function EmployeeDirectoryPage() {
       header: 'Employee Name',
       accessorKey: 'name',
       cell: (item: any) => (
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-500 text-white font-semibold shadow-inner">
+        <div 
+          className="flex items-center gap-3 cursor-pointer group"
+          onClick={() => setViewModal({ isOpen: true, employeeId: item.id })}
+        >
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-500 text-white font-semibold shadow-inner group-hover:scale-105 transition-transform">
             {item.user?.firstName?.[0] || 'U'}
             {item.user?.lastName?.[0] || ''}
           </div>
           <div>
-            <div className="font-semibold text-white">
+            <div className="font-semibold text-white group-hover:text-brand-300 transition-colors">
               {item.user?.firstName} {item.user?.lastName}
             </div>
             <div className="text-xs text-brand-300">{item.user?.email}</div>
@@ -84,10 +91,13 @@ export default function EmployeeDirectoryPage() {
       },
     },
     {
-      header: 'Department',
+      header: 'Department / Designation',
       accessorKey: 'department',
       cell: (item: any) => (
-        <div className="text-sm text-brand-100">{item.department?.name || item.departmentId || 'Unassigned'}</div>
+        <div>
+          <div className="text-sm font-medium text-brand-100">{item.department?.name || 'Unassigned Department'}</div>
+          {item.designation?.name && <div className="text-xs text-brand-400 mt-0.5">{item.designation.name}</div>}
+        </div>
       ),
     },
     {
@@ -135,10 +145,28 @@ export default function EmployeeDirectoryPage() {
               >
                 <DropdownMenu.Item
                   onSelect={() => {
-                    setResetModal({ isOpen: true, employeeId: item.id, email: item.user?.email });
+                    setViewModal({ isOpen: true, employeeId: item.id });
                     setOpenMenuId(null);
                   }}
                   className="w-full text-left px-4 py-2.5 text-sm text-brand-100 hover:bg-white/5 flex items-center gap-2 transition-colors outline-none cursor-pointer"
+                >
+                  <Eye size={14} /> View Profile
+                </DropdownMenu.Item>
+                <DropdownMenu.Item
+                  onSelect={() => {
+                    setEditModal({ isOpen: true, employeeId: item.id });
+                    setOpenMenuId(null);
+                  }}
+                  className="w-full text-left px-4 py-2.5 text-sm text-brand-100 hover:bg-white/5 flex items-center gap-2 transition-colors border-t border-white/5 outline-none cursor-pointer"
+                >
+                  <Edit size={14} /> Edit Profile
+                </DropdownMenu.Item>
+                <DropdownMenu.Item
+                  onSelect={() => {
+                    setResetModal({ isOpen: true, employeeId: item.id, email: item.user?.email });
+                    setOpenMenuId(null);
+                  }}
+                  className="w-full text-left px-4 py-2.5 text-sm text-brand-100 hover:bg-white/5 flex items-center gap-2 transition-colors border-t border-white/5 outline-none cursor-pointer"
                 >
                   <Key size={14} /> Reset Password
                 </DropdownMenu.Item>
@@ -203,6 +231,18 @@ export default function EmployeeDirectoryPage() {
 
       {/* Modals */}
       <AddEmployeeModal isOpen={isAddOpen} onClose={() => setIsAddOpen(false)} />
+      
+      <ViewEmployeeModal 
+        isOpen={viewModal.isOpen} 
+        onClose={() => setViewModal({ isOpen: false, employeeId: null })}
+        employeeId={viewModal.employeeId}
+      />
+
+      <EditEmployeeModal 
+        isOpen={editModal.isOpen} 
+        onClose={() => setEditModal({ isOpen: false, employeeId: null })}
+        employeeId={editModal.employeeId}
+      />
       
       <ResetPasswordModal 
         isOpen={resetModal.isOpen} 
