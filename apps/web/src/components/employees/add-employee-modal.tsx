@@ -5,7 +5,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { X, ChevronRight, ChevronLeft, CheckCircle2 } from 'lucide-react';
-import { useQueryClient } from '@tanstack/react-query';
+import { useQueryClient, useQuery } from '@tanstack/react-query';
 
 import {
   Dialog,
@@ -46,11 +46,44 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
   const [successData, setSuccessData] = useState<any>(null);
   const queryClient = useQueryClient();
 
+  const { data: departments = [] } = useQuery({
+    queryKey: ['departments'],
+    queryFn: async () => {
+      const response = await apiClient.get('/department');
+      const data = response.data;
+      return Array.isArray(data?.data) 
+        ? data.data 
+        : Array.isArray(data?.items) 
+        ? data.items 
+        : Array.isArray(data) 
+        ? data 
+        : [];
+    },
+    enabled: isOpen && step >= 2,
+  });
+
+  const { data: designations = [] } = useQuery({
+    queryKey: ['designations'],
+    queryFn: async () => {
+      const response = await apiClient.get('/designation');
+      const data = response.data;
+      return Array.isArray(data?.data) 
+        ? data.data 
+        : Array.isArray(data?.items) 
+        ? data.items 
+        : Array.isArray(data) 
+        ? data 
+        : [];
+    },
+    enabled: isOpen && step >= 2,
+  });
+
   const {
     register,
     handleSubmit,
     control,
     trigger,
+    watch,
     formState: { errors },
     reset,
   } = useForm<EmployeeFormValues>({
@@ -60,6 +93,8 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
       roles: ['EMPLOYEE'],
     },
   });
+
+  const formDepartmentId = watch('departmentId');
 
   const nextStep = async () => {
     const fieldsToValidate = 
@@ -237,6 +272,11 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
                     className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400 text-white [&>option]:bg-brand-900"
                   >
                     <option value="">Unassigned (Pending Setup)</option>
+                    {departments.map((dept: any) => (
+                      <option key={dept.id} value={dept.id}>
+                        {dept.name}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div className="space-y-1.5">
@@ -246,6 +286,13 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
                     className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400 text-white [&>option]:bg-brand-900"
                   >
                     <option value="">Unassigned (Pending Setup)</option>
+                    {designations
+                      .filter((desig: any) => !formDepartmentId || desig.departmentId === formDepartmentId)
+                      .map((desig: any) => (
+                      <option key={desig.id} value={desig.id}>
+                        {desig.name}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>

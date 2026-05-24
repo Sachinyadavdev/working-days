@@ -17,9 +17,9 @@ export function RequirePermission({
   requireAll = false,
 }: RequirePermissionProps) {
   const permissions = useAuthStore((s) => s.permissions);
-  const roles = useAuthStore((s) => s.user?.roles || []);
+  const roles = useAuthStore((s) => s.user?.roles) || [];
 
-  const isSuperAdmin = roles.includes('super-admin');
+  const isSuperAdmin = roles.includes('super-admin') || roles.includes('SUPER_ADMIN');
 
   if (isSuperAdmin) {
     return <>{children}</>;

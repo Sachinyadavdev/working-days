@@ -17,6 +17,8 @@ import {
   UserCog,
   ChevronLeft,
   LogOut,
+  Building2,
+  Briefcase,
 } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
@@ -41,6 +43,8 @@ const navigation = [
 const adminNavigation = [
   { name: 'Admin Dashboard', href: '/admin', icon: ShieldAlert },
   { name: 'Workspaces', href: '/admin/workspaces', icon: FolderKanban },
+  { name: 'Departments', href: '/admin/departments', icon: Building2 },
+  { name: 'Designations', href: '/admin/designations', icon: Briefcase },
   { name: 'All Users', href: '/admin/users', icon: Users },
   { name: 'All Roles', href: '/admin/roles', icon: UserCog },
   { name: 'Audit Logs', href: '/admin/audit', icon: Activity },

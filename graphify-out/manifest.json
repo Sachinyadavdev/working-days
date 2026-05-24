@@ -15,12 +15,12 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\applypatch-msg": {
-    "mtime": 1779469946.161609,
+    "mtime": 1779530722.119145,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\commit-msg": {
-    "mtime": 1779469946.1593404,
+    "mtime": 1779530722.1156309,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
@@ -30,67 +30,67 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\husky.sh": {
-    "mtime": 1779469946.1705341,
+    "mtime": 1779530722.1291564,
     "ast_hash": "13871d2ab13e8423790ecb2c01c78c18",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\post-applypatch": {
-    "mtime": 1779469946.1634867,
+    "mtime": 1779530722.121157,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\post-checkout": {
-    "mtime": 1779469946.1660078,
+    "mtime": 1779530722.1251566,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\post-commit": {
-    "mtime": 1779469946.1601627,
+    "mtime": 1779530722.1176307,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\post-merge": {
-    "mtime": 1779469946.1670122,
+    "mtime": 1779530722.126158,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\post-rewrite": {
-    "mtime": 1779469946.164997,
+    "mtime": 1779530722.124156,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\pre-applypatch": {
-    "mtime": 1779469946.1624737,
+    "mtime": 1779530722.1201556,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\pre-auto-gc": {
-    "mtime": 1779469946.1695325,
+    "mtime": 1779530722.128156,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\pre-commit": {
-    "mtime": 1779469946.1558127,
+    "mtime": 1779530722.11263,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\pre-merge-commit": {
-    "mtime": 1779469946.1573405,
+    "mtime": 1779530722.113631,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\pre-push": {
-    "mtime": 1779469946.1685193,
+    "mtime": 1779530722.1271558,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\pre-rebase": {
-    "mtime": 1779469946.1644864,
+    "mtime": 1779530722.1221566,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.husky\\_\\prepare-commit-msg": {
-    "mtime": 1779469946.158342,
+    "mtime": 1779530722.1146302,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
@@ -115,8 +115,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\app.module.ts": {
-    "mtime": 1779439092.3648932,
-    "ast_hash": "dac4a80015fb6ed90f74df4370ff89ac",
+    "mtime": 1779534177.2110708,
+    "ast_hash": "4722e56dfa2f8900f38c8ea02ab24cc1",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\main.ts": {
@@ -170,13 +170,13 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\common\\guards\\permissions.guard.ts": {
-    "mtime": 1779439233.5090094,
-    "ast_hash": "50091131756cbf48579eeb49ebeee897",
+    "mtime": 1779541137.6491754,
+    "ast_hash": "83a500c69f25b96f4bf76e1bf7f5e2fd",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\common\\guards\\roles.guard.ts": {
-    "mtime": 1779439227.9729292,
-    "ast_hash": "98bb6db8409f2890abbeda5ad5cdbf33",
+    "mtime": 1779541129.3464255,
+    "ast_hash": "15c144195bd4d8a05e864d68a4f00cce",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\common\\interceptors\\logging.interceptor.ts": {
@@ -265,8 +265,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\auth\\auth.controller.ts": {
-    "mtime": 1779513305.504194,
-    "ast_hash": "759e66aee4636526f7f26f3cc61c9ae8",
+    "mtime": 1779539564.6272223,
+    "ast_hash": "86d1a8726020e7e4695b99c7f633b00f",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\auth\\auth.module.ts": {
@@ -275,8 +275,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\auth\\auth.service.ts": {
-    "mtime": 1779514353.706633,
-    "ast_hash": "7fe6c19e60acddecb32d9784615aae02",
+    "mtime": 1779539554.0643857,
+    "ast_hash": "14f3f629523979508b1537d73e18d325",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\auth\\dto\\login.dto.ts": {
@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\employees.controller.ts": {
-    "mtime": 1779439360.5111797,
-    "ast_hash": "12f19c3b18f56ab946a00330869eaf7f",
+    "mtime": 1779541135.5606632,
+    "ast_hash": "effdc03d3282233e61d77dd545f240a0",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\employees.module.ts": {
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\employees.service.ts": {
-    "mtime": 1779439364.0106206,
-    "ast_hash": "54c6e600652f821f34c7418cc4611f2f",
+    "mtime": 1779539807.2807484,
+    "ast_hash": "6e906867e7a85349ddc84d1e44fc4727",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\dto\\create-employee.dto.ts": {
@@ -490,8 +490,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\package.json": {
-    "mtime": 1779446995.9628417,
-    "ast_hash": "a50cce3aebf4bf36e85582fa2702854e",
+    "mtime": 1779530722.2574263,
+    "ast_hash": "00a2534b809f3b5e23ade93b43ab059a",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\postcss.config.mjs": {
@@ -525,8 +525,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(auth)\\login\\page.tsx": {
-    "mtime": 1779513970.801319,
-    "ast_hash": "fcc485dd34be3a598187e51676e7eb87",
+    "mtime": 1779539606.9169674,
+    "ast_hash": "20dbebcd6c9f91d8635f45638af34bed",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(auth)\\register\\page.tsx": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\layout\\app-sidebar.tsx": {
-    "mtime": 1779447341.8969586,
-    "ast_hash": "7bc4744e91ffa513f8bed85c03be68cc",
+    "mtime": 1779558688.839042,
+    "ast_hash": "abf2cc637461eaea04cd2966af96919c",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\layout\\header.tsx": {
@@ -570,8 +570,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\lib\\api-client.ts": {
-    "mtime": 1779439649.1838017,
-    "ast_hash": "85b1ba3f4e0ebb78934eff9de3151593",
+    "mtime": 1779541472.3461106,
+    "ast_hash": "6d4ff7dcd4c79b57fde64eef83e4b5fa",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\lib\\utils.ts": {
@@ -590,8 +590,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\stores\\auth.store.ts": {
-    "mtime": 1779439656.8632092,
-    "ast_hash": "85dc66e18534c8dbfe54cfac96fe1113",
+    "mtime": 1779518046.712265,
+    "ast_hash": "724c3696046119b1aea589b856f29571",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\stores\\sidebar.store.ts": {
@@ -665,8 +665,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\Project_run_guide.md": {
-    "mtime": 1779468253.4270487,
-    "ast_hash": "38a0d74458f92cb7fbf6284e28ef51fc",
+    "mtime": 1779537712.6996026,
+    "ast_hash": "e8d3c01fbe192cfca1ed846d8537aae3",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\.github\\workflows\\ci.yml": {
@@ -692,6 +692,411 @@
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(auth)\\reset-password\\page.tsx": {
     "mtime": 1779514015.7232733,
     "ast_hash": "aad1c3594a295fd6f1a0e7ad73ce0fe5",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\dump_roles.ts": {
+    "mtime": 1779541066.7769167,
+    "ast_hash": "9a580bdca04a82258d293d4a3f30ad08",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\authorization\\authorization.controller.spec.ts": {
+    "mtime": 1779517743.5015247,
+    "ast_hash": "1c596271659342633f02d0b9413c1f47",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\authorization\\authorization.controller.ts": {
+    "mtime": 1779517940.2957525,
+    "ast_hash": "b011b76832dda1f67908c99ca284235b",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\authorization\\authorization.module.ts": {
+    "mtime": 1779517949.052921,
+    "ast_hash": "4b83a6904229ec11e8c15962bba3fa0d",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\authorization\\authorization.service.spec.ts": {
+    "mtime": 1779517753.9838405,
+    "ast_hash": "77b97429f882fcce863fe9f63b6542d8",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\authorization\\authorization.service.ts": {
+    "mtime": 1779541147.1577587,
+    "ast_hash": "5bf96105659bd1b04ee3fa4a7a746c80",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\department\\department.controller.ts": {
+    "mtime": 1779561543.086105,
+    "ast_hash": "3da551a4dbcb47ffc0304d72f1c6b858",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\department\\department.module.ts": {
+    "mtime": 1779534143.6691647,
+    "ast_hash": "0fca22b723ffff76f06981638abfe3df",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\department\\department.service.ts": {
+    "mtime": 1779560222.8469257,
+    "ast_hash": "52580752b59c8d43d4898b8d010abca8",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\designation\\designation.controller.ts": {
+    "mtime": 1779561545.5669699,
+    "ast_hash": "c9cb1e539092ef61c5564e4225e0f7ec",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\designation\\designation.module.ts": {
+    "mtime": 1779534157.0323305,
+    "ast_hash": "a5d8e464b93ca71298f7bfc95a6fedf4",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\designation\\designation.service.ts": {
+    "mtime": 1779559281.408985,
+    "ast_hash": "06d99c81ac0ac72d9a343bee49505ff9",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\documents\\documents.controller.ts": {
+    "mtime": 1779534180.4455278,
+    "ast_hash": "3582d8539ddbf8a588011ee358868352",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\documents\\documents.module.ts": {
+    "mtime": 1779534183.6375418,
+    "ast_hash": "a9b9f6dee70f82a70f0d93a66b0107dd",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\documents\\documents.service.ts": {
+    "mtime": 1779534183.63554,
+    "ast_hash": "7f46c3eb7cc2d6a88fdb8c19898f1105",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employee-profile\\employee-profile.controller.ts": {
+    "mtime": 1779539871.892771,
+    "ast_hash": "6670ee4567eb8684d0ecc3b1eaced015",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employee-profile\\employee-profile.module.ts": {
+    "mtime": 1779534166.2763505,
+    "ast_hash": "e01eee737752454bd000e6030b548d51",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employee-profile\\employee-profile.service.ts": {
+    "mtime": 1779537697.878306,
+    "ast_hash": "4ae09068c97a0490b64123c9c72a9ad3",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\dto\\admin-employee.dto.ts": {
+    "mtime": 1779539479.2042353,
+    "ast_hash": "98aaf417b6d9925615036ae784e1172f",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\permissions\\permissions.controller.spec.ts": {
+    "mtime": 1779517723.212154,
+    "ast_hash": "cfe6183a3996620eb3eedcac041f5aa8",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\permissions\\permissions.controller.ts": {
+    "mtime": 1779517922.081997,
+    "ast_hash": "336b8a3489d5195bd9d844dc15c4a240",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\permissions\\permissions.module.ts": {
+    "mtime": 1779517730.7033844,
+    "ast_hash": "1dc258ea1905ce98b8db268599776dd5",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\permissions\\permissions.service.spec.ts": {
+    "mtime": 1779517730.7016582,
+    "ast_hash": "968a7ad410bfaf56343596a10ba5cb93",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\permissions\\permissions.service.ts": {
+    "mtime": 1779517923.523335,
+    "ast_hash": "f55e2acdedd156999bb8228afb9afd7a",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\roles\\roles.controller.spec.ts": {
+    "mtime": 1779517667.770635,
+    "ast_hash": "113449fb77f65d6f11dac64057d1066d",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\roles\\roles.controller.ts": {
+    "mtime": 1779518718.443846,
+    "ast_hash": "599a38991772332d08f02e386ae392c6",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\roles\\roles.module.ts": {
+    "mtime": 1779517908.3051798,
+    "ast_hash": "9c0c2252a816b81c97e83af1a315f04c",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\roles\\roles.service.spec.ts": {
+    "mtime": 1779517675.2310853,
+    "ast_hash": "7f021838ecb5976dc345a11a1feaee6f",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\roles\\roles.service.ts": {
+    "mtime": 1779518716.3299012,
+    "ast_hash": "063067d08ac75ea23fece47f55dd4c18",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\roles\\dto\\assign-permissions.dto.ts": {
+    "mtime": 1779517856.7988696,
+    "ast_hash": "c97332cd07eb22791ff3c483895e154b",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\roles\\dto\\create-role.dto.ts": {
+    "mtime": 1779517822.6099832,
+    "ast_hash": "2ceafc95670292cf826dddf5dc788e1e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\roles\\dto\\update-role.dto.ts": {
+    "mtime": 1779517854.6585252,
+    "ast_hash": "568384e569c1478461f5acc3ca2d884f",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\salary\\salary.controller.ts": {
+    "mtime": 1779534169.2036326,
+    "ast_hash": "5dabdbcf1a06b7c4abc8b495476d17af",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\salary\\salary.module.ts": {
+    "mtime": 1779534174.1896522,
+    "ast_hash": "c8a361d8c6d2359f061b3a03aa8c7dd0",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\salary\\salary.service.ts": {
+    "mtime": 1779534174.1860335,
+    "ast_hash": "6a76a2425544532e1af15443eb86569f",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\security\\security.controller.ts": {
+    "mtime": 1779532029.201447,
+    "ast_hash": "6ba789e39fa35d695b656fa862c86877",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\security\\security.module.ts": {
+    "mtime": 1779532037.1049488,
+    "ast_hash": "c64f18d20a0d6f0f119faa6d0ea69daa",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\security\\security.service.ts": {
+    "mtime": 1779532021.717116,
+    "ast_hash": "eccaa173f704999de0f3da2e964ff3a5",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\settings\\settings.controller.ts": {
+    "mtime": 1779531992.9271846,
+    "ast_hash": "12bc72330d67165cd864bb01f8393c06",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\settings\\settings.module.ts": {
+    "mtime": 1779531907.308325,
+    "ast_hash": "95f65195f1d5674ce12169cb2fae4148",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\settings\\settings.service.ts": {
+    "mtime": 1779531972.9870079,
+    "ast_hash": "99156887b5255f7a0f3df3894706f1e5",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\settings\\dto\\update-setting.dto.ts": {
+    "mtime": 1779531950.745698,
+    "ast_hash": "bb44139a86abb1455e03deff3a82e589",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\super-admin\\super-admin.controller.ts": {
+    "mtime": 1779532011.5392632,
+    "ast_hash": "5427d29db9aeb5f5a14b432069d9d746",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\super-admin\\super-admin.module.ts": {
+    "mtime": 1779531896.133054,
+    "ast_hash": "f28752e936be0b95c61fb69b2163709c",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\super-admin\\super-admin.service.ts": {
+    "mtime": 1779532003.1544476,
+    "ast_hash": "8eca6abed1dc00dda8a722bf03c33cee",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\workspace\\workspace.controller.ts": {
+    "mtime": 1779539873.9338553,
+    "ast_hash": "84e07a9b5fabf267e9c7d5f66eac59b0",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\workspace\\workspace.module.ts": {
+    "mtime": 1779534179.5434766,
+    "ast_hash": "a176d6cae79f534a400f7750f14570b4",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\workspace\\workspace.service.ts": {
+    "mtime": 1779535128.880455,
+    "ast_hash": "f5873b590c99cf845c356516dcc99a43",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\page.tsx": {
+    "mtime": 1779532108.9571,
+    "ast_hash": "2aac292275e4fb6743dd91e48977a821",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\audit\\page.tsx": {
+    "mtime": 1779532134.1267817,
+    "ast_hash": "31e4c4b5bbff0c6eb4887503ae08d900",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\roles\\page.tsx": {
+    "mtime": 1779532121.7229023,
+    "ast_hash": "db4affe3c306ccea523e346bfde27aa4",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\settings\\page.tsx": {
+    "mtime": 1779532132.0997915,
+    "ast_hash": "e2e0a70d3d3213f58d882f31489bc022",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\users\\page.tsx": {
+    "mtime": 1779537820.9964197,
+    "ast_hash": "f16a302b7911835564d717675240b721",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\workspaces\\page.tsx": {
+    "mtime": 1779534235.4097357,
+    "ast_hash": "7db79d1782bfc437fcba547696cf6cc5",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\employee\\profile\\page.tsx": {
+    "mtime": 1779534237.452165,
+    "ast_hash": "7dffb016a62a7f7e60d6492ba0bb83b1",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\employee\\projects\\page.tsx": {
+    "mtime": 1779534248.5021002,
+    "ast_hash": "08ab5e6e34b0c3e1821c9568bf9890f8",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\employee\\salary\\page.tsx": {
+    "mtime": 1779534250.5307739,
+    "ast_hash": "09ad9f1211f351d306cb7aa3bfa1f8c7",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\employees\\page.tsx": {
+    "mtime": 1779540774.3659997,
+    "ast_hash": "3a3820289d168c29628e8147c1be40b4",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\settings\\roles\\page.tsx": {
+    "mtime": 1779531017.001359,
+    "ast_hash": "61cfed0316aca9a9731f6197e2b90065",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\settings\\roles\\components\\permission-matrix.tsx": {
+    "mtime": 1779531022.7177596,
+    "ast_hash": "ef2b57a0e41302d60a389eb101132c9e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\settings\\roles\\components\\role-dialog.tsx": {
+    "mtime": 1779531020.6136317,
+    "ast_hash": "de850e634131d2a35e79b9f1361b267d",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\settings\\users\\page.tsx": {
+    "mtime": 1779531014.9728444,
+    "ast_hash": "83c9d69b97bec47c8ea5186cf04b6d4e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\settings\\users\\components\\assign-role-dialog.tsx": {
+    "mtime": 1779539891.0967638,
+    "ast_hash": "b727578935044b53040d603d517aec89",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\auth\\require-permission.tsx": {
+    "mtime": 1779561841.0201254,
+    "ast_hash": "93ff2be3845377f89b59744125d35084",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\auth\\require-role.tsx": {
+    "mtime": 1779518076.7278225,
+    "ast_hash": "b579015bbe791ba2b29fa977ab32a7f7",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\employees\\access-management-modals.tsx": {
+    "mtime": 1779539682.9227393,
+    "ast_hash": "e883674abcc00f4340fe6d545cd35b3d",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\employees\\add-employee-modal.tsx": {
+    "mtime": 1779561916.4507835,
+    "ast_hash": "eba3ba41b4e3f35cfdde655c5652ec25",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\ui\\button.tsx": {
+    "mtime": 1779530658.8220458,
+    "ast_hash": "fda142180b5144df1e1d918f81e314b4",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\ui\\card.tsx": {
+    "mtime": 1779530703.0651703,
+    "ast_hash": "6a20080c2fe903abb4cc95f06d11d85c",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\ui\\checkbox.tsx": {
+    "mtime": 1779530684.9600987,
+    "ast_hash": "ca06e9d95214f6c4b90a760098d21830",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\ui\\dialog.tsx": {
+    "mtime": 1779530660.8795466,
+    "ast_hash": "4759bd9b6acb4039487254920077c639",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\ui\\input.tsx": {
+    "mtime": 1779530687.145244,
+    "ast_hash": "9db357718ecb8dba88cb0b7983fd65ea",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\ui\\label.tsx": {
+    "mtime": 1779530700.9960532,
+    "ast_hash": "7ea839d3fa873fb063a9709a79e47561",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\department\\dto\\create-department.dto.ts": {
+    "mtime": 1779560187.0032377,
+    "ast_hash": "24942bfc41f71f6f3c794f0fd72f6afc",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\department\\dto\\update-department.dto.ts": {
+    "mtime": 1779558585.8914838,
+    "ast_hash": "d1b90aeea14a72988f428d2114ea98b0",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\designation\\dto\\create-designation.dto.ts": {
+    "mtime": 1779558588.0255158,
+    "ast_hash": "0070aeea1504cd28309b575ae9c04187",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\designation\\dto\\update-designation.dto.ts": {
+    "mtime": 1779558590.0973659,
+    "ast_hash": "fdcff3ef33a6091041abf53ad0e8dd28",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\departments\\page.tsx": {
+    "mtime": 1779561638.2479064,
+    "ast_hash": "a6035173bd75303476ef90447493bcb2",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\departments\\components\\department-modal.tsx": {
+    "mtime": 1779560917.773988,
+    "ast_hash": "30b06501edb9452f147ce819c3688bf8",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\designations\\page.tsx": {
+    "mtime": 1779561640.3511977,
+    "ast_hash": "79a3901cdae9fae3e2054c620cd93df2",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\admin\\designations\\components\\designation-modal.tsx": {
+    "mtime": 1779562059.6797235,
+    "ast_hash": "d181a4158cacbce86c1f52d2351fc4ed",
     "semantic_hash": ""
   }
 }
