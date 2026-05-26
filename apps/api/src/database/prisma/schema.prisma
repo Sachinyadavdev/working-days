@@ -171,6 +171,8 @@ model Employee {
   workspaceMembers WorkspaceMember[]
   managedDepartments Department[]     @relation("DepartmentManager")
   assignedTasks      Task[]           @relation("TaskAssignee")
+  managedProjects    Project[]        @relation("ProjectManager")
+  projectMemberships ProjectMember[]
 
   @@map("employees")
   @@index([employeeCode])
@@ -286,28 +288,36 @@ model WorkspaceMember {
 // ============== PROJECTS ==============
 
 model Project {
-  id          String        @id @default(uuid())
-  name        String
-  key         String        @unique
-  description String?
-  workspaceId String?       @map("workspace_id")
-  status      ProjectStatus @default(PLANNING)
-  priority    Priority      @default(MEDIUM)
-  startDate   DateTime?     @map("start_date")
-  endDate     DateTime?     @map("end_date")
-  ownerId     String        @map("owner_id")
-  createdAt   DateTime      @default(now()) @map("created_at")
-  updatedAt   DateTime      @updatedAt @map("updated_at")
+  id               String        @id @default(uuid())
+  name             String
+  key              String        @unique
+  description      String?
+  clientName       String?       @map("client_name")
+  estimatedBudget  Decimal?      @map("estimated_budget") @db.Decimal(14, 2)
+  tags             String[]      @default([])
+  attachments      String[]      @default([])
+  projectManagerId String?       @map("project_manager_id")
+  workspaceId      String?       @map("workspace_id")
+  status           ProjectStatus @default(PLANNING)
+  priority         Priority      @default(MEDIUM)
+  startDate        DateTime?     @map("start_date")
+  endDate          DateTime?     @map("end_date")
+  ownerId          String        @map("owner_id")
+  createdAt        DateTime      @default(now()) @map("created_at")
+  updatedAt        DateTime      @updatedAt @map("updated_at")
 
-  workspace   Workspace?    @relation(fields: [workspaceId], references: [id])
-  tasks       Task[]
-  teams       ProjectTeam[]
+  workspace      Workspace?     @relation(fields: [workspaceId], references: [id])
+  projectManager Employee?      @relation("ProjectManager", fields: [projectManagerId], references: [id])
+  tasks          Task[]
+  teams          ProjectTeam[]
+  members        ProjectMember[]
 
   @@map("projects")
   @@index([key])
   @@index([status])
   @@index([ownerId])
   @@index([workspaceId])
+  @@index([projectManagerId])
 }
 
 enum ProjectStatus {
@@ -315,6 +325,7 @@ enum ProjectStatus {
   ACTIVE
   ON_HOLD
   COMPLETED
+  CANCELLED
   ARCHIVED
 }
 
@@ -364,6 +375,7 @@ model Task {
 }
 
 enum TaskStatus {
+  BACKLOG
   PENDING
   IN_PROGRESS
   IN_REVIEW
@@ -434,6 +446,20 @@ model ProjectTeam {
 
   @@id([projectId, teamId])
   @@map("project_teams")
+}
+
+model ProjectMember {
+  id         String   @id @default(uuid())
+  projectId  String   @map("project_id")
+  employeeId String   @map("employee_id")
+  role       String   @default("MEMBER")
+  joinedAt   DateTime @default(now()) @map("joined_at")
+
+  project  Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  employee Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, employeeId])
+  @@map("project_members")
 }
 
 // ============== ATTENDANCE ==============

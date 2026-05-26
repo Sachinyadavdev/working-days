@@ -1782,7 +1782,7 @@
       "source_file": "apps/api/src/common/decorators/public.decorator.ts",
       "source_location": "L1",
       "id": "apps_api_src_common_decorators_public_decorator_ts",
-      "community": 1,
+      "community": 73,
       "norm_label": "public.decorator.ts"
     },
     {
@@ -1791,7 +1791,7 @@
       "source_file": "apps/api/src/common/decorators/public.decorator.ts",
       "source_location": "L9",
       "id": "decorators_public_decorator_public",
-      "community": 1,
+      "community": 73,
       "norm_label": "public()"
     },
     {
@@ -1800,7 +1800,7 @@
       "source_file": "apps/api/src/common/decorators/roles.decorator.ts",
       "source_location": "L1",
       "id": "apps_api_src_common_decorators_roles_decorator_ts",
-      "community": 58,
+      "community": 50,
       "norm_label": "roles.decorator.ts"
     },
     {
@@ -1809,7 +1809,7 @@
       "source_file": "apps/api/src/common/decorators/roles.decorator.ts",
       "source_location": "L9",
       "id": "decorators_roles_decorator_roles",
-      "community": 58,
+      "community": 50,
       "norm_label": "roles()"
     },
     {
@@ -1818,7 +1818,7 @@
       "source_file": "apps/api/src/common/dto/pagination.dto.ts",
       "source_location": "L1",
       "id": "apps_api_src_common_dto_pagination_dto_ts",
-      "community": 53,
+      "community": 67,
       "norm_label": "pagination.dto.ts"
     },
     {
@@ -1827,7 +1827,7 @@
       "source_file": "apps/api/src/common/dto/pagination.dto.ts",
       "source_location": "L5",
       "id": "dto_pagination_dto_paginationdto",
-      "community": 53,
+      "community": 67,
       "norm_label": "paginationdto"
     },
     {
@@ -1836,7 +1836,7 @@
       "source_file": "apps/api/src/common/dto/pagination.dto.ts",
       "source_location": "L36",
       "id": "dto_pagination_dto_paginationdto_skip",
-      "community": 53,
+      "community": 67,
       "norm_label": ".skip()"
     },
     {
@@ -1908,7 +1908,7 @@
       "source_file": "apps/api/src/common/guards/jwt-auth.guard.ts",
       "source_location": "L1",
       "id": "apps_api_src_common_guards_jwt_auth_guard_ts",
-      "community": 56,
+      "community": 70,
       "norm_label": "jwt-auth.guard.ts"
     },
     {
@@ -1917,7 +1917,7 @@
       "source_file": "apps/api/src/common/guards/jwt-auth.guard.ts",
       "source_location": "L8",
       "id": "guards_jwt_auth_guard_jwtauthguard",
-      "community": 56,
+      "community": 70,
       "norm_label": "jwtauthguard"
     },
     {
@@ -1926,7 +1926,7 @@
       "source_file": "apps/api/src/common/guards/jwt-auth.guard.ts",
       "source_location": "L9",
       "id": "guards_jwt_auth_guard_jwtauthguard_constructor",
-      "community": 56,
+      "community": 70,
       "norm_label": ".constructor()"
     },
     {
@@ -1935,7 +1935,7 @@
       "source_file": "apps/api/src/common/guards/jwt-auth.guard.ts",
       "source_location": "L13",
       "id": "guards_jwt_auth_guard_jwtauthguard_canactivate",
-      "community": 56,
+      "community": 70,
       "norm_label": ".canactivate()"
     },
     {
@@ -1989,7 +1989,7 @@
       "source_file": "apps/api/src/common/guards/roles.guard.ts",
       "source_location": "L1",
       "id": "apps_api_src_common_guards_roles_guard_ts",
-      "community": 60,
+      "community": 70,
       "norm_label": "roles.guard.ts"
     },
     {
@@ -1998,7 +1998,7 @@
       "source_file": "apps/api/src/common/guards/roles.guard.ts",
       "source_location": "L8",
       "id": "guards_roles_guard_prisma",
-      "community": 60,
+      "community": 70,
       "norm_label": "prisma"
     },
     {
@@ -2007,7 +2007,7 @@
       "source_file": "apps/api/src/common/guards/roles.guard.ts",
       "source_location": "L11",
       "id": "guards_roles_guard_rolesguard",
-      "community": 60,
+      "community": 70,
       "norm_label": "rolesguard"
     },
     {
@@ -2016,7 +2016,7 @@
       "source_file": "apps/api/src/common/guards/roles.guard.ts",
       "source_location": "L12",
       "id": "guards_roles_guard_rolesguard_constructor",
-      "community": 60,
+      "community": 70,
       "norm_label": ".constructor()"
     },
     {
@@ -2025,7 +2025,7 @@
       "source_file": "apps/api/src/common/guards/roles.guard.ts",
       "source_location": "L17",
       "id": "guards_roles_guard_rolesguard_canactivate",
-      "community": 60,
+      "community": 70,
       "norm_label": ".canactivate()"
     },
     {
@@ -2133,7 +2133,7 @@
       "source_file": "apps/api/src/database/database.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_database_database_module_ts",
-      "community": 65,
+      "community": 58,
       "norm_label": "database.module.ts"
     },
     {
@@ -2142,7 +2142,7 @@
       "source_file": "apps/api/src/database/database.module.ts",
       "source_location": "L10",
       "id": "database_database_module_databasemodule",
-      "community": 65,
+      "community": 58,
       "norm_label": "databasemodule"
     },
     {
@@ -2232,7 +2232,7 @@
       "source_file": "apps/api/src/health/health.controller.ts",
       "source_location": "L1",
       "id": "apps_api_src_health_health_controller_ts",
-      "community": 1,
+      "community": 73,
       "norm_label": "health.controller.ts"
     },
     {
@@ -2241,7 +2241,7 @@
       "source_file": "apps/api/src/health/health.controller.ts",
       "source_location": "L10",
       "id": "health_health_controller_healthcontroller",
-      "community": 1,
+      "community": 73,
       "norm_label": "healthcontroller"
     },
     {
@@ -2250,7 +2250,7 @@
       "source_file": "apps/api/src/health/health.controller.ts",
       "source_location": "L11",
       "id": "health_health_controller_healthcontroller_constructor",
-      "community": 1,
+      "community": 73,
       "norm_label": ".constructor()"
     },
     {
@@ -2259,7 +2259,7 @@
       "source_file": "apps/api/src/health/health.controller.ts",
       "source_location": "L19",
       "id": "health_health_controller_healthcontroller_check",
-      "community": 1,
+      "community": 73,
       "norm_label": ".check()"
     },
     {
@@ -2268,7 +2268,7 @@
       "source_file": "apps/api/src/health/health.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_health_health_module_ts",
-      "community": 1,
+      "community": 73,
       "norm_label": "health.module.ts"
     },
     {
@@ -2277,7 +2277,7 @@
       "source_file": "apps/api/src/health/health.module.ts",
       "source_location": "L5",
       "id": "health_health_module_healthmodule",
-      "community": 1,
+      "community": 73,
       "norm_label": "healthmodule"
     },
     {
@@ -2286,7 +2286,7 @@
       "source_file": "apps/api/src/logger/logger.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_logger_logger_module_ts",
-      "community": 65,
+      "community": 2,
       "norm_label": "logger.module.ts"
     },
     {
@@ -2295,7 +2295,7 @@
       "source_file": "apps/api/src/logger/logger.module.ts",
       "source_location": "L10",
       "id": "logger_logger_module_loggermodule",
-      "community": 65,
+      "community": 2,
       "norm_label": "loggermodule"
     },
     {
@@ -2376,7 +2376,7 @@
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.controller.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_activity_logs_activity_logs_controller_ts",
-      "community": 28,
+      "community": 67,
       "norm_label": "activity-logs.controller.ts"
     },
     {
@@ -2385,7 +2385,7 @@
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.controller.ts",
       "source_location": "L10",
       "id": "activity_logs_activity_logs_controller_activitylogscontroller",
-      "community": 28,
+      "community": 67,
       "norm_label": "activitylogscontroller"
     },
     {
@@ -2394,7 +2394,7 @@
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.controller.ts",
       "source_location": "L11",
       "id": "activity_logs_activity_logs_controller_activitylogscontroller_constructor",
-      "community": 28,
+      "community": 67,
       "norm_label": ".constructor()"
     },
     {
@@ -2403,7 +2403,7 @@
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.controller.ts",
       "source_location": "L16",
       "id": "activity_logs_activity_logs_controller_activitylogscontroller_findall",
-      "community": 28,
+      "community": 67,
       "norm_label": ".findall()"
     },
     {
@@ -2412,7 +2412,7 @@
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_activity_logs_activity_logs_module_ts",
-      "community": 28,
+      "community": 67,
       "norm_label": "activity-logs.module.ts"
     },
     {
@@ -2421,7 +2421,7 @@
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.module.ts",
       "source_location": "L6",
       "id": "activity_logs_activity_logs_module_activitylogsmodule",
-      "community": 28,
+      "community": 67,
       "norm_label": "activitylogsmodule"
     },
     {
@@ -2430,7 +2430,7 @@
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_activity_logs_activity_logs_service_ts",
-      "community": 28,
+      "community": 67,
       "norm_label": "activity-logs.service.ts"
     },
     {
@@ -2473,25 +2473,70 @@
       "label": ".onProjectCreated()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
-      "source_location": "L28",
+      "source_location": "L29",
       "id": "activity_logs_activity_logs_service_activitylogsservice_onprojectcreated",
       "community": 28,
       "norm_label": ".onprojectcreated()"
     },
     {
+      "label": ".onProjectUpdated()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L34",
+      "id": "activity_logs_activity_logs_service_activitylogsservice_onprojectupdated",
+      "community": 28,
+      "norm_label": ".onprojectupdated()"
+    },
+    {
+      "label": ".onProjectDeleted()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L48",
+      "id": "activity_logs_activity_logs_service_activitylogsservice_onprojectdeleted",
+      "community": 28,
+      "norm_label": ".onprojectdeleted()"
+    },
+    {
+      "label": ".onMemberAdded()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L53",
+      "id": "activity_logs_activity_logs_service_activitylogsservice_onmemberadded",
+      "community": 28,
+      "norm_label": ".onmemberadded()"
+    },
+    {
+      "label": ".onMemberRemoved()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L58",
+      "id": "activity_logs_activity_logs_service_activitylogsservice_onmemberremoved",
+      "community": 28,
+      "norm_label": ".onmemberremoved()"
+    },
+    {
       "label": ".onTaskAssigned()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
-      "source_location": "L33",
+      "source_location": "L65",
       "id": "activity_logs_activity_logs_service_activitylogsservice_ontaskassigned",
       "community": 28,
       "norm_label": ".ontaskassigned()"
     },
     {
+      "label": ".onTaskUpdated()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L70",
+      "id": "activity_logs_activity_logs_service_activitylogsservice_ontaskupdated",
+      "community": 28,
+      "norm_label": ".ontaskupdated()"
+    },
+    {
       "label": ".onEmployeeCreated()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
-      "source_location": "L38",
+      "source_location": "L86",
       "id": "activity_logs_activity_logs_service_activitylogsservice_onemployeecreated",
       "community": 28,
       "norm_label": ".onemployeecreated()"
@@ -2511,7 +2556,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L12",
       "id": "attendance_attendance_controller_attendancecontroller",
-      "community": 80,
+      "community": 53,
       "norm_label": "attendancecontroller"
     },
     {
@@ -2520,7 +2565,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L13",
       "id": "attendance_attendance_controller_attendancecontroller_constructor",
-      "community": 80,
+      "community": 53,
       "norm_label": ".constructor()"
     },
     {
@@ -2529,7 +2574,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L17",
       "id": "attendance_attendance_controller_attendancecontroller_checkin",
-      "community": 80,
+      "community": 53,
       "norm_label": ".checkin()"
     },
     {
@@ -2538,7 +2583,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L23",
       "id": "attendance_attendance_controller_attendancecontroller_checkout",
-      "community": 80,
+      "community": 53,
       "norm_label": ".checkout()"
     },
     {
@@ -2547,7 +2592,7 @@
       "source_file": "apps/api/src/modules/attendance/attendance.controller.ts",
       "source_location": "L29",
       "id": "attendance_attendance_controller_attendancecontroller_findall",
-      "community": 80,
+      "community": 53,
       "norm_label": ".findall()"
     },
     {
@@ -3555,7 +3600,7 @@
       "source_file": "apps/api/src/modules/documents/documents.controller.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_documents_documents_controller_ts",
-      "community": 73,
+      "community": 65,
       "norm_label": "documents.controller.ts"
     },
     {
@@ -3564,7 +3609,7 @@
       "source_file": "apps/api/src/modules/documents/documents.controller.ts",
       "source_location": "L4",
       "id": "documents_documents_controller_documentscontroller",
-      "community": 73,
+      "community": 65,
       "norm_label": "documentscontroller"
     },
     {
@@ -3573,7 +3618,7 @@
       "source_file": "apps/api/src/modules/documents/documents.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_documents_documents_module_ts",
-      "community": 73,
+      "community": 65,
       "norm_label": "documents.module.ts"
     },
     {
@@ -3582,7 +3627,7 @@
       "source_file": "apps/api/src/modules/documents/documents.module.ts",
       "source_location": "L9",
       "id": "documents_documents_module_documentsmodule",
-      "community": 73,
+      "community": 65,
       "norm_label": "documentsmodule"
     },
     {
@@ -3591,7 +3636,7 @@
       "source_file": "apps/api/src/modules/documents/documents.service.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_documents_documents_service_ts",
-      "community": 73,
+      "community": 65,
       "norm_label": "documents.service.ts"
     },
     {
@@ -3600,7 +3645,7 @@
       "source_file": "apps/api/src/modules/documents/documents.service.ts",
       "source_location": "L4",
       "id": "documents_documents_service_documentsservice",
-      "community": 73,
+      "community": 65,
       "norm_label": "documentsservice"
     },
     {
@@ -4239,7 +4284,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_notifications_notifications_controller_ts",
-      "community": 53,
+      "community": 67,
       "norm_label": "notifications.controller.ts"
     },
     {
@@ -4248,7 +4293,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L10",
       "id": "notifications_notifications_controller_notificationscontroller",
-      "community": 57,
+      "community": 2,
       "norm_label": "notificationscontroller"
     },
     {
@@ -4257,7 +4302,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L11",
       "id": "notifications_notifications_controller_notificationscontroller_constructor",
-      "community": 57,
+      "community": 2,
       "norm_label": ".constructor()"
     },
     {
@@ -4266,7 +4311,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L15",
       "id": "notifications_notifications_controller_notificationscontroller_findall",
-      "community": 57,
+      "community": 2,
       "norm_label": ".findall()"
     },
     {
@@ -4275,7 +4320,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L21",
       "id": "notifications_notifications_controller_notificationscontroller_markasread",
-      "community": 57,
+      "community": 2,
       "norm_label": ".markasread()"
     },
     {
@@ -4284,7 +4329,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.controller.ts",
       "source_location": "L25",
       "id": "notifications_notifications_controller_notificationscontroller_markallasread",
-      "community": 57,
+      "community": 2,
       "norm_label": ".markallasread()"
     },
     {
@@ -4293,7 +4338,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.gateway.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_notifications_notifications_gateway_ts",
-      "community": 57,
+      "community": 2,
       "norm_label": "notifications.gateway.ts"
     },
     {
@@ -4302,7 +4347,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.gateway.ts",
       "source_location": "L15",
       "id": "notifications_notifications_gateway_notificationsgateway",
-      "community": 57,
+      "community": 2,
       "norm_label": "notificationsgateway"
     },
     {
@@ -4311,7 +4356,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.gateway.ts",
       "source_location": "L21",
       "id": "notifications_notifications_gateway_notificationsgateway_constructor",
-      "community": 57,
+      "community": 2,
       "norm_label": ".constructor()"
     },
     {
@@ -4320,7 +4365,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.gateway.ts",
       "source_location": "L23",
       "id": "notifications_notifications_gateway_notificationsgateway_handleconnection",
-      "community": 57,
+      "community": 2,
       "norm_label": ".handleconnection()"
     },
     {
@@ -4329,7 +4374,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.gateway.ts",
       "source_location": "L31",
       "id": "notifications_notifications_gateway_notificationsgateway_handledisconnect",
-      "community": 57,
+      "community": 2,
       "norm_label": ".handledisconnect()"
     },
     {
@@ -4338,7 +4383,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.gateway.ts",
       "source_location": "L43",
       "id": "notifications_notifications_gateway_notificationsgateway_sendtouser",
-      "community": 57,
+      "community": 2,
       "norm_label": ".sendtouser()"
     },
     {
@@ -4347,7 +4392,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.gateway.ts",
       "source_location": "L53",
       "id": "notifications_notifications_gateway_notificationsgateway_broadcast",
-      "community": 57,
+      "community": 2,
       "norm_label": ".broadcast()"
     },
     {
@@ -4356,7 +4401,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_notifications_notifications_module_ts",
-      "community": 57,
+      "community": 2,
       "norm_label": "notifications.module.ts"
     },
     {
@@ -4365,7 +4410,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.module.ts",
       "source_location": "L11",
       "id": "notifications_notifications_module_notificationsmodule",
-      "community": 57,
+      "community": 2,
       "norm_label": "notificationsmodule"
     },
     {
@@ -4374,7 +4419,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.service.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_notifications_notifications_service_ts",
-      "community": 53,
+      "community": 67,
       "norm_label": "notifications.service.ts"
     },
     {
@@ -4383,7 +4428,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.service.ts",
       "source_location": "L6",
       "id": "notifications_notifications_service_notificationsservice",
-      "community": 67,
+      "community": 2,
       "norm_label": "notificationsservice"
     },
     {
@@ -4392,7 +4437,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.service.ts",
       "source_location": "L7",
       "id": "notifications_notifications_service_notificationsservice_constructor",
-      "community": 67,
+      "community": 2,
       "norm_label": ".constructor()"
     },
     {
@@ -4401,7 +4446,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.service.ts",
       "source_location": "L9",
       "id": "notifications_notifications_service_notificationsservice_findbyuser",
-      "community": 67,
+      "community": 2,
       "norm_label": ".findbyuser()"
     },
     {
@@ -4410,7 +4455,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.service.ts",
       "source_location": "L23",
       "id": "notifications_notifications_service_notificationsservice_create",
-      "community": 67,
+      "community": 2,
       "norm_label": ".create()"
     },
     {
@@ -4419,7 +4464,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.service.ts",
       "source_location": "L27",
       "id": "notifications_notifications_service_notificationsservice_markasread",
-      "community": 67,
+      "community": 2,
       "norm_label": ".markasread()"
     },
     {
@@ -4428,7 +4473,7 @@
       "source_file": "apps/api/src/modules/notifications/notifications.service.ts",
       "source_location": "L31",
       "id": "notifications_notifications_service_notificationsservice_markallasread",
-      "community": 67,
+      "community": 2,
       "norm_label": ".markallasread()"
     },
     {
@@ -4570,64 +4615,136 @@
       "label": "ProjectsController",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.controller.ts",
-      "source_location": "L13",
+      "source_location": "L14",
       "id": "projects_projects_controller_projectscontroller",
-      "community": 16,
+      "community": 60,
       "norm_label": "projectscontroller"
     },
     {
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.controller.ts",
-      "source_location": "L14",
+      "source_location": "L15",
       "id": "projects_projects_controller_projectscontroller_constructor",
-      "community": 16,
+      "community": 60,
       "norm_label": ".constructor()"
+    },
+    {
+      "label": ".getStats()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L21",
+      "id": "projects_projects_controller_projectscontroller_getstats",
+      "community": 60,
+      "norm_label": ".getstats()"
     },
     {
       "label": ".findAll()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.controller.ts",
-      "source_location": "L18",
+      "source_location": "L29",
       "id": "projects_projects_controller_projectscontroller_findall",
-      "community": 16,
+      "community": 60,
       "norm_label": ".findall()"
     },
     {
       "label": ".create()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.controller.ts",
-      "source_location": "L24",
+      "source_location": "L35",
       "id": "projects_projects_controller_projectscontroller_create",
-      "community": 16,
+      "community": 60,
       "norm_label": ".create()"
     },
     {
       "label": ".findOne()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.controller.ts",
-      "source_location": "L33",
+      "source_location": "L44",
       "id": "projects_projects_controller_projectscontroller_findone",
-      "community": 16,
+      "community": 60,
       "norm_label": ".findone()"
     },
     {
       "label": ".update()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.controller.ts",
-      "source_location": "L39",
+      "source_location": "L50",
       "id": "projects_projects_controller_projectscontroller_update",
-      "community": 16,
+      "community": 60,
       "norm_label": ".update()"
     },
     {
       "label": ".archive()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.controller.ts",
-      "source_location": "L45",
+      "source_location": "L56",
       "id": "projects_projects_controller_projectscontroller_archive",
-      "community": 16,
+      "community": 60,
       "norm_label": ".archive()"
+    },
+    {
+      "label": ".delete()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L62",
+      "id": "projects_projects_controller_projectscontroller_delete",
+      "community": 60,
+      "norm_label": ".delete()"
+    },
+    {
+      "label": ".getMembers()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L70",
+      "id": "projects_projects_controller_projectscontroller_getmembers",
+      "community": 60,
+      "norm_label": ".getmembers()"
+    },
+    {
+      "label": ".addMember()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L76",
+      "id": "projects_projects_controller_projectscontroller_addmember",
+      "community": 60,
+      "norm_label": ".addmember()"
+    },
+    {
+      "label": ".removeMember()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L82",
+      "id": "projects_projects_controller_projectscontroller_removemember",
+      "community": 60,
+      "norm_label": ".removemember()"
+    },
+    {
+      "label": ".getKanbanBoard()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L93",
+      "id": "projects_projects_controller_projectscontroller_getkanbanboard",
+      "community": 60,
+      "norm_label": ".getkanbanboard()"
+    },
+    {
+      "label": ".getTimeline()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L101",
+      "id": "projects_projects_controller_projectscontroller_gettimeline",
+      "community": 60,
+      "norm_label": ".gettimeline()"
+    },
+    {
+      "label": ".getActivityLogs()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L109",
+      "id": "projects_projects_controller_projectscontroller_getactivitylogs",
+      "community": 60,
+      "norm_label": ".getactivitylogs()"
     },
     {
       "label": "projects.module.ts",
@@ -4660,64 +4777,163 @@
       "label": "ProjectsService",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.service.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "id": "projects_projects_service_projectsservice",
-      "community": 16,
+      "community": 57,
       "norm_label": "projectsservice"
     },
     {
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.service.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "id": "projects_projects_service_projectsservice_constructor",
-      "community": 16,
+      "community": 57,
       "norm_label": ".constructor()"
     },
     {
       "label": ".findAll()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.service.ts",
-      "source_location": "L16",
+      "source_location": "L19",
       "id": "projects_projects_service_projectsservice_findall",
-      "community": 16,
+      "community": 57,
       "norm_label": ".findall()"
     },
     {
       "label": ".findById()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.service.ts",
-      "source_location": "L56",
+      "source_location": "L77",
       "id": "projects_projects_service_projectsservice_findbyid",
-      "community": 16,
+      "community": 57,
       "norm_label": ".findbyid()"
     },
     {
       "label": ".create()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.service.ts",
-      "source_location": "L75",
+      "source_location": "L122",
       "id": "projects_projects_service_projectsservice_create",
-      "community": 16,
+      "community": 57,
       "norm_label": ".create()"
     },
     {
       "label": ".update()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.service.ts",
-      "source_location": "L98",
+      "source_location": "L152",
       "id": "projects_projects_service_projectsservice_update",
-      "community": 16,
+      "community": 57,
       "norm_label": ".update()"
     },
     {
       "label": ".archive()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/projects.service.ts",
-      "source_location": "L111",
+      "source_location": "L181",
       "id": "projects_projects_service_projectsservice_archive",
-      "community": 16,
+      "community": 57,
       "norm_label": ".archive()"
+    },
+    {
+      "label": ".delete()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L196",
+      "id": "projects_projects_service_projectsservice_delete",
+      "community": 57,
+      "norm_label": ".delete()"
+    },
+    {
+      "label": ".getStats()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L207",
+      "id": "projects_projects_service_projectsservice_getstats",
+      "community": 57,
+      "norm_label": ".getstats()"
+    },
+    {
+      "label": ".getMembers()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L272",
+      "id": "projects_projects_service_projectsservice_getmembers",
+      "community": 57,
+      "norm_label": ".getmembers()"
+    },
+    {
+      "label": ".addMember()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L291",
+      "id": "projects_projects_service_projectsservice_addmember",
+      "community": 57,
+      "norm_label": ".addmember()"
+    },
+    {
+      "label": ".removeMember()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L332",
+      "id": "projects_projects_service_projectsservice_removemember",
+      "community": 57,
+      "norm_label": ".removemember()"
+    },
+    {
+      "label": ".getKanbanBoard()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L348",
+      "id": "projects_projects_service_projectsservice_getkanbanboard",
+      "community": 57,
+      "norm_label": ".getkanbanboard()"
+    },
+    {
+      "label": ".getTimeline()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L381",
+      "id": "projects_projects_service_projectsservice_gettimeline",
+      "community": 57,
+      "norm_label": ".gettimeline()"
+    },
+    {
+      "label": ".getActivityLogs()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L421",
+      "id": "projects_projects_service_projectsservice_getactivitylogs",
+      "community": 57,
+      "norm_label": ".getactivitylogs()"
+    },
+    {
+      "label": ".getProjectTaskIds()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L440",
+      "id": "projects_projects_service_projectsservice_getprojecttaskids",
+      "community": 57,
+      "norm_label": ".getprojecttaskids()"
+    },
+    {
+      "label": "add-member.dto.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/dto/add-member.dto.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_modules_projects_dto_add_member_dto_ts",
+      "community": 16,
+      "norm_label": "add-member.dto.ts"
+    },
+    {
+      "label": "AddMemberDto",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/dto/add-member.dto.ts",
+      "source_location": "L4",
+      "id": "dto_add_member_dto_addmemberdto",
+      "community": 16,
+      "norm_label": "addmemberdto"
     },
     {
       "label": "create-project.dto.ts",
@@ -4732,10 +4948,28 @@
       "label": "CreateProjectDto",
       "file_type": "code",
       "source_file": "apps/api/src/modules/projects/dto/create-project.dto.ts",
-      "source_location": "L4",
+      "source_location": "L5",
       "id": "dto_create_project_dto_createprojectdto",
       "community": 16,
       "norm_label": "createprojectdto"
+    },
+    {
+      "label": "filter-projects.dto.ts",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/dto/filter-projects.dto.ts",
+      "source_location": "L1",
+      "id": "apps_api_src_modules_projects_dto_filter_projects_dto_ts",
+      "community": 16,
+      "norm_label": "filter-projects.dto.ts"
+    },
+    {
+      "label": "FilterProjectsDto",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/projects/dto/filter-projects.dto.ts",
+      "source_location": "L5",
+      "id": "dto_filter_projects_dto_filterprojectsdto",
+      "community": 16,
+      "norm_label": "filterprojectsdto"
     },
     {
       "label": "update-project.dto.ts",
@@ -5382,7 +5616,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.controller.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_super_admin_super_admin_controller_ts",
-      "community": 58,
+      "community": 50,
       "norm_label": "super-admin.controller.ts"
     },
     {
@@ -5391,7 +5625,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.controller.ts",
       "source_location": "L10",
       "id": "super_admin_super_admin_controller_superadmincontroller",
-      "community": 58,
+      "community": 50,
       "norm_label": "superadmincontroller"
     },
     {
@@ -5400,7 +5634,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.controller.ts",
       "source_location": "L11",
       "id": "super_admin_super_admin_controller_superadmincontroller_constructor",
-      "community": 58,
+      "community": 50,
       "norm_label": ".constructor()"
     },
     {
@@ -5409,7 +5643,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.controller.ts",
       "source_location": "L15",
       "id": "super_admin_super_admin_controller_superadmincontroller_getdashboardstats",
-      "community": 58,
+      "community": 50,
       "norm_label": ".getdashboardstats()"
     },
     {
@@ -5418,7 +5652,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.controller.ts",
       "source_location": "L21",
       "id": "super_admin_super_admin_controller_superadmincontroller_toggleuserstatus",
-      "community": 58,
+      "community": 50,
       "norm_label": ".toggleuserstatus()"
     },
     {
@@ -5427,7 +5661,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_super_admin_super_admin_module_ts",
-      "community": 58,
+      "community": 50,
       "norm_label": "super-admin.module.ts"
     },
     {
@@ -5436,7 +5670,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.module.ts",
       "source_location": "L9",
       "id": "super_admin_super_admin_module_superadminmodule",
-      "community": 58,
+      "community": 50,
       "norm_label": "superadminmodule"
     },
     {
@@ -5445,7 +5679,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.service.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_super_admin_super_admin_service_ts",
-      "community": 58,
+      "community": 50,
       "norm_label": "super-admin.service.ts"
     },
     {
@@ -5454,7 +5688,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.service.ts",
       "source_location": "L5",
       "id": "super_admin_super_admin_service_superadminservice",
-      "community": 58,
+      "community": 50,
       "norm_label": "superadminservice"
     },
     {
@@ -5463,7 +5697,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.service.ts",
       "source_location": "L6",
       "id": "super_admin_super_admin_service_superadminservice_constructor",
-      "community": 58,
+      "community": 50,
       "norm_label": ".constructor()"
     },
     {
@@ -5472,7 +5706,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.service.ts",
       "source_location": "L8",
       "id": "super_admin_super_admin_service_superadminservice_getdashboardstats",
-      "community": 58,
+      "community": 50,
       "norm_label": ".getdashboardstats()"
     },
     {
@@ -5481,7 +5715,7 @@
       "source_file": "apps/api/src/modules/super-admin/super-admin.service.ts",
       "source_location": "L39",
       "id": "super_admin_super_admin_service_superadminservice_toggleuserstatus",
-      "community": 58,
+      "community": 50,
       "norm_label": ".toggleuserstatus()"
     },
     {
@@ -5632,7 +5866,7 @@
       "label": ".update()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/tasks/tasks.service.ts",
-      "source_location": "L116",
+      "source_location": "L118",
       "id": "tasks_tasks_service_tasksservice_update",
       "community": 14,
       "norm_label": ".update()"
@@ -5641,7 +5875,7 @@
       "label": ".cancel()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/tasks/tasks.service.ts",
-      "source_location": "L139",
+      "source_location": "L145",
       "id": "tasks_tasks_service_tasksservice_cancel",
       "community": 14,
       "norm_label": ".cancel()"
@@ -5697,7 +5931,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L12",
       "id": "teams_teams_controller_teamscontroller",
-      "community": 79,
+      "community": 17,
       "norm_label": "teamscontroller"
     },
     {
@@ -5706,7 +5940,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L13",
       "id": "teams_teams_controller_teamscontroller_constructor",
-      "community": 79,
+      "community": 17,
       "norm_label": ".constructor()"
     },
     {
@@ -5715,7 +5949,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L17",
       "id": "teams_teams_controller_teamscontroller_findall",
-      "community": 79,
+      "community": 17,
       "norm_label": ".findall()"
     },
     {
@@ -5724,7 +5958,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L21",
       "id": "teams_teams_controller_teamscontroller_create",
-      "community": 79,
+      "community": 17,
       "norm_label": ".create()"
     },
     {
@@ -5733,7 +5967,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L25",
       "id": "teams_teams_controller_teamscontroller_findone",
-      "community": 79,
+      "community": 17,
       "norm_label": ".findone()"
     },
     {
@@ -5742,7 +5976,7 @@
       "source_file": "apps/api/src/modules/teams/teams.controller.ts",
       "source_location": "L29",
       "id": "teams_teams_controller_teamscontroller_update",
-      "community": 79,
+      "community": 17,
       "norm_label": ".update()"
     },
     {
@@ -5751,7 +5985,7 @@
       "source_file": "apps/api/src/modules/teams/teams.module.ts",
       "source_location": "L1",
       "id": "apps_api_src_modules_teams_teams_module_ts",
-      "community": 65,
+      "community": 17,
       "norm_label": "teams.module.ts"
     },
     {
@@ -5760,7 +5994,7 @@
       "source_file": "apps/api/src/modules/teams/teams.module.ts",
       "source_location": "L10",
       "id": "teams_teams_module_teamsmodule",
-      "community": 65,
+      "community": 17,
       "norm_label": "teamsmodule"
     },
     {
@@ -6192,7 +6426,7 @@
       "source_file": "apps/api/src/redis/redis.service.ts",
       "source_location": "L1",
       "id": "apps_api_src_redis_redis_service_ts",
-      "community": 60,
+      "community": 63,
       "norm_label": "redis.service.ts"
     },
     {
@@ -7137,7 +7371,7 @@
       "source_file": "apps/web/src/app/(auth)/forgot-password/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_auth_forgot_password_page_tsx",
-      "community": 51,
+      "community": 68,
       "norm_label": "page.tsx"
     },
     {
@@ -7146,7 +7380,7 @@
       "source_file": "apps/web/src/app/(auth)/forgot-password/page.tsx",
       "source_location": "L8",
       "id": "forgot_password_page_forgotpasswordpage",
-      "community": 51,
+      "community": 68,
       "norm_label": "forgotpasswordpage()"
     },
     {
@@ -7191,7 +7425,7 @@
       "source_file": "apps/web/src/app/(auth)/reset-password/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_auth_reset_password_page_tsx",
-      "community": 51,
+      "community": 68,
       "norm_label": "page.tsx"
     },
     {
@@ -7200,7 +7434,7 @@
       "source_file": "apps/web/src/app/(auth)/reset-password/page.tsx",
       "source_location": "L10",
       "id": "reset_password_page_resetpasswordform",
-      "community": 51,
+      "community": 68,
       "norm_label": "resetpasswordform()"
     },
     {
@@ -7209,7 +7443,7 @@
       "source_file": "apps/web/src/app/(auth)/reset-password/page.tsx",
       "source_location": "L164",
       "id": "reset_password_page_resetpasswordpage",
-      "community": 51,
+      "community": 68,
       "norm_label": "resetpasswordpage()"
     },
     {
@@ -7272,7 +7506,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_admin_departments_page_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "page.tsx"
     },
     {
@@ -7281,7 +7515,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L13",
       "id": "departments_page_department",
-      "community": 48,
+      "community": 68,
       "norm_label": "department"
     },
     {
@@ -7290,7 +7524,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/page.tsx",
       "source_location": "L29",
       "id": "departments_page_departmentspage",
-      "community": 48,
+      "community": 68,
       "norm_label": "departmentspage()"
     },
     {
@@ -7299,7 +7533,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_admin_departments_components_department_modal_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "department-modal.tsx"
     },
     {
@@ -7308,7 +7542,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L21",
       "id": "components_department_modal_departmentschema",
-      "community": 48,
+      "community": 68,
       "norm_label": "departmentschema"
     },
     {
@@ -7317,7 +7551,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L29",
       "id": "components_department_modal_departmentformvalues",
-      "community": 48,
+      "community": 68,
       "norm_label": "departmentformvalues"
     },
     {
@@ -7326,7 +7560,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L31",
       "id": "components_department_modal_departmentmodalprops",
-      "community": 48,
+      "community": 68,
       "norm_label": "departmentmodalprops"
     },
     {
@@ -7335,7 +7569,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/departments/components/department-modal.tsx",
       "source_location": "L37",
       "id": "components_department_modal_departmentmodal",
-      "community": 48,
+      "community": 68,
       "norm_label": "departmentmodal()"
     },
     {
@@ -7344,7 +7578,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_admin_designations_page_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "page.tsx"
     },
     {
@@ -7353,7 +7587,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L13",
       "id": "designations_page_designation",
-      "community": 48,
+      "community": 68,
       "norm_label": "designation"
     },
     {
@@ -7362,7 +7596,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/page.tsx",
       "source_location": "L25",
       "id": "designations_page_designationspage",
-      "community": 48,
+      "community": 68,
       "norm_label": "designationspage()"
     },
     {
@@ -7371,7 +7605,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_admin_designations_components_designation_modal_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "designation-modal.tsx"
     },
     {
@@ -7380,7 +7614,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L21",
       "id": "components_designation_modal_designationschema",
-      "community": 48,
+      "community": 68,
       "norm_label": "designationschema"
     },
     {
@@ -7389,7 +7623,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L27",
       "id": "components_designation_modal_designationformvalues",
-      "community": 48,
+      "community": 68,
       "norm_label": "designationformvalues"
     },
     {
@@ -7398,7 +7632,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L29",
       "id": "components_designation_modal_designationmodalprops",
-      "community": 48,
+      "community": 68,
       "norm_label": "designationmodalprops"
     },
     {
@@ -7407,7 +7641,7 @@
       "source_file": "apps/web/src/app/(dashboard)/admin/designations/components/designation-modal.tsx",
       "source_location": "L35",
       "id": "components_designation_modal_designationmodal",
-      "community": 48,
+      "community": 68,
       "norm_label": "designationmodal()"
     },
     {
@@ -7596,8 +7830,89 @@
       "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
       "source_location": "L18",
       "id": "employees_page_employeedirectorypage",
-      "community": 51,
+      "community": 68,
       "norm_label": "employeedirectorypage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_app_dashboard_projects_page_tsx",
+      "community": 68,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "STATUS_BADGE",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L35",
+      "id": "projects_page_status_badge",
+      "community": 68,
+      "norm_label": "status_badge"
+    },
+    {
+      "label": "PRIORITY_BADGE",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L44",
+      "id": "projects_page_priority_badge",
+      "community": 68,
+      "norm_label": "priority_badge"
+    },
+    {
+      "label": "ProjectsPage()",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L51",
+      "id": "projects_page_projectspage",
+      "community": 68,
+      "norm_label": "projectspage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "community": 48,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "STATUS_BADGE",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L39",
+      "id": "id_page_status_badge",
+      "community": 48,
+      "norm_label": "status_badge"
+    },
+    {
+      "label": "PRIORITY_BADGE",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L48",
+      "id": "id_page_priority_badge",
+      "community": 48,
+      "norm_label": "priority_badge"
+    },
+    {
+      "label": "TASK_STATUS_COLOR",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L55",
+      "id": "id_page_task_status_color",
+      "community": 48,
+      "norm_label": "task_status_color"
+    },
+    {
+      "label": "ProjectDetailPage()",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L68",
+      "id": "id_page_projectdetailpage",
+      "community": 51,
+      "norm_label": "projectdetailpage()"
     },
     {
       "label": "page.tsx",
@@ -7605,7 +7920,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_settings_roles_page_tsx",
-      "community": 49,
+      "community": 12,
       "norm_label": "page.tsx"
     },
     {
@@ -7614,7 +7929,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/page.tsx",
       "source_location": "L12",
       "id": "roles_page_role",
-      "community": 49,
+      "community": 12,
       "norm_label": "role"
     },
     {
@@ -7623,7 +7938,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/page.tsx",
       "source_location": "L23",
       "id": "roles_page_rolespage",
-      "community": 49,
+      "community": 12,
       "norm_label": "rolespage()"
     },
     {
@@ -7632,7 +7947,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/permission-matrix.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_settings_roles_components_permission_matrix_tsx",
-      "community": 12,
+      "community": 68,
       "norm_label": "permission-matrix.tsx"
     },
     {
@@ -7641,7 +7956,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/permission-matrix.tsx",
       "source_location": "L9",
       "id": "components_permission_matrix_permissionmatrixprops",
-      "community": 12,
+      "community": 68,
       "norm_label": "permissionmatrixprops"
     },
     {
@@ -7650,7 +7965,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/permission-matrix.tsx",
       "source_location": "L16",
       "id": "components_permission_matrix_permissiongroup",
-      "community": 12,
+      "community": 68,
       "norm_label": "permissiongroup"
     },
     {
@@ -7659,7 +7974,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/permission-matrix.tsx",
       "source_location": "L21",
       "id": "components_permission_matrix_permissionmatrix",
-      "community": 49,
+      "community": 12,
       "norm_label": "permissionmatrix()"
     },
     {
@@ -7668,7 +7983,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/role-dialog.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_settings_roles_components_role_dialog_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "role-dialog.tsx"
     },
     {
@@ -7677,7 +7992,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/role-dialog.tsx",
       "source_location": "L13",
       "id": "components_role_dialog_roleschema",
-      "community": 48,
+      "community": 68,
       "norm_label": "roleschema"
     },
     {
@@ -7686,7 +8001,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/role-dialog.tsx",
       "source_location": "L20",
       "id": "components_role_dialog_roleformdata",
-      "community": 48,
+      "community": 68,
       "norm_label": "roleformdata"
     },
     {
@@ -7695,7 +8010,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/role-dialog.tsx",
       "source_location": "L22",
       "id": "components_role_dialog_roledialogprops",
-      "community": 48,
+      "community": 68,
       "norm_label": "roledialogprops"
     },
     {
@@ -7704,7 +8019,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/roles/components/role-dialog.tsx",
       "source_location": "L29",
       "id": "components_role_dialog_roledialog",
-      "community": 48,
+      "community": 12,
       "norm_label": "roledialog()"
     },
     {
@@ -7713,7 +8028,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/users/page.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_settings_users_page_tsx",
-      "community": 49,
+      "community": 12,
       "norm_label": "page.tsx"
     },
     {
@@ -7722,7 +8037,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/users/page.tsx",
       "source_location": "L10",
       "id": "users_page_user",
-      "community": 49,
+      "community": 12,
       "norm_label": "user"
     },
     {
@@ -7731,7 +8046,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/users/page.tsx",
       "source_location": "L18",
       "id": "users_page_userspage",
-      "community": 49,
+      "community": 12,
       "norm_label": "userspage()"
     },
     {
@@ -7740,7 +8055,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/users/components/assign-role-dialog.tsx",
       "source_location": "L1",
       "id": "apps_web_src_app_dashboard_settings_users_components_assign_role_dialog_tsx",
-      "community": 12,
+      "community": 68,
       "norm_label": "assign-role-dialog.tsx"
     },
     {
@@ -7749,7 +8064,7 @@
       "source_file": "apps/web/src/app/(dashboard)/settings/users/components/assign-role-dialog.tsx",
       "source_location": "L9",
       "id": "components_assign_role_dialog_assignroledialogprops",
-      "community": 12,
+      "community": 68,
       "norm_label": "assignroledialogprops"
     },
     {
@@ -7762,12 +8077,30 @@
       "norm_label": "assignroledialog()"
     },
     {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "community": 51,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "TasksPage()",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L16",
+      "id": "tasks_page_taskspage",
+      "community": 51,
+      "norm_label": "taskspage()"
+    },
+    {
       "label": "require-permission.tsx",
       "file_type": "code",
       "source_file": "apps/web/src/components/auth/require-permission.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_auth_require_permission_tsx",
-      "community": 49,
+      "community": 12,
       "norm_label": "require-permission.tsx"
     },
     {
@@ -7776,7 +8109,7 @@
       "source_file": "apps/web/src/components/auth/require-permission.tsx",
       "source_location": "L6",
       "id": "auth_require_permission_requirepermissionprops",
-      "community": 49,
+      "community": 12,
       "norm_label": "requirepermissionprops"
     },
     {
@@ -7785,7 +8118,7 @@
       "source_file": "apps/web/src/components/auth/require-permission.tsx",
       "source_location": "L13",
       "id": "auth_require_permission_requirepermission",
-      "community": 49,
+      "community": 12,
       "norm_label": "requirepermission()"
     },
     {
@@ -8068,12 +8401,426 @@
       "norm_label": "header()"
     },
     {
+      "label": "add-member-modal.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_projects_add_member_modal_tsx",
+      "community": 68,
+      "norm_label": "add-member-modal.tsx"
+    },
+    {
+      "label": "AddMemberModalProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L13",
+      "id": "projects_add_member_modal_addmembermodalprops",
+      "community": 68,
+      "norm_label": "addmembermodalprops"
+    },
+    {
+      "label": "AddMemberModal()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L22",
+      "id": "projects_add_member_modal_addmembermodal",
+      "community": 48,
+      "norm_label": "addmembermodal()"
+    },
+    {
+      "label": "create-project-modal.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_projects_create_project_modal_tsx",
+      "community": 68,
+      "norm_label": "create-project-modal.tsx"
+    },
+    {
+      "label": "CreateProjectModalProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L13",
+      "id": "projects_create_project_modal_createprojectmodalprops",
+      "community": 68,
+      "norm_label": "createprojectmodalprops"
+    },
+    {
+      "label": "CreateProjectModal()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L20",
+      "id": "projects_create_project_modal_createprojectmodal",
+      "community": 68,
+      "norm_label": "createprojectmodal()"
+    },
+    {
+      "label": "edit-project-modal.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "community": 68,
+      "norm_label": "edit-project-modal.tsx"
+    },
+    {
+      "label": "EditProjectModalProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L13",
+      "id": "projects_edit_project_modal_editprojectmodalprops",
+      "community": 68,
+      "norm_label": "editprojectmodalprops"
+    },
+    {
+      "label": "EditProjectModal()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L21",
+      "id": "projects_edit_project_modal_editprojectmodal",
+      "community": 68,
+      "norm_label": "editprojectmodal()"
+    },
+    {
+      "label": "project-activity-feed.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_projects_project_activity_feed_tsx",
+      "community": 48,
+      "norm_label": "project-activity-feed.tsx"
+    },
+    {
+      "label": "ActivityLog",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L17",
+      "id": "projects_project_activity_feed_activitylog",
+      "community": 48,
+      "norm_label": "activitylog"
+    },
+    {
+      "label": "ProjectActivityFeedProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L32",
+      "id": "projects_project_activity_feed_projectactivityfeedprops",
+      "community": 48,
+      "norm_label": "projectactivityfeedprops"
+    },
+    {
+      "label": "ACTION_ICONS",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L37",
+      "id": "projects_project_activity_feed_action_icons",
+      "community": 48,
+      "norm_label": "action_icons"
+    },
+    {
+      "label": "ACTION_COLORS",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L46",
+      "id": "projects_project_activity_feed_action_colors",
+      "community": 48,
+      "norm_label": "action_colors"
+    },
+    {
+      "label": "formatChanges()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L55",
+      "id": "projects_project_activity_feed_formatchanges",
+      "community": 48,
+      "norm_label": "formatchanges()"
+    },
+    {
+      "label": "timeAgo()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L68",
+      "id": "projects_project_activity_feed_timeago",
+      "community": 48,
+      "norm_label": "timeago()"
+    },
+    {
+      "label": "ProjectActivityFeed()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L80",
+      "id": "projects_project_activity_feed_projectactivityfeed",
+      "community": 48,
+      "norm_label": "projectactivityfeed()"
+    },
+    {
+      "label": "project-kanban.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_projects_project_kanban_tsx",
+      "community": 48,
+      "norm_label": "project-kanban.tsx"
+    },
+    {
+      "label": "KanbanTask",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L19",
+      "id": "projects_project_kanban_kanbantask",
+      "community": 48,
+      "norm_label": "kanbantask"
+    },
+    {
+      "label": "KanbanColumn",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L33",
+      "id": "projects_project_kanban_kanbancolumn",
+      "community": 48,
+      "norm_label": "kanbancolumn"
+    },
+    {
+      "label": "ProjectKanbanProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L41",
+      "id": "projects_project_kanban_projectkanbanprops",
+      "community": 48,
+      "norm_label": "projectkanbanprops"
+    },
+    {
+      "label": "COLUMN_CONFIG",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L47",
+      "id": "projects_project_kanban_column_config",
+      "community": 48,
+      "norm_label": "column_config"
+    },
+    {
+      "label": "PriorityIcon()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L56",
+      "id": "projects_project_kanban_priorityicon",
+      "community": 48,
+      "norm_label": "priorityicon()"
+    },
+    {
+      "label": "TaskCard()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L65",
+      "id": "projects_project_kanban_taskcard",
+      "community": 48,
+      "norm_label": "taskcard()"
+    },
+    {
+      "label": "ProjectKanban()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L132",
+      "id": "projects_project_kanban_projectkanban",
+      "community": 48,
+      "norm_label": "projectkanban()"
+    },
+    {
+      "label": "project-stats.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-stats.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_projects_project_stats_tsx",
+      "community": 68,
+      "norm_label": "project-stats.tsx"
+    },
+    {
+      "label": "ProjectStatsProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-stats.tsx",
+      "source_location": "L17",
+      "id": "projects_project_stats_projectstatsprops",
+      "community": 68,
+      "norm_label": "projectstatsprops"
+    },
+    {
+      "label": "statCards",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-stats.tsx",
+      "source_location": "L34",
+      "id": "projects_project_stats_statcards",
+      "community": 68,
+      "norm_label": "statcards"
+    },
+    {
+      "label": "AnimatedCounter()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-stats.tsx",
+      "source_location": "L43",
+      "id": "projects_project_stats_animatedcounter",
+      "community": 68,
+      "norm_label": "animatedcounter()"
+    },
+    {
+      "label": "ProjectStats()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-stats.tsx",
+      "source_location": "L66",
+      "id": "projects_project_stats_projectstats",
+      "community": 68,
+      "norm_label": "projectstats()"
+    },
+    {
+      "label": "project-timeline.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_projects_project_timeline_tsx",
+      "community": 79,
+      "norm_label": "project-timeline.tsx"
+    },
+    {
+      "label": "TimelineTask",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L6",
+      "id": "projects_project_timeline_timelinetask",
+      "community": 79,
+      "norm_label": "timelinetask"
+    },
+    {
+      "label": "ProjectTimelineProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L22",
+      "id": "projects_project_timeline_projecttimelineprops",
+      "community": 79,
+      "norm_label": "projecttimelineprops"
+    },
+    {
+      "label": "STATUS_COLORS",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L29",
+      "id": "projects_project_timeline_status_colors",
+      "community": 79,
+      "norm_label": "status_colors"
+    },
+    {
+      "label": "STATUS_BG",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L40",
+      "id": "projects_project_timeline_status_bg",
+      "community": 79,
+      "norm_label": "status_bg"
+    },
+    {
+      "label": "daysBetween()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L51",
+      "id": "projects_project_timeline_daysbetween",
+      "community": 79,
+      "norm_label": "daysbetween()"
+    },
+    {
+      "label": "ProjectTimeline()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L55",
+      "id": "projects_project_timeline_projecttimeline",
+      "community": 79,
+      "norm_label": "projecttimeline()"
+    },
+    {
+      "label": "create-task-modal.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "community": 68,
+      "norm_label": "create-task-modal.tsx"
+    },
+    {
+      "label": "CreateTaskModalProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L12",
+      "id": "tasks_create_task_modal_createtaskmodalprops",
+      "community": 68,
+      "norm_label": "createtaskmodalprops"
+    },
+    {
+      "label": "CreateTaskModal()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L17",
+      "id": "tasks_create_task_modal_createtaskmodal",
+      "community": 51,
+      "norm_label": "createtaskmodal()"
+    },
+    {
+      "label": "edit-task-modal.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "community": 68,
+      "norm_label": "edit-task-modal.tsx"
+    },
+    {
+      "label": "EditTaskModalProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L12",
+      "id": "tasks_edit_task_modal_edittaskmodalprops",
+      "community": 68,
+      "norm_label": "edittaskmodalprops"
+    },
+    {
+      "label": "EditTaskModal()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L18",
+      "id": "tasks_edit_task_modal_edittaskmodal",
+      "community": 51,
+      "norm_label": "edittaskmodal()"
+    },
+    {
+      "label": "view-task-modal.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L1",
+      "id": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "community": 68,
+      "norm_label": "view-task-modal.tsx"
+    },
+    {
+      "label": "ViewTaskModalProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L10",
+      "id": "tasks_view_task_modal_viewtaskmodalprops",
+      "community": 68,
+      "norm_label": "viewtaskmodalprops"
+    },
+    {
+      "label": "ViewTaskModal()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L16",
+      "id": "tasks_view_task_modal_viewtaskmodal",
+      "community": 51,
+      "norm_label": "viewtaskmodal()"
+    },
+    {
       "label": "button.tsx",
       "file_type": "code",
       "source_file": "apps/web/src/components/ui/button.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_button_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "button.tsx"
     },
     {
@@ -8082,7 +8829,7 @@
       "source_file": "apps/web/src/components/ui/button.tsx",
       "source_location": "L7",
       "id": "ui_button_buttonvariants",
-      "community": 48,
+      "community": 68,
       "norm_label": "buttonvariants"
     },
     {
@@ -8091,7 +8838,7 @@
       "source_file": "apps/web/src/components/ui/button.tsx",
       "source_location": "L36",
       "id": "ui_button_buttonprops",
-      "community": 48,
+      "community": 68,
       "norm_label": "buttonprops"
     },
     {
@@ -8100,7 +8847,7 @@
       "source_file": "apps/web/src/components/ui/button.tsx",
       "source_location": "L42",
       "id": "ui_button_button",
-      "community": 48,
+      "community": 68,
       "norm_label": "button"
     },
     {
@@ -8145,7 +8892,7 @@
       "source_file": "apps/web/src/components/ui/card.tsx",
       "source_location": "L44",
       "id": "ui_card_carddescription",
-      "community": 49,
+      "community": 12,
       "norm_label": "carddescription"
     },
     {
@@ -8172,7 +8919,7 @@
       "source_file": "apps/web/src/components/ui/checkbox.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_checkbox_tsx",
-      "community": 12,
+      "community": 68,
       "norm_label": "checkbox.tsx"
     },
     {
@@ -8181,7 +8928,7 @@
       "source_file": "apps/web/src/components/ui/checkbox.tsx",
       "source_location": "L7",
       "id": "ui_checkbox_checkbox",
-      "community": 12,
+      "community": 68,
       "norm_label": "checkbox"
     },
     {
@@ -8253,7 +9000,7 @@
       "source_file": "apps/web/src/components/ui/dialog.tsx",
       "source_location": "L60",
       "id": "ui_dialog_dialogfooter",
-      "community": 12,
+      "community": 68,
       "norm_label": "dialogfooter()"
     },
     {
@@ -8280,7 +9027,7 @@
       "source_file": "apps/web/src/components/ui/error-message.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_error_message_tsx",
-      "community": 5,
+      "community": 68,
       "norm_label": "error-message.tsx"
     },
     {
@@ -8289,7 +9036,7 @@
       "source_file": "apps/web/src/components/ui/error-message.tsx",
       "source_location": "L4",
       "id": "ui_error_message_errormessageprops",
-      "community": 5,
+      "community": 68,
       "norm_label": "errormessageprops"
     },
     {
@@ -8298,7 +9045,7 @@
       "source_file": "apps/web/src/components/ui/error-message.tsx",
       "source_location": "L10",
       "id": "ui_error_message_errormessage",
-      "community": 5,
+      "community": 68,
       "norm_label": "errormessage()"
     },
     {
@@ -8307,7 +9054,7 @@
       "source_file": "apps/web/src/components/ui/input.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_input_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "input.tsx"
     },
     {
@@ -8316,7 +9063,7 @@
       "source_file": "apps/web/src/components/ui/input.tsx",
       "source_location": "L5",
       "id": "ui_input_input",
-      "community": 48,
+      "community": 68,
       "norm_label": "input"
     },
     {
@@ -8325,7 +9072,7 @@
       "source_file": "apps/web/src/components/ui/label.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_label_tsx",
-      "community": 48,
+      "community": 68,
       "norm_label": "label.tsx"
     },
     {
@@ -8334,7 +9081,7 @@
       "source_file": "apps/web/src/components/ui/label.tsx",
       "source_location": "L7",
       "id": "ui_label_labelvariants",
-      "community": 48,
+      "community": 68,
       "norm_label": "labelvariants"
     },
     {
@@ -8343,7 +9090,7 @@
       "source_file": "apps/web/src/components/ui/label.tsx",
       "source_location": "L11",
       "id": "ui_label_label",
-      "community": 48,
+      "community": 68,
       "norm_label": "label"
     },
     {
@@ -8352,7 +9099,7 @@
       "source_file": "apps/web/src/components/ui/loading.tsx",
       "source_location": "L1",
       "id": "apps_web_src_components_ui_loading_tsx",
-      "community": 5,
+      "community": 68,
       "norm_label": "loading.tsx"
     },
     {
@@ -8361,7 +9108,7 @@
       "source_file": "apps/web/src/components/ui/loading.tsx",
       "source_location": "L4",
       "id": "ui_loading_loadingprops",
-      "community": 5,
+      "community": 68,
       "norm_label": "loadingprops"
     },
     {
@@ -8370,7 +9117,7 @@
       "source_file": "apps/web/src/components/ui/loading.tsx",
       "source_location": "L10",
       "id": "ui_loading_sizemap",
-      "community": 5,
+      "community": 68,
       "norm_label": "sizemap"
     },
     {
@@ -8379,7 +9126,7 @@
       "source_file": "apps/web/src/components/ui/loading.tsx",
       "source_location": "L17",
       "id": "ui_loading_loading",
-      "community": 5,
+      "community": 68,
       "norm_label": "loading()"
     },
     {
@@ -8388,7 +9135,7 @@
       "source_file": "apps/web/src/lib/api-client.ts",
       "source_location": "L1",
       "id": "apps_web_src_lib_api_client_ts",
-      "community": 51,
+      "community": 68,
       "norm_label": "api-client.ts"
     },
     {
@@ -8397,16 +9144,34 @@
       "source_file": "apps/web/src/lib/api-client.ts",
       "source_location": "L7",
       "id": "lib_api_client_apiclient",
-      "community": 51,
+      "community": 68,
       "norm_label": "apiclient"
+    },
+    {
+      "label": "failedQueue",
+      "file_type": "code",
+      "source_file": "apps/web/src/lib/api-client.ts",
+      "source_location": "L28",
+      "id": "lib_api_client_failedqueue",
+      "community": 68,
+      "norm_label": "failedqueue"
+    },
+    {
+      "label": "processQueue()",
+      "file_type": "code",
+      "source_file": "apps/web/src/lib/api-client.ts",
+      "source_location": "L33",
+      "id": "lib_api_client_processqueue",
+      "community": 68,
+      "norm_label": "processqueue()"
     },
     {
       "label": "authStore",
       "file_type": "code",
       "source_file": "apps/web/src/lib/api-client.ts",
-      "source_location": "L46",
+      "source_location": "L78",
       "id": "lib_api_client_authstore",
-      "community": 51,
+      "community": 68,
       "norm_label": "authstore"
     },
     {
@@ -8415,7 +9180,7 @@
       "source_file": "apps/web/src/lib/utils.ts",
       "source_location": "L1",
       "id": "apps_web_src_lib_utils_ts",
-      "community": 5,
+      "community": 68,
       "norm_label": "utils.ts"
     },
     {
@@ -8424,7 +9189,7 @@
       "source_file": "apps/web/src/lib/utils.ts",
       "source_location": "L5",
       "id": "lib_utils_cn",
-      "community": 5,
+      "community": 68,
       "norm_label": "cn()"
     },
     {
@@ -13109,23 +13874,12 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
-      "source_location": "L7",
+      "source_file": "apps/api/src/modules/projects/dto/filter-projects.dto.ts",
+      "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_api_src_modules_projects_projects_controller_ts",
-      "target": "apps_api_src_common_dto_pagination_dto_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/api/src/modules/projects/projects.service.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_api_src_modules_projects_projects_service_ts",
-      "target": "apps_api_src_common_dto_pagination_dto_ts"
+      "source": "apps_api_src_modules_projects_dto_filter_projects_dto_ts",
+      "target": "apps_api_src_common_dto_pagination_dto_ts",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -13191,6 +13945,28 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "apps_api_src_modules_users_users_service_ts",
+      "target": "apps_api_src_common_dto_pagination_dto_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_modules_projects_projects_controller_ts",
+      "target": "apps_api_src_common_dto_pagination_dto_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_modules_projects_projects_service_ts",
       "target": "apps_api_src_common_dto_pagination_dto_ts"
     },
     {
@@ -13317,23 +14093,12 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
-      "source_location": "L7",
+      "source_file": "apps/api/src/modules/projects/dto/filter-projects.dto.ts",
+      "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_api_src_modules_projects_projects_controller_ts",
-      "target": "dto_pagination_dto_paginationdto"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/api/src/modules/projects/projects.service.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_api_src_modules_projects_projects_service_ts",
-      "target": "dto_pagination_dto_paginationdto"
+      "source": "apps_api_src_modules_projects_dto_filter_projects_dto_ts",
+      "target": "dto_pagination_dto_paginationdto",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -13399,6 +14164,28 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "apps_api_src_modules_users_users_service_ts",
+      "target": "dto_pagination_dto_paginationdto"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_modules_projects_projects_controller_ts",
+      "target": "dto_pagination_dto_paginationdto"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_api_src_modules_projects_projects_service_ts",
       "target": "dto_pagination_dto_paginationdto"
     },
     {
@@ -15046,11 +15833,61 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_onprojectupdated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_onprojectdeleted",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_onmemberadded",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_onmemberremoved",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
       "source_location": "L33",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "activity_logs_activity_logs_service_activitylogsservice",
       "target": "activity_logs_activity_logs_service_activitylogsservice_ontaskassigned"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_ontaskupdated",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -15078,11 +15915,66 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice_onprojectupdated",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice_onprojectdeleted",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice_onmemberadded",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice_onmemberremoved",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
       "source_location": "L34",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "activity_logs_activity_logs_service_activitylogsservice_ontaskassigned",
       "target": "activity_logs_activity_logs_service_activitylogsservice_log"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/activity-logs/activity-logs.service.ts",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "activity_logs_activity_logs_service_activitylogsservice_ontaskupdated",
+      "target": "activity_logs_activity_logs_service_activitylogsservice_log",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -17360,9 +18252,9 @@
       "source_file": "apps/api/src/modules/employees/employees.controller.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_employees_employees_controller_ts",
-      "target": "dto_admin_employee_dto_adminupdateemployeedto",
-      "confidence_score": 1.0
+      "target": "dto_admin_employee_dto_adminupdateemployeedto"
     },
     {
       "relation": "imports",
@@ -17484,9 +18376,9 @@
       "source_file": "apps/api/src/modules/employees/employees.controller.ts",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "employees_employees_controller_employeescontroller",
-      "target": "employees_employees_controller_employeescontroller_updateemployeeasadmin",
-      "confidence_score": 1.0
+      "target": "employees_employees_controller_employeescontroller_updateemployeeasadmin"
     },
     {
       "relation": "method",
@@ -17634,9 +18526,9 @@
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_employees_employees_service_ts",
-      "target": "dto_admin_employee_dto_adminupdateemployeedto",
-      "confidence_score": 1.0
+      "target": "dto_admin_employee_dto_adminupdateemployeedto"
     },
     {
       "relation": "imports",
@@ -17747,9 +18639,9 @@
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
       "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "employees_employees_service_employeesservice",
-      "target": "employees_employees_service_employeesservice_updateemployeeasadmin",
-      "confidence_score": 1.0
+      "target": "employees_employees_service_employeesservice_updateemployeeasadmin"
     },
     {
       "relation": "method",
@@ -17788,9 +18680,9 @@
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
       "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "employees_employees_service_employeesservice_updateemployeeasadmin",
-      "target": "employees_employees_service_employeesservice_findbyid",
-      "confidence_score": 1.0
+      "target": "employees_employees_service_employeesservice_findbyid"
     },
     {
       "relation": "calls",
@@ -17843,9 +18735,9 @@
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
       "source_location": "L243",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "employees_employees_service_employeesservice_updateemployeeasadmin",
-      "target": "employees_employees_service_employeesservice_update",
-      "confidence_score": 1.0
+      "target": "employees_employees_service_employeesservice_update"
     },
     {
       "relation": "calls",
@@ -17887,9 +18779,9 @@
       "source_file": "apps/api/src/modules/employees/employees.service.ts",
       "source_location": "L280",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "employees_employees_service_employeesservice_updateemployeeasadmin",
-      "target": "employees_employees_service_employeesservice_changerole",
-      "confidence_score": 1.0
+      "target": "employees_employees_service_employeesservice_changerole"
     },
     {
       "relation": "contains",
@@ -17907,9 +18799,9 @@
       "source_file": "apps/api/src/modules/employees/dto/admin-employee.dto.ts",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_api_src_modules_employees_dto_admin_employee_dto_ts",
-      "target": "dto_admin_employee_dto_adminupdateemployeedto",
-      "confidence_score": 1.0
+      "target": "dto_admin_employee_dto_adminupdateemployeedto"
     },
     {
       "relation": "contains",
@@ -18813,6 +19705,50 @@
       "target": "dto_update_project_dto_updateprojectdto"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_projects_controller_ts",
+      "target": "apps_api_src_modules_projects_dto_filter_projects_dto_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_projects_controller_ts",
+      "target": "dto_filter_projects_dto_filterprojectsdto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_projects_controller_ts",
+      "target": "apps_api_src_modules_projects_dto_add_member_dto_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_projects_controller_ts",
+      "target": "dto_add_member_dto_addmemberdto",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/projects/projects.controller.ts",
@@ -18842,6 +19778,16 @@
       "confidence_score": 1.0,
       "source": "projects_projects_controller_projectscontroller",
       "target": "projects_projects_controller_projectscontroller_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "projects_projects_controller_projectscontroller",
+      "target": "projects_projects_controller_projectscontroller_getstats",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -18892,6 +19838,76 @@
       "confidence_score": 1.0,
       "source": "projects_projects_controller_projectscontroller",
       "target": "projects_projects_controller_projectscontroller_archive"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "projects_projects_controller_projectscontroller",
+      "target": "projects_projects_controller_projectscontroller_delete",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "projects_projects_controller_projectscontroller",
+      "target": "projects_projects_controller_projectscontroller_getmembers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "projects_projects_controller_projectscontroller",
+      "target": "projects_projects_controller_projectscontroller_addmember",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "projects_projects_controller_projectscontroller",
+      "target": "projects_projects_controller_projectscontroller_removemember",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "projects_projects_controller_projectscontroller",
+      "target": "projects_projects_controller_projectscontroller_getkanbanboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "projects_projects_controller_projectscontroller",
+      "target": "projects_projects_controller_projectscontroller_gettimeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.controller.ts",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "projects_projects_controller_projectscontroller",
+      "target": "projects_projects_controller_projectscontroller_getactivitylogs",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -18981,6 +19997,50 @@
       "target": "dto_update_project_dto_updateprojectdto"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_projects_service_ts",
+      "target": "apps_api_src_modules_projects_dto_filter_projects_dto_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_projects_service_ts",
+      "target": "dto_filter_projects_dto_filterprojectsdto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_projects_service_ts",
+      "target": "apps_api_src_modules_projects_dto_add_member_dto_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_projects_service_ts",
+      "target": "dto_add_member_dto_addmemberdto",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/projects/projects.service.ts",
@@ -19051,6 +20111,107 @@
       "target": "projects_projects_service_projectsservice_archive"
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice",
+      "target": "projects_projects_service_projectsservice_delete",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L207",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice",
+      "target": "projects_projects_service_projectsservice_getstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L272",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice",
+      "target": "projects_projects_service_projectsservice_getmembers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L291",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice",
+      "target": "projects_projects_service_projectsservice_addmember",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L332",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice",
+      "target": "projects_projects_service_projectsservice_removemember",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L348",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice",
+      "target": "projects_projects_service_projectsservice_getkanbanboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L381",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice",
+      "target": "projects_projects_service_projectsservice_gettimeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L421",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice",
+      "target": "projects_projects_service_projectsservice_getactivitylogs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L440",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice",
+      "target": "projects_projects_service_projectsservice_getprojecttaskids",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L304",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice_addmember",
+      "target": "projects_projects_service_projectsservice_create",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -19060,6 +20221,38 @@
       "confidence_score": 1.0,
       "source": "projects_projects_service_projectsservice_archive",
       "target": "projects_projects_service_projectsservice_update"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L338",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice_removemember",
+      "target": "projects_projects_service_projectsservice_delete",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/projects.service.ts",
+      "source_location": "L429",
+      "weight": 1.0,
+      "source": "projects_projects_service_projectsservice_getactivitylogs",
+      "target": "projects_projects_service_projectsservice_getprojecttaskids",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/dto/add-member.dto.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_dto_add_member_dto_ts",
+      "target": "dto_add_member_dto_addmemberdto",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19092,6 +20285,16 @@
       "confidence_score": 1.0,
       "source": "apps_api_src_modules_projects_dto_update_project_dto_ts",
       "target": "dto_create_project_dto_createprojectdto"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/projects/dto/filter-projects.dto.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_api_src_modules_projects_dto_filter_projects_dto_ts",
+      "target": "dto_filter_projects_dto_filterprojectsdto",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -24376,9 +25579,9 @@
       "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_employees_page_tsx",
-      "target": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_employees_edit_employee_modal_tsx"
     },
     {
       "relation": "imports",
@@ -24387,9 +25590,9 @@
       "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_employees_page_tsx",
-      "target": "employees_edit_employee_modal_editemployeemodal",
-      "confidence_score": 1.0
+      "target": "employees_edit_employee_modal_editemployeemodal"
     },
     {
       "relation": "imports_from",
@@ -24398,9 +25601,9 @@
       "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_employees_page_tsx",
-      "target": "apps_web_src_components_employees_view_employee_modal_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_employees_view_employee_modal_tsx"
     },
     {
       "relation": "imports",
@@ -24409,9 +25612,9 @@
       "source_file": "apps/web/src/app/(dashboard)/employees/page.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_app_dashboard_employees_page_tsx",
-      "target": "employees_view_employee_modal_viewemployeemodal",
-      "confidence_score": 1.0
+      "target": "employees_view_employee_modal_viewemployeemodal"
     },
     {
       "relation": "imports_from",
@@ -24476,6 +25679,582 @@
       "source_location": "L17",
       "weight": 1.0,
       "source": "employees_page_employeedirectorypage",
+      "target": "stores_auth_store_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "apps_web_src_components_ui_card_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "ui_card_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "ui_card_cardcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "ui_card_cardheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "ui_card_cardtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "apps_web_src_components_ui_data_table_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "ui_data_table_datatable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "apps_web_src_components_ui_input_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "ui_input_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "apps_web_src_components_ui_button_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "apps_web_src_stores_auth_store_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "stores_auth_store_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "apps_web_src_components_projects_project_stats_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "projects_project_stats_projectstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "apps_web_src_components_projects_create_project_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "projects_create_project_modal_createprojectmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "projects_edit_project_modal_editprojectmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "projects_page_status_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "projects_page_priority_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_page_tsx",
+      "target": "projects_page_projectspage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/web/src/app/(dashboard)/projects/page.tsx",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "projects_page_projectspage",
+      "target": "stores_auth_store_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_components_ui_card_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "ui_card_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "ui_card_cardcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "ui_card_cardheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "ui_card_cardtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_components_ui_button_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_stores_auth_store_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "stores_auth_store_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_components_projects_project_kanban_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "projects_project_kanban_projectkanban",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_components_projects_project_timeline_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "projects_project_timeline_projecttimeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_components_projects_project_activity_feed_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "projects_project_activity_feed_projectactivityfeed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_components_projects_add_member_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "projects_add_member_modal_addmembermodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "projects_edit_project_modal_editprojectmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "tasks_create_task_modal_createtaskmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "id_page_status_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "id_page_priority_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "id_page_task_status_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_projects_id_page_tsx",
+      "target": "id_page_projectdetailpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/web/src/app/(dashboard)/projects/[id]/page.tsx",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "id_page_projectdetailpage",
       "target": "stores_auth_store_useauthstore"
     },
     {
@@ -25316,6 +27095,214 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "apps_web_src_components_ui_card_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "ui_card_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "ui_card_cardcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "ui_card_cardheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "ui_card_cardtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "apps_web_src_components_ui_data_table_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "ui_data_table_datatable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "apps_web_src_stores_auth_store_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "stores_auth_store_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "tasks_create_task_modal_createtaskmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "tasks_edit_task_modal_edittaskmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "tasks_view_task_modal_viewtaskmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "apps_web_src_app_dashboard_tasks_page_tsx",
+      "target": "tasks_page_taskspage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/web/src/app/(dashboard)/tasks/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "tasks_page_taskspage",
+      "target": "stores_auth_store_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/auth/require-permission.tsx",
       "source_location": "L3",
       "weight": 1.0,
@@ -25667,9 +27654,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "apps_web_src_components_ui_dialog_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_dialog_tsx"
     },
     {
       "relation": "imports",
@@ -25678,9 +27665,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "ui_dialog_dialogcontent",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogcontent"
     },
     {
       "relation": "imports",
@@ -25689,9 +27676,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "ui_dialog_dialogheader",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogheader"
     },
     {
       "relation": "imports",
@@ -25700,9 +27687,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "ui_dialog_dialogtitle",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogtitle"
     },
     {
       "relation": "imports_from",
@@ -25711,9 +27698,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "apps_web_src_lib_api_client_ts",
-      "confidence_score": 1.0
+      "target": "apps_web_src_lib_api_client_ts"
     },
     {
       "relation": "imports",
@@ -25722,9 +27709,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "lib_api_client_apiclient",
-      "confidence_score": 1.0
+      "target": "lib_api_client_apiclient"
     },
     {
       "relation": "contains",
@@ -25732,9 +27719,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "employees_edit_employee_modal_employeeschema",
-      "confidence_score": 1.0
+      "target": "employees_edit_employee_modal_employeeschema"
     },
     {
       "relation": "contains",
@@ -25742,9 +27729,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "employees_edit_employee_modal_employeeformvalues",
-      "confidence_score": 1.0
+      "target": "employees_edit_employee_modal_employeeformvalues"
     },
     {
       "relation": "contains",
@@ -25752,9 +27739,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "employees_edit_employee_modal_editemployeemodalprops",
-      "confidence_score": 1.0
+      "target": "employees_edit_employee_modal_editemployeemodalprops"
     },
     {
       "relation": "contains",
@@ -25762,9 +27749,9 @@
       "source_file": "apps/web/src/components/employees/edit-employee-modal.tsx",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_edit_employee_modal_tsx",
-      "target": "employees_edit_employee_modal_editemployeemodal",
-      "confidence_score": 1.0
+      "target": "employees_edit_employee_modal_editemployeemodal"
     },
     {
       "relation": "imports_from",
@@ -25773,9 +27760,9 @@
       "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_view_employee_modal_tsx",
-      "target": "apps_web_src_components_ui_dialog_tsx",
-      "confidence_score": 1.0
+      "target": "apps_web_src_components_ui_dialog_tsx"
     },
     {
       "relation": "imports",
@@ -25784,9 +27771,9 @@
       "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_view_employee_modal_tsx",
-      "target": "ui_dialog_dialogcontent",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogcontent"
     },
     {
       "relation": "imports",
@@ -25795,9 +27782,9 @@
       "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_view_employee_modal_tsx",
-      "target": "ui_dialog_dialogheader",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogheader"
     },
     {
       "relation": "imports",
@@ -25806,9 +27793,9 @@
       "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_view_employee_modal_tsx",
-      "target": "ui_dialog_dialogtitle",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogtitle"
     },
     {
       "relation": "imports_from",
@@ -25817,9 +27804,9 @@
       "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_view_employee_modal_tsx",
-      "target": "apps_web_src_lib_api_client_ts",
-      "confidence_score": 1.0
+      "target": "apps_web_src_lib_api_client_ts"
     },
     {
       "relation": "imports",
@@ -25828,9 +27815,9 @@
       "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_view_employee_modal_tsx",
-      "target": "lib_api_client_apiclient",
-      "confidence_score": 1.0
+      "target": "lib_api_client_apiclient"
     },
     {
       "relation": "contains",
@@ -25838,9 +27825,9 @@
       "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_view_employee_modal_tsx",
-      "target": "employees_view_employee_modal_viewemployeemodalprops",
-      "confidence_score": 1.0
+      "target": "employees_view_employee_modal_viewemployeemodalprops"
     },
     {
       "relation": "contains",
@@ -25848,9 +27835,9 @@
       "source_file": "apps/web/src/components/employees/view-employee-modal.tsx",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_web_src_components_employees_view_employee_modal_tsx",
-      "target": "employees_view_employee_modal_viewemployeemodal",
-      "confidence_score": 1.0
+      "target": "employees_view_employee_modal_viewemployeemodal"
     },
     {
       "relation": "calls",
@@ -26110,6 +28097,1378 @@
       "weight": 1.0,
       "source": "layout_header_header",
       "target": "lib_utils_cn"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "apps_web_src_components_ui_dialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "ui_dialog_dialogcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "ui_dialog_dialogheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "ui_dialog_dialogtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "ui_dialog_dialogfooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "ui_dialog_dialogdescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "apps_web_src_components_ui_label_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "ui_label_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "apps_web_src_components_ui_input_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "ui_input_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "apps_web_src_components_ui_button_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "apps_web_src_components_ui_error_message_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "ui_error_message_errormessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "projects_add_member_modal_addmembermodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/add-member-modal.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_add_member_modal_tsx",
+      "target": "projects_add_member_modal_addmembermodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "apps_web_src_components_ui_dialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "ui_dialog_dialogcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "ui_dialog_dialogheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "ui_dialog_dialogtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "ui_dialog_dialogfooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "ui_dialog_dialogdescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "apps_web_src_components_ui_label_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "ui_label_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "apps_web_src_components_ui_input_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "ui_input_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "apps_web_src_components_ui_button_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "apps_web_src_components_ui_error_message_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "ui_error_message_errormessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "projects_create_project_modal_createprojectmodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/create-project-modal.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_create_project_modal_tsx",
+      "target": "projects_create_project_modal_createprojectmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "apps_web_src_components_ui_dialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "ui_dialog_dialogcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "ui_dialog_dialogheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "ui_dialog_dialogtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "ui_dialog_dialogfooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "ui_dialog_dialogdescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "apps_web_src_components_ui_label_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "ui_label_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "apps_web_src_components_ui_input_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "ui_input_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "apps_web_src_components_ui_button_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "apps_web_src_components_ui_error_message_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "ui_error_message_errormessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "projects_edit_project_modal_editprojectmodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/edit-project-modal.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_edit_project_modal_tsx",
+      "target": "projects_edit_project_modal_editprojectmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_activity_feed_tsx",
+      "target": "projects_project_activity_feed_activitylog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_activity_feed_tsx",
+      "target": "projects_project_activity_feed_projectactivityfeedprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_activity_feed_tsx",
+      "target": "projects_project_activity_feed_action_icons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_activity_feed_tsx",
+      "target": "projects_project_activity_feed_action_colors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_activity_feed_tsx",
+      "target": "projects_project_activity_feed_formatchanges",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_activity_feed_tsx",
+      "target": "projects_project_activity_feed_timeago",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-activity-feed.tsx",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_activity_feed_tsx",
+      "target": "projects_project_activity_feed_projectactivityfeed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_kanban_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_kanban_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_kanban_tsx",
+      "target": "projects_project_kanban_kanbantask",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_kanban_tsx",
+      "target": "projects_project_kanban_kanbancolumn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_kanban_tsx",
+      "target": "projects_project_kanban_projectkanbanprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_kanban_tsx",
+      "target": "projects_project_kanban_column_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_kanban_tsx",
+      "target": "projects_project_kanban_priorityicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_kanban_tsx",
+      "target": "projects_project_kanban_taskcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-kanban.tsx",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_kanban_tsx",
+      "target": "projects_project_kanban_projectkanban",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-stats.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_stats_tsx",
+      "target": "projects_project_stats_projectstatsprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-stats.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_stats_tsx",
+      "target": "projects_project_stats_statcards",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-stats.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_stats_tsx",
+      "target": "projects_project_stats_animatedcounter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-stats.tsx",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_stats_tsx",
+      "target": "projects_project_stats_projectstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_timeline_tsx",
+      "target": "projects_project_timeline_timelinetask",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_timeline_tsx",
+      "target": "projects_project_timeline_projecttimelineprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_timeline_tsx",
+      "target": "projects_project_timeline_status_colors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_timeline_tsx",
+      "target": "projects_project_timeline_status_bg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_timeline_tsx",
+      "target": "projects_project_timeline_daysbetween",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "apps_web_src_components_projects_project_timeline_tsx",
+      "target": "projects_project_timeline_projecttimeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/projects/project-timeline.tsx",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "projects_project_timeline_projecttimeline",
+      "target": "projects_project_timeline_daysbetween",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "apps_web_src_components_ui_dialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "ui_dialog_dialogcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "ui_dialog_dialogheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "ui_dialog_dialogtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "ui_dialog_dialogfooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "ui_dialog_dialogdescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "apps_web_src_components_ui_label_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "ui_label_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "apps_web_src_components_ui_input_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "ui_input_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "apps_web_src_components_ui_button_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "apps_web_src_components_ui_error_message_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "ui_error_message_errormessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "tasks_create_task_modal_createtaskmodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/create-task-modal.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_create_task_modal_tsx",
+      "target": "tasks_create_task_modal_createtaskmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "apps_web_src_components_ui_dialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "ui_dialog_dialogcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "ui_dialog_dialogheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "ui_dialog_dialogtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "ui_dialog_dialogfooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "ui_dialog_dialogdescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "apps_web_src_components_ui_label_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "ui_label_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "apps_web_src_components_ui_input_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "ui_input_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "apps_web_src_components_ui_button_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "apps_web_src_components_ui_error_message_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "ui_error_message_errormessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "tasks_edit_task_modal_edittaskmodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/edit-task-modal.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_edit_task_modal_tsx",
+      "target": "tasks_edit_task_modal_edittaskmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "apps_web_src_components_ui_dialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "ui_dialog_dialogcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "ui_dialog_dialogheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "ui_dialog_dialogtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "ui_dialog_dialogfooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "apps_web_src_components_ui_button_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "apps_web_src_lib_api_client_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "lib_api_client_apiclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "tasks_view_task_modal_viewtaskmodalprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/tasks/view-task-modal.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "apps_web_src_components_tasks_view_task_modal_tsx",
+      "target": "tasks_view_task_modal_viewtaskmodal",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -26644,6 +30003,26 @@
       "confidence_score": 1.0,
       "source": "apps_web_src_lib_api_client_ts",
       "target": "lib_api_client_apiclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/lib/api-client.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "apps_web_src_lib_api_client_ts",
+      "target": "lib_api_client_failedqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/lib/api-client.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "apps_web_src_lib_api_client_ts",
+      "target": "lib_api_client_processqueue",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -28100,5 +31479,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "3f9776a26350a7afe25ffceb3b1c6a4c4f2519c1"
+  "built_at_commit": "b4e7377287fa38888abd28e11bd9d9c89a398531"
 }
