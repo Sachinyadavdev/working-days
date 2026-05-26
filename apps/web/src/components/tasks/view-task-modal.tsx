@@ -31,9 +31,15 @@ export function ViewTaskModal({ isOpen, onClose, taskId }: ViewTaskModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px] bg-brand-900 border-white/10 text-white p-0 overflow-hidden">
         {isLoading ? (
-          <div className="p-8 text-center text-brand-300">Loading task details...</div>
+          <div className="p-8 text-center text-brand-300">
+            <DialogTitle className="sr-only">Loading task</DialogTitle>
+            Loading task details...
+          </div>
         ) : !actualTask ? (
-          <div className="p-8 text-center text-red-400">Task not found</div>
+          <div className="p-8 text-center text-red-400">
+            <DialogTitle className="sr-only">Error</DialogTitle>
+            Task not found
+          </div>
         ) : (
           <>
             <DialogHeader className="p-6 border-b border-white/5 bg-black/20">

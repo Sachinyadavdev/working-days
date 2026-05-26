@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Patch, Delete, Param, Body, Query } from '@nestjs/common';
+import { Controller, Get, Post, Patch, Delete, Param, Body, Query, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 
 import { ProjectsService } from './projects.service';
@@ -6,7 +6,10 @@ import { CreateProjectDto } from './dto/create-project.dto';
 import { UpdateProjectDto } from './dto/update-project.dto';
 import { FilterProjectsDto } from './dto/filter-projects.dto';
 import { AddMemberDto } from './dto/add-member.dto';
+import { CreateCommentDto } from './dto/create-comment.dto';
 import { CurrentUser } from '../../common/decorators/current-user.decorator';
+import { Roles } from '../../common/decorators/roles.decorator';
+import { RolesGuard } from '../../common/guards/roles.guard';
 
 @ApiTags('Projects')
 @ApiBearerAuth('access-token')
@@ -108,5 +111,34 @@ export class ProjectsController {
   @ApiOperation({ summary: 'Get activity logs for a project' })
   async getActivityLogs(@Param('id') id: string) {
     return this.projectsService.getActivityLogs(id);
+  }
+
+  // ────────────────── COMMENTS ──────────────────
+
+  @Post(':id/comments')
+  @ApiOperation({ summary: 'Add a comment to a project' })
+  async addComment(
+    @Param('id') id: string,
+    @Body() dto: CreateCommentDto,
+    @CurrentUser('sub') userId: string,
+  ) {
+    return this.projectsService.addComment(id, userId, dto);
+  }
+
+  @Get(':id/comments')
+  @ApiOperation({ summary: 'Get comments for a project' })
+  async getComments(@Param('id') id: string) {
+    return this.projectsService.getComments(id);
+  }
+
+  @Delete(':id/comments/:commentId')
+  @Roles('SUPER_ADMIN')
+  @UseGuards(RolesGuard)
+  @ApiOperation({ summary: 'Delete a comment (Super Admin only)' })
+  async deleteComment(
+    @Param('id') id: string,
+    @Param('commentId') commentId: string,
+  ) {
+    return this.projectsService.deleteComment(id, commentId);
   }
 }

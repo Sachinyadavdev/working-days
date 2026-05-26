@@ -311,6 +311,7 @@ model Project {
   tasks          Task[]
   teams          ProjectTeam[]
   members        ProjectMember[]
+  comments       Comment[]
 
   @@map("projects")
   @@index([key])
@@ -396,16 +397,19 @@ enum TaskType {
 model Comment {
   id        String   @id @default(uuid())
   content   String
-  taskId    String   @map("task_id")
+  taskId    String?  @map("task_id")
+  projectId String?  @map("project_id")
   authorId  String   @map("author_id")
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
-  task   Task @relation(fields: [taskId], references: [id], onDelete: Cascade)
-  author User @relation(fields: [authorId], references: [id])
+  task    Task?    @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  project Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  author  User     @relation(fields: [authorId], references: [id])
 
   @@map("comments")
   @@index([taskId])
+  @@index([projectId])
 }
 
 // ============== TEAMS ==============

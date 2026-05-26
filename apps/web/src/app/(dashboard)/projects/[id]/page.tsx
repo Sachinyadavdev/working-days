@@ -23,6 +23,8 @@ import {
   AlertCircle,
   FileText,
   ExternalLink,
+  Link as LinkIcon,
+  MessageSquare,
 } from 'lucide-react';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -36,6 +38,8 @@ import { AddMemberModal } from '@/components/projects/add-member-modal';
 import { EditProjectModal } from '@/components/projects/edit-project-modal';
 import { CreateTaskModal } from '@/components/tasks/create-task-modal';
 import { ViewTaskModal } from '@/components/tasks/view-task-modal';
+import { AddLinkModal } from '@/components/projects/add-link-modal';
+import { ProjectComments } from '@/components/projects/project-comments';
 
 const STATUS_BADGE: Record<string, string> = {
   PLANNING: 'bg-slate-100 text-slate-700',
@@ -64,6 +68,40 @@ const TASK_STATUS_COLOR: Record<string, string> = {
   CANCELLED: 'bg-gray-400',
 };
 
+function parseAttachment(attachmentString: string) {
+  try {
+    const parsed = JSON.parse(attachmentString);
+    if (parsed.url) {
+      return {
+        url: parsed.url,
+        title: parsed.title || parsed.url.split('/').pop() || 'Attachment',
+        description: parsed.description || '',
+        raw: attachmentString
+      };
+    }
+  } catch (e) {
+    // Ignore, it's a plain string
+  }
+  return {
+    url: attachmentString,
+    title: attachmentString.split('/').pop() || 'Attachment',
+    description: '',
+    raw: attachmentString
+  };
+}
+
+function formatDateTime(dateStr: string): string {
+  const date = new Date(dateStr);
+  return date.toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+  });
+}
+
 const tabClass = 'px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground data-[state=active]:text-brand-600 data-[state=active]:border-b-2 data-[state=active]:border-brand-500 outline-none cursor-pointer';
 
 export default function ProjectDetailPage() {
@@ -78,6 +116,7 @@ export default function ProjectDetailPage() {
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [isAddMemberOpen, setIsAddMemberOpen] = useState(false);
   const [isCreateTaskOpen, setIsCreateTaskOpen] = useState(false);
+  const [isAddLinkOpen, setIsAddLinkOpen] = useState(false);
   const [viewTaskId, setViewTaskId] = useState<string | null>(null);
 
   // Fetch project details
@@ -130,6 +169,17 @@ export default function ProjectDetailPage() {
     },
   });
 
+  // Remove link mutation
+  const removeLinkMutation = useMutation({
+    mutationFn: async (linkToRemove: string) => {
+      const updatedAttachments = project?.attachments?.filter((url: string) => url !== linkToRemove) || [];
+      await apiClient.patch(`/projects/${projectId}`, { attachments: updatedAttachments });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['project', projectId] });
+    },
+  });
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
@@ -161,6 +211,10 @@ export default function ProjectDetailPage() {
   const daysRemaining = project.endDate
     ? Math.ceil((new Date(project.endDate).getTime() - Date.now()) / (1000 * 60 * 60 * 24))
     : null;
+
+  // Hours calculation
+  const totalHours = tasks.reduce((acc: number, t: any) => acc + (t.estimatedHours || 0), 0);
+  const completedHours = tasks.filter((t: any) => t.status === 'COMPLETED').reduce((acc: number, t: any) => acc + (t.estimatedHours || 0), 0);
 
   return (
     <div className="flex-1 space-y-6 p-8 pt-6 max-w-[1400px] mx-auto">
@@ -196,7 +250,7 @@ export default function ProjectDetailPage() {
       </div>
 
       {/* Quick Stats Bar */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
         <div className="rounded-xl border border-border bg-card p-4 flex items-center gap-3">
           <div className="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center">
             <CheckSquare className="h-5 w-5 text-blue-600" />
@@ -235,6 +289,17 @@ export default function ProjectDetailPage() {
             <p className="text-xs text-muted-foreground">{daysRemaining !== null && daysRemaining >= 0 ? 'Days Left' : daysRemaining !== null ? '' : 'No Deadline'}</p>
           </div>
         </div>
+        <div className="rounded-xl border border-border bg-card p-4 flex items-center gap-3">
+          <div className="h-10 w-10 rounded-lg bg-indigo-100 flex items-center justify-center">
+            <Activity className="h-5 w-5 text-indigo-600" />
+          </div>
+          <div>
+            <p className="text-2xl font-bold text-foreground">
+              {completedHours > 0 ? `${completedHours}/` : ''}{totalHours}h
+            </p>
+            <p className="text-xs text-muted-foreground">Hours Est.</p>
+          </div>
+        </div>
       </div>
 
       {/* Progress bar */}
@@ -270,6 +335,9 @@ export default function ProjectDetailPage() {
           </Tabs.Trigger>
           <Tabs.Trigger value="files" className={tabClass}>
             <Paperclip className="inline h-4 w-4 mr-1.5" />Files
+          </Tabs.Trigger>
+          <Tabs.Trigger value="comments" className={tabClass}>
+            <MessageSquare className="inline h-4 w-4 mr-1.5" />Comments
           </Tabs.Trigger>
         </Tabs.List>
 
@@ -320,6 +388,46 @@ export default function ProjectDetailPage() {
                   )}
                 </CardContent>
               </Card>
+
+                {/* Recent Comments */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-base">
+                      <MessageSquare className="h-4 w-4" /> Recent Comments
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {!project.comments || project.comments.length === 0 ? (
+                      <p className="text-sm text-muted-foreground">No comments yet.</p>
+                    ) : (
+                      <div className="space-y-4">
+                        {project.comments.map((comment: any) => (
+                          <div key={comment.id} className="flex gap-3 text-sm">
+                            <div className="h-8 w-8 shrink-0 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-bold uppercase overflow-hidden">
+                              {comment.author?.avatar ? (
+                                <img src={comment.author.avatar} alt="Avatar" className="h-full w-full object-cover" />
+                              ) : (
+                                <span>{comment.author?.firstName?.[0]}{comment.author?.lastName?.[0]}</span>
+                              )}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between mb-0.5">
+                                <span className="font-semibold text-foreground">
+                                  {comment.author?.firstName} {comment.author?.lastName}
+                                </span>
+                                <span className="text-xs text-muted-foreground">{formatDateTime(comment.createdAt)}</span>
+                              </div>
+                              <p className="text-muted-foreground line-clamp-2">{comment.content}</p>
+                            </div>
+                          </div>
+                        ))}
+                        <Button variant="link" size="sm" className="w-full text-brand-600 mt-2" onClick={() => setActiveTab('comments')}>
+                          View all comments
+                        </Button>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
             </div>
 
             {/* Right: Project Details */}
@@ -547,41 +655,66 @@ export default function ProjectDetailPage() {
         {/* ─── FILES TAB ─── */}
         <Tabs.Content value="files" className="mt-6">
           <Card>
-            <CardHeader><CardTitle>Attachments</CardTitle></CardHeader>
+            <CardHeader className="flex flex-row items-center justify-between">
+              <CardTitle>Attachments</CardTitle>
+              {isAdmin && (
+                <Button size="sm" onClick={() => setIsAddLinkOpen(true)}>
+                  <LinkIcon className="h-4 w-4 mr-1.5" /> Attach Link
+                </Button>
+              )}
+            </CardHeader>
             <CardContent>
               {(!project.attachments || project.attachments.length === 0) ? (
                 <div className="flex flex-col items-center justify-center py-12 text-muted-foreground">
                   <Paperclip className="h-10 w-10 mb-3" />
                   <p>No files attached</p>
-                  <p className="text-xs mt-1">Add file URLs when editing the project</p>
+                  <p className="text-xs mt-1">Attach Google Docs, Sheets, or other resources</p>
                 </div>
               ) : (
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {project.attachments.map((url: string, i: number) => {
-                    const fileName = url.split('/').pop() || `File ${i + 1}`;
+                  {project.attachments.map((attachmentRaw: string, i: number) => {
+                    const file = parseAttachment(attachmentRaw);
                     return (
-                      <a
-                        key={i}
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-3 rounded-lg border border-border hover:bg-muted/50 transition-colors group"
-                      >
-                        <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center">
-                          <Paperclip className="h-5 w-5 text-muted-foreground" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-foreground truncate">{fileName}</p>
-                          <p className="text-xs text-muted-foreground truncate">{url}</p>
-                        </div>
-                        <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </a>
+                      <div key={i} className="flex items-center gap-3 p-3 rounded-lg border border-border hover:bg-muted/50 transition-colors group relative">
+                        <a
+                          href={file.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 flex-1 min-w-0"
+                        >
+                          <div className="h-10 w-10 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
+                            <ExternalLink className="h-5 w-5 text-brand-500" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-foreground truncate" title={file.title}>{file.title}</p>
+                            {file.description ? (
+                              <p className="text-xs text-muted-foreground truncate" title={file.description}>{file.description}</p>
+                            ) : (
+                              <p className="text-xs text-muted-foreground truncate" title={file.url}>{file.url}</p>
+                            )}
+                          </div>
+                        </a>
+                        {isAdmin && (
+                          <button
+                            onClick={() => { if (window.confirm('Remove this attachment?')) removeLinkMutation.mutate(file.raw); }}
+                            className="opacity-0 group-hover:opacity-100 p-1.5 rounded-md hover:bg-red-50 text-red-400 hover:text-red-600 transition-all absolute right-2"
+                            title="Remove attachment"
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </button>
+                        )}
+                      </div>
                     );
                   })}
                 </div>
               )}
             </CardContent>
           </Card>
+        </Tabs.Content>
+
+        {/* ─── COMMENTS TAB ─── */}
+        <Tabs.Content value="comments" className="mt-6 max-w-4xl mx-auto">
+          <ProjectComments projectId={projectId} isAdmin={isAdmin} />
         </Tabs.Content>
       </Tabs.Root>
 
@@ -590,6 +723,7 @@ export default function ProjectDetailPage() {
       <AddMemberModal isOpen={isAddMemberOpen} onClose={() => setIsAddMemberOpen(false)} projectId={projectId} existingMemberIds={existingMemberIds} />
       <CreateTaskModal isOpen={isCreateTaskOpen} onClose={() => setIsCreateTaskOpen(false)} />
       <ViewTaskModal isOpen={!!viewTaskId} onClose={() => setViewTaskId(null)} taskId={viewTaskId} />
+      <AddLinkModal isOpen={isAddLinkOpen} onClose={() => setIsAddLinkOpen(false)} projectId={projectId} existingAttachments={project.attachments || []} />
     </div>
   );
 }

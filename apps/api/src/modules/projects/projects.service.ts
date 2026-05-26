@@ -6,6 +6,7 @@ import { CreateProjectDto } from './dto/create-project.dto';
 import { UpdateProjectDto } from './dto/update-project.dto';
 import { FilterProjectsDto } from './dto/filter-projects.dto';
 import { AddMemberDto } from './dto/add-member.dto';
+import { CreateCommentDto } from './dto/create-comment.dto';
 
 @Injectable()
 export class ProjectsService {
@@ -109,6 +110,13 @@ export class ProjectsService {
           },
         },
         teams: { include: { team: true } },
+        comments: {
+          orderBy: { createdAt: 'desc' },
+          take: 5,
+          include: {
+            author: { select: { id: true, firstName: true, lastName: true, avatar: true } }
+          }
+        },
         _count: { select: { tasks: true, members: true } },
       },
     });
@@ -443,5 +451,46 @@ export class ProjectsService {
       select: { id: true },
     });
     return tasks.map((t) => t.id);
+  }
+
+  // ────────────────── COMMENTS ──────────────────
+
+  async addComment(projectId: string, authorId: string, dto: CreateCommentDto) {
+    const project = await this.prisma.project.findUnique({ where: { id: projectId } });
+    if (!project) throw new NotFoundException('Project not found');
+
+    const comment = await this.prisma.comment.create({
+      data: {
+        content: dto.content,
+        projectId,
+        authorId,
+      },
+      include: {
+        author: { select: { id: true, firstName: true, lastName: true, avatar: true } }
+      }
+    });
+
+    return comment;
+  }
+
+  async getComments(projectId: string) {
+    const project = await this.prisma.project.findUnique({ where: { id: projectId } });
+    if (!project) throw new NotFoundException('Project not found');
+
+    return this.prisma.comment.findMany({
+      where: { projectId },
+      orderBy: { createdAt: 'desc' },
+      include: {
+        author: { select: { id: true, firstName: true, lastName: true, avatar: true } }
+      }
+    });
+  }
+
+  async deleteComment(projectId: string, commentId: string) {
+    const comment = await this.prisma.comment.findUnique({ where: { id: commentId, projectId } });
+    if (!comment) throw new NotFoundException('Comment not found');
+
+    await this.prisma.comment.delete({ where: { id: commentId } });
+    return { message: 'Comment deleted successfully' };
   }
 }
