@@ -302,6 +302,9 @@ model Project {
   priority         Priority      @default(MEDIUM)
   startDate        DateTime?     @map("start_date")
   endDate          DateTime?     @map("end_date")
+  readme           String?       @db.Text
+  developerDocs    String?       @map("developer_docs") @db.Text
+  credentials      Json?         @default("[]")
   ownerId          String        @map("owner_id")
   createdAt        DateTime      @default(now()) @map("created_at")
   updatedAt        DateTime      @updatedAt @map("updated_at")

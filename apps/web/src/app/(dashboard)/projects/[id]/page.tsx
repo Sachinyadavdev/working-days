@@ -25,6 +25,8 @@ import {
   ExternalLink,
   Link as LinkIcon,
   MessageSquare,
+  BarChart3,
+  BookOpen,
 } from 'lucide-react';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -40,6 +42,8 @@ import { CreateTaskModal } from '@/components/tasks/create-task-modal';
 import { ViewTaskModal } from '@/components/tasks/view-task-modal';
 import { AddLinkModal } from '@/components/projects/add-link-modal';
 import { ProjectComments } from '@/components/projects/project-comments';
+import { ProjectContributions } from '@/components/projects/project-contributions';
+import { ProjectDocs } from '@/components/projects/project-docs';
 
 const STATUS_BADGE: Record<string, string> = {
   PLANNING: 'bg-slate-100 text-slate-700',
@@ -338,6 +342,12 @@ export default function ProjectDetailPage() {
           </Tabs.Trigger>
           <Tabs.Trigger value="comments" className={tabClass}>
             <MessageSquare className="inline h-4 w-4 mr-1.5" />Comments
+          </Tabs.Trigger>
+          <Tabs.Trigger value="contributions" className={tabClass}>
+            <BarChart3 className="inline h-4 w-4 mr-1.5" />Contributions
+          </Tabs.Trigger>
+          <Tabs.Trigger value="docs" className={tabClass}>
+            <BookOpen className="inline h-4 w-4 mr-1.5" />Docs
           </Tabs.Trigger>
         </Tabs.List>
 
@@ -715,6 +725,22 @@ export default function ProjectDetailPage() {
         {/* ─── COMMENTS TAB ─── */}
         <Tabs.Content value="comments" className="mt-6 max-w-4xl mx-auto">
           <ProjectComments projectId={projectId} isAdmin={isAdmin} />
+        </Tabs.Content>
+
+        {/* ─── CONTRIBUTIONS TAB ─── */}
+        <Tabs.Content value="contributions" className="mt-6">
+          <ProjectContributions tasks={tasks} members={members} />
+        </Tabs.Content>
+
+        {/* ─── DOCS TAB ─── */}
+        <Tabs.Content value="docs" className="mt-6 max-w-4xl mx-auto">
+          <ProjectDocs
+            projectId={projectId}
+            readme={project.readme || null}
+            developerDocs={project.developerDocs || null}
+            credentials={project.credentials || []}
+            isAdmin={isAdmin}
+          />
         </Tabs.Content>
       </Tabs.Root>
 

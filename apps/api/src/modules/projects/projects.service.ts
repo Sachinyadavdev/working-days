@@ -174,6 +174,9 @@ export class ProjectsService {
     if (dto.projectManagerId !== undefined) updateData.projectManagerId = dto.projectManagerId || null;
     if (dto.tags !== undefined) updateData.tags = dto.tags;
     if (dto.attachments !== undefined) updateData.attachments = dto.attachments;
+    if (dto.readme !== undefined) updateData.readme = dto.readme;
+    if (dto.developerDocs !== undefined) updateData.developerDocs = dto.developerDocs;
+    if (dto.credentials !== undefined) updateData.credentials = dto.credentials;
 
     const project = await this.prisma.project.update({
       where: { id },

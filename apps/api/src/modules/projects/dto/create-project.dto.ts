@@ -65,4 +65,18 @@ export class CreateProjectDto {
   @IsArray()
   @IsString({ each: true })
   attachments?: string[];
+
+  @ApiPropertyOptional({ description: 'Project README content (markdown)' })
+  @IsOptional()
+  @IsString()
+  readme?: string;
+
+  @ApiPropertyOptional({ description: 'Developer documentation (markdown)' })
+  @IsOptional()
+  @IsString()
+  developerDocs?: string;
+
+  @ApiPropertyOptional({ description: 'Project credentials (JSON array)', type: 'array' })
+  @IsOptional()
+  credentials?: any;
 }
