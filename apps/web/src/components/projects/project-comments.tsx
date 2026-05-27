@@ -88,7 +88,7 @@ export function ProjectComments({ projectId, isAdmin }: ProjectCommentsProps) {
     addCommentMutation.mutate(content.trim());
   };
 
-  const isSuperAdmin = user?.role === 'SUPER_ADMIN';
+  const isSuperAdmin = user?.roles?.includes('SUPER_ADMIN');
 
   return (
     <div className="space-y-6">
