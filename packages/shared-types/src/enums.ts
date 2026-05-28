@@ -53,7 +53,37 @@ export enum AttendanceStatus {
   ABSENT = 'ABSENT',
   HALF_DAY = 'HALF_DAY',
   LATE = 'LATE',
+  ON_LEAVE = 'ON_LEAVE',
+  HOLIDAY = 'HOLIDAY',
+  WEEKEND = 'WEEKEND',
   WORK_FROM_HOME = 'WORK_FROM_HOME',
+  REMOTE = 'REMOTE',
+}
+
+export enum ShiftType {
+  MORNING = 'MORNING',
+  NIGHT = 'NIGHT',
+  FLEXIBLE = 'FLEXIBLE',
+  CUSTOM = 'CUSTOM',
+}
+
+export enum BreakType {
+  LUNCH = 'LUNCH',
+  TEA = 'TEA',
+  IDLE = 'IDLE',
+  OTHER = 'OTHER',
+}
+
+export enum CorrectionType {
+  FORGOT_CHECKOUT = 'FORGOT_CHECKOUT',
+  WRONG_TIMING = 'WRONG_TIMING',
+  MISSED_ATTENDANCE = 'MISSED_ATTENDANCE',
+}
+
+export enum CorrectionStatus {
+  PENDING = 'PENDING',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED',
 }
 
 export enum LeaveType {

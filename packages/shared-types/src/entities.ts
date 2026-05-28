@@ -12,6 +12,10 @@ import {
   LeaveType,
   LeaveStatus,
   NotificationType,
+  ShiftType,
+  BreakType,
+  CorrectionType,
+  CorrectionStatus,
 } from './enums';
 
 /** Base entity with common fields */
@@ -61,7 +65,9 @@ export interface EmployeeEntity extends BaseEntity {
   dateOfJoining: string;
   dateOfBirth: string | null;
   status: EmployeeStatus;
+  shiftId: string | null;
   user?: UserEntity;
+  shift?: ShiftEntity | null;
 }
 
 /** Project entity */
@@ -110,7 +116,6 @@ export interface TeamEntity extends BaseEntity {
   tags: string[];
 }
 
-/** Attendance entity */
 export interface AttendanceEntity extends BaseEntity {
   employeeId: string;
   date: string;
@@ -119,6 +124,41 @@ export interface AttendanceEntity extends BaseEntity {
   status: AttendanceStatus;
   totalHours: number | null;
   notes: string | null;
+  ipAddress: string | null;
+  deviceInfo: string | null;
+  location: string | null;
+  shiftId: string | null;
+  breaks?: AttendanceBreakEntity[];
+  corrections?: AttendanceCorrectionEntity[];
+}
+
+export interface ShiftEntity extends BaseEntity {
+  name: string;
+  type: ShiftType;
+  startTime: string;
+  endTime: string;
+  gracePeriod: number;
+  breakDuration: number;
+}
+
+export interface AttendanceBreakEntity {
+  id: string;
+  attendanceId: string;
+  startTime: string;
+  endTime: string | null;
+  type: BreakType;
+  durationMin: number | null;
+}
+
+export interface AttendanceCorrectionEntity extends BaseEntity {
+  attendanceId: string;
+  employeeId: string;
+  type: CorrectionType;
+  requestedCheckIn: string | null;
+  requestedCheckOut: string | null;
+  reason: string;
+  status: CorrectionStatus;
+  approverId: string | null;
 }
 
 /** Leave request entity */
