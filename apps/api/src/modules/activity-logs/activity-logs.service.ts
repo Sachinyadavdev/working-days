@@ -80,10 +80,73 @@ export class ActivityLogsService {
     }
   }
 
+  @OnEvent('task.checklist.toggled')
+  async onTaskChecklistToggled(payload: { taskId: string; title: string; item: any; userId: string }) {
+    await this.log({ 
+      userId: payload.userId, 
+      action: payload.item.completed ? 'CHECKLIST_COMPLETED' : 'CHECKLIST_UNCOMPLETED', 
+      entity: 'Task', 
+      entityId: payload.taskId, 
+      changes: { itemTitle: payload.item.title, taskTitle: payload.title } 
+    });
+  }
+
   // ────────── Employee Events ──────────
 
   @OnEvent('employee.created')
   async onEmployeeCreated(employee: { id: string; userId: string }) {
     await this.log({ userId: employee.userId, action: 'CREATE', entity: 'Employee', entityId: employee.id });
   }
+
+  // ────────── Team Events ──────────
+
+  @OnEvent('team.created')
+  async onTeamCreated(team: { id: string; userId: string; name: string }) {
+    await this.log({ userId: team.userId, action: 'CREATE', entity: 'Team', entityId: team.id, changes: { name: team.name } });
+  }
+
+  @OnEvent('team.updated')
+  async onTeamUpdated(payload: { before: any; after: any }) {
+    const changes: Record<string, unknown> = {};
+    const trackFields = ['name', 'status', 'description', 'leadId', 'departmentId', 'maxCapacity'];
+    for (const field of trackFields) {
+      if (String(payload.before[field]) !== String(payload.after[field])) {
+        changes[field] = { from: payload.before[field], to: payload.after[field] };
+      }
+    }
+    if (Object.keys(changes).length > 0) {
+      await this.log({ action: 'UPDATE', entity: 'Team', entityId: payload.after.id, changes });
+    }
+  }
+
+  @OnEvent('team.deleted')
+  async onTeamDeleted(team: { id: string; name: string }) {
+    await this.log({ action: 'DELETE', entity: 'Team', entityId: team.id, changes: { name: team.name } });
+  }
+
+  @OnEvent('team.memberAdded')
+  async onTeamMemberAdded(payload: { teamId: string; teamName: string; employeeId: string; userId?: string; role: string }) {
+    await this.log({ userId: payload.userId, action: 'MEMBER_ADDED', entity: 'Team', entityId: payload.teamId, changes: { employeeId: payload.employeeId, role: payload.role, teamName: payload.teamName } });
+  }
+
+  @OnEvent('team.memberRemoved')
+  async onTeamMemberRemoved(payload: { teamId: string; employeeId: string }) {
+    await this.log({ action: 'MEMBER_REMOVED', entity: 'Team', entityId: payload.teamId, changes: { employeeId: payload.employeeId } });
+  }
+
+  @OnEvent('team.projectAssigned')
+  async onTeamProjectAssigned(payload: { teamId: string; teamName: string; projectId: string; projectName: string }) {
+    await this.log({ action: 'PROJECT_ASSIGNED', entity: 'Team', entityId: payload.teamId, changes: { projectId: payload.projectId, projectName: payload.projectName } });
+  }
+
+  @OnEvent('team.projectRemoved')
+  async onTeamProjectRemoved(payload: { teamId: string; projectId: string }) {
+    await this.log({ action: 'PROJECT_REMOVED', entity: 'Team', entityId: payload.teamId, changes: { projectId: payload.projectId } });
+  }
+
+  @OnEvent('team.leadChanged')
+  async onTeamLeadChanged(payload: { teamId: string; oldLeadId: string | null; newLeadId: string }) {
+    await this.log({ action: 'LEAD_CHANGED', entity: 'Team', entityId: payload.teamId, changes: { oldLeadId: payload.oldLeadId, newLeadId: payload.newLeadId } });
+  }
 }
+

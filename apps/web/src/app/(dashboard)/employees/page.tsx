@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Plus, MoreVertical, Key, Shield, UserX, UserCheck, Edit, Eye } from 'lucide-react';
+import { Plus, MoreVertical, Key, Shield, UserX, UserCheck, Edit, Eye, Search } from 'lucide-react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -27,15 +27,15 @@ export default function EmployeeDirectoryPage() {
   const [statusModal, setStatusModal] = useState<{ isOpen: boolean; employeeId: string; status: string }>({ isOpen: false, employeeId: '', status: '' });
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
 
+  const [searchQuery, setSearchQuery] = useState('');
+
   // Fetch all employees
   const { data: employeesResponse, isLoading } = useQuery({
-    queryKey: ['employees'],
+    queryKey: ['employees', searchQuery],
     queryFn: async () => {
-      // The old endpoint was '/employee-profile/all'. Wait, let's use '/employees' which we just added in the controller.
-      // Wait, EmployeesController has GET /employees which uses pagination.
-      // The original code used /employee-profile/all, let's keep it if it works, or use /employees. 
-      // Let's assume /employees returns { items: [] } 
-      const { data } = await apiClient.get('/employees');
+      const params: any = {};
+      if (searchQuery) params.search = searchQuery;
+      const { data } = await apiClient.get('/employees', { params });
       return data;
     },
   });
@@ -216,8 +216,21 @@ export default function EmployeeDirectoryPage() {
       </div>
 
       <Card className="bg-brand-900 border-white/5 shadow-2xl overflow-hidden">
-        <CardHeader className="border-b border-white/5 bg-black/20">
-          <CardTitle className="text-xl text-white">Organization Members</CardTitle>
+        <CardHeader className="border-b border-white/5 bg-black/20 pb-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <CardTitle className="text-xl text-white">Organization Members</CardTitle>
+            
+            <div className="relative w-full sm:w-72">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-brand-400" size={16} />
+              <input
+                type="text"
+                placeholder="Search employees..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-9 pr-4 py-2 bg-black/20 border border-white/10 rounded-lg text-sm text-white placeholder:text-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
+              />
+            </div>
+          </div>
         </CardHeader>
         <CardContent className="p-0">
           <DataTable

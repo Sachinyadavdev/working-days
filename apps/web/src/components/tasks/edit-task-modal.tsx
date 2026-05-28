@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogD
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { Plus, Trash2 } from 'lucide-react';
 import { ErrorMessage } from '@/components/ui/error-message';
 import { apiClient } from '@/lib/api-client';
 
@@ -28,6 +29,7 @@ export function EditTaskModal({ isOpen, onClose, taskId }: EditTaskModalProps) {
     assignedTo: '',
     deadline: '',
     estimatedHours: 0,
+    checklist: [] as { id: string; title: string; completed: boolean; completedAt: string | null }[],
   });
 
   // Fetch the current task data
@@ -60,6 +62,7 @@ export function EditTaskModal({ isOpen, onClose, taskId }: EditTaskModalProps) {
         assignedTo: actualTask.assignedTo || '',
         deadline: actualTask.deadline ? new Date(actualTask.deadline).toISOString().split('T')[0] : '',
         estimatedHours: actualTask.estimatedHours || 0,
+        checklist: actualTask.checklist || [],
       });
     }
   }, [task, isOpen]);
@@ -90,11 +93,37 @@ export function EditTaskModal({ isOpen, onClose, taskId }: EditTaskModalProps) {
     updateMutation.mutate(formData);
   };
 
+  const [newChecklistItem, setNewChecklistItem] = useState('');
+
+  const addChecklistItem = () => {
+    if (!newChecklistItem.trim()) return;
+    setFormData({
+      ...formData,
+      checklist: [
+        ...formData.checklist,
+        {
+          id: Math.random().toString(36).substring(2, 9),
+          title: newChecklistItem.trim(),
+          completed: false,
+          completedAt: null,
+        }
+      ]
+    });
+    setNewChecklistItem('');
+  };
+
+  const removeChecklistItem = (id: string) => {
+    setFormData({
+      ...formData,
+      checklist: formData.checklist.filter(item => item.id !== id)
+    });
+  };
+
   if (!isOpen) return null;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[500px] bg-brand-900 border-white/10 text-white">
+      <DialogContent className="sm:max-w-[500px] bg-brand-900 border-white/10 text-white max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-xl">Edit Task</DialogTitle>
           <DialogDescription className="text-brand-300">
@@ -217,6 +246,47 @@ export function EditTaskModal({ isOpen, onClose, taskId }: EditTaskModalProps) {
                     </option>
                   ))}
                 </select>
+              </div>
+
+              <div className="col-span-2 space-y-2 mt-2">
+                <Label className="text-brand-100">Checklist / Subtasks (Optional)</Label>
+                <div className="space-y-2">
+                  {formData.checklist.map((item, index) => (
+                    <div key={item.id} className="flex items-center gap-2 bg-black/20 p-2 rounded-md border border-white/5">
+                      <span className="text-xs font-mono text-brand-400">{index + 1}.</span>
+                      <span className="flex-1 text-sm text-brand-100 truncate">{item.title}</span>
+                      <button
+                        type="button"
+                        onClick={() => removeChecklistItem(item.id)}
+                        className="text-brand-400 hover:text-red-400 transition-colors"
+                      >
+                        <Trash2 size={14} />
+                      </button>
+                    </div>
+                  ))}
+                  <div className="flex gap-2">
+                    <Input
+                      placeholder="Add a checklist item..."
+                      value={newChecklistItem}
+                      onChange={(e) => setNewChecklistItem(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          addChecklistItem();
+                        }
+                      }}
+                      className="bg-black/20 border-white/10 text-white flex-1"
+                    />
+                    <Button
+                      type="button"
+                      onClick={addChecklistItem}
+                      variant="outline"
+                      className="border-white/10 text-brand-100 hover:bg-white/5 hover:text-white px-3"
+                    >
+                      <Plus size={16} />
+                    </Button>
+                  </div>
+                </div>
               </div>
 
             </div>

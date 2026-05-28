@@ -11,6 +11,8 @@ import {
   CheckCircle,
   AlertTriangle,
   ArrowRight,
+  CheckSquare,
+  Square,
   Activity,
 } from 'lucide-react';
 
@@ -41,6 +43,8 @@ const ACTION_ICONS: Record<string, React.ElementType> = {
   ASSIGN: CheckCircle,
   MEMBER_ADDED: UserPlus,
   MEMBER_REMOVED: UserMinus,
+  CHECKLIST_COMPLETED: CheckSquare,
+  CHECKLIST_UNCOMPLETED: Square,
 };
 
 const ACTION_COLORS: Record<string, string> = {
@@ -50,6 +54,8 @@ const ACTION_COLORS: Record<string, string> = {
   ASSIGN: 'bg-purple-100 text-purple-600',
   MEMBER_ADDED: 'bg-indigo-100 text-indigo-600',
   MEMBER_REMOVED: 'bg-orange-100 text-orange-600',
+  CHECKLIST_COMPLETED: 'bg-emerald-100 text-emerald-600',
+  CHECKLIST_UNCOMPLETED: 'bg-yellow-100 text-yellow-600',
 };
 
 function renderChanges(changes: Record<string, any> | undefined): React.ReactNode {
@@ -82,16 +88,16 @@ function renderChanges(changes: Record<string, any> | undefined): React.ReactNod
   );
 }
 
-function timeAgo(dateStr: string): string {
-  const now = new Date();
+function formatDateTime(dateStr: string): string {
   const date = new Date(dateStr);
-  const seconds = Math.floor((now.getTime() - date.getTime()) / 1000);
-
-  if (seconds < 60) return 'just now';
-  if (seconds < 3600) return `${Math.floor(seconds / 60)}m ago`;
-  if (seconds < 86400) return `${Math.floor(seconds / 3600)}h ago`;
-  if (seconds < 604800) return `${Math.floor(seconds / 86400)}d ago`;
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return date.toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+  });
 }
 
 export function ProjectActivityFeed({ logs, isLoading }: ProjectActivityFeedProps) {
@@ -139,15 +145,21 @@ export function ProjectActivityFeed({ logs, isLoading }: ProjectActivityFeedProp
                 <span className="text-sm font-medium text-foreground">
                   {log.user ? `${log.user.firstName} ${log.user.lastName}` : 'System'}
                 </span>
-                <span className="text-xs text-muted-foreground">
-                  {log.action.replace('_', ' ').toLowerCase()} {log.entity.toLowerCase()}
+                <span className="text-xs text-muted-foreground ml-1">
+                  {log.action === 'CHECKLIST_COMPLETED' && `completed checklist item in task`}
+                  {log.action === 'CHECKLIST_UNCOMPLETED' && `uncompleted checklist item in task`}
+                  {log.action !== 'CHECKLIST_COMPLETED' && log.action !== 'CHECKLIST_UNCOMPLETED' && (
+                    `${log.action.replace('_', ' ').toLowerCase()} ${log.entity.toLowerCase()}`
+                  )}
                 </span>
               </div>
               {renderChanges(log.changes)}
             </div>
 
             {/* Time */}
-            <span className="text-xs text-muted-foreground shrink-0">{timeAgo(log.createdAt)}</span>
+            <span className="text-[10px] text-muted-foreground shrink-0 text-right">
+              {formatDateTime(log.createdAt)}
+            </span>
           </motion.div>
         );
       })}

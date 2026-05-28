@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Plus, CheckSquare, Clock, CalendarDays, MoreVertical, Edit, Eye, Trash } from 'lucide-react';
+import { Plus, CheckSquare, Clock, CalendarDays, MoreVertical, Edit, Eye, Trash, Search, Filter } from 'lucide-react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -24,11 +24,38 @@ export default function TasksPage() {
   const [editModal, setEditModal] = useState<{ isOpen: boolean; taskId: string | null }>({ isOpen: false, taskId: null });
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
 
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedProjectId, setSelectedProjectId] = useState('');
+
+  // Fetch all projects for the filter
+  const { data: projectsResponse } = useQuery({
+    queryKey: ['projects'],
+    queryFn: async () => {
+      const { data } = await apiClient.get('/projects');
+      return data;
+    },
+  });
+
+  let projects: any[] = [];
+  if (Array.isArray(projectsResponse)) {
+    projects = projectsResponse;
+  } else if (projectsResponse?.data?.items && Array.isArray(projectsResponse.data.items)) {
+    projects = projectsResponse.data.items;
+  } else if (projectsResponse?.items && Array.isArray(projectsResponse.items)) {
+    projects = projectsResponse.items;
+  } else if (projectsResponse?.data && Array.isArray(projectsResponse.data)) {
+    projects = projectsResponse.data;
+  }
+
   // Fetch all tasks
   const { data: tasksResponse, isLoading } = useQuery({
-    queryKey: ['tasks'],
+    queryKey: ['tasks', searchQuery, selectedProjectId],
     queryFn: async () => {
-      const { data } = await apiClient.get('/tasks');
+      const params: any = {};
+      if (searchQuery) params.search = searchQuery;
+      if (selectedProjectId) params.projectId = selectedProjectId;
+      
+      const { data } = await apiClient.get('/tasks', { params });
       return data;
     },
   });
@@ -209,9 +236,139 @@ export default function TasksPage() {
         )}
       </div>
 
+      {/* Analytics Dashboard Summary */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 mb-8">
+        <Card className="bg-brand-900 border-white/5 shadow-lg flex flex-col justify-center">
+          <CardContent className="p-4 flex items-center gap-3">
+            <div className="p-2.5 bg-brand-500/20 text-brand-400 rounded-lg">
+              <CheckSquare size={20} />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-brand-300">Total Tasks</p>
+              <h3 className="text-xl font-bold text-white">{tasks.length}</h3>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-brand-900 border-white/5 shadow-lg flex flex-col justify-center">
+          <CardContent className="p-4 flex items-center gap-3">
+            <div className="p-2.5 bg-gray-500/20 text-gray-400 rounded-lg">
+              <CalendarDays size={20} />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-brand-300">Pending</p>
+              <h3 className="text-xl font-bold text-white">
+                {tasks.filter((t: any) => t.status === 'PENDING').length}
+              </h3>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-brand-900 border-white/5 shadow-lg flex flex-col justify-center">
+          <CardContent className="p-4 flex items-center gap-3">
+            <div className="p-2.5 bg-blue-500/20 text-blue-400 rounded-lg">
+              <Clock size={20} />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-brand-300">In Progress</p>
+              <h3 className="text-xl font-bold text-white">
+                {tasks.filter((t: any) => t.status === 'IN_PROGRESS').length}
+              </h3>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-brand-900 border-white/5 shadow-lg flex flex-col justify-center">
+          <CardContent className="p-4 flex items-center gap-3">
+            <div className="p-2.5 bg-purple-500/20 text-purple-400 rounded-lg">
+              <Eye size={20} />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-brand-300">In Review</p>
+              <h3 className="text-xl font-bold text-white">
+                {tasks.filter((t: any) => t.status === 'IN_REVIEW').length}
+              </h3>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-brand-900 border-white/5 shadow-lg flex flex-col justify-center">
+          <CardContent className="p-4 flex items-center gap-3">
+            <div className="p-2.5 bg-yellow-500/20 text-yellow-400 rounded-lg">
+              <CheckSquare size={20} />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-brand-300">Testing</p>
+              <h3 className="text-xl font-bold text-white">
+                {tasks.filter((t: any) => t.status === 'TESTING').length}
+              </h3>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-brand-900 border-white/5 shadow-lg flex flex-col justify-center">
+          <CardContent className="p-4 flex items-center gap-3">
+            <div className="p-2.5 bg-red-500/20 text-red-400 rounded-lg">
+              <Edit size={20} />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-brand-300">Blocked</p>
+              <h3 className="text-xl font-bold text-white">
+                {tasks.filter((t: any) => t.status === 'BLOCKED').length}
+              </h3>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-brand-900 border-white/5 shadow-lg flex flex-col justify-center">
+          <CardContent className="p-4 flex items-center gap-3">
+            <div className="p-2.5 bg-green-500/20 text-green-400 rounded-lg">
+              <CheckSquare size={20} />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-brand-300">Completed</p>
+              <h3 className="text-xl font-bold text-white">
+                {tasks.filter((t: any) => t.status === 'COMPLETED').length}
+              </h3>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
       <Card className="bg-brand-900 border-white/5 shadow-2xl overflow-hidden">
-        <CardHeader className="border-b border-white/5 bg-black/20">
-          <CardTitle className="text-xl text-white">All Tasks</CardTitle>
+        <CardHeader className="border-b border-white/5 bg-black/20 pb-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <CardTitle className="text-xl text-white">All Tasks</CardTitle>
+            
+            <div className="flex flex-col sm:flex-row items-center gap-3">
+              {/* Task Search */}
+              <div className="relative w-full sm:w-64">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-brand-400" size={16} />
+                <input
+                  type="text"
+                  placeholder="Search tasks..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-9 pr-4 py-2 bg-black/20 border border-white/10 rounded-lg text-sm text-white placeholder:text-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
+                />
+              </div>
+
+              {/* Project Filter */}
+              <div className="relative w-full sm:w-48">
+                <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-brand-400" size={16} />
+                <select
+                  value={selectedProjectId}
+                  onChange={(e) => setSelectedProjectId(e.target.value)}
+                  className="w-full pl-9 pr-4 py-2 bg-black/20 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all appearance-none cursor-pointer"
+                >
+                  <option value="">All Projects</option>
+                  {projects.map(p => (
+                    <option key={p.id} value={p.id}>{p.name}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
         </CardHeader>
         <CardContent className="p-0">
           <DataTable

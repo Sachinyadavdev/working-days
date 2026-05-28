@@ -103,6 +103,11 @@ export interface TeamEntity extends BaseEntity {
   name: string;
   description: string | null;
   leadId: string | null;
+  status: 'ACTIVE' | 'INACTIVE' | 'ARCHIVED';
+  departmentId: string | null;
+  maxCapacity: number;
+  avatar: string | null;
+  tags: string[];
 }
 
 /** Attendance entity */

@@ -724,7 +724,7 @@ export default function ProjectDetailPage() {
 
         {/* ─── COMMENTS TAB ─── */}
         <Tabs.Content value="comments" className="mt-6 max-w-4xl mx-auto">
-          <ProjectComments projectId={projectId} isAdmin={isAdmin} />
+          <ProjectComments projectId={projectId} isAdmin={!!isAdmin} />
         </Tabs.Content>
 
         {/* ─── CONTRIBUTIONS TAB ─── */}
@@ -739,7 +739,7 @@ export default function ProjectDetailPage() {
             readme={project.readme || null}
             developerDocs={project.developerDocs || null}
             credentials={project.credentials || []}
-            isAdmin={isAdmin}
+            isAdmin={!!isAdmin}
           />
         </Tabs.Content>
       </Tabs.Root>

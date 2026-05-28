@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { apiClient } from '@/lib/api-client';
-import { CalendarDays, Clock, User, Tag, Paperclip, AlertCircle, FileText } from 'lucide-react';
+import { CalendarDays, Clock, User, Tag, Paperclip, AlertCircle, FileText, CheckSquare, Square, Check } from 'lucide-react';
 
 interface ViewTaskModalProps {
   isOpen: boolean;
@@ -14,6 +14,7 @@ interface ViewTaskModalProps {
 }
 
 export function ViewTaskModal({ isOpen, onClose, taskId }: ViewTaskModalProps) {
+  const queryClient = useQueryClient();
   const { data: task, isLoading } = useQuery({
     queryKey: ['tasks', taskId],
     queryFn: async () => {
@@ -23,13 +24,27 @@ export function ViewTaskModal({ isOpen, onClose, taskId }: ViewTaskModalProps) {
     enabled: isOpen && !!taskId,
   });
 
+  const toggleMutation = useMutation({
+    mutationFn: async (itemId: string) => {
+      const { data } = await apiClient.patch(`/tasks/${taskId}/checklist/${itemId}/toggle`);
+      return data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['tasks', taskId] });
+      queryClient.invalidateQueries({ queryKey: ['tasks'] }); // Update lists/kanban boards
+    },
+  });
+
   if (!isOpen) return null;
 
   const actualTask = task?.data || task;
+  const checklist = actualTask?.checklist || [];
+  const completedCount = checklist.filter((item: any) => item.completed).length;
+  const progressPct = checklist.length > 0 ? Math.round((completedCount / checklist.length) * 100) : 0;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[600px] bg-brand-900 border-white/10 text-white p-0 overflow-hidden">
+      <DialogContent className="sm:max-w-[600px] bg-brand-900 border-white/10 text-white p-0 flex flex-col max-h-[90vh] overflow-hidden">
         {isLoading ? (
           <div className="p-8 text-center text-brand-300">
             <DialogTitle className="sr-only">Loading task</DialogTitle>
@@ -42,7 +57,7 @@ export function ViewTaskModal({ isOpen, onClose, taskId }: ViewTaskModalProps) {
           </div>
         ) : (
           <>
-            <DialogHeader className="p-6 border-b border-white/5 bg-black/20">
+            <DialogHeader className="p-6 border-b border-white/5 bg-black/20 shrink-0">
               <div className="flex items-start justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
@@ -61,7 +76,7 @@ export function ViewTaskModal({ isOpen, onClose, taskId }: ViewTaskModalProps) {
               </div>
             </DialogHeader>
 
-            <div className="p-6 space-y-6">
+            <div className="p-6 space-y-6 overflow-y-auto flex-1 custom-scrollbar">
               <div>
                 <h4 className="text-sm font-semibold text-brand-100 flex items-center gap-2 mb-2">
                   <FileText size={16} /> Description
@@ -71,7 +86,46 @@ export function ViewTaskModal({ isOpen, onClose, taskId }: ViewTaskModalProps) {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              {checklist.length > 0 && (
+                <div className="pt-4 border-t border-white/5">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="text-sm font-semibold text-brand-100 flex items-center gap-2">
+                      <CheckSquare size={16} /> Checklist ({completedCount}/{checklist.length})
+                    </h4>
+                    <div className="text-xs font-semibold text-brand-400">{progressPct}%</div>
+                  </div>
+                  
+                  {/* Progress bar */}
+                  <div className="h-1.5 w-full bg-black/40 rounded-full overflow-hidden mb-4">
+                    <div 
+                      className={`h-full rounded-full transition-all duration-500 ${progressPct === 100 ? 'bg-emerald-500' : 'bg-brand-500'}`} 
+                      style={{ width: `${progressPct}%` }}
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    {checklist.map((item: any) => (
+                      <div 
+                        key={item.id} 
+                        className={`flex items-start gap-3 p-3 rounded-lg border transition-colors ${item.completed ? 'bg-emerald-500/5 border-emerald-500/20' : 'bg-black/20 border-white/5 hover:border-white/10'}`}
+                      >
+                        <button
+                          onClick={() => toggleMutation.mutate(item.id)}
+                          disabled={toggleMutation.isPending}
+                          className={`mt-0.5 shrink-0 flex items-center justify-center h-5 w-5 rounded ${item.completed ? 'bg-emerald-500 text-white' : 'border border-white/20 text-transparent hover:border-white/40'}`}
+                        >
+                          {item.completed && <Check size={14} strokeWidth={3} />}
+                        </button>
+                        <div className={`flex-1 text-sm ${item.completed ? 'text-brand-300 line-through' : 'text-brand-100'}`}>
+                          {item.title}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-4">
                 <div className="space-y-1">
                   <span className="text-xs text-brand-400 flex items-center gap-1"><User size={12} /> Assignee</span>
                   <div className="text-sm font-medium text-brand-100">
@@ -109,7 +163,7 @@ export function ViewTaskModal({ isOpen, onClose, taskId }: ViewTaskModalProps) {
               )}
             </div>
 
-            <DialogFooter className="p-6 border-t border-white/5 bg-black/20">
+            <DialogFooter className="p-6 border-t border-white/5 bg-black/20 shrink-0">
               <Button onClick={onClose} variant="outline" className="bg-brand-800 text-white border-white/10 hover:bg-brand-700">
                 Close
               </Button>

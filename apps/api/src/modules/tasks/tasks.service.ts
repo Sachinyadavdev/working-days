@@ -13,16 +13,18 @@ export class TasksService {
     private readonly eventEmitter: EventEmitter2,
   ) {}
 
-  async findAll(pagination: PaginationDto) {
+  async findAll(pagination: PaginationDto, projectId?: string) {
     const { skip, limit, search, sortBy, sortOrder } = pagination;
 
-    const where = search
-      ? {
-          OR: [
-            { title: { contains: search, mode: 'insensitive' as const } },
-          ],
-        }
-      : {};
+    const where: any = {};
+    if (search) {
+      where.OR = [
+        { title: { contains: search, mode: 'insensitive' } },
+      ];
+    }
+    if (projectId) {
+      where.projectId = projectId;
+    }
 
     const [tasks, total] = await Promise.all([
       this.prisma.task.findMany({
@@ -98,6 +100,7 @@ export class TasksService {
         assignedTo: dto.assignedTo,
         tags: dto.tags || [],
         attachments: dto.attachments || [],
+        checklist: (dto.checklist as any) || [],
         reporterId,
         parentId: dto.parentId,
       },
@@ -135,7 +138,7 @@ export class TasksService {
 
     const task = await this.prisma.task.update({
       where: { id },
-      data: updateData,
+      data: updateData as any,
     });
 
     this.eventEmitter.emit('task.updated', { before: existing, after: task });
@@ -150,5 +153,25 @@ export class TasksService {
       where: { id },
       data: { status: 'CANCELLED' },
     });
+  }
+
+  async toggleChecklistItem(taskId: string, itemId: string, userId: string) {
+    const task = await this.prisma.task.findUnique({ where: { id: taskId } });
+    if (!task) throw new NotFoundException('Task not found');
+    
+    const checklist = (task.checklist as any[]) || [];
+    const item = checklist.find(i => i.id === itemId);
+    if (!item) throw new NotFoundException('Checklist item not found');
+    
+    item.completed = !item.completed;
+    item.completedAt = item.completed ? new Date().toISOString() : null;
+    
+    const updatedTask = await this.prisma.task.update({
+      where: { id: taskId },
+      data: { checklist: checklist as any },
+    });
+    
+    this.eventEmitter.emit('task.checklist.toggled', { taskId, title: task.title, item, userId });
+    return updatedTask;
   }
 }

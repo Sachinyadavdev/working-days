@@ -200,6 +200,7 @@ model Department {
   manager     Employee?     @relation("DepartmentManager", fields: [managerId], references: [id])
   employees   Employee[]    @relation("EmployeeDepartment")
   designations Designation[]
+  teams        Team[]        @relation("TeamDepartment")
 
   @@map("departments")
 }
@@ -354,6 +355,7 @@ model Task {
   deadline       DateTime?
   tags           String[]   @default([])
   attachments    String[]   @default([])
+  checklist      Json?      @default("[]")
   startedAt      DateTime?  @map("started_at")
   completedAt    DateTime?  @map("completed_at")
   projectId      String?    @map("project_id")
@@ -380,6 +382,7 @@ model Task {
 
 enum TaskStatus {
   BACKLOG
+  DRAFT
   PENDING
   IN_PROGRESS
   IN_REVIEW
@@ -417,24 +420,49 @@ model Comment {
 
 // ============== TEAMS ==============
 
-model Team {
-  id          String   @id @default(uuid())
-  name        String
-  description String?
-  leadId      String?  @map("lead_id")
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
+enum TeamStatus {
+  ACTIVE
+  INACTIVE
+  ARCHIVED
+}
 
-  members  TeamMember[]
-  projects ProjectTeam[]
+enum TeamRole {
+  TEAM_LEAD
+  SENIOR_DEVELOPER
+  DEVELOPER
+  QA_ENGINEER
+  UI_UX_DESIGNER
+  DEVOPS_ENGINEER
+  INTERN
+  MEMBER
+}
+
+model Team {
+  id           String     @id @default(uuid())
+  name         String
+  description  String?
+  leadId       String?    @map("lead_id")
+  status       TeamStatus @default(ACTIVE)
+  departmentId String?    @map("department_id")
+  maxCapacity  Int        @default(20) @map("max_capacity")
+  avatar       String?
+  tags         String[]   @default([])
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+
+  department Department? @relation("TeamDepartment", fields: [departmentId], references: [id])
+  members    TeamMember[]
+  projects   ProjectTeam[]
 
   @@map("teams")
+  @@index([status])
+  @@index([departmentId])
 }
 
 model TeamMember {
   teamId     String   @map("team_id")
   employeeId String   @map("employee_id")
-  role       String   @default("MEMBER")
+  role       TeamRole @default(MEMBER)
   joinedAt   DateTime @default(now()) @map("joined_at")
 
   team     Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
@@ -568,6 +596,9 @@ enum NotificationType {
   LEAVE_REJECTED
   ATTENDANCE_REMINDER
   PROJECT_UPDATE
+  TEAM_MEMBER_ADDED
+  TEAM_PROJECT_ASSIGNED
+  TEAM_UPDATE
   SYSTEM
 }
 

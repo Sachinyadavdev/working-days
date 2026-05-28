@@ -33,6 +33,11 @@ export class PaginationDto {
   @IsString()
   search?: string;
 
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  projectId?: string;
+
   get skip(): number {
     return (this.page - 1) * this.limit;
   }

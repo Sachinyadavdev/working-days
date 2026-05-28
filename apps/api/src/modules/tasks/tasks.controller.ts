@@ -16,7 +16,7 @@ export class TasksController {
   @Get()
   @ApiOperation({ summary: 'Get all tasks (supports filtering by project, status, assignee)' })
   async findAll(@Query() pagination: PaginationDto) {
-    return this.tasksService.findAll(pagination);
+    return this.tasksService.findAll(pagination, pagination.projectId);
   }
 
   @Post()
@@ -41,5 +41,15 @@ export class TasksController {
   @ApiOperation({ summary: 'Cancel task' })
   async cancel(@Param('id') id: string) {
     return this.tasksService.cancel(id);
+  }
+
+  @Patch(':id/checklist/:itemId/toggle')
+  @ApiOperation({ summary: 'Toggle a checklist item in a task' })
+  async toggleChecklistItem(
+    @Param('id') id: string,
+    @Param('itemId') itemId: string,
+    @CurrentUser('sub') userId: string,
+  ) {
+    return this.tasksService.toggleChecklistItem(id, itemId, userId);
   }
 }

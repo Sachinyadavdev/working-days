@@ -1,16 +1,16 @@
-# Graph Report - working-days  (2026-05-26)
+# Graph Report - working-days  (2026-05-28)
 
 ## Corpus Check
-- 234 files · ~46,533 words
+- 239 files · ~53,080 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1169 nodes · 1991 edges · 80 communities (64 shown, 16 thin omitted)
+- 1210 nodes · 2093 edges · 86 communities (68 shown, 18 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b4e73772`
+- Built from commit: `3a30402a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -87,18 +87,24 @@
 - [[_COMMUNITY_Community 77|Community 77]]
 - [[_COMMUNITY_Community 78|Community 78]]
 - [[_COMMUNITY_Community 79|Community 79]]
+- [[_COMMUNITY_Community 80|Community 80]]
+- [[_COMMUNITY_Community 81|Community 81]]
+- [[_COMMUNITY_Community 82|Community 82]]
+- [[_COMMUNITY_Community 83|Community 83]]
+- [[_COMMUNITY_Community 84|Community 84]]
+- [[_COMMUNITY_Community 85|Community 85]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `apiClient` - 30 edges
+1. `apiClient` - 33 edges
 2. `PrismaService` - 24 edges
-3. `compilerOptions` - 22 edges
-4. `useAuthStore` - 22 edges
-5. `PaginationDto` - 21 edges
-6. `cn()` - 21 edges
-7. `scripts` - 19 edges
-8. `Button` - 19 edges
-9. `ProjectsService` - 18 edges
-10. `RedisService` - 18 edges
+3. `useAuthStore` - 24 edges
+4. `compilerOptions` - 22 edges
+5. `Button` - 22 edges
+6. `PaginationDto` - 21 edges
+7. `ProjectsService` - 21 edges
+8. `cn()` - 21 edges
+9. `scripts` - 19 edges
+10. `ProjectsController` - 19 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `cn()` --calls--> `clsx`  [INFERRED]
@@ -107,24 +113,24 @@
   apps/web/src/components/employees/view-employee-modal.tsx → packages/shared-utils/src/index.ts
 - `EmployeeDirectoryPage()` --calls--> `useAuthStore`  [EXTRACTED]
   apps/web/src/app/(dashboard)/employees/page.tsx → apps/web/src/stores/auth.store.ts
-- `ProjectsPage()` --calls--> `useAuthStore`  [EXTRACTED]
-  apps/web/src/app/(dashboard)/projects/page.tsx → apps/web/src/stores/auth.store.ts
 - `bootstrap()` --calls--> `compression`  [INFERRED]
   apps/api/src/main.ts → apps/api/package.json
+- `bootstrap()` --calls--> `helmet`  [INFERRED]
+  apps/api/src/main.ts → apps/api/package.json
 
-## Communities (80 total, 16 thin omitted)
+## Communities (86 total, 18 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.11
 Nodes (10): AdminCreateEmployeeDto, AdminUpdateEmployeeDto, ChangeRoleDto, ChangeStatusDto, ResetPasswordDto, CreateEmployeeDto, UpdateEmployeeDto, EmployeesController (+2 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.07
-Nodes (8): AuthController, AuthService, APP_CONSTANTS, LoginDto, RegisterDto, SecurityController, SecurityModule, SecurityService
+Cohesion: 0.05
+Nodes (8): AuthController, AuthModule, AuthService, JwtRefreshStrategy, JwtStrategy, UsersController, UsersModule, UsersService
 
 ### Community 2 - "Community 2"
-Cohesion: 0.06
-Nodes (11): GlobalExceptionFilter, LoggingInterceptor, TransformedResponse, TransformInterceptor, LoggerModule, LoggerService, NotificationsController, NotificationsGateway (+3 more)
+Cohesion: 0.13
+Nodes (6): GlobalExceptionFilter, LoggingInterceptor, TransformedResponse, TransformInterceptor, LoggerService, AppModule
 
 ### Community 3 - "Community 3"
 Cohesion: 0.09
@@ -135,8 +141,8 @@ Cohesion: 0.18
 Nodes (5): CreateLeaveRequestDto, UpdateLeaveStatusDto, LeaveController, LeaveModule, LeaveService
 
 ### Community 5 - "Community 5"
-Cohesion: 0.32
-Nodes (8): DashboardLayout(), adminNavigation, AppSidebar(), employeeNavigation, navigation, Header(), SidebarState, useSidebarStore
+Cohesion: 0.14
+Nodes (18): RequireRole(), RequireRoleProps, DashboardLayout(), ProjectDetailPage(), adminNavigation, AppSidebar(), employeeNavigation, navigation (+10 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.06
@@ -171,16 +177,16 @@ Cohesion: 0.09
 Nodes (21): dependsOn, outputs, cache, cache, persistent, globalDependencies, dependsOn, cache (+13 more)
 
 ### Community 14 - "Community 14"
-Cohesion: 0.15
-Nodes (5): CreateTaskDto, UpdateTaskDto, TasksController, TasksModule, TasksService
+Cohesion: 0.13
+Nodes (6): ChecklistItemDto, CreateTaskDto, UpdateTaskDto, TasksController, TasksModule, TasksService
 
 ### Community 15 - "Community 15"
 Cohesion: 0.10
 Nodes (20): compilerOptions, allowJs, baseUrl, esModuleInterop, incremental, isolatedModules, jsx, lib (+12 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.39
-Nodes (5): AddMemberDto, CreateProjectDto, FilterProjectsDto, UpdateProjectDto, ProjectsModule
+Cohesion: 0.34
+Nodes (6): AddMemberDto, CreateCommentDto, CreateProjectDto, FilterProjectsDto, UpdateProjectDto, ProjectsModule
 
 ### Community 17 - "Community 17"
 Cohesion: 0.16
@@ -243,32 +249,32 @@ Cohesion: 0.40
 Nodes (3): containerVariants, itemVariants, stats
 
 ### Community 47 - "Community 47"
-Cohesion: 0.15
-Nodes (3): UpdateUserDto, UsersController, UsersService
+Cohesion: 0.40
+Nodes (3): CurrentUser, PaginationDto, UpdateUserDto
 
 ### Community 48 - "Community 48"
-Cohesion: 0.10
-Nodes (14): PRIORITY_BADGE, STATUS_BADGE, TASK_STATUS_COLOR, AddMemberModal(), ACTION_COLORS, ACTION_ICONS, ActivityLog, ProjectActivityFeed() (+6 more)
+Cohesion: 0.20
+Nodes (5): ACTION_COLORS, ACTION_ICONS, ActivityLog, ProjectActivityFeed(), ProjectActivityFeedProps
 
 ### Community 49 - "Community 49"
 Cohesion: 0.23
 Nodes (5): Card, CardContent, CardFooter, CardHeader, CardTitle
 
 ### Community 50 - "Community 50"
-Cohesion: 0.09
-Nodes (8): Roles(), UpdateSettingDto, SettingsController, SettingsModule, SettingsService, SuperAdminController, SuperAdminModule, SuperAdminService
+Cohesion: 0.16
+Nodes (4): UpdateSettingDto, SettingsController, SettingsModule, SettingsService
 
 ### Community 51 - "Community 51"
-Cohesion: 0.18
-Nodes (12): RequireRole(), RequireRoleProps, ProjectDetailPage(), LoginPage(), RegisterPage(), AuthState, useAuthStore, User (+4 more)
+Cohesion: 0.17
+Nodes (8): PRIORITY_BADGE, STATUS_BADGE, TASK_STATUS_COLOR, AddLinkModal(), AddMemberModal(), Comment, ProjectComments(), ProjectCommentsProps
 
 ### Community 52 - "Community 52"
 Cohesion: 0.16
 Nodes (5): AssignRoleDto, AuthorizationController, RequirePermissions(), PermissionsGuard, prisma
 
 ### Community 53 - "Community 53"
-Cohesion: 0.16
-Nodes (5): AttendanceController, AttendanceModule, AttendanceService, CurrentUser, CheckInDto
+Cohesion: 0.18
+Nodes (4): AttendanceController, AttendanceModule, AttendanceService, CheckInDto
 
 ### Community 54 - "Community 54"
 Cohesion: 0.16
@@ -279,48 +285,48 @@ Cohesion: 0.19
 Nodes (3): WorkspaceController, WorkspaceModule, WorkspaceService
 
 ### Community 56 - "Community 56"
-Cohesion: 0.22
-Nodes (4): PermissionsController, PermissionsModule, PermissionsService, prisma
+Cohesion: 0.16
+Nodes (5): JwtAuthGuard, PermissionsController, PermissionsModule, PermissionsService, prisma
+
+### Community 58 - "Community 58"
+Cohesion: 0.50
+Nodes (3): APP_CONSTANTS, LoginDto, RegisterDto
 
 ### Community 59 - "Community 59"
 Cohesion: 0.18
 Nodes (11): jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, moduleNameMapper, rootDir, testEnvironment, testRegex (+3 more)
 
 ### Community 65 - "Community 65"
-Cohesion: 0.28
-Nodes (6): AuthorizationModule, DocumentsController, DocumentsModule, DocumentsService, RedisModule, RolesModule
+Cohesion: 0.44
+Nodes (4): AuthorizationModule, LoggerModule, RedisModule, RolesModule
 
 ### Community 66 - "Community 66"
 Cohesion: 0.47
 Nodes (4): AssignPermissionsDto, CreateRoleDto, UpdateRoleDto, prisma
 
 ### Community 67 - "Community 67"
-Cohesion: 0.29
-Nodes (3): ActivityLogsController, ActivityLogsModule, PaginationDto
+Cohesion: 0.16
+Nodes (5): DatabaseModule, PrismaService, Public(), HealthController, HealthModule
 
 ### Community 68 - "Community 68"
 Cohesion: 0.05
-Nodes (71): AssignRoleDialogProps, DepartmentFormValues, DepartmentModal(), DepartmentModalProps, departmentSchema, DesignationFormValues, DesignationModal(), DesignationModalProps (+63 more)
+Nodes (74): AssignRoleDialogProps, DepartmentFormValues, DepartmentModal(), DepartmentModalProps, departmentSchema, DesignationFormValues, DesignationModal(), DesignationModalProps (+66 more)
 
 ### Community 69 - "Community 69"
 Cohesion: 0.29
 Nodes (7): scripts, build, clean, dev, lint, start, type-check
-
-### Community 70 - "Community 70"
-Cohesion: 0.12
-Nodes (7): AuthModule, JwtAuthGuard, prisma, RolesGuard, JwtRefreshStrategy, JwtStrategy, UsersModule
 
 ### Community 71 - "Community 71"
 Cohesion: 0.15
 Nodes (5): DepartmentController, DepartmentModule, DepartmentService, CreateDepartmentDto, UpdateDepartmentDto
 
 ### Community 72 - "Community 72"
-Cohesion: 0.15
-Nodes (5): DesignationController, DesignationModule, DesignationService, CreateDesignationDto, UpdateDesignationDto
+Cohesion: 0.06
+Nodes (12): Roles(), DesignationController, DesignationModule, DesignationService, CreateDesignationDto, UpdateDesignationDto, SecurityController, SecurityModule (+4 more)
 
 ### Community 73 - "Community 73"
-Cohesion: 0.32
-Nodes (3): Public(), HealthController, HealthModule
+Cohesion: 0.22
+Nodes (7): Credential, CREDENTIAL_TYPES, CredentialRow(), getTypeIcon(), getTypeLabel(), ProjectDocs(), ProjectDocsProps
 
 ### Community 74 - "Community 74"
 Cohesion: 0.47
@@ -338,25 +344,41 @@ Nodes (3): name, private, version
 Cohesion: 0.33
 Nodes (6): daysBetween(), ProjectTimeline(), ProjectTimelineProps, STATUS_BG, STATUS_COLORS, TimelineTask
 
+### Community 80 - "Community 80"
+Cohesion: 0.15
+Nodes (3): NotificationsController, NotificationsGateway, NotificationsModule
+
+### Community 81 - "Community 81"
+Cohesion: 0.25
+Nodes (5): COLUMN_CONFIG, KanbanColumn, KanbanTask, ProjectKanban(), ProjectKanbanProps
+
+### Community 82 - "Community 82"
+Cohesion: 0.47
+Nodes (3): DocumentsController, DocumentsModule, DocumentsService
+
+### Community 83 - "Community 83"
+Cohesion: 0.33
+Nodes (5): BAR_COLORS, DONUT_COLORS, ProjectContributions(), ProjectContributionsProps, Task
+
 ## Knowledge Gaps
-- **396 isolated node(s):** `name`, `version`, `private`, `description`, `dev` (+391 more)
+- **407 isolated node(s):** `name`, `version`, `private`, `description`, `dev` (+402 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `Community 7` to `Community 75`?**
-  _High betweenness centrality (0.069) - this node is a cross-community bridge._
+  _High betweenness centrality (0.062) - this node is a cross-community bridge._
 - **Why does `bootstrap()` connect `Community 7` to `Community 2`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **Why does `LoggerService` connect `Community 2` to `Community 1`, `Community 58`, `Community 50`, `Community 7`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+- **Why does `ProjectsService` connect `Community 57` to `Community 16`?**
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _396 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _407 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.10793650793650794 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.06951219512195123 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.051207729468599035 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.058693244739756366 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
