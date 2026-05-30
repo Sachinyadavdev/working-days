@@ -5,6 +5,7 @@ import { Bell, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useSidebarStore } from '@/stores/sidebar.store';
 import { useAuthStore } from '@/stores/auth.store';
+import { HeaderAttendance } from './header-attendance';
 
 export function Header() {
   const isCollapsed = useSidebarStore((s) => s.isCollapsed);
@@ -31,6 +32,8 @@ export function Header() {
 
       {/* Right side */}
       <div className="flex items-center gap-4">
+        <HeaderAttendance />
+
         <button className="relative rounded-lg p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
           <Bell className="h-5 w-5" />
           <span className="absolute -top-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-brand-500 text-[10px] font-bold text-white">

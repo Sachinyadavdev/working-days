@@ -9,7 +9,15 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { apiClient } from '@/lib/api-client';
 
-export function AllEmployeesHours({ data, onUpdate }: { data: any, onUpdate?: () => void }) {
+export function AllEmployeesHours({ 
+  data, 
+  onUpdate, 
+  onEmployeeSelect 
+}: { 
+  data: any; 
+  onUpdate?: () => void;
+  onEmployeeSelect?: (emp: { id: string; name: string }) => void;
+}) {
   const allEmployees = data?.allEmployees || [];
   
   const [editingEmployee, setEditingEmployee] = useState<{ id: string, name: string, currentHours: number } | null>(null);
@@ -71,26 +79,43 @@ export function AllEmployeesHours({ data, onUpdate }: { data: any, onUpdate?: ()
             const user = employee.user;
             const initials = `${user.firstName[0]}${user.lastName[0]}`;
             const requiredHours = employee.requiredDailyHours || 8.0;
+            const attendance = data?.recentCheckIns?.find((a: any) => a.employeeId === employee.id);
+            const liveOvertimeMinutes = attendance?.liveOvertimeMinutes || 0;
 
             return (
-              <div key={employee.id} className="flex items-center justify-between p-2 rounded-lg hover:bg-muted/50 transition-colors border border-transparent hover:border-border">
+              <div 
+                key={employee.id} 
+                className="flex items-center justify-between p-2 rounded-lg hover:bg-muted/50 transition-colors border border-transparent hover:border-border cursor-pointer group"
+                onClick={() => onEmployeeSelect?.({ id: employee.id, name: `${user.firstName} ${user.lastName}` })}
+              >
                 <div className="flex items-center gap-2 overflow-hidden mr-2">
                   <Avatar className="h-8 w-8 shrink-0">
                     <AvatarImage src={user.avatar || undefined} alt={user.firstName} />
                     <AvatarFallback className="text-xs">{initials}</AvatarFallback>
                   </Avatar>
                   <div className="truncate">
-                    <p className="text-xs font-medium truncate">{user.firstName} {user.lastName}</p>
+                    <p className="text-xs font-medium truncate group-hover:text-brand-600 transition-colors">{user.firstName} {user.lastName}</p>
                     <p className="text-[10px] text-muted-foreground truncate">{user.email}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 shrink-0">
+                <div className="flex items-center gap-3 shrink-0">
+                  {liveOvertimeMinutes > 0 && (
+                    <div className="text-right">
+                      <p className="text-[10px] text-brand-600 mb-0.5 font-bold">Overtime</p>
+                      <p className="text-xs font-bold text-brand-600 whitespace-nowrap">
+                        +{Math.floor(liveOvertimeMinutes / 60)}h {liveOvertimeMinutes % 60}m
+                      </p>
+                    </div>
+                  )}
                   <div className="text-right">
                     <p className="text-[10px] text-muted-foreground mb-0.5">Required</p>
                     <p className="text-xs font-semibold whitespace-nowrap">{requiredHours}h / day</p>
                   </div>
                   <button 
-                    onClick={() => handleEditClick(employee, requiredHours)}
+                    onClick={(e) => {
+                      e.stopPropagation(); // prevent clicking the row
+                      handleEditClick(employee, requiredHours);
+                    }}
                     className="p-1.5 rounded-md hover:bg-brand-500/10 text-muted-foreground hover:text-brand-500 transition-colors"
                     title="Edit Required Hours"
                   >

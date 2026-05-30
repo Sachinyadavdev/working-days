@@ -28,11 +28,33 @@ export class AttendanceService {
     const employee = await this.getEmployeeByUserIdOrThrow(userId);
     const today = this.getToday();
 
-    // Check if already checked in today
     const existing = await this.prisma.attendance.findUnique({
       where: { employeeId_date: { employeeId: employee.id, date: today } },
     });
-    if (existing) throw new BadRequestException('Already checked in today');
+
+    if (existing) {
+      if (existing.checkOutTime) {
+        // Employee checked out previously today, resume their shift
+        const now = new Date();
+        const durationMin = Math.round((now.getTime() - existing.checkOutTime.getTime()) / (1000 * 60));
+        
+        await this.prisma.attendanceBreak.create({
+          data: {
+            attendanceId: existing.id,
+            startTime: existing.checkOutTime,
+            endTime: now,
+            type: BreakType.OTHER,
+            durationMin,
+          },
+        });
+
+        return this.prisma.attendance.update({
+          where: { id: existing.id },
+          data: { checkOutTime: null },
+        });
+      }
+      throw new BadRequestException('Already checked in today');
+    }
 
     return this.prisma.attendance.create({
       data: {
@@ -156,6 +178,7 @@ export class AttendanceService {
       include: { breaks: true },
     });
 
+    let weeklyOvertimeMinutes = 0;
     const weeklyMinutes = weeklyAttendances.reduce((acc, a) => {
       let mins = a.totalMinutes || (a.totalHours ? Number(a.totalHours) * 60 : 0);
       
@@ -173,6 +196,11 @@ export class AttendanceService {
         elapsedMins -= breakMins;
         mins = Math.max(0, elapsedMins);
       }
+      
+      if (mins > (employee.requiredDailyHours * 60)) {
+        weeklyOvertimeMinutes += (mins - (employee.requiredDailyHours * 60));
+      }
+      
       return acc + mins;
     }, 0);
 
@@ -182,14 +210,36 @@ export class AttendanceService {
     const presentDays = weeklyAttendances.filter(a => a.status === AttendanceStatus.PRESENT || a.status === AttendanceStatus.WORK_FROM_HOME).length;
     const lateDays = weeklyAttendances.filter(a => a.status === AttendanceStatus.LATE).length;
 
+    let todayLiveMinutes = todayAttendance?.totalMinutes || (todayAttendance?.totalHours ? Number(todayAttendance.totalHours) * 60 : 0);
+    if (todayAttendance && !todayAttendance.checkOutTime) {
+      const now = new Date();
+      let elapsedMins = Math.round((now.getTime() - todayAttendance.checkInTime.getTime()) / (1000 * 60));
+      
+      const breakMins = todayAttendance.breaks?.reduce((bAcc, b) => {
+        if (b.durationMin) return bAcc + b.durationMin;
+        if (!b.endTime) return bAcc + Math.round((now.getTime() - b.startTime.getTime()) / (1000 * 60));
+        return bAcc;
+      }, 0) || 0;
+      
+      elapsedMins -= breakMins;
+      todayLiveMinutes = Math.max(0, elapsedMins);
+    }
+    
+    const requiredDailyMins = employee.requiredDailyHours * 60;
+    const todayOvertimeMinutes = Math.max(0, todayLiveMinutes - requiredDailyMins);
+
     return {
       today: todayAttendance,
+      todayLiveMinutes,
+      todayOvertimeMinutes,
+      requiredDailyHours: employee.requiredDailyHours,
       weeklyStats: {
         hours: weeklyHours,
         minutes: weeklyRemainingMinutes,
         totalHoursFormatted: `${weeklyHours}h ${weeklyRemainingMinutes}m`,
         presentDays,
         lateDays,
+        overtimeMinutes: weeklyOvertimeMinutes,
       }
     };
   }
@@ -236,8 +286,14 @@ export class AttendanceService {
         liveTotalMinutes = Math.max(0, elapsedMins);
       }
       
-      return { ...a, liveTotalMinutes };
+      const requiredDailyMins = a.employee.requiredDailyHours * 60;
+      const liveOvertimeMinutes = Math.max(0, liveTotalMinutes - requiredDailyMins);
+      
+      return { ...a, liveTotalMinutes, liveOvertimeMinutes };
     });
+
+    const organizationTotalMinutes = presentWithLiveStats.reduce((acc, curr) => acc + curr.liveTotalMinutes, 0);
+    const organizationOvertimeMinutes = presentWithLiveStats.reduce((acc, curr) => acc + curr.liveOvertimeMinutes, 0);
 
     return {
       totalEmployees,
@@ -249,13 +305,23 @@ export class AttendanceService {
         onBreak: activeBreaks.length,
         offline: offline.length,
       },
+      organizationTotalMinutes,
+      organizationOvertimeMinutes,
       recentCheckIns: presentWithLiveStats,
       allEmployees: allEmployeesList,
     };
   }
 
-  async getCalendar(userId: string, month: number, year: number) {
-    const employee = await this.getEmployeeByUserId(userId);
+  async getCalendar(userId: string, month: number, year: number, targetEmployeeId?: string) {
+    let employee;
+    
+    if (targetEmployeeId) {
+      // Allow viewing another employee's calendar (assuming Admin role is validated by frontend or other guards)
+      employee = await this.prisma.employee.findUnique({ where: { id: targetEmployeeId } });
+    } else {
+      employee = await this.getEmployeeByUserId(userId);
+    }
+
     if (!employee) return [];
 
     const startDate = new Date(Date.UTC(year, month - 1, 1));
@@ -269,7 +335,17 @@ export class AttendanceService {
       orderBy: { date: 'asc' },
     });
 
-    return attendances;
+    const requiredDailyMins = employee.requiredDailyHours * 60;
+
+    return attendances.map(a => {
+      const totalMins = a.totalMinutes || (a.totalHours ? Number(a.totalHours) * 60 : 0);
+      const overtimeMins = Math.max(0, totalMins - requiredDailyMins);
+      return {
+        ...a,
+        totalMins,
+        overtimeMins
+      };
+    });
   }
 
   async findAll(pagination: PaginationDto) {

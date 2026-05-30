@@ -16,6 +16,13 @@ export function CheckInWidget({ stats, onUpdate }: { stats: any; onUpdate: () =>
   const activeBreak = today?.breaks?.find((b: any) => !b.endTime);
   const isOnBreak = !!activeBreak;
 
+  const requiredMins = (stats?.requiredDailyHours || 8) * 60;
+  const loggedMins = stats?.todayLiveMinutes || today?.totalMinutes || 0;
+  const remainingMins = Math.max(0, requiredMins - loggedMins);
+  const overtimeMins = stats?.todayOvertimeMinutes || 0;
+  const isOvertime = overtimeMins > 0;
+  const progressPercent = Math.min(100, (loggedMins / requiredMins) * 100);
+
   const handleAction = async (action: 'checkIn' | 'checkOut' | 'startBreak' | 'endBreak') => {
     setLoading(true);
     try {
@@ -53,10 +60,36 @@ export function CheckInWidget({ stats, onUpdate }: { stats: any; onUpdate: () =>
           <Square className="w-8 h-8 text-muted-foreground" />
         </div>
         <h3 className="text-xl font-bold mb-2">Shift Completed</h3>
-        <p className="text-muted-foreground text-sm">
+        <p className="text-muted-foreground text-sm mb-6">
           You checked out at {new Date(today.checkOutTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}. 
           {today.totalMinutes != null ? ` You worked for ${Math.floor(today.totalMinutes / 60)}h ${today.totalMinutes % 60}m today.` : ''} Great work today!
         </p>
+
+        <div className="w-full space-y-2 mb-8 text-left">
+          <div className="flex justify-between text-sm">
+            <span className="text-muted-foreground">{Math.floor(loggedMins / 60)}h {loggedMins % 60}m logged</span>
+            {isOvertime ? (
+              <span className="font-medium text-brand-600 font-bold">Overtime: {Math.floor(overtimeMins / 60)}h {overtimeMins % 60}m</span>
+            ) : (
+              <span className="font-medium">{Math.floor(remainingMins / 60)}h {remainingMins % 60}m remaining</span>
+            )}
+          </div>
+          <div className="h-2.5 w-full bg-muted rounded-full overflow-hidden">
+            <div 
+              className={`h-full rounded-full transition-all duration-500 ${isOvertime ? 'bg-brand-500 shadow-[0_0_10px_rgba(var(--brand-500),0.5)]' : 'bg-emerald-500'}`} 
+              style={{ width: `${progressPercent}%` }} 
+            />
+          </div>
+        </div>
+
+        <Button 
+          variant="outline" 
+          className="w-full sm:w-auto min-w-[200px] h-12 text-md rounded-full border-brand-500 text-brand-600 hover:bg-brand-50 hover:text-brand-700 transition-all"
+          onClick={() => handleAction('checkIn')}
+          disabled={loading}
+        >
+          <Play className="mr-2 h-4 w-4 fill-current" /> Resume Shift
+        </Button>
       </div>
     );
   }
@@ -74,6 +107,25 @@ export function CheckInWidget({ stats, onUpdate }: { stats: any; onUpdate: () =>
             <MapPin className="w-4 h-4" /> Office HQ
           </div>
         </div>
+
+        {isCheckedIn && (
+          <div className="w-full space-y-2 px-1">
+            <div className="flex justify-between text-sm">
+              <span className="text-muted-foreground">{Math.floor(loggedMins / 60)}h {loggedMins % 60}m logged</span>
+              {isOvertime ? (
+                <span className="font-medium text-brand-600 font-bold">Overtime: {Math.floor(overtimeMins / 60)}h {overtimeMins % 60}m</span>
+              ) : (
+                <span className="font-medium text-foreground">{Math.floor(remainingMins / 60)}h {remainingMins % 60}m remaining</span>
+              )}
+            </div>
+            <div className="h-2.5 w-full bg-muted rounded-full overflow-hidden">
+              <div 
+                className={`h-full rounded-full transition-all duration-500 ${isOnBreak ? 'bg-amber-500' : isOvertime ? 'bg-brand-500 shadow-[0_0_10px_rgba(var(--brand-500),0.5)]' : 'bg-emerald-500'}`}
+                style={{ width: `${progressPercent}%` }} 
+              />
+            </div>
+          </div>
+        )}
 
         {!isCheckedIn ? (
           <Button 

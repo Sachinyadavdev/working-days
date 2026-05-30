@@ -55,8 +55,9 @@ export class AttendanceController {
     @CurrentUser('sub') userId: string,
     @Query('month', ParseIntPipe) month: number,
     @Query('year', ParseIntPipe) year: number,
+    @Query('employeeId') employeeId?: string,
   ) {
-    return this.attendanceService.getCalendar(userId, month, year);
+    return this.attendanceService.getCalendar(userId, month, year, employeeId);
   }
 
   @Get()

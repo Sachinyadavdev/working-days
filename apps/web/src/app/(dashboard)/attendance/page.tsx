@@ -18,6 +18,7 @@ export default function AttendancePage() {
   const [employeeStats, setEmployeeStats] = useState<any>(null);
   const [adminStats, setAdminStats] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [selectedEmployee, setSelectedEmployee] = useState<{ id: string; name: string } | null>(null);
 
   useEffect(() => {
     loadData();
@@ -81,13 +82,21 @@ export default function AttendancePage() {
           {isAdmin && adminStats && (
             <>
               <PresenceList data={adminStats} onUpdate={loadData} />
-              <AllEmployeesHours data={adminStats} onUpdate={loadData} />
+              <AllEmployeesHours 
+                data={adminStats} 
+                onUpdate={loadData} 
+                onEmployeeSelect={setSelectedEmployee}
+              />
             </>
           )}
         </div>
         <div className="lg:col-span-2 space-y-6">
-          <AttendanceStats stats={employeeStats} />
-          <AttendanceCalendar />
+          <AttendanceStats stats={isAdmin ? adminStats : employeeStats} isAdminView={isAdmin} />
+          <AttendanceCalendar 
+            employeeId={selectedEmployee?.id} 
+            employeeName={selectedEmployee?.name}
+            onClearEmployee={() => setSelectedEmployee(null)}
+          />
         </div>
       </div>
     </div>

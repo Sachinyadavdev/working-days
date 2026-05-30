@@ -51,8 +51,10 @@ export const attendanceApi = {
     return response.data.data || response.data;
   },
 
-  getCalendar: async (month: number, year: number) => {
-    const response = await apiClient.get(`/attendance/calendar?month=${month}&year=${year}`);
+  getCalendar: async (month: number, year: number, employeeId?: string) => {
+    let url = `/attendance/calendar?month=${month}&year=${year}`;
+    if (employeeId) url += `&employeeId=${employeeId}`;
+    const response = await apiClient.get(url);
     return response.data.data || response.data;
   },
 
