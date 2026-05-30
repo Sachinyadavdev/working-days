@@ -21,6 +21,7 @@ export class AdminCreateEmployeeDto {
   
   @ApiProperty() @IsDateString() dateOfJoining: string;
   @ApiPropertyOptional() @IsOptional() @IsDateString() dateOfBirth?: string;
+  @ApiPropertyOptional() @IsOptional() requiredDailyHours?: number;
   
   @ApiProperty({ type: [String] }) @IsArray() @IsString({ each: true }) roles: string[];
 }

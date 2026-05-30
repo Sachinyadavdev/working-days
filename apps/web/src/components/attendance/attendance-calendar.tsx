@@ -33,7 +33,7 @@ export function AttendanceCalendar() {
   const nextMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
 
   const getDayStatus = (day: number) => {
-    const record = attendances.find(a => new Date(a.date).getDate() === day);
+    const record = attendances.find(a => new Date(a.date).getUTCDate() === day);
     return record?.status;
   };
 

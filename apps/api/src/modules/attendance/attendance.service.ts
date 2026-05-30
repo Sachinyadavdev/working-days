@@ -21,8 +21,7 @@ export class AttendanceService {
 
   private getToday() {
     const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    return today;
+    return new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()));
   }
 
   async checkIn(userId: string, dto: CheckInDto) {
@@ -147,7 +146,7 @@ export class AttendanceService {
 
     // Calculate weekly stats
     const startOfWeek = new Date(today);
-    startOfWeek.setDate(today.getDate() - today.getDay()); // Sunday
+    startOfWeek.setUTCDate(today.getUTCDate() - today.getUTCDay()); // Sunday
     
     const weeklyAttendances = await this.prisma.attendance.findMany({
       where: {
@@ -208,14 +207,38 @@ export class AttendanceService {
       }
     });
 
-    const totalEmployees = await this.prisma.employee.count({ where: { status: 'ACTIVE' } });
+    const allEmployeesList = await this.prisma.employee.findMany({ 
+      where: { status: 'ACTIVE' },
+      include: { user: { select: { firstName: true, lastName: true, avatar: true, email: true } } }
+    });
+    
+    const totalEmployees = allEmployeesList.length;
     const present = attendances.filter(a => a.status === AttendanceStatus.PRESENT || a.status === AttendanceStatus.WORK_FROM_HOME || a.status === AttendanceStatus.LATE);
     const late = attendances.filter(a => a.status === AttendanceStatus.LATE);
     
     const activeBreaks = attendances.filter(a => !a.checkOutTime && a.breaks.some(b => !b.endTime));
     const online = present.filter(a => !a.checkOutTime && !a.breaks.some(b => !b.endTime));
     const offline = present.filter(a => !!a.checkOutTime);
-    
+    const presentWithLiveStats = present.map(a => {
+      let liveTotalMinutes = a.totalMinutes || (a.totalHours ? Number(a.totalHours) * 60 : 0);
+      
+      if (!a.checkOutTime) {
+        const now = new Date();
+        let elapsedMins = Math.round((now.getTime() - a.checkInTime.getTime()) / (1000 * 60));
+        
+        const breakMins = a.breaks?.reduce((bAcc, b) => {
+          if (b.durationMin) return bAcc + b.durationMin;
+          if (!b.endTime) return bAcc + Math.round((now.getTime() - b.startTime.getTime()) / (1000 * 60));
+          return bAcc;
+        }, 0) || 0;
+        
+        elapsedMins -= breakMins;
+        liveTotalMinutes = Math.max(0, elapsedMins);
+      }
+      
+      return { ...a, liveTotalMinutes };
+    });
+
     return {
       totalEmployees,
       presentCount: present.length,
@@ -226,7 +249,8 @@ export class AttendanceService {
         onBreak: activeBreaks.length,
         offline: offline.length,
       },
-      recentCheckIns: present.slice(0, 10), // basic recent list
+      recentCheckIns: presentWithLiveStats,
+      allEmployees: allEmployeesList,
     };
   }
 
@@ -234,8 +258,8 @@ export class AttendanceService {
     const employee = await this.getEmployeeByUserId(userId);
     if (!employee) return [];
 
-    const startDate = new Date(year, month - 1, 1);
-    const endDate = new Date(year, month, 0);
+    const startDate = new Date(Date.UTC(year, month - 1, 1));
+    const endDate = new Date(Date.UTC(year, month, 0));
 
     const attendances = await this.prisma.attendance.findMany({
       where: {

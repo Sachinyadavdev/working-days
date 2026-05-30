@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useAuthStore } from '@/stores/auth.store';
 import { CheckInWidget } from '@/components/attendance/check-in-widget';
 import { PresenceList } from '@/components/attendance/presence-list';
+import { AllEmployeesHours } from '@/components/attendance/all-employees-hours';
 import { AttendanceStats } from '@/components/attendance/attendance-stats';
 import { AttendanceCalendar } from '@/components/attendance/attendance-calendar';
 import { Button } from '@/components/ui/button';
@@ -78,7 +79,10 @@ export default function AttendancePage() {
         <div className="lg:col-span-1 space-y-6">
           <CheckInWidget stats={employeeStats} onUpdate={loadData} />
           {isAdmin && adminStats && (
-            <PresenceList data={adminStats} />
+            <>
+              <PresenceList data={adminStats} onUpdate={loadData} />
+              <AllEmployeesHours data={adminStats} onUpdate={loadData} />
+            </>
           )}
         </div>
         <div className="lg:col-span-2 space-y-6">

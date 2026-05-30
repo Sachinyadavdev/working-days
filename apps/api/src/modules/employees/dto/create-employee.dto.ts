@@ -11,4 +11,5 @@ export class CreateEmployeeDto {
   @ApiPropertyOptional() @IsOptional() @IsDateString() dateOfBirth?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() address?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() emergencyContact?: string;
+  @ApiPropertyOptional() @IsOptional() requiredDailyHours?: number;
 }

@@ -122,6 +122,7 @@ export class EmployeesService {
         dateOfBirth: dto.dateOfBirth ? new Date(dto.dateOfBirth) : undefined,
         address: dto.address,
         emergencyContact: dto.emergencyContact,
+        requiredDailyHours: dto.requiredDailyHours,
       },
       include: {
         user: {
@@ -151,6 +152,7 @@ export class EmployeesService {
         dateOfBirth: dto.dateOfBirth ? new Date(dto.dateOfBirth) : undefined,
         address: dto.address,
         emergencyContact: dto.emergencyContact,
+        requiredDailyHours: dto.requiredDailyHours !== undefined ? dto.requiredDailyHours : undefined,
       },
     });
 
@@ -195,6 +197,7 @@ export class EmployeesService {
             emergencyContact: dto.emergencyContact || null,
             dateOfJoining: new Date(dto.dateOfJoining),
             dateOfBirth: dto.dateOfBirth ? new Date(dto.dateOfBirth) : undefined,
+            requiredDailyHours: dto.requiredDailyHours !== undefined ? dto.requiredDailyHours : 8.0,
           },
         },
         roles: {
@@ -266,6 +269,7 @@ export class EmployeesService {
         emergencyContact: dto.emergencyContact !== undefined ? dto.emergencyContact : undefined,
         dateOfJoining: dto.dateOfJoining ? new Date(dto.dateOfJoining) : undefined,
         dateOfBirth: dto.dateOfBirth ? new Date(dto.dateOfBirth) : undefined,
+        requiredDailyHours: dto.requiredDailyHours !== undefined ? dto.requiredDailyHours : undefined,
       },
       include: {
         user: {

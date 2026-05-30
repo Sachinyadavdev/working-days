@@ -33,6 +33,7 @@ const employeeSchema = z.object({
   designationId: z.string().optional(),
   employeeType: z.string().min(1, 'Employee type is required'),
   dateOfJoining: z.string().min(1, 'Joining date is required'),
+  requiredDailyHours: z.coerce.number().min(1, 'Hours must be at least 1').max(24, 'Hours cannot exceed 24').optional().default(8),
   
   roles: z.array(z.string()).min(1, 'At least one role must be selected'),
 });
@@ -96,6 +97,7 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
     defaultValues: {
       employeeType: 'FULL_TIME',
       roles: ['EMPLOYEE'],
+      requiredDailyHours: 8.0,
     },
   });
 
@@ -104,7 +106,7 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
   const nextStep = async () => {
     const fieldsToValidate = 
       step === 1 ? ['firstName', 'lastName', 'email', 'phone', 'gender', 'dateOfBirth', 'address', 'emergencyContact'] 
-      : step === 2 ? ['employeeCode', 'departmentId', 'designationId', 'employeeType', 'dateOfJoining', 'workLocation', 'bloodGroup']
+      : step === 2 ? ['employeeCode', 'departmentId', 'designationId', 'employeeType', 'dateOfJoining', 'workLocation', 'bloodGroup', 'requiredDailyHours']
       : [];
       
     const isStepValid = await trigger(fieldsToValidate as any);
@@ -375,6 +377,20 @@ export function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
                     className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400"
                     placeholder="e.g. O+"
                   />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="text-sm font-medium text-brand-200">Required Daily Hours</label>
+                  <input
+                    {...register('requiredDailyHours')}
+                    type="number"
+                    step="0.5"
+                    className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 outline-none focus:border-brand-400"
+                    placeholder="8.0"
+                  />
+                  {errors.requiredDailyHours && <span className="text-xs text-red-400">{errors.requiredDailyHours.message}</span>}
                 </div>
               </div>
             </div>
