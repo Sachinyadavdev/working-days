@@ -245,8 +245,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\attendance\\attendance.controller.ts": {
-    "mtime": 1779972597.007666,
-    "ast_hash": "5eb3456be8f112c67099ce8103002381",
+    "mtime": 1780143764.8819413,
+    "ast_hash": "e3bbb5be9510e8751ea35e4c64e9c0b6",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\attendance\\attendance.module.ts": {
@@ -255,8 +255,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\attendance\\attendance.service.ts": {
-    "mtime": 1779977292.8698356,
-    "ast_hash": "8b0d5362363facb1df20bf18bfd38009",
+    "mtime": 1780148080.9370549,
+    "ast_hash": "733806fe7841cb8e3729bb9e7baec82f",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\attendance\\dto\\check-in.dto.ts": {
@@ -310,13 +310,13 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\employees.service.ts": {
-    "mtime": 1779613650.649064,
-    "ast_hash": "e2b0327601b4b872d123063bd60b9990",
+    "mtime": 1780116780.1299236,
+    "ast_hash": "6f9e165a3d76262ce137017f62b33dda",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\dto\\create-employee.dto.ts": {
-    "mtime": 1779439366.5031452,
-    "ast_hash": "0f5d10337d6022ef47746440ca42ced3",
+    "mtime": 1780116718.9231012,
+    "ast_hash": "e8eedc51e352c53741d7552065aba83f",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\dto\\update-employee.dto.ts": {
@@ -550,8 +550,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\layout\\header.tsx": {
-    "mtime": 1779439739.1852772,
-    "ast_hash": "a9af1b8b2e6e695379f81d3516caad45",
+    "mtime": 1780142277.9745584,
+    "ast_hash": "25130fe963a434c9ae2425f44a1fb9b3",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\ui\\data-table.tsx": {
@@ -785,8 +785,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\employees\\dto\\admin-employee.dto.ts": {
-    "mtime": 1779613639.7148833,
-    "ast_hash": "6a58cb27004360afc2e1ba52d6edaf6e",
+    "mtime": 1780117781.421047,
+    "ast_hash": "17ea1a91d4b23b49eb75ababc6392527",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\permissions\\permissions.controller.spec.ts": {
@@ -1025,8 +1025,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\employees\\add-employee-modal.tsx": {
-    "mtime": 1779613842.4865808,
-    "ast_hash": "86eb0b4bea50859e887fc1f94f55f1ab",
+    "mtime": 1780116888.7073486,
+    "ast_hash": "95e5ecaed5f4ee3189a18563b0954a77",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\ui\\button.tsx": {
@@ -1100,8 +1100,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\employees\\edit-employee-modal.tsx": {
-    "mtime": 1779613868.897255,
-    "ast_hash": "4bee6ae24670685c337bfac73bc13095",
+    "mtime": 1780116907.4103177,
+    "ast_hash": "6a64eba309927ccfbd67b844f4778774",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\employees\\view-employee-modal.tsx": {
@@ -1275,8 +1275,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\attendance\\page.tsx": {
-    "mtime": 1779974850.7988539,
-    "ast_hash": "71a02ff27c827e0cb746d7699b5fc5d2",
+    "mtime": 1780148125.6892123,
+    "ast_hash": "38d2086aeabc65e2332bcdd7f82b11aa",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\teams\\page.tsx": {
@@ -1290,23 +1290,23 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\attendance\\attendance-calendar.tsx": {
-    "mtime": 1779972800.5308628,
-    "ast_hash": "30ef4014faa76944f0248e9e70a814e3",
+    "mtime": 1780143858.0442097,
+    "ast_hash": "944b7d988cf40c8a0b0f1880b0017560",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\attendance\\attendance-stats.tsx": {
-    "mtime": 1779976303.1407676,
-    "ast_hash": "c00b4f87a1480d51df1ee78621480ae7",
+    "mtime": 1780148353.7035902,
+    "ast_hash": "e38906290d7ee750f2e0a2148f77df19",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\attendance\\check-in-widget.tsx": {
-    "mtime": 1779976314.1365654,
-    "ast_hash": "11139b9af6713e3b465b9687bac99b5d",
+    "mtime": 1780125428.1885138,
+    "ast_hash": "26649822c20c8804dc9b8f49e4f104cb",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\attendance\\presence-list.tsx": {
-    "mtime": 1779972811.8572733,
-    "ast_hash": "2ffa05eef58f7150d837fcc24007ea15",
+    "mtime": 1780118677.7439082,
+    "ast_hash": "b0b5d5783c7337440f53894b5f524e37",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\teams\\add-team-member-modal.tsx": {
@@ -1360,8 +1360,18 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\lib\\api\\attendance.ts": {
-    "mtime": 1779974115.5605617,
-    "ast_hash": "64caff815cc91fd2e2aded6c9c580eb2",
+    "mtime": 1780143784.0494885,
+    "ast_hash": "568196135039f61afa51daa4309c61c0",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\attendance\\all-employees-hours.tsx": {
+    "mtime": 1780143824.218846,
+    "ast_hash": "0a0f6afb796586e040ebddf229ef973e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\layout\\header-attendance.tsx": {
+    "mtime": 1780142908.6846006,
+    "ast_hash": "e4326282064f2f590f5b952bc473b2fd",
     "semantic_hash": ""
   }
 }

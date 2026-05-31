@@ -15,11 +15,28 @@ export function HeaderAttendance() {
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(false);
 
-  const fetchStats = async () => {
+  const fetchStats = async (isInitial = false) => {
     if (!user) return;
     try {
       const res = await attendanceApi.getEmployeeStats();
       setStats(res);
+
+      if (isInitial && !res?.today && !user.roles?.includes('SUPER_ADMIN')) {
+        try {
+          await attendanceApi.checkIn({
+            status: AttendanceStatus.PRESENT,
+            ipAddress: '192.168.1.1',
+            deviceInfo: navigator.userAgent,
+            location: 'Office HQ',
+          });
+          toast.success('Automatically checked in for the day!');
+          const updatedRes = await attendanceApi.getEmployeeStats();
+          setStats(updatedRes);
+          window.dispatchEvent(new Event('attendance-updated'));
+        } catch (checkInErr) {
+          console.error('Auto check-in failed', checkInErr);
+        }
+      }
     } catch (err) {
       console.error(err);
     } finally {
@@ -31,13 +48,13 @@ export function HeaderAttendance() {
     if (!user) return;
     
     // Add slight delay to prevent 429 Too Many Requests alongside page mounts
-    const initialFetch = setTimeout(() => fetchStats(), 500);
+    const initialFetch = setTimeout(() => fetchStats(true), 500);
     
     // Refresh every 60 seconds to keep time live
-    const interval = setInterval(fetchStats, 60000);
+    const interval = setInterval(() => fetchStats(false), 60000);
     
     // Listen for custom event from other widgets
-    const handleUpdate = () => fetchStats();
+    const handleUpdate = () => fetchStats(false);
     window.addEventListener('attendance-updated', handleUpdate);
     
     return () => {
