@@ -15,6 +15,7 @@ import { LeaveCalendar } from '@/components/leave/leave-calendar';
 import { ApplyLeaveDialog } from '@/components/leave/apply-leave-dialog';
 import { LeaveHistory } from '@/components/leave/leave-history';
 import { AdminLeaveStats } from '@/components/leave/admin-leave-stats';
+import { HolidaysManagement } from '@/components/leave/holidays-management';
 import { LeaveCategoriesManagement } from '@/components/leave/leave-categories-management';
 import { LeaveBalanceManagement } from '@/components/leave/leave-balance-management';
 import { AdminEmployeeLeaveAnalytics } from '@/components/leave/admin-employee-leave-analytics';
@@ -31,7 +32,7 @@ export default function LeavePage() {
     useState<AdminLeaveDashboard | null>(null);
   const [categories, setCategories] = useState<LeaveCategory[]>([]);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'overview' | 'history' | 'admin' | 'policies' | 'balances' | 'analytics'>(
+  const [activeTab, setActiveTab] = useState<'overview' | 'history' | 'admin' | 'policies' | 'balances' | 'analytics' | 'holidays'>(
     'overview'
   );
 
@@ -78,7 +79,8 @@ export default function LeavePage() {
       { id: 'admin' as const, label: 'Admin Dashboard' },
       { id: 'analytics' as const, label: 'Employee Analytics' },
       { id: 'policies' as const, label: 'Leave Policies' },
-      { id: 'balances' as const, label: 'Leave Balances' }
+      { id: 'balances' as const, label: 'Leave Balances' },
+      { id: 'holidays' as const, label: 'Holidays' }
     ] : []),
   ];
 
@@ -212,6 +214,10 @@ export default function LeavePage() {
 
       {activeTab === 'analytics' && isAdmin && employeeDashboard && (
         <AdminEmployeeLeaveAnalytics holidays={employeeDashboard.holidays} />
+      )}
+
+      {activeTab === 'holidays' && isAdmin && employeeDashboard && (
+        <HolidaysManagement initialHolidays={employeeDashboard.holidays} />
       )}
     </div>
   );
