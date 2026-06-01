@@ -160,8 +160,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\common\\filters\\global-exception.filter.ts": {
-    "mtime": 1779439184.996798,
-    "ast_hash": "df8799b003b8064a0b7ebba273b6f5e2",
+    "mtime": 1780232476.499309,
+    "ast_hash": "46ca403f297c3f8eda1c793d373a547c",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\common\\guards\\jwt-auth.guard.ts": {
@@ -325,8 +325,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\leave.controller.ts": {
-    "mtime": 1779439518.1089194,
-    "ast_hash": "4722d7fdc76932fd5d48d8b26a09153b",
+    "mtime": 1780232640.177801,
+    "ast_hash": "c1c7bf8f458151dd75e109b4dab2744c",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\leave.module.ts": {
@@ -335,18 +335,18 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\leave.service.ts": {
-    "mtime": 1779439521.575898,
-    "ast_hash": "d06192651e3341e6b26e211d7b1934b9",
+    "mtime": 1780232884.5865223,
+    "ast_hash": "45642c967f45e4d41018da862e7b212f",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\dto\\create-leave-request.dto.ts": {
-    "mtime": 1779439524.3374512,
-    "ast_hash": "0e760aa43b3a42f6c563a728905f04b3",
+    "mtime": 1780231195.9573936,
+    "ast_hash": "225431d157570778ca08de2efca5b367",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\dto\\update-leave-status.dto.ts": {
-    "mtime": 1779439526.5281556,
-    "ast_hash": "30b3fbba665941ecf678176156e91a44",
+    "mtime": 1780231204.874584,
+    "ast_hash": "013c148ee689ef57318222e346aaf866",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\notifications\\notifications.controller.ts": {
@@ -625,13 +625,13 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\packages\\shared-types\\src\\entities.ts": {
-    "mtime": 1779972506.4890573,
-    "ast_hash": "e76d4dfc95f88e9b1fe7e47c72d4bbab",
+    "mtime": 1780231134.2949746,
+    "ast_hash": "076fc7b8cb393fe0364b9f3601e1207e",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\packages\\shared-types\\src\\enums.ts": {
-    "mtime": 1779972488.3039017,
-    "ast_hash": "3bed11e7795e8adbd9fa4e5d6969803d",
+    "mtime": 1780231113.6586337,
+    "ast_hash": "6bcffacdefe03d6cfcbf0af651880750",
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\packages\\shared-types\\src\\index.ts": {
@@ -1370,8 +1370,93 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\layout\\header-attendance.tsx": {
-    "mtime": 1780142908.6846006,
-    "ast_hash": "e4326282064f2f590f5b952bc473b2fd",
+    "mtime": 1780228104.2379365,
+    "ast_hash": "0b91fb178d3f80eb6191520824cbd70e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\dto\\create-leave-category.dto.ts": {
+    "mtime": 1780231174.6077995,
+    "ast_hash": "b48fafda9089692c7cd73a74b4669463",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\dto\\create-leave-comment.dto.ts": {
+    "mtime": 1780231224.463314,
+    "ast_hash": "6da6c1eb84065de59296fcb5c27eff5a",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\dto\\holiday.dto.ts": {
+    "mtime": 1780231235.0307026,
+    "ast_hash": "a9545c202b3814f71a7e35d2ba76902e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\dto\\leave-balance.dto.ts": {
+    "mtime": 1780231216.5300977,
+    "ast_hash": "b1421a25a496ede1428f827716e9aa79",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\dto\\leave-request-query.dto.ts": {
+    "mtime": 1780232627.7984874,
+    "ast_hash": "6de582356f0f1d813a7f88e7293657f9",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\api\\src\\modules\\leave\\dto\\update-leave-category.dto.ts": {
+    "mtime": 1780231182.6088212,
+    "ast_hash": "3f794fc0f21a53f5819e79826b178a06",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\app\\(dashboard)\\leave\\page.tsx": {
+    "mtime": 1780233672.2863438,
+    "ast_hash": "4cd14d22d88b587ae9c5c46a5e17087e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\leave\\admin-leave-stats.tsx": {
+    "mtime": 1780231572.5915143,
+    "ast_hash": "04ff37c202e699a766745b2bab7941de",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\leave\\apply-leave-dialog.tsx": {
+    "mtime": 1780248897.6080298,
+    "ast_hash": "d2d3c9a6dd7fcc24441502c5842850d9",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\leave\\leave-balance-management.tsx": {
+    "mtime": 1780247923.731035,
+    "ast_hash": "7b406c69b13d9f5dd14c5c1354d9d8c7",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\leave\\leave-calendar.tsx": {
+    "mtime": 1780231426.6977427,
+    "ast_hash": "de70bd6650cea2086d17042b0f53b86c",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\leave\\leave-categories-management.tsx": {
+    "mtime": 1780252113.1196995,
+    "ast_hash": "75012d093614afe06f2ae64b356d9e4c",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\leave\\leave-detail-sheet.tsx": {
+    "mtime": 1780231538.3412623,
+    "ast_hash": "c19ddb797023bdb8c8cc434bf11387d0",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\leave\\leave-history.tsx": {
+    "mtime": 1780247911.1399999,
+    "ast_hash": "97fbdb8b3462eaad70c6862c460487f4",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\components\\leave\\leave-summary-cards.tsx": {
+    "mtime": 1780253008.29906,
+    "ast_hash": "57145f64222edee623931375170e7f3e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\lib\\api\\employee.ts": {
+    "mtime": 1780233526.2507272,
+    "ast_hash": "4cf218c71ddd633bf7b49adbc5badec7",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Dell\\Documents\\GitHub\\Personal\\working-days\\apps\\web\\src\\lib\\api\\leave.ts": {
+    "mtime": 1780231366.4998746,
+    "ast_hash": "cd71d009262580dba09257a1fd8adcc8",
     "semantic_hash": ""
   }
 }

@@ -20,7 +20,7 @@ export class GlobalExceptionFilter implements ExceptionFilter {
 
     let status = HttpStatus.INTERNAL_SERVER_ERROR;
     let message = 'Internal server error';
-    let error = 'InternalServerError';
+    let error = 'Error';
 
     if (exception instanceof HttpException) {
       status = exception.getStatus();

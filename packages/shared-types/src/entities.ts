@@ -9,8 +9,8 @@ import {
   TaskType,
   Priority,
   AttendanceStatus,
-  LeaveType,
   LeaveStatus,
+  HolidayType,
   NotificationType,
   ShiftType,
   BreakType,
@@ -161,18 +161,75 @@ export interface AttendanceCorrectionEntity extends BaseEntity {
   approverId: string | null;
 }
 
+/** Leave category (dynamic leave type) */
+export interface LeaveCategoryEntity extends BaseEntity {
+  name: string;
+  code: string;
+  description: string | null;
+  totalDaysPerYear: number;
+  carryForwardAllowed: boolean;
+  maxCarryForward: number;
+  requiresApproval: boolean;
+  requiresDocument: boolean;
+  isPaid: boolean;
+  isActive: boolean;
+}
+
+/** Leave balance entity */
+export interface LeaveBalanceEntity extends BaseEntity {
+  employeeId: string;
+  categoryId: string;
+  year: number;
+  allocated: number;
+  used: number;
+  pending: number;
+  carryForward: number;
+  remarks: string | null;
+  category?: LeaveCategoryEntity;
+}
+
 /** Leave request entity */
 export interface LeaveRequestEntity extends BaseEntity {
   employeeId: string;
-  leaveType: LeaveType;
+  categoryId: string;
   startDate: string;
   endDate: string;
   totalDays: number;
+  halfDay: boolean;
+  halfDayPeriod: string | null;
   reason: string;
+  emergencyLeave: boolean;
+  attachmentUrl: string | null;
+  contactDuringLeave: string | null;
+  backupEmployeeId: string | null;
   status: LeaveStatus;
   reviewedBy: string | null;
   reviewedAt: string | null;
   reviewNote: string | null;
+  cancelledAt: string | null;
+  cancellationReason: string | null;
+  employee?: EmployeeEntity;
+  category?: LeaveCategoryEntity;
+  comments?: LeaveCommentEntity[];
+}
+
+/** Leave comment entity */
+export interface LeaveCommentEntity {
+  id: string;
+  leaveRequestId: string;
+  authorId: string;
+  content: string;
+  createdAt: string;
+  author?: { firstName: string; lastName: string; avatar: string | null };
+}
+
+/** Holiday entity */
+export interface HolidayEntity extends BaseEntity {
+  name: string;
+  date: string;
+  type: HolidayType;
+  region: string | null;
+  isActive: boolean;
 }
 
 /** Notification entity */
