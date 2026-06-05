@@ -137,7 +137,7 @@ export function LeaveCategoriesManagement({ categories, onRefresh }: LeaveCatego
         </button>
       </div>
 
-      <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+      <div className="overflow-x-auto rounded-xl border border-border bg-card shadow-sm">
         <table className="min-w-full divide-y divide-border">
           <thead className="bg-muted/50">
             <tr>

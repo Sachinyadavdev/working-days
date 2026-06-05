@@ -150,7 +150,7 @@ export function LeaveBalanceManagement({ categories }: LeaveBalanceManagementPro
           <div className="h-6 w-6 animate-spin rounded-full border-b-2 border-brand-500" />
         </div>
       ) : (
-        <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+        <div className="overflow-x-auto rounded-xl border border-border bg-card shadow-sm">
           <table className="min-w-full divide-y divide-border">
             <thead className="bg-muted/50">
               <tr>

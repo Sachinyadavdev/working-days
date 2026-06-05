@@ -15,7 +15,7 @@ export function Header() {
     <header
       className={cn(
         'sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border bg-background/80 px-6 backdrop-blur-md transition-all duration-300',
-        isCollapsed ? 'ml-16' : 'ml-64',
+        isCollapsed ? 'ml-16' : 'ml-56',
       )}
     >
       {/* Search bar */}

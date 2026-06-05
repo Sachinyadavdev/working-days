@@ -19,7 +19,7 @@ export default function DashboardLayout({
       <main
         className={cn(
           'min-h-[calc(100vh-4rem)] p-6 transition-all duration-300',
-          isCollapsed ? 'ml-16' : 'ml-64',
+          isCollapsed ? 'ml-16' : 'ml-56',
         )}
       >
         {children}
