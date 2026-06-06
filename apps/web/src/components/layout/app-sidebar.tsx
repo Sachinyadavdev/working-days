@@ -19,11 +19,13 @@ import {
   LogOut,
   Building2,
   Briefcase,
+  ClipboardList,
 } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { useSidebarStore } from '@/stores/sidebar.store';
 import { useAuthStore } from '@/stores/auth.store';
+import { useNotificationStore } from '@/stores/notification.store';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
@@ -55,6 +57,7 @@ const employeeNavigation = [
   { name: 'My Profile', href: '/employee/profile', icon: UserCog },
   { name: 'My Projects', href: '/employee/projects', icon: FolderKanban },
   { name: 'My Salary', href: '/employee/salary', icon: Activity },
+  { name: 'EOD Reports', href: '/eod', icon: ClipboardList },
 ];
 
 export function AppSidebar() {
@@ -62,6 +65,7 @@ export function AppSidebar() {
   const router = useRouter();
   const { isCollapsed, toggle } = useSidebarStore();
   const { user, logout } = useAuthStore();
+  const unreadCount = useNotificationStore((s) => s.unreadCount);
   
   const isSuperAdmin = user?.roles?.includes('SUPER_ADMIN') || false;
 
@@ -93,6 +97,7 @@ export function AppSidebar() {
       <nav className="flex-1 space-y-1 overflow-y-auto px-2 py-4">
         {navigation.map((item) => {
           const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
+          const isNotifications = item.name === 'Notifications';
           return (
             <Link
               key={item.name}
@@ -106,8 +111,24 @@ export function AppSidebar() {
               )}
               title={isCollapsed ? item.name : undefined}
             >
-              <item.icon className="h-5 w-5 shrink-0" />
-              {!isCollapsed && <span>{item.name}</span>}
+              <div className="relative shrink-0">
+                <item.icon className="h-5 w-5" />
+                {isNotifications && unreadCount > 0 && isCollapsed && (
+                  <span className="absolute -top-1.5 -right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[9px] font-bold text-white">
+                    {unreadCount > 9 ? '9+' : unreadCount}
+                  </span>
+                )}
+              </div>
+              {!isCollapsed && (
+                <>
+                  <span className="flex-1">{item.name}</span>
+                  {isNotifications && unreadCount > 0 && (
+                    <span className="flex h-5 min-w-[20px] items-center justify-center rounded-full bg-red-500 px-1.5 text-[10px] font-bold text-white">
+                      {unreadCount > 99 ? '99+' : unreadCount}
+                    </span>
+                  )}
+                </>
+              )}
             </Link>
           );
         })}

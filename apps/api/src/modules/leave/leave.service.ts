@@ -253,6 +253,7 @@ export class LeaveService {
         message: `${employee.user?.firstName || 'An employee'} applied for ${dto.totalDays} days of leave.`,
         type: 'LEAVE_REQUEST',
         priority: 'HIGH',
+        metadata: { actionUrl: '/leave', leaveRequestId: leave.id },
       }).catch(err => console.error('Failed to send leave notification to admin', err));
     }
 
@@ -345,6 +346,7 @@ export class LeaveService {
         message: `Your leave request for ${leave.totalDays} days has been ${dto.status.toLowerCase()}.`,
         type: notifType,
         priority: dto.status === 'REJECTED' ? 'HIGH' : 'MEDIUM',
+        metadata: { actionUrl: '/leave', leaveRequestId: id },
       }).catch(err => console.error('Failed to send leave status notification', err));
     }
 

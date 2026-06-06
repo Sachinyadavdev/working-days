@@ -132,3 +132,11 @@ export enum NotificationType {
   TEAM_UPDATE = 'TEAM_UPDATE',
   SYSTEM = 'SYSTEM',
 }
+
+export enum EodStatus {
+  DRAFT = 'DRAFT',
+  SUBMITTED = 'SUBMITTED',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED',
+  AUTO_GENERATED = 'AUTO_GENERATED',
+}

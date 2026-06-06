@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
 import { EventEmitterModule } from '@nestjs/event-emitter';
+import { ScheduleModule } from '@nestjs/schedule';
 
 import { DatabaseModule } from './database/database.module';
 import { RedisModule } from './redis/redis.module';
@@ -30,6 +31,7 @@ import { EmployeeProfileModule } from './modules/employee-profile/employee-profi
 import { SalaryModule } from './modules/salary/salary.module';
 import { WorkspaceModule } from './modules/workspace/workspace.module';
 import { DocumentsModule } from './modules/documents/documents.module';
+import { EodModule } from './modules/eod/eod.module';
 
 @Module({
   imports: [
@@ -110,6 +112,9 @@ import { DocumentsModule } from './modules/documents/documents.module';
     WorkspaceModule,
 
     DocumentsModule,
+
+    ScheduleModule.forRoot(),
+    EodModule,
   ],
   providers: [
     // Apply throttle guard globally

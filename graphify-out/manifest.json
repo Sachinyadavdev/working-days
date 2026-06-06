@@ -1,81 +1,81 @@
 {
   ".husky/_/applypatch-msg": {
-    "mtime": 1780509513.6855314,
+    "mtime": 1780729406.3349285,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/commit-msg": {
-    "mtime": 1780509513.6835167,
+    "mtime": 1780729406.3322637,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/h": {
-    "mtime": 1780509364.972884,
+    "mtime": 1780729403.4346654,
     "ast_hash": "15239a01c5554e56ff745570fb583a91",
     "semantic_hash": ""
   },
   ".husky/_/husky.sh": {
-    "mtime": 1780509513.694917,
+    "mtime": 1780729406.3456125,
     "ast_hash": "13871d2ab13e8423790ecb2c01c78c18",
     "semantic_hash": ""
   },
   ".husky/_/post-applypatch": {
-    "mtime": 1780509513.6871467,
+    "mtime": 1780729406.3390255,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/post-checkout": {
-    "mtime": 1780509513.6924956,
+    "mtime": 1780729406.342011,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/post-commit": {
-    "mtime": 1780509513.6845293,
+    "mtime": 1780729406.3349285,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/post-merge": {
-    "mtime": 1780509513.6929164,
+    "mtime": 1780729406.3436034,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/post-rewrite": {
-    "mtime": 1780509513.689839,
+    "mtime": 1780729406.342011,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/pre-applypatch": {
-    "mtime": 1780509513.6861274,
+    "mtime": 1780729406.337763,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/pre-auto-gc": {
-    "mtime": 1780509513.693919,
+    "mtime": 1780729406.3456125,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/pre-commit": {
-    "mtime": 1780509513.6809876,
+    "mtime": 1780729406.3308394,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/pre-merge-commit": {
-    "mtime": 1780509513.6820045,
+    "mtime": 1780729406.3322637,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/pre-push": {
-    "mtime": 1780509513.693919,
+    "mtime": 1780729406.3436034,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/pre-rebase": {
-    "mtime": 1780509513.689839,
+    "mtime": 1780729406.3407867,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
   ".husky/_/prepare-commit-msg": {
-    "mtime": 1780509513.6835167,
+    "mtime": 1780729406.3322637,
     "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
     "semantic_hash": ""
   },
@@ -100,8 +100,8 @@
     "semantic_hash": ""
   },
   "apps/api/src/app.module.ts": {
-    "mtime": 1780505165.915897,
-    "ast_hash": "083dad171f22b7a007befc2c5386c821",
+    "mtime": 1780681425.7201393,
+    "ast_hash": "50f0c576cf11b09e8f343cbf52508500",
     "semantic_hash": ""
   },
   "apps/api/src/common/constants/index.ts": {
@@ -495,13 +495,13 @@
     "semantic_hash": ""
   },
   "apps/api/src/modules/leave/leave.module.ts": {
-    "mtime": 1780505165.9622777,
-    "ast_hash": "d840f293aab2d23bfcdf851450a98d4c",
+    "mtime": 1780684699.4430313,
+    "ast_hash": "6f448d2345456a250cf44916635e642a",
     "semantic_hash": ""
   },
   "apps/api/src/modules/leave/leave.service.ts": {
-    "mtime": 1780505165.9622777,
-    "ast_hash": "d710482b5119c0f056c88a6bd069e2de",
+    "mtime": 1780728952.9778645,
+    "ast_hash": "073b31beb91202d8126d29e9325b6c5c",
     "semantic_hash": ""
   },
   "apps/api/src/modules/notifications/notifications.controller.ts": {
@@ -515,13 +515,13 @@
     "semantic_hash": ""
   },
   "apps/api/src/modules/notifications/notifications.module.ts": {
-    "mtime": 1780505165.9633758,
-    "ast_hash": "0f5a2ac3b9782de626987054affb1331",
+    "mtime": 1780683532.7513192,
+    "ast_hash": "b99d755a7775d7121cbd984f8fa66f14",
     "semantic_hash": ""
   },
   "apps/api/src/modules/notifications/notifications.service.ts": {
-    "mtime": 1780505165.9633758,
-    "ast_hash": "9483c15758efa797bfbbcd21419b60da",
+    "mtime": 1780684100.3711584,
+    "ast_hash": "d91b706e63f953561d329488c4ebffb4",
     "semantic_hash": ""
   },
   "apps/api/src/modules/permissions/permissions.controller.spec.ts": {
@@ -845,8 +845,8 @@
     "semantic_hash": ""
   },
   "apps/web/package.json": {
-    "mtime": 1780505165.9949796,
-    "ast_hash": "29cdc11d10f2ba1f9aff8a3b35c69a65",
+    "mtime": 1780683838.9175558,
+    "ast_hash": "b72528719f24361736b822c8af21b2b5",
     "semantic_hash": ""
   },
   "apps/web/postcss.config.mjs": {
@@ -960,8 +960,8 @@
     "semantic_hash": ""
   },
   "apps/web/src/app/(dashboard)/layout.tsx": {
-    "mtime": 1780505166.0062356,
-    "ast_hash": "ace4f527bb848c0101e84f10f3ffbb5e",
+    "mtime": 1780681572.9094982,
+    "ast_hash": "08307ca506a3a02f7a97aa1e2a76e83b",
     "semantic_hash": ""
   },
   "apps/web/src/app/(dashboard)/leave/page.tsx": {
@@ -1085,8 +1085,8 @@
     "semantic_hash": ""
   },
   "apps/web/src/components/layout/app-sidebar.tsx": {
-    "mtime": 1780505166.0262847,
-    "ast_hash": "1719747627a936f34570b377545a0408",
+    "mtime": 1780729344.5098686,
+    "ast_hash": "650f224e053e03a4cf8854dab5329153",
     "semantic_hash": ""
   },
   "apps/web/src/components/layout/header-attendance.tsx": {
@@ -1095,8 +1095,8 @@
     "semantic_hash": ""
   },
   "apps/web/src/components/layout/header.tsx": {
-    "mtime": 1780505166.0262847,
-    "ast_hash": "f06204e54f562c0f99ab6fcdb19fb9b1",
+    "mtime": 1780729307.305202,
+    "ast_hash": "b5a68a0729b80a9b6aaefb1ba7be4134",
     "semantic_hash": ""
   },
   "apps/web/src/components/leave/admin-employee-leave-analytics.tsx": {
@@ -1120,8 +1120,8 @@
     "semantic_hash": ""
   },
   "apps/web/src/components/leave/leave-balance-management.tsx": {
-    "mtime": 1780505166.028477,
-    "ast_hash": "f01a564516c19c010bbf9081c817e3ed",
+    "mtime": 1780681305.6905785,
+    "ast_hash": "8e22cabcc2631e22b30602912e214637",
     "semantic_hash": ""
   },
   "apps/web/src/components/leave/leave-calendar.tsx": {
@@ -1130,8 +1130,8 @@
     "semantic_hash": ""
   },
   "apps/web/src/components/leave/leave-categories-management.tsx": {
-    "mtime": 1780505166.0310433,
-    "ast_hash": "d0fe3d2b672aeee437cd64f4be211aa0",
+    "mtime": 1780681319.2446294,
+    "ast_hash": "3c1b9cbc5b7a7c9a57bc78c6bed992e4",
     "semantic_hash": ""
   },
   "apps/web/src/components/leave/leave-detail-sheet.tsx": {
@@ -1467,6 +1467,41 @@
   "pnpm-workspace.yaml": {
     "mtime": 1780505166.252376,
     "ast_hash": "62cf619ba44cea403e3ab3ed2f69673b",
+    "semantic_hash": ""
+  },
+  "apps/api/src/modules/notifications/announcements.controller.ts": {
+    "mtime": 1780684082.1375408,
+    "ast_hash": "64a4a760f60890d2428913eb21ef1018",
+    "semantic_hash": ""
+  },
+  "apps/api/src/modules/notifications/preferences.controller.ts": {
+    "mtime": 1780684084.192674,
+    "ast_hash": "4e40bd38ed6f1d955ec20eded09a2b99",
+    "semantic_hash": ""
+  },
+  "apps/web/src/app/(dashboard)/admin/announcements/page.tsx": {
+    "mtime": 1780683880.2217324,
+    "ast_hash": "7c3a8e1495a5674d1e69ddf88a493b24",
+    "semantic_hash": ""
+  },
+  "apps/web/src/app/(dashboard)/notifications/page.tsx": {
+    "mtime": 1780729032.939706,
+    "ast_hash": "8bf8db265899a11367e45005ba0d4f65",
+    "semantic_hash": ""
+  },
+  "apps/web/src/app/(dashboard)/settings/notifications/page.tsx": {
+    "mtime": 1780683882.3063703,
+    "ast_hash": "98d315c6eeb0b67d807dc551c674ee16",
+    "semantic_hash": ""
+  },
+  "apps/web/src/components/notifications/NotificationBell.tsx": {
+    "mtime": 1780729778.172708,
+    "ast_hash": "7a1ecf63f470d9b492163d6ee32c27f4",
+    "semantic_hash": ""
+  },
+  "apps/web/src/stores/notification.store.ts": {
+    "mtime": 1780729262.61385,
+    "ast_hash": "69b11fda9f5a074666da64d8617df96f",
     "semantic_hash": ""
   }
 }

@@ -1,14 +1,28 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Bell, Filter, CheckCircle2, Trash2 } from 'lucide-react';
+import { Bell, Filter, CheckCircle2, Trash2, ChevronRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { apiClient } from '@/lib/api-client';
+
+function getActionUrl(notif: any): string {
+  if (notif.metadata?.actionUrl) return notif.metadata.actionUrl;
+  const type = notif.type || '';
+  if (type.startsWith('LEAVE')) return '/leave';
+  if (type.startsWith('TASK')) return '/tasks';
+  if (type.startsWith('PROJECT')) return '/projects';
+  if (type.startsWith('ATTENDANCE')) return '/attendance';
+  if (type.startsWith('TEAM')) return '/teams';
+  if (type === 'ANNOUNCEMENT') return '/notifications';
+  return '/notifications';
+}
 
 export default function NotificationCenter() {
   const [activeFilter, setActiveFilter] = useState('ALL');
   const [notifications, setNotifications] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     fetchNotifications();
@@ -37,6 +51,14 @@ export default function NotificationCenter() {
     } catch (error) {
       console.error('Failed to mark all as read', error);
     }
+  };
+
+  const handleClick = async (notif: any) => {
+    if (!notif.isRead) {
+      apiClient.patch(`/notifications/${notif.id}/read`).catch(() => {});
+      setNotifications(prev => prev.map(n => n.id === notif.id ? { ...n, isRead: true } : n));
+    }
+    router.push(getActionUrl(notif));
   };
 
   const filteredNotifications = notifications.filter(notif => {
@@ -92,7 +114,11 @@ export default function NotificationCenter() {
           <div className="p-8 text-center text-gray-500">No notifications found</div>
         ) : (
           filteredNotifications.map((notif) => (
-            <div key={notif.id} className={`p-5 flex gap-4 border-b border-gray-100 dark:border-gray-700/50 last:border-0 hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors ${!notif.isRead ? 'bg-blue-50/30 dark:bg-blue-900/5' : ''}`}>
+            <div
+              key={notif.id}
+              onClick={() => handleClick(notif)}
+              className={`p-5 flex gap-4 border-b border-gray-100 dark:border-gray-700/50 last:border-0 hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors cursor-pointer ${!notif.isRead ? 'bg-blue-50/30 dark:bg-blue-900/5' : ''}`}
+            >
               <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${
                 notif.type?.includes('LEAVE') ? 'bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400' :
                 notif.type?.includes('TASK') ? 'bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400' :
@@ -110,6 +136,7 @@ export default function NotificationCenter() {
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">{notif.message}</p>
               </div>
+              <ChevronRight className="w-5 h-5 text-gray-400 self-center flex-shrink-0" />
             </div>
           ))
         )}
