@@ -34,6 +34,8 @@ model User {
   reportedTasks  Task[]         @relation("TaskReporter")
   comments       Comment[]
   leaveComments  LeaveComment[]
+  notificationPreferences NotificationPreference[]
+  authoredAnnouncements Announcement[]
 
   @@map("users")
   @@index([email])
@@ -207,6 +209,7 @@ model Department {
   employees   Employee[]    @relation("EmployeeDepartment")
   designations Designation[]
   teams        Team[]        @relation("TeamDepartment")
+  announcements Announcement[]
 
   @@map("departments")
 }
@@ -459,6 +462,7 @@ model Team {
   department Department? @relation("TeamDepartment", fields: [departmentId], references: [id])
   members    TeamMember[]
   projects   ProjectTeam[]
+  announcements Announcement[]
 
   @@map("teams")
   @@index([status])
@@ -754,16 +758,21 @@ enum LeaveStatus {
 // ============== NOTIFICATIONS ==============
 
 model Notification {
-  id        String           @id @default(uuid())
-  userId    String           @map("user_id")
-  title     String
-  message   String
-  type      NotificationType
-  isRead    Boolean          @default(false) @map("is_read")
-  metadata  Json?
-  createdAt DateTime         @default(now()) @map("created_at")
+  id             String               @id @default(uuid())
+  userId         String               @map("user_id")
+  title          String
+  message        String
+  type           NotificationType
+  priority       NotificationPriority @default(MEDIUM)
+  isRead         Boolean              @default(false) @map("is_read")
+  isArchived     Boolean              @default(false) @map("is_archived")
+  announcementId String?              @map("announcement_id")
+  metadata       Json?
+  createdAt      DateTime             @default(now()) @map("created_at")
 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  announcement Announcement? @relation(fields: [announcementId], references: [id], onDelete: SetNull)
+  logs         NotificationLog[]
 
   @@map("notifications")
   @@index([userId, isRead])
@@ -784,6 +793,93 @@ enum NotificationType {
   TEAM_PROJECT_ASSIGNED
   TEAM_UPDATE
   SYSTEM
+  ANNOUNCEMENT
+}
+
+enum NotificationPriority {
+  CRITICAL
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum NotificationChannel {
+  IN_APP
+  EMAIL
+  PUSH
+  SMS
+}
+
+model NotificationPreference {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  type      String   
+  channels  Json     @default("[\"IN_APP\", \"EMAIL\"]") 
+  isEnabled Boolean  @default(true) @map("is_enabled")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, type])
+  @@map("notification_preferences")
+}
+
+model NotificationTemplate {
+  id        String   @id @default(uuid())
+  code      String   @unique
+  name      String
+  subject   String?
+  body      String   @db.Text
+  module    String   
+  channels  Json     @default("[\"IN_APP\", \"EMAIL\"]") 
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("notification_templates")
+}
+
+enum AnnouncementTarget {
+  ALL
+  DEPARTMENT
+  TEAM
+  INDIVIDUAL
+}
+
+model Announcement {
+  id             String             @id @default(uuid())
+  title          String
+  message        String             @db.Text
+  targetAudience AnnouncementTarget @map("target_audience")
+  departmentId   String?            @map("department_id")
+  teamId         String?            @map("team_id")
+  priority       NotificationPriority @default(MEDIUM)
+  startDate      DateTime           @default(now()) @map("start_date")
+  expiryDate     DateTime?          @map("expiry_date")
+  authorId       String             @map("author_id")
+  createdAt      DateTime           @default(now()) @map("created_at")
+  updatedAt      DateTime           @updatedAt @map("updated_at")
+
+  department   Department?    @relation(fields: [departmentId], references: [id], onDelete: SetNull)
+  team         Team?          @relation(fields: [teamId], references: [id], onDelete: SetNull)
+  author       User           @relation(fields: [authorId], references: [id])
+  notifications Notification[]
+
+  @@map("announcements")
+}
+
+model NotificationLog {
+  id             String              @id @default(uuid())
+  notificationId String              @map("notification_id")
+  channel        NotificationChannel
+  status         String              
+  error          String?
+  sentAt         DateTime            @default(now()) @map("sent_at")
+
+  notification Notification @relation(fields: [notificationId], references: [id], onDelete: Cascade)
+
+  @@map("notification_logs")
+  @@index([notificationId])
 }
 
 // ============== ACTIVITY LOGS & AUDIT ==============

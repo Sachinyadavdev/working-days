@@ -10,11 +10,14 @@ import { AllocateLeaveBalanceDto, AdjustLeaveBalanceDto } from './dto/leave-bala
 import { CreateLeaveCommentDto } from './dto/create-leave-comment.dto';
 import { CreateHolidayDto, UpdateHolidayDto } from './dto/holiday.dto';
 
+import { NotificationsService } from '../notifications/notifications.service';
+
 @Injectable()
 export class LeaveService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly eventEmitter: EventEmitter2,
+    private readonly notificationsService: NotificationsService,
   ) {}
 
   // ============================
@@ -166,7 +169,7 @@ export class LeaveService {
   }
 
   async create(dto: CreateLeaveRequestDto, userId: string) {
-    const employee = await this.prisma.employee.findUnique({ where: { userId } });
+    const employee = await this.prisma.employee.findUnique({ where: { userId }, include: { user: true } });
     if (!employee) throw new NotFoundException('Employee profile not found');
 
     // Validate category exists
@@ -232,13 +235,34 @@ export class LeaveService {
     }
 
     this.eventEmitter.emit('leave.requested', leave);
+
+    // Notify admins
+    const admins = await this.prisma.user.findMany({ 
+      where: { 
+        roles: {
+          some: {
+            role: { name: { in: ['SUPER_ADMIN', 'SYSTEM_ADMIN'] } }
+          }
+        } 
+      } 
+    });
+    for (const admin of admins) {
+      await this.notificationsService.create({
+        userId: admin.id,
+        title: 'New Leave Request',
+        message: `${employee.user?.firstName || 'An employee'} applied for ${dto.totalDays} days of leave.`,
+        type: 'LEAVE_REQUEST',
+        priority: 'HIGH',
+      }).catch(err => console.error('Failed to send leave notification to admin', err));
+    }
+
     return leave;
   }
 
   async updateStatus(id: string, dto: UpdateLeaveStatusDto, reviewerId: string) {
     const leave = await this.prisma.leaveRequest.findUnique({
       where: { id },
-      include: { category: true },
+      include: { category: true, employee: { include: { user: true } } },
     });
     if (!leave) throw new NotFoundException('Leave request not found');
 
@@ -309,6 +333,21 @@ export class LeaveService {
     }
 
     this.eventEmitter.emit(`leave.${dto.status.toLowerCase()}`, updated);
+
+    // Notify employee of status change
+    if (dto.status !== 'PENDING') {
+      const notifType = dto.status === 'APPROVED' ? 'LEAVE_APPROVED' 
+        : dto.status === 'REJECTED' ? 'LEAVE_REJECTED' 
+        : 'LEAVE_CANCELLED';
+      await this.notificationsService.create({
+        userId: leave.employee.userId,
+        title: `Leave Request ${dto.status}`,
+        message: `Your leave request for ${leave.totalDays} days has been ${dto.status.toLowerCase()}.`,
+        type: notifType,
+        priority: dto.status === 'REJECTED' ? 'HIGH' : 'MEDIUM',
+      }).catch(err => console.error('Failed to send leave status notification', err));
+    }
+
     return updated;
   }
 
