@@ -1,3 +1,4 @@
+import { Roles } from '../../common/decorators/roles.decorator';
 import { Controller, Get, Post, Body, Param, Patch } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 import { AttendanceCorrectionsService } from './attendance-corrections.service';
@@ -23,18 +24,21 @@ export class AttendanceCorrectionsController {
   }
 
   @Get()
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER')
   @ApiOperation({ summary: 'Get all correction requests (Admin)' })
   async getAllRequests() {
     return this.correctionsService.getAllRequests();
   }
 
   @Patch(':id/approve')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER')
   @ApiOperation({ summary: 'Approve a correction request' })
   async approveRequest(@CurrentUser('sub') userId: string, @Param('id') id: string) {
     return this.correctionsService.approveRequest(userId, id);
   }
 
   @Patch(':id/reject')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER')
   @ApiOperation({ summary: 'Reject a correction request' })
   async rejectRequest(@CurrentUser('sub') userId: string, @Param('id') id: string) {
     return this.correctionsService.rejectRequest(userId, id);

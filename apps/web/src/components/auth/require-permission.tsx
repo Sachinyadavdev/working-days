@@ -16,7 +16,7 @@ export function RequirePermission({
   fallback = null,
   requireAll = false,
 }: RequirePermissionProps) {
-  const permissions = useAuthStore((s) => s.permissions);
+  const permissions = useAuthStore((s) => s.permissions).map(p => p.replace(':', '.'));
   const roles = useAuthStore((s) => s.user?.roles) || [];
 
   const isSuperAdmin = roles.includes('super-admin') || roles.includes('SUPER_ADMIN');
@@ -28,8 +28,8 @@ export function RequirePermission({
   const permissionsToCheck = Array.isArray(permission) ? permission : [permission];
 
   const hasAccess = requireAll
-    ? permissionsToCheck.every((p) => permissions.includes(p))
-    : permissionsToCheck.some((p) => permissions.includes(p));
+    ? permissionsToCheck.every((p) => permissions.includes(p.replace(':', '.')))
+    : permissionsToCheck.some((p) => permissions.includes(p.replace(':', '.')));
 
   if (!hasAccess) {
     return <>{fallback}</>;

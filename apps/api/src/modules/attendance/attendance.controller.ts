@@ -1,3 +1,4 @@
+import { Roles } from '../../common/decorators/roles.decorator';
 import { Controller, Get, Post, Body, Query, Param, ParseIntPipe } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 
@@ -44,6 +45,7 @@ export class AttendanceController {
   }
 
   @Get('stats/admin')
+  @Roles('ADMIN', 'SUPER_ADMIN')
   @ApiOperation({ summary: 'Get dashboard stats for admin view' })
   async getAdminStats() {
     return this.attendanceService.getAdminStats();
@@ -52,15 +54,16 @@ export class AttendanceController {
   @Get('calendar')
   @ApiOperation({ summary: 'Get attendance calendar for a month' })
   async getCalendar(
-    @CurrentUser('sub') userId: string,
+    @CurrentUser() user: { sub: string; roles: string[] },
     @Query('month', ParseIntPipe) month: number,
     @Query('year', ParseIntPipe) year: number,
     @Query('employeeId') employeeId?: string,
   ) {
-    return this.attendanceService.getCalendar(userId, month, year, employeeId);
+    return this.attendanceService.getCalendar(user.sub, month, year, employeeId, user.roles);
   }
 
   @Get()
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER')
   @ApiOperation({ summary: 'Get attendance records' })
   async findAll(@Query() pagination: PaginationDto) {
     return this.attendanceService.findAll(pagination);

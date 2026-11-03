@@ -1,3 +1,4 @@
+import { Roles } from '../../common/decorators/roles.decorator';
 import { Controller, Get, Post, Patch, Body, Param, Query } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 import { EodService } from './eod.service';
@@ -11,6 +12,7 @@ export class EodController {
   constructor(private readonly eodService: EodService) {}
 
   @Get()
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER')
   @ApiOperation({ summary: 'Get all EOD reports (Admin/Manager)' })
   async findAll(@Query() pagination: PaginationDto) {
     return this.eodService.findAll(pagination);
@@ -38,6 +40,7 @@ export class EodController {
   }
 
   @Patch(':id/review')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER')
   @ApiOperation({ summary: 'Review an EOD report (Approve/Reject)' })
   async reviewEod(
     @Param('id') id: string,

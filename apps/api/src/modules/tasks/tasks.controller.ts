@@ -1,3 +1,4 @@
+import { Roles } from '../../common/decorators/roles.decorator';
 import { Controller, Get, Post, Patch, Delete, Param, Body, Query } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 
@@ -20,6 +21,7 @@ export class TasksController {
   }
 
   @Post()
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Create a new task' })
   async create(@Body() dto: CreateTaskDto, @CurrentUser('sub') userId: string) {
     return this.tasksService.create(dto, userId);
@@ -33,11 +35,13 @@ export class TasksController {
 
   @Patch(':id')
   @ApiOperation({ summary: 'Update task' })
-  async update(@Param('id') id: string, @Body() dto: UpdateTaskDto) {
+  async update(@Param('id') id: string, @Body() dto: UpdateTaskDto, @CurrentUser() user: { sub: string; roles: string[] }) {
+    await this.tasksService.assertCanEdit(id, user.sub, user.roles, dto);
     return this.tasksService.update(id, dto);
   }
 
   @Delete(':id')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Cancel task' })
   async cancel(@Param('id') id: string) {
     return this.tasksService.cancel(id);
@@ -48,8 +52,9 @@ export class TasksController {
   async toggleChecklistItem(
     @Param('id') id: string,
     @Param('itemId') itemId: string,
-    @CurrentUser('sub') userId: string,
+    @CurrentUser() user: { sub: string; roles: string[] },
   ) {
-    return this.tasksService.toggleChecklistItem(id, itemId, userId);
+    await this.tasksService.assertCanEdit(id, user.sub, user.roles);
+    return this.tasksService.toggleChecklistItem(id, itemId, user.sub);
   }
 }

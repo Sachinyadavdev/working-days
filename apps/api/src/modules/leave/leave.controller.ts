@@ -150,7 +150,7 @@ export class LeaveController {
   @Patch('requests/:id/cancel')
   @ApiOperation({ summary: 'Cancel own leave request' })
   async cancelRequest(@Param('id') id: string, @CurrentUser('sub') userId: string, @Body() dto: { cancellationReason?: string }) {
-    return this.leaveService.updateStatus(id, { status: 'CANCELLED', cancellationReason: dto.cancellationReason }, userId);
+    return this.leaveService.cancelOwnRequest(id, userId, dto.cancellationReason);
   }
 
   // ============================

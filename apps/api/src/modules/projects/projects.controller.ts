@@ -34,6 +34,7 @@ export class ProjectsController {
   }
 
   @Post()
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Create a new project' })
   async create(
     @Body() dto: CreateProjectDto,
@@ -49,18 +50,21 @@ export class ProjectsController {
   }
 
   @Patch(':id')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Update project' })
   async update(@Param('id') id: string, @Body() dto: UpdateProjectDto) {
     return this.projectsService.update(id, dto);
   }
 
   @Delete(':id/archive')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Archive project (soft delete)' })
   async archive(@Param('id') id: string) {
     return this.projectsService.archive(id);
   }
 
   @Delete(':id')
+  @Roles('SUPER_ADMIN')
   @ApiOperation({ summary: 'Permanently delete project (Super Admin only)' })
   async delete(@Param('id') id: string) {
     return this.projectsService.delete(id);
@@ -75,12 +79,14 @@ export class ProjectsController {
   }
 
   @Post(':id/members')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Add member to project' })
   async addMember(@Param('id') id: string, @Body() dto: AddMemberDto) {
     return this.projectsService.addMember(id, dto);
   }
 
   @Delete(':id/members/:employeeId')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Remove member from project' })
   async removeMember(
     @Param('id') id: string,

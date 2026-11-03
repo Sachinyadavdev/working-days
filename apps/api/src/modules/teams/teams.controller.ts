@@ -1,3 +1,4 @@
+import { Roles } from '../../common/decorators/roles.decorator';
 import { Controller, Get, Post, Patch, Delete, Param, Body, Query, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 
@@ -34,6 +35,7 @@ export class TeamsController {
   }
 
   @Post()
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Create a new team' })
   async create(
     @Body() dto: CreateTeamDto,
@@ -49,24 +51,28 @@ export class TeamsController {
   }
 
   @Patch(':id')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Update team' })
   async update(@Param('id') id: string, @Body() dto: UpdateTeamDto) {
     return this.teamsService.update(id, dto);
   }
 
   @Delete(':id/archive')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Archive team (soft delete)' })
   async archive(@Param('id') id: string) {
     return this.teamsService.archive(id);
   }
 
   @Patch(':id/activate')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Activate an inactive/archived team' })
   async activate(@Param('id') id: string) {
     return this.teamsService.activate(id);
   }
 
   @Delete(':id')
+  @Roles('SUPER_ADMIN')
   @ApiOperation({ summary: 'Permanently delete team (Super Admin only)' })
   async delete(@Param('id') id: string) {
     return this.teamsService.delete(id);
@@ -81,12 +87,14 @@ export class TeamsController {
   }
 
   @Post(':id/members')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Add member to team' })
   async addMember(@Param('id') id: string, @Body() dto: AddTeamMemberDto) {
     return this.teamsService.addMember(id, dto);
   }
 
   @Delete(':id/members/:employeeId')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Remove member from team' })
   async removeMember(
     @Param('id') id: string,
@@ -96,6 +104,7 @@ export class TeamsController {
   }
 
   @Patch(':id/members/:employeeId')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Update team member role' })
   async updateMemberRole(
     @Param('id') id: string,
@@ -106,6 +115,7 @@ export class TeamsController {
   }
 
   @Post(':id/members/transfer')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Transfer member to another team' })
   async transferMember(@Param('id') id: string, @Body() dto: TransferMemberDto) {
     return this.teamsService.transferMember(id, dto);
@@ -120,12 +130,14 @@ export class TeamsController {
   }
 
   @Post(':id/projects')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Assign project to team' })
   async assignProject(@Param('id') id: string, @Body() dto: AssignProjectDto) {
     return this.teamsService.assignProject(id, dto);
   }
 
   @Delete(':id/projects/:projectId')
+  @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Remove project from team' })
   async removeProject(
     @Param('id') id: string,

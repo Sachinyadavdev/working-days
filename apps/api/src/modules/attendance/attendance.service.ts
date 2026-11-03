@@ -1,4 +1,4 @@
-import { Injectable, BadRequestException, NotFoundException } from '@nestjs/common';
+import { ForbiddenException, Injectable, BadRequestException, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../../database/prisma.service';
 import { PaginationDto } from '../../common/dto/pagination.dto';
 import { CheckInDto } from './dto/check-in.dto';
@@ -312,17 +312,20 @@ export class AttendanceService {
     };
   }
 
-  async getCalendar(userId: string, month: number, year: number, targetEmployeeId?: string) {
+  async getCalendar(userId: string, month: number, year: number, targetEmployeeId?: string, roles: string[] = []) {
     let employee;
     
     if (targetEmployeeId) {
-      // Allow viewing another employee's calendar (assuming Admin role is validated by frontend or other guards)
+      // Only managers may inspect another employee's calendar.
       employee = await this.prisma.employee.findUnique({ where: { id: targetEmployeeId } });
     } else {
       employee = await this.getEmployeeByUserId(userId);
     }
 
     if (!employee) return [];
+    if (employee.userId !== userId && !roles.some(role => ['ADMIN', 'SUPER_ADMIN', 'MANAGER'].includes(role))) {
+      throw new ForbiddenException('You can only view your own attendance calendar');
+    }
 
     const startDate = new Date(Date.UTC(year, month - 1, 1));
     const endDate = new Date(Date.UTC(year, month, 0));

@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException, BadRequestException, ConflictException } from '@nestjs/common';
+import { ForbiddenException, Injectable, NotFoundException, BadRequestException, ConflictException } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 import { PrismaService } from '../../database/prisma.service';
 import { PaginationDto } from '../../common/dto/pagination.dto';
@@ -258,6 +258,15 @@ export class LeaveService {
     }
 
     return leave;
+  }
+
+  async cancelOwnRequest(id: string, userId: string, cancellationReason?: string) {
+    const leave = await this.prisma.leaveRequest.findUnique({
+      where: { id }, include: { employee: { select: { userId: true } } },
+    });
+    if (!leave) throw new NotFoundException('Leave request not found');
+    if (leave.employee.userId !== userId) throw new ForbiddenException('You can only cancel your own leave request');
+    return this.updateStatus(id, { status: 'CANCELLED', cancellationReason }, userId);
   }
 
   async updateStatus(id: string, dto: UpdateLeaveStatusDto, reviewerId: string) {

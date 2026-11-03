@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, ForbiddenException } from '@nestjs/common';
 import { PrismaService } from '../../database/prisma.service';
 
 @Injectable()
@@ -15,8 +15,8 @@ export class WorkspaceService {
     });
   }
 
-  async getWorkspaces(userId: string, role: string) {
-    if (role === 'SUPER_ADMIN') {
+  async getWorkspaces(userId: string, roles: string[]) {
+    if (roles.includes('SUPER_ADMIN')) {
       return this.prisma.workspace.findMany();
     }
     
@@ -35,12 +35,16 @@ export class WorkspaceService {
     });
   }
 
-  async getWorkspaceById(workspaceId: string) {
+  async getWorkspaceById(workspaceId: string, userId: string, roles: string[]) {
     const workspace = await this.prisma.workspace.findUnique({
       where: { id: workspaceId },
       include: { members: { include: { employee: true } }, projects: true },
     });
     if (!workspace) throw new NotFoundException('Workspace not found');
+    if (!roles.includes('SUPER_ADMIN') && workspace.ownerId !== userId &&
+        !workspace.members.some(member => member.employee.userId === userId)) {
+      throw new ForbiddenException('You do not have access to this workspace');
+    }
     return workspace;
   }
 }

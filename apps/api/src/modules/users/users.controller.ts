@@ -1,4 +1,4 @@
-import { Controller, Get, Patch, Delete, Param, Body, Query } from '@nestjs/common';
+import { Controller, Get, Patch, Delete, Param, Body, Query, ForbiddenException } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 
 import { UsersService } from './users.service';
@@ -35,7 +35,10 @@ export class UsersController {
 
   @Patch(':id')
   @ApiOperation({ summary: 'Update user' })
-  async update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
+  async update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto, @CurrentUser() user: { sub: string; roles: string[] }) {
+    if (user.sub !== id && !user.roles.some(role => ['ADMIN', 'SUPER_ADMIN'].includes(role))) {
+      throw new ForbiddenException('You can only update your own profile');
+    }
     return this.usersService.update(id, updateUserDto);
   }
 

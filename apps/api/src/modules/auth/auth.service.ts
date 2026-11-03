@@ -164,11 +164,12 @@ export class AuthService {
 
 
     // Extract role names
-    const roleNames = user.roles.map((ur) => ur.role.name);
+    const activeRoles = user.roles.filter(({ role }) => !role.deletedAt && role.status === 'ACTIVE');
+    const roleNames = activeRoles.map((ur) => ur.role.name);
 
     // Extract permission names and cache them
-    const permissions = user.roles.flatMap((ur) =>
-      ur.role.permissions.map((rp) => rp.permission.name),
+    const permissions = activeRoles.flatMap((ur) =>
+      ur.role.permissions.map((rp) => `${rp.permission.module}.${rp.permission.action}`),
     );
 
     // Cache permissions in Redis
@@ -197,6 +198,7 @@ export class AuthService {
         lastName: user.lastName,
         avatar: user.avatar,
         roles: roleNames,
+        permissions: [...new Set(permissions)],
       },
       ...tokens,
     };

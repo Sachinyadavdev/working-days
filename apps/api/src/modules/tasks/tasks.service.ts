@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, ForbiddenException } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 
 import { PrismaService } from '../../database/prisma.service';
@@ -12,6 +12,19 @@ export class TasksService {
     private readonly prisma: PrismaService,
     private readonly eventEmitter: EventEmitter2,
   ) {}
+
+  async assertCanEdit(id: string, userId: string, roles: string[], dto?: UpdateTaskDto) {
+    if (roles.some(role => ['ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER'].includes(role))) return;
+    const task = await this.prisma.task.findUnique({
+      where: { id }, select: { assignee: { select: { userId: true } } },
+    });
+    if (!task) throw new NotFoundException('Task not found');
+    if (task.assignee?.userId !== userId) throw new ForbiddenException('You can only update your assigned tasks');
+    // Assignees retain progress updates; assignment and task setup remain management actions.
+    if (dto && Object.keys(dto).some(key => !['status', 'checklist'].includes(key))) {
+      throw new ForbiddenException('Only managers can change task details or assignments');
+    }
+  }
 
   async findAll(pagination: PaginationDto, projectId?: string) {
     const { skip, limit, search, sortBy, sortOrder } = pagination;

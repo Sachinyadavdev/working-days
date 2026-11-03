@@ -1,3 +1,4 @@
+import { Roles } from '../../common/decorators/roles.decorator';
 import { Controller, Post, Get, Body, UseGuards, Param } from '@nestjs/common';
 import { NotificationsService } from './notifications.service';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
@@ -9,6 +10,7 @@ export class AnnouncementsController {
   constructor(private readonly notificationsService: NotificationsService) {}
 
   @Post()
+  @Roles('ADMIN', 'SUPER_ADMIN')
   async createAnnouncement(
     @CurrentUser('sub') authorId: string,
     @Body() body: {
