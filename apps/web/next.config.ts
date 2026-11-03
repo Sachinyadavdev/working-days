@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
 
   // Environment variables available on the client
   env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001',
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api/v1',
   },
 
   experimental: {},

@@ -32,6 +32,7 @@ import { SalaryModule } from './modules/salary/salary.module';
 import { WorkspaceModule } from './modules/workspace/workspace.module';
 import { DocumentsModule } from './modules/documents/documents.module';
 import { EodModule } from './modules/eod/eod.module';
+import { SearchModule } from './modules/search/search.module';
 
 @Module({
   imports: [
@@ -115,6 +116,7 @@ import { EodModule } from './modules/eod/eod.module';
 
     ScheduleModule.forRoot(),
     EodModule,
+    SearchModule,
   ],
   providers: [
     // Apply throttle guard globally
