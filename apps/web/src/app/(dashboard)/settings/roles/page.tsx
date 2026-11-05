@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Plus } from 'lucide-react';
 import { RequirePermission } from '@/components/auth/require-permission';
+import { RequireRole } from '@/components/auth/require-role';
 import { apiClient as api } from '@/lib/api-client';
 import { RoleDialog } from './components/role-dialog';
 import { PermissionMatrix } from './components/permission-matrix';
@@ -21,23 +22,40 @@ interface Role {
 }
 
 export default function RolesPage() {
+  return (
+    <RequireRole role={['ADMIN', 'SUPER_ADMIN']} fallback={<p role="alert" className="p-6 text-muted-foreground">Role management is available to administrators only.</p>}>
+      <RolesContent />
+    </RequireRole>
+  );
+}
+
+function RolesContent() {
   const [roles, setRoles] = useState<Role[]>([]);
   const [isRoleDialogOpen, setIsRoleDialogOpen] = useState(false);
   const [selectedRole, setSelectedRole] = useState<Role | null>(null);
   const [isMatrixOpen, setIsMatrixOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [page, setPage] = useState(0);
+  const [total, setTotal] = useState(0);
+  const pageSize = 12;
 
   const fetchRoles = async () => {
+    setIsLoading(true);
+    setError(null);
     try {
-      const res = await api.get('/roles');
-      setRoles(res.data.data);
+      const res = await api.get('/roles', { params: { skip: page * pageSize, take: pageSize } });
+      setRoles(res.data.data.data);
+      setTotal(res.data.data.total);
     } catch (error) {
-      console.error('Failed to fetch roles', error);
+      setError('Unable to load roles. Please retry or ask your administrator to check your access.');
     }
+    finally { setIsLoading(false); }
   };
 
   useEffect(() => {
     fetchRoles();
-  }, []);
+  }, [page]);
 
   return (
     <div className="space-y-6">
@@ -54,7 +72,10 @@ export default function RolesPage() {
         </RequirePermission>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {error && <div role="alert" className="text-sm text-destructive">{error} <Button variant="outline" size="sm" onClick={fetchRoles}>Retry</Button></div>}
+      {isLoading && <p role="status">Loading roles…</p>}
+      {!isLoading && !error && roles.length === 0 && <p>No roles found.</p>}
+      {!isLoading && !error && <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {roles.map((role) => (
           <Card key={role.id} className="flex flex-col justify-between">
             <CardHeader>
@@ -83,6 +104,12 @@ export default function RolesPage() {
             </CardContent>
           </Card>
         ))}
+      </div>}
+
+      <div className="flex items-center justify-end gap-3">
+        <Button variant="outline" disabled={isLoading || page === 0} onClick={() => setPage(page - 1)}>Previous</Button>
+        <span className="text-sm text-muted-foreground">Page {page + 1} of {Math.max(1, Math.ceil(total / pageSize))}</span>
+        <Button variant="outline" disabled={isLoading || (page + 1) * pageSize >= total} onClick={() => setPage(page + 1)}>Next</Button>
       </div>
 
       {isRoleDialogOpen && (

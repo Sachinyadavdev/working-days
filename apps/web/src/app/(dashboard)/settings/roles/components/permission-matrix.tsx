@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { apiClient as api } from '@/lib/api-client';
+import { toast } from 'sonner';
 
 interface PermissionMatrixProps {
   isOpen: boolean;
@@ -21,7 +22,9 @@ interface PermissionGroup {
 export function PermissionMatrix({ isOpen, onClose, role, onSuccess }: PermissionMatrixProps) {
   const [permissionGroups, setPermissionGroups] = useState<PermissionGroup[]>([]);
   const [selectedPermissions, setSelectedPermissions] = useState<Set<string>>(new Set());
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
     if (isOpen && role) {
@@ -32,15 +35,16 @@ export function PermissionMatrix({ isOpen, onClose, role, onSuccess }: Permissio
   const fetchData = async () => {
     try {
       setIsLoading(true);
+      setLoadError(null);
       const [modulesRes, roleRes] = await Promise.all([
         api.get('/permissions/modules'),
         api.get(`/roles/${role.id}`),
       ]);
-      setPermissionGroups(modulesRes.data);
-      const rolePerms = roleRes.data.permissions.map((rp: any) => rp.permissionId);
+      setPermissionGroups(modulesRes.data.data);
+      const rolePerms = roleRes.data.data.permissions.map((rp: any) => rp.permissionId);
       setSelectedPermissions(new Set(rolePerms));
     } catch (error) {
-      console.error('Failed to load permissions', error);
+      setLoadError('Unable to load permissions. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -69,6 +73,8 @@ export function PermissionMatrix({ isOpen, onClose, role, onSuccess }: Permissio
   };
 
   const onSave = async () => {
+    if (isLoading || isSaving || loadError) return;
+    setIsSaving(true);
     try {
       await api.post(`/roles/${role.id}/permissions`, {
         permissionIds: Array.from(selectedPermissions),
@@ -76,7 +82,9 @@ export function PermissionMatrix({ isOpen, onClose, role, onSuccess }: Permissio
       onSuccess();
       onClose();
     } catch (error) {
-      console.error('Failed to save permissions', error);
+      toast.error('Unable to save permissions. Please try again.');
+    } finally {
+      setIsSaving(false);
     }
   };
 
@@ -89,6 +97,8 @@ export function PermissionMatrix({ isOpen, onClose, role, onSuccess }: Permissio
 
         {isLoading ? (
           <div className="py-8 text-center">Loading...</div>
+        ) : loadError ? (
+          <div role="alert" className="py-4 text-sm text-destructive">{loadError} <Button variant="outline" onClick={fetchData}>Retry</Button></div>
         ) : (
           <div className="space-y-6">
             {permissionGroups.map((group) => {
@@ -139,7 +149,7 @@ export function PermissionMatrix({ isOpen, onClose, role, onSuccess }: Permissio
 
         <DialogFooter className="mt-6">
           <Button type="button" variant="outline" onClick={onClose}>Cancel</Button>
-          <Button type="button" onClick={onSave} disabled={isLoading}>Save Changes</Button>
+          <Button type="button" onClick={onSave} disabled={isLoading || isSaving || !!loadError}>{isSaving ? 'Saving…' : 'Save Changes'}</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

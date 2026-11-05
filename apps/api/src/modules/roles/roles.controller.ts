@@ -13,6 +13,7 @@ import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 @ApiTags('Roles')
 @ApiBearerAuth()
 @UseGuards(JwtAuthGuard, RolesGuard, PermissionsGuard)
+@Roles('ADMIN', 'SUPER_ADMIN')
 @Controller('roles')
 export class RolesController {
   constructor(private readonly rolesService: RolesService) {}
@@ -25,14 +26,12 @@ export class RolesController {
   }
 
   @Get()
-  @RequirePermissions('role.read')
   @ApiOperation({ summary: 'Get all roles' })
   findAll(@Query('skip') skip: number = 0, @Query('take') take: number = 10) {
     return this.rolesService.findAll(+skip, +take);
   }
 
   @Get(':id')
-  @RequirePermissions('role.read')
   @ApiOperation({ summary: 'Get a role by id' })
   findOne(@Param('id') id: string) {
     return this.rolesService.findOne(id);

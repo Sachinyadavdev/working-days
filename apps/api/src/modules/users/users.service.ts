@@ -48,6 +48,11 @@ export class UsersService {
       items: users.map((user) => ({
         ...user,
         roles: user.roles.map((ur) => ur.role.name),
+        roleAssignments: user.roles.map(({ role }) => ({
+          id: role.id,
+          name: role.name,
+          status: role.status,
+        })),
       })),
       meta: {
         total,

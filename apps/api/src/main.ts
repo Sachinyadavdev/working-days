@@ -11,6 +11,7 @@ import { GlobalExceptionFilter } from './common/filters/global-exception.filter'
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
 import { LoggerService } from './logger/logger.service';
+import { normalizeApiVersion } from './common/api-version';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
@@ -30,7 +31,7 @@ async function bootstrap() {
   // API versioning (URI-based: /api/v1/...)
   app.enableVersioning({
     type: VersioningType.URI,
-    defaultVersion: configService.get<string>('API_VERSION', '1'),
+    defaultVersion: normalizeApiVersion(configService.get<string>('API_VERSION', '1')),
   });
 
   // Security

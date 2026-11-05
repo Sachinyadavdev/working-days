@@ -15,7 +15,7 @@ async function main() {
   ]);
 
   // Create default permissions
-  const modules = ['user', 'employee', 'project', 'task', 'team', 'attendance', 'leave', 'notification'];
+  const modules = ['role', 'user', 'employee', 'project', 'task', 'team', 'attendance', 'leave', 'notification'];
   const actions = ['create', 'read', 'update', 'delete'];
 
   for (const mod of modules) {
@@ -27,6 +27,12 @@ async function main() {
       });
     }
   }
+
+  await prisma.permission.upsert({
+    where: { module_action: { module: 'role', action: 'assign' } },
+    update: {},
+    create: { name: 'role:assign', module: 'role', action: 'assign', description: 'Assign user roles' },
+  });
 
   // Assign all permissions to SUPER_ADMIN
   const allPermissions = await prisma.permission.findMany();

@@ -9,6 +9,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { apiClient as api } from '@/lib/api-client';
+import { toast } from 'sonner';
 
 const roleSchema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -33,7 +34,7 @@ export function RoleDialog({ isOpen, onClose, role, onSuccess }: RoleDialogProps
     resolver: zodResolver(roleSchema),
     defaultValues: {
       name: role?.name || '',
-      slug: role?.slug || '',
+      slug: role?.slug || (role?.isSystem ? role.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') : ''),
       description: role?.description || '',
       priority: role?.priority || 0,
     },
@@ -42,15 +43,15 @@ export function RoleDialog({ isOpen, onClose, role, onSuccess }: RoleDialogProps
   const onSubmit = async (data: RoleFormData) => {
     try {
       if (isEditing) {
-        await api.patch(`/roles/${role.id}`, data);
+        const { slug, ...editableFields } = data;
+        await api.patch(`/roles/${role.id}`, role.isSystem ? editableFields : data);
       } else {
         await api.post('/roles', data);
       }
       onSuccess();
       onClose();
     } catch (error) {
-      console.error('Failed to save role', error);
-      // add toast here
+      toast.error('Unable to save the role. Check your permissions and ensure the name and slug are unique.');
     }
   };
 
@@ -69,7 +70,7 @@ export function RoleDialog({ isOpen, onClose, role, onSuccess }: RoleDialogProps
 
           <div className="space-y-2">
             <Label htmlFor="slug">Slug</Label>
-            <Input id="slug" {...register('slug')} placeholder="e.g. hr-manager" disabled={isEditing && role?.isSystem} />
+            <Input id="slug" {...register('slug')} placeholder="e.g. hr-manager" readOnly={isEditing && role?.isSystem} />
             {errors.slug && <p className="text-sm text-destructive">{errors.slug.message}</p>}
           </div>
 

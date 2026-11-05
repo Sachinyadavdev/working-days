@@ -16,9 +16,9 @@ export function RequireRole({
   fallback = null,
   requireAll = false,
 }: RequireRoleProps) {
-  const roles = useAuthStore((s) => s.user?.roles || []);
+  const roles = useAuthStore((s) => s.user?.roles) || [];
 
-  const isSuperAdmin = roles.includes('super-admin');
+  const isSuperAdmin = roles.includes('SUPER_ADMIN') || roles.includes('super-admin');
 
   if (isSuperAdmin) {
     return <>{children}</>;

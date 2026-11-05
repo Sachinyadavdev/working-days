@@ -37,8 +37,8 @@ const navigation = [
   { name: 'Leave', href: '/leave', icon: CalendarDays },
   { name: 'Notifications', href: '/notifications', icon: Bell },
   { name: 'Activity', href: '/activity', icon: Activity },
-  { name: 'Roles', href: '/settings/roles', icon: ShieldAlert },
-  { name: 'User Access', href: '/settings/users', icon: UserCog },
+  { name: 'Roles', href: '/settings/roles', icon: ShieldAlert, adminOnly: true },
+  { name: 'User Access', href: '/settings/users', icon: UserCog, adminOnly: true },
   { name: 'Settings', href: '/settings', icon: Settings },
 ];
 
@@ -68,6 +68,7 @@ export function AppSidebar() {
   const unreadCount = useNotificationStore((s) => s.unreadCount);
   
   const isSuperAdmin = user?.roles?.includes('SUPER_ADMIN') || false;
+  const isAdmin = isSuperAdmin || user?.roles?.includes('ADMIN') || false;
 
   const handleLogout = () => {
     logout();
@@ -95,7 +96,7 @@ export function AppSidebar() {
 
       {/* Navigation */}
       <nav className="flex-1 space-y-1 overflow-y-auto px-2 py-4">
-        {navigation.map((item) => {
+        {navigation.filter(item => !item.adminOnly || isAdmin).map((item) => {
           const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
           const isNotifications = item.name === 'Notifications';
           return (

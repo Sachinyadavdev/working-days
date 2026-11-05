@@ -9,7 +9,18 @@ import {
   TrendingUp,
   ArrowUpRight,
   ArrowDownRight,
+  ShieldCheck,
 } from 'lucide-react';
+import { useAuthStore } from '@/stores/auth.store';
+
+const roleLabels: Record<string, string> = {
+  SUPER_ADMIN: 'Super Admin',
+  ADMIN: 'Admin',
+  HR_ADMIN: 'HR Admin',
+  MANAGER: 'Manager',
+  PROJECT_MANAGER: 'Project Manager',
+  EMPLOYEE: 'Employee',
+};
 
 const stats = [
   { name: 'Total Employees', value: '248', change: '+12%', trend: 'up', icon: Users, color: 'from-blue-500 to-blue-600' },
@@ -29,6 +40,9 @@ const itemVariants = {
 };
 
 export default function DashboardPage() {
+  const user = useAuthStore((state) => state.user);
+  const roles = Array.from(new Set(user?.roles ?? []));
+
   return (
     <div className="space-y-8">
       {/* Page header */}
@@ -37,8 +51,23 @@ export default function DashboardPage() {
           Dashboard
         </h1>
         <p className="mt-1 text-muted-foreground">
-          Welcome back! Here&apos;s an overview of your workspace.
+          Welcome back{user?.firstName ? `, ${user.firstName}` : ''}! Here&apos;s an overview of your workspace.
         </p>
+        <div className="mt-3 flex flex-wrap items-center gap-2" aria-label="Your assigned roles">
+          <span className="text-sm text-muted-foreground">
+            {roles.length > 1 ? 'Your roles:' : 'Your role:'}
+          </span>
+          {!user ? (
+            <span className="text-sm text-muted-foreground" role="status">Loading...</span>
+          ) : roles.length > 0 ? roles.map((role) => (
+            <span key={role} className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+              <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+              {roleLabels[role.toUpperCase().replace(/-/g, '_')] ?? role}
+            </span>
+          )) : (
+            <span className="text-sm text-muted-foreground">No role assigned</span>
+          )}
+        </div>
       </div>
 
       {/* Stats cards */}
