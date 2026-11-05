@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException, ConflictException } from '@nestjs/common';
+import { Injectable, NotFoundException, ConflictException, BadRequestException } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 
 import { PrismaService } from '../../database/prisma.service';
@@ -151,13 +151,13 @@ export class ProjectsService {
       },
     });
 
-    this.eventEmitter.emit('project.created', project);
+    await this.eventEmitter.emitAsync('project.created', project);
     return project;
   }
 
   // ────────────────── UPDATE ──────────────────
 
-  async update(id: string, dto: UpdateProjectDto) {
+  async update(id: string, dto: UpdateProjectDto, actorId?: string) {
     const existing = await this.prisma.project.findUnique({ where: { id } });
     if (!existing) throw new NotFoundException('Project not found');
 
@@ -183,13 +183,13 @@ export class ProjectsService {
       data: updateData,
     });
 
-    this.eventEmitter.emit('project.updated', { before: existing, after: project });
+    await this.eventEmitter.emitAsync('project.updated', { before: existing, after: project, actorId });
     return project;
   }
 
   // ────────────────── ARCHIVE ──────────────────
 
-  async archive(id: string) {
+  async archive(id: string, actorId?: string) {
     const existing = await this.prisma.project.findUnique({ where: { id } });
     if (!existing) throw new NotFoundException('Project not found');
 
@@ -198,18 +198,18 @@ export class ProjectsService {
       data: { status: 'ARCHIVED' },
     });
 
-    this.eventEmitter.emit('project.updated', { before: existing, after: project });
+    await this.eventEmitter.emitAsync('project.updated', { before: existing, after: project, actorId });
     return project;
   }
 
   // ────────────────── DELETE ──────────────────
 
-  async delete(id: string) {
+  async delete(id: string, actorId?: string) {
     const existing = await this.prisma.project.findUnique({ where: { id } });
     if (!existing) throw new NotFoundException('Project not found');
 
     await this.prisma.project.delete({ where: { id } });
-    this.eventEmitter.emit('project.deleted', existing);
+    await this.eventEmitter.emitAsync('project.deleted', { ...existing, actorId });
     return { message: 'Project deleted successfully' };
   }
 
@@ -299,7 +299,7 @@ export class ProjectsService {
     });
   }
 
-  async addMember(projectId: string, dto: AddMemberDto) {
+  async addMember(projectId: string, dto: AddMemberDto, actorId?: string) {
     const project = await this.prisma.project.findUnique({ where: { id: projectId } });
     if (!project) throw new NotFoundException('Project not found');
 
@@ -329,18 +329,20 @@ export class ProjectsService {
       },
     });
 
-    this.eventEmitter.emit('project.memberAdded', {
+    await this.eventEmitter.emitAsync('project.memberAdded', {
       projectId,
       projectName: project.name,
       employeeId: dto.employeeId,
       userId: employee.userId,
+      actorId,
+      memberName: `${member.employee.user.firstName} ${member.employee.user.lastName}`,
       role: dto.role || 'MEMBER',
     });
 
     return member;
   }
 
-  async removeMember(projectId: string, employeeId: string) {
+  async removeMember(projectId: string, employeeId: string, actorId?: string) {
     const member = await this.prisma.projectMember.findUnique({
       where: { projectId_employeeId: { projectId, employeeId } },
     });
@@ -350,7 +352,7 @@ export class ProjectsService {
       where: { projectId_employeeId: { projectId, employeeId } },
     });
 
-    this.eventEmitter.emit('project.memberRemoved', { projectId, employeeId });
+    await this.eventEmitter.emitAsync('project.memberRemoved', { projectId, employeeId, actorId });
     return { message: 'Member removed successfully' };
   }
 
@@ -429,7 +431,8 @@ export class ProjectsService {
 
   // ────────────────── ACTIVITY LOGS ──────────────────
 
-  async getActivityLogs(projectId: string) {
+  async getActivityLogs(projectId: string, skip = 0) {
+    if (!Number.isSafeInteger(skip) || skip < 0) throw new BadRequestException('Invalid activity offset');
     const project = await this.prisma.project.findUnique({ where: { id: projectId } });
     if (!project) throw new NotFoundException('Project not found');
 
@@ -438,12 +441,14 @@ export class ProjectsService {
         OR: [
           { entity: 'Project', entityId: projectId },
           { entity: 'Task', entityId: { in: await this.getProjectTaskIds(projectId) } },
+          { entity: 'Task', changes: { path: ['projectId'], equals: projectId } },
         ],
       },
       include: {
         user: { select: { id: true, firstName: true, lastName: true, avatar: true } },
       },
-      orderBy: { createdAt: 'desc' },
+      orderBy: [{ createdAt: 'desc' }, { id: 'desc' }],
+      skip,
       take: 50,
     });
   }
@@ -473,6 +478,7 @@ export class ProjectsService {
       }
     });
 
+    await this.eventEmitter.emitAsync('project.commentAdded', { projectId, actorId: authorId, commentId: comment.id });
     return comment;
   }
 
@@ -489,11 +495,12 @@ export class ProjectsService {
     });
   }
 
-  async deleteComment(projectId: string, commentId: string) {
+  async deleteComment(projectId: string, commentId: string, actorId?: string) {
     const comment = await this.prisma.comment.findUnique({ where: { id: commentId, projectId } });
     if (!comment) throw new NotFoundException('Comment not found');
 
     await this.prisma.comment.delete({ where: { id: commentId } });
+    await this.eventEmitter.emitAsync('project.commentDeleted', { projectId, actorId, commentId });
     return { message: 'Comment deleted successfully' };
   }
 }

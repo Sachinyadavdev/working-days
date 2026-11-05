@@ -52,7 +52,13 @@ export default function ProjectsPage() {
   const router = useRouter();
   const { user } = useAuthStore();
   const queryClient = useQueryClient();
-  const isAdmin = user?.roles?.includes('SUPER_ADMIN') || user?.roles?.includes('ADMIN') || user?.roles?.includes('PROJECT_MANAGER');
+  const permissions = useAuthStore((s) => s.permissions);
+  const isAdmin = user?.roles?.some(role => ['SUPER_ADMIN', 'ADMIN', 'MANAGER', 'PROJECT_MANAGER'].includes(role));
+  const hasPermission = (action: string) => !!isAdmin || permissions.some(p => p.replace(':', '.') === `project.${action}`);
+  const canCreate = hasPermission('create');
+  const canUpdate = hasPermission('update');
+  const canArchive = hasPermission('delete');
+  const canDelete = user?.roles?.includes('SUPER_ADMIN');
 
   const [isCreateOpen, setIsCreateOpen] = useState(false);
   const [editModal, setEditModal] = useState<{ isOpen: boolean; projectId: string | null }>({ isOpen: false, projectId: null });
@@ -203,26 +209,26 @@ export default function ProjectsPage() {
               >
                 <Eye size={14} /> View Details
               </DropdownMenu.Item>
-              {isAdmin && (
+              {(canUpdate || canArchive || canDelete) && (
                 <>
-                  <DropdownMenu.Item
+                  {canUpdate && <DropdownMenu.Item
                     onSelect={() => { setEditModal({ isOpen: true, projectId: item.id }); setOpenMenuId(null); }}
                     className="w-full text-left px-3 py-2 text-sm text-foreground hover:bg-muted flex items-center gap-2 transition-colors border-t border-border outline-none cursor-pointer"
                   >
                     <Edit size={14} /> Edit
-                  </DropdownMenu.Item>
-                  <DropdownMenu.Item
+                  </DropdownMenu.Item>}
+                  {canArchive && <DropdownMenu.Item
                     onSelect={() => { if (window.confirm('Archive this project?')) archiveMutation.mutate(item.id); setOpenMenuId(null); }}
                     className="w-full text-left px-3 py-2 text-sm text-foreground hover:bg-muted flex items-center gap-2 transition-colors border-t border-border outline-none cursor-pointer"
                   >
                     <Archive size={14} /> Archive
-                  </DropdownMenu.Item>
-                  <DropdownMenu.Item
+                  </DropdownMenu.Item>}
+                  {canDelete && <DropdownMenu.Item
                     onSelect={() => { if (window.confirm('Permanently delete this project? This cannot be undone.')) deleteMutation.mutate(item.id); setOpenMenuId(null); }}
                     className="w-full text-left px-3 py-2 text-sm text-red-500 hover:bg-red-50 flex items-center gap-2 transition-colors border-t border-border outline-none cursor-pointer"
                   >
                     <Trash2 size={14} /> Delete
-                  </DropdownMenu.Item>
+                  </DropdownMenu.Item>}
                 </>
               )}
             </DropdownMenu.Content>
@@ -240,7 +246,7 @@ export default function ProjectsPage() {
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Projects</h1>
           <p className="text-muted-foreground mt-1">Manage and track all projects across your organization.</p>
         </div>
-        {isAdmin && (
+        {canCreate && (
           <Button
             onClick={() => setIsCreateOpen(true)}
             className="flex items-center gap-2 shadow-lg"

@@ -8,7 +8,7 @@ import { FilterProjectsDto } from './dto/filter-projects.dto';
 import { AddMemberDto } from './dto/add-member.dto';
 import { CreateCommentDto } from './dto/create-comment.dto';
 import { CurrentUser } from '../../common/decorators/current-user.decorator';
-import { Roles } from '../../common/decorators/roles.decorator';
+import { Roles, RolePermission } from '../../common/decorators/roles.decorator';
 import { RolesGuard } from '../../common/guards/roles.guard';
 
 @ApiTags('Projects')
@@ -34,6 +34,7 @@ export class ProjectsController {
   }
 
   @Post()
+  @RolePermission('project.create')
   @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Create a new project' })
   async create(
@@ -50,24 +51,26 @@ export class ProjectsController {
   }
 
   @Patch(':id')
+  @RolePermission('project.update')
   @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Update project' })
-  async update(@Param('id') id: string, @Body() dto: UpdateProjectDto) {
-    return this.projectsService.update(id, dto);
+  async update(@Param('id') id: string, @Body() dto: UpdateProjectDto, @CurrentUser('sub') actorId: string) {
+    return this.projectsService.update(id, dto, actorId);
   }
 
   @Delete(':id/archive')
+  @RolePermission('project.delete')
   @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Archive project (soft delete)' })
-  async archive(@Param('id') id: string) {
-    return this.projectsService.archive(id);
+  async archive(@Param('id') id: string, @CurrentUser('sub') actorId: string) {
+    return this.projectsService.archive(id, actorId);
   }
 
   @Delete(':id')
   @Roles('SUPER_ADMIN')
   @ApiOperation({ summary: 'Permanently delete project (Super Admin only)' })
-  async delete(@Param('id') id: string) {
-    return this.projectsService.delete(id);
+  async delete(@Param('id') id: string, @CurrentUser('sub') actorId: string) {
+    return this.projectsService.delete(id, actorId);
   }
 
   // ────────────────── MEMBERS ──────────────────
@@ -79,20 +82,23 @@ export class ProjectsController {
   }
 
   @Post(':id/members')
+  @RolePermission('project.update')
   @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Add member to project' })
-  async addMember(@Param('id') id: string, @Body() dto: AddMemberDto) {
-    return this.projectsService.addMember(id, dto);
+  async addMember(@Param('id') id: string, @Body() dto: AddMemberDto, @CurrentUser('sub') actorId: string) {
+    return this.projectsService.addMember(id, dto, actorId);
   }
 
   @Delete(':id/members/:employeeId')
+  @RolePermission('project.update')
   @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Remove member from project' })
   async removeMember(
     @Param('id') id: string,
     @Param('employeeId') employeeId: string,
+    @CurrentUser('sub') actorId: string,
   ) {
-    return this.projectsService.removeMember(id, employeeId);
+    return this.projectsService.removeMember(id, employeeId, actorId);
   }
 
   // ────────────────── KANBAN ──────────────────
@@ -115,8 +121,8 @@ export class ProjectsController {
 
   @Get(':id/activity')
   @ApiOperation({ summary: 'Get activity logs for a project' })
-  async getActivityLogs(@Param('id') id: string) {
-    return this.projectsService.getActivityLogs(id);
+  async getActivityLogs(@Param('id') id: string, @Query('skip') skip = '0') {
+    return this.projectsService.getActivityLogs(id, Number(skip));
   }
 
   // ────────────────── COMMENTS ──────────────────
@@ -144,7 +150,8 @@ export class ProjectsController {
   async deleteComment(
     @Param('id') id: string,
     @Param('commentId') commentId: string,
+    @CurrentUser('sub') actorId: string,
   ) {
-    return this.projectsService.deleteComment(id, commentId);
+    return this.projectsService.deleteComment(id, commentId, actorId);
   }
 }

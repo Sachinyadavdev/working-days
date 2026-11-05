@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FolderPlus,
@@ -14,6 +14,7 @@ import {
   CheckSquare,
   Square,
   Activity,
+  MessageSquare,
 } from 'lucide-react';
 
 interface ActivityLog {
@@ -37,6 +38,8 @@ interface ProjectActivityFeedProps {
 }
 
 const ACTION_ICONS: Record<string, React.ElementType> = {
+  COMMENT_ADDED: MessageSquare,
+  COMMENT_DELETED: Trash2,
   CREATE: FolderPlus,
   UPDATE: Edit,
   DELETE: Trash2,
@@ -60,7 +63,7 @@ const ACTION_COLORS: Record<string, string> = {
 
 function renderChanges(changes: Record<string, any> | undefined): React.ReactNode {
   if (!changes) return null;
-  const entries = Object.entries(changes);
+  const entries = Object.entries(changes).filter(([key]) => !['projectId', 'commentId'].includes(key));
   if (entries.length === 0) return null;
 
   return (
@@ -69,17 +72,17 @@ function renderChanges(changes: Record<string, any> | undefined): React.ReactNod
         if (typeof value === 'object' && value !== null && value.from !== undefined && value.to !== undefined) {
           return (
             <div key={key} className="flex flex-wrap items-center gap-2">
-              <span className="font-semibold text-muted-foreground min-w-[80px]">{key}:</span>
-              <span className="text-red-500/80 line-through bg-red-50 px-1 rounded">{String(value.from) || 'empty'}</span>
+              <span className="font-semibold text-muted-foreground min-w-[80px]">{key.replace(/([a-z])([A-Z])/g, '$1 $2')}: </span>
+              <span className="text-red-500/80 line-through bg-red-50 px-1 rounded">{formatValue(value.from)}</span>
               <ArrowRight className="w-3 h-3 text-muted-foreground" />
-              <span className="text-emerald-600 font-medium bg-emerald-50 px-1 rounded">{String(value.to) || 'empty'}</span>
+              <span className="text-emerald-600 font-medium bg-emerald-50 px-1 rounded">{formatValue(value.to)}</span>
             </div>
           );
         } else {
           return (
             <div key={key} className="flex flex-wrap items-start gap-2">
-              <span className="font-semibold text-muted-foreground min-w-[80px]">{key}:</span>
-              <span className="text-foreground bg-muted/50 px-1 rounded break-all">{typeof value === 'object' ? JSON.stringify(value) : String(value)}</span>
+              <span className="font-semibold text-muted-foreground min-w-[80px]">{key.replace(/([a-z])([A-Z])/g, '$1 $2')}: </span>
+              <span className="text-foreground bg-muted/50 px-1 rounded break-all">{formatValue(value)}</span>
             </div>
           );
         }
@@ -100,7 +103,27 @@ function formatDateTime(dateStr: string): string {
   });
 }
 
+function formatValue(value: unknown): string {
+  if (value === null || value === undefined || value === '') return 'Not set';
+  if (Array.isArray(value)) return value.length ? value.map(formatValue).join(', ') : 'None';
+  if (typeof value === 'object') return JSON.stringify(value);
+  return String(value);
+}
+
+const actionLabels: Record<string, string> = {
+  CREATE: 'created', UPDATE: 'updated', DELETE: 'deleted', ASSIGN: 'assigned',
+  MEMBER_ADDED: 'added a member to', MEMBER_REMOVED: 'removed a member from',
+  COMMENT_ADDED: 'commented on', COMMENT_DELETED: 'deleted a comment from',
+  CHECKLIST_COMPLETED: 'completed a checklist item in', CHECKLIST_UNCOMPLETED: 'reopened a checklist item in',
+};
+
 export function ProjectActivityFeed({ logs, isLoading }: ProjectActivityFeedProps) {
+  const [filter, setFilter] = useState('all');
+  const [search, setSearch] = useState('');
+  const visibleLogs = logs.filter(log => {
+    const category = log.entity === 'Task' ? 'tasks' : log.action.startsWith('MEMBER_') ? 'members' : log.action.startsWith('COMMENT_') ? 'comments' : 'project';
+    return (filter === 'all' || category === filter) && `${log.user?.firstName || ''} ${log.user?.lastName || ''} ${log.action} ${JSON.stringify(log.changes || {})}`.toLowerCase().includes(search.toLowerCase());
+  });
   if (isLoading) {
     return (
       <div className="space-y-3">
@@ -122,7 +145,14 @@ export function ProjectActivityFeed({ logs, isLoading }: ProjectActivityFeedProp
 
   return (
     <div className="space-y-1">
-      {logs.map((log, index) => {
+      <div className="mb-4 flex flex-wrap gap-3">
+        <input aria-label="Search loaded activity" placeholder="Search loaded activity..." className="rounded-md border border-border bg-background px-3 py-2 text-sm" value={search} onChange={event => setSearch(event.target.value)} />
+        <select aria-label="Activity type" className="rounded-md border border-border bg-background px-3 py-2 text-sm" value={filter} onChange={event => setFilter(event.target.value)}>
+          <option value="all">All activity</option><option value="project">Project changes</option><option value="tasks">Tasks</option><option value="members">Members</option><option value="comments">Comments</option>
+        </select>
+      </div>
+      {visibleLogs.length === 0 && <p className="py-6 text-sm text-muted-foreground">No matching activity in the loaded history.</p>}
+      {visibleLogs.map((log, index) => {
         const Icon = ACTION_ICONS[log.action] || Activity;
         const colorClass = ACTION_COLORS[log.action] || 'bg-gray-100 text-gray-600';
 
@@ -131,7 +161,7 @@ export function ProjectActivityFeed({ logs, isLoading }: ProjectActivityFeedProp
             key={log.id}
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.03 }}
+            transition={{ delay: Math.min(index, 10) * 0.03 }}
             className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors group"
           >
             {/* Icon */}
@@ -143,14 +173,10 @@ export function ProjectActivityFeed({ logs, isLoading }: ProjectActivityFeedProp
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
                 <span className="text-sm font-medium text-foreground">
-                  {log.user ? `${log.user.firstName} ${log.user.lastName}` : 'System'}
+                  {log.user ? `${log.user.firstName} ${log.user.lastName}` : 'Unknown actor'}
                 </span>
                 <span className="text-xs text-muted-foreground ml-1">
-                  {log.action === 'CHECKLIST_COMPLETED' && `completed checklist item in task`}
-                  {log.action === 'CHECKLIST_UNCOMPLETED' && `uncompleted checklist item in task`}
-                  {log.action !== 'CHECKLIST_COMPLETED' && log.action !== 'CHECKLIST_UNCOMPLETED' && (
-                    `${log.action.replace('_', ' ').toLowerCase()} ${log.entity.toLowerCase()}`
-                  )}
+                  {actionLabels[log.action] || log.action.replace(/_/g, ' ').toLowerCase()} {log.entity.toLowerCase()}
                 </span>
               </div>
               {renderChanges(log.changes)}

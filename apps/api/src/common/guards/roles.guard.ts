@@ -1,13 +1,15 @@
-import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
+import { Injectable, CanActivate, ExecutionContext, Optional } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 
-import { ROLES_KEY } from '../decorators/roles.decorator';
+import { ROLES_KEY, ROLE_PERMISSION_KEY } from '../decorators/roles.decorator';
+import { PrismaService } from '../../database/prisma.service';
 
 
 @Injectable()
 export class RolesGuard implements CanActivate {
   constructor(
     private reflector: Reflector,
+    @Optional() private prisma?: PrismaService,
   ) {}
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
@@ -34,6 +36,17 @@ export class RolesGuard implements CanActivate {
       return true;
     }
 
-    return requiredRoles.some((role) => userRolesList!.includes(role));
+    if (requiredRoles.some((role) => userRolesList.includes(role))) return true;
+    const permission = this.reflector.getAllAndOverride<string>(ROLE_PERMISSION_KEY, [context.getHandler(), context.getClass()]);
+    if (!permission || !user.sub || !this.prisma) return false;
+    const [module, action] = permission.split('.');
+    const assignment = await this.prisma.userRole.findFirst({
+      where: { userId: user.sub, role: {
+        status: 'ACTIVE', deletedAt: null,
+        permissions: { some: { permission: { module, action } } },
+      } },
+      select: { roleId: true },
+    });
+    return !!assignment;
   }
 }

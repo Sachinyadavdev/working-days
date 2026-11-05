@@ -123,6 +123,7 @@ export class TasksService {
       },
     });
 
+    await this.eventEmitter.emitAsync('task.created', task);
     // Emit event for notifications
     if (task.assignedTo) {
       this.eventEmitter.emit('task.assigned', task);
@@ -131,7 +132,7 @@ export class TasksService {
     return task;
   }
 
-  async update(id: string, dto: UpdateTaskDto) {
+  async update(id: string, dto: UpdateTaskDto, actorId?: string) {
     const existing = await this.prisma.task.findUnique({ where: { id } });
     if (!existing) throw new NotFoundException('Task not found');
 
@@ -154,18 +155,20 @@ export class TasksService {
       data: updateData as any,
     });
 
-    this.eventEmitter.emit('task.updated', { before: existing, after: task });
+    await this.eventEmitter.emitAsync('task.updated', { before: existing, after: task, actorId });
     return task;
   }
 
-  async cancel(id: string) {
+  async cancel(id: string, actorId?: string) {
     const existing = await this.prisma.task.findUnique({ where: { id } });
     if (!existing) throw new NotFoundException('Task not found');
 
-    return this.prisma.task.update({
+    const task = await this.prisma.task.update({
       where: { id },
       data: { status: 'CANCELLED' },
     });
+    await this.eventEmitter.emitAsync('task.updated', { before: existing, after: task, actorId });
+    return task;
   }
 
   async toggleChecklistItem(taskId: string, itemId: string, userId: string) {
@@ -184,7 +187,7 @@ export class TasksService {
       data: { checklist: checklist as any },
     });
     
-    this.eventEmitter.emit('task.checklist.toggled', { taskId, title: task.title, item, userId });
+    await this.eventEmitter.emitAsync('task.checklist.toggled', { taskId, projectId: task.projectId, title: task.title, item, userId });
     return updatedTask;
   }
 }

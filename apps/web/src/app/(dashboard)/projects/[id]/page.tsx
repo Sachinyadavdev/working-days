@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useQuery, useInfiniteQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useParams, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import * as Tabs from '@radix-ui/react-tabs';
@@ -115,6 +115,8 @@ export default function ProjectDetailPage() {
   const { user } = useAuthStore();
   const projectId = params.id as string;
   const isAdmin = user?.roles?.includes('SUPER_ADMIN') || user?.roles?.includes('ADMIN') || user?.roles?.includes('PROJECT_MANAGER');
+  const permissions = useAuthStore((s) => s.permissions);
+  const canUpdateProject = !!isAdmin || user?.roles?.includes('MANAGER') || permissions.some(p => p.replace(':', '.') === 'project.update');
 
   const [activeTab, setActiveTab] = useState('overview');
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -153,14 +155,18 @@ export default function ProjectDetailPage() {
     enabled: !!projectId && activeTab === 'timeline',
   });
 
-  // Fetch activity logs
-  const { data: activityData, isLoading: activityLoading } = useQuery({
+  // Fetch a fresh, paginated history when the activity tab is open.
+  const { data: activityData, isLoading: activityLoading, isError: activityError, refetch: refreshActivity, fetchNextPage, hasNextPage, isFetchingNextPage } = useInfiniteQuery({
     queryKey: ['project-activity', projectId],
-    queryFn: async () => {
-      const { data } = await apiClient.get(`/projects/${projectId}/activity`);
-      return data?.data || data;
+    initialPageParam: 0,
+    queryFn: async ({ pageParam }) => {
+      const { data } = await apiClient.get(`/projects/${projectId}/activity`, { params: { skip: pageParam } });
+      return data.data;
     },
+    getNextPageParam: (lastPage, pages) => lastPage.length === 50 ? pages.length * 50 : undefined,
     enabled: !!projectId && activeTab === 'activity',
+    refetchInterval: activeTab === 'activity' ? 15000 : false,
+    refetchOnMount: 'always',
   });
 
   // Remove member mutation
@@ -244,7 +250,7 @@ export default function ProjectDetailPage() {
             </div>
           </div>
         </div>
-        {isAdmin && (
+        {canUpdateProject && (
           <div className="flex items-center gap-2">
             <Button variant="outline" size="sm" onClick={() => setIsEditOpen(true)}>
               <Edit className="h-4 w-4 mr-1.5" /> Edit
@@ -602,7 +608,7 @@ export default function ProjectDetailPage() {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle>Team Members ({members.length})</CardTitle>
-              {isAdmin && (
+              {canUpdateProject && (
                 <Button size="sm" onClick={() => setIsAddMemberOpen(true)}>
                   <UserPlus className="h-4 w-4 mr-1.5" /> Add Member
                 </Button>
@@ -635,7 +641,7 @@ export default function ProjectDetailPage() {
                           <span className="text-[10px] px-1.5 py-0.5 rounded bg-muted text-muted-foreground font-medium">{member.role}</span>
                         </div>
                       </div>
-                      {isAdmin && (
+                      {canUpdateProject && (
                         <button
                           onClick={() => { if (window.confirm(`Remove ${member.employee?.user?.firstName} from this project?`)) removeMemberMutation.mutate(member.employeeId || member.employee?.id); }}
                           className="opacity-0 group-hover:opacity-100 p-1.5 rounded-md hover:bg-red-50 text-red-400 hover:text-red-600 transition-all"
@@ -655,9 +661,11 @@ export default function ProjectDetailPage() {
         {/* ─── ACTIVITY TAB ─── */}
         <Tabs.Content value="activity" className="mt-6">
           <Card>
-            <CardHeader><CardTitle>Activity Log</CardTitle></CardHeader>
+            <CardHeader className="flex flex-row items-center justify-between"><div><CardTitle>Project Activity</CardTitle><p className="mt-1 text-sm text-muted-foreground">Project changes, tasks, members and comments. Newest first.</p></div><Button variant="outline" size="sm" onClick={() => void refreshActivity()}>Refresh</Button></CardHeader>
             <CardContent>
-              <ProjectActivityFeed logs={activityData || []} isLoading={activityLoading} />
+              {activityError && <div role="alert" className="mb-4 text-sm text-destructive">Unable to load activity. <Button variant="outline" size="sm" onClick={() => void refreshActivity()}>Retry</Button></div>}
+              <ProjectActivityFeed logs={activityData?.pages.flat() || []} isLoading={activityLoading} />
+              {hasNextPage && <Button className="mt-4" variant="outline" disabled={isFetchingNextPage} onClick={() => void fetchNextPage()}>{isFetchingNextPage ? 'Loading...' : 'Load older activity'}</Button>}
             </CardContent>
           </Card>
         </Tabs.Content>
@@ -667,7 +675,7 @@ export default function ProjectDetailPage() {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle>Attachments</CardTitle>
-              {isAdmin && (
+              {canUpdateProject && (
                 <Button size="sm" onClick={() => setIsAddLinkOpen(true)}>
                   <LinkIcon className="h-4 w-4 mr-1.5" /> Attach Link
                 </Button>
@@ -704,7 +712,7 @@ export default function ProjectDetailPage() {
                             )}
                           </div>
                         </a>
-                        {isAdmin && (
+                        {canUpdateProject && (
                           <button
                             onClick={() => { if (window.confirm('Remove this attachment?')) removeLinkMutation.mutate(file.raw); }}
                             className="opacity-0 group-hover:opacity-100 p-1.5 rounded-md hover:bg-red-50 text-red-400 hover:text-red-600 transition-all absolute right-2"

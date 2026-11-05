@@ -37,14 +37,14 @@ export class TasksController {
   @ApiOperation({ summary: 'Update task' })
   async update(@Param('id') id: string, @Body() dto: UpdateTaskDto, @CurrentUser() user: { sub: string; roles: string[] }) {
     await this.tasksService.assertCanEdit(id, user.sub, user.roles, dto);
-    return this.tasksService.update(id, dto);
+    return this.tasksService.update(id, dto, user.sub);
   }
 
   @Delete(':id')
   @Roles('ADMIN', 'SUPER_ADMIN', 'MANAGER', 'PROJECT_MANAGER')
   @ApiOperation({ summary: 'Cancel task' })
-  async cancel(@Param('id') id: string) {
-    return this.tasksService.cancel(id);
+  async cancel(@Param('id') id: string, @CurrentUser('sub') actorId: string) {
+    return this.tasksService.cancel(id, actorId);
   }
 
   @Patch(':id/checklist/:itemId/toggle')

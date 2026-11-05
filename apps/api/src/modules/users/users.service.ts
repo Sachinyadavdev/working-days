@@ -80,7 +80,8 @@ export class UsersService {
         createdAt: true,
         updatedAt: true,
         roles: {
-          include: { role: true },
+          where: { role: { status: 'ACTIVE', deletedAt: null } },
+          include: { role: { include: { permissions: { include: { permission: true } } } } },
         },
         employee: true,
       },
@@ -93,6 +94,7 @@ export class UsersService {
     return {
       ...user,
       roles: user.roles.map((ur) => ur.role.name),
+      permissions: [...new Set(user.roles.flatMap(({ role }) => role.permissions.map(({ permission }) => `${permission.module}.${permission.action}`)))],
     };
   }
 
